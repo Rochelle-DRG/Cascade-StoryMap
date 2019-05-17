@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ArcGIS API for JavaScript Hello World App</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
+    
+</head>
+
+<body>
+    
+
+    <nav class="navabar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">Story Map</span>
+        </div>
+    </nav>
+
+    <div class="main-body">
+        <div id="viewDiv" class="general-map"></div>
+        <div id="viewDiv2" class="general-map"></div>
+    
+        
+        <div class="my-element sticky-top">
+            <span class="container">
+                A bunch of test words for my test page on my test site on my computer, I need this to wrap around and whatnot so I will keep on typing and filling this with nonsense content until I can hopefull get it to wrap to the next line, I am curious about how much it will take for this to go round and round and round untill i am to tired of it and this is getting to long and not fun.
+            </span>
+        </div> 
+
+    </div>
+
+    
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+    <script src="plugins/paroller.js-master/dist/jquery.paroller.js"></script>
+    
+    <!-- BootStrap imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Esri API -->
+    <script src="https://js.arcgis.com/4.11/"></script>
+    <script src="javascript/map.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            
+            $(".my-element").paroller({ factor: 0.5, factorXs: 0.2, factorSm: 0.3, type: 'foreground', direction: 'vertical' });  
+        }); 
+    </script>
+</body>
+
+</html>
