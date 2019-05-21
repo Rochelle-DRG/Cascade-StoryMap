@@ -1,0 +1,45 @@
+.general-map {
+  padding: 0;
+  margin-top: 0px;
+  height: 500px;
+  width: 100%;
+}
+
+.my-element {
+  height: 350px;
+  width: 100%;
+  /* margin-top: -500px; */
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  background-color: whitesmoke;
+  /* border: 3px solid gold; */
+}
+
+.header {
+  height: 50px;
+  color: whitesmoke;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.75);
+  border-bottom: black;
+}
+
+.large-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.sm-textbox {
+  color: black;
+  width: 25%;
+  padding: 20px;
+}
+
+.sm-textbox p {
+  background-color: bisque;
+}
+/*# sourceMappingURL=style.css.map */

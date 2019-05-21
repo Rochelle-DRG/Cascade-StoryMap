@@ -25,10 +25,21 @@ $(document).ready(function () {
             zoom: 10
         });
 
-        view.on("mouse-wheel", function(event) {
-            // disable mouse wheel scroll zooming on the view
-            event.stopPropagation();
+        var map3 = new Map({
+            basemap: "gray"
         });
+
+        var mapview3 = new MapView({
+            container: "viewDiv3",
+            map: map3,
+            center: [-80.78511,41.10042],
+            zoom: 10
+        });
+
+        // view.on("mouse-wheel", function(event) {
+        //     // disable mouse wheel scroll zooming on the view
+        //     // event.stopPropagation();
+        // });
 
     });
 });
