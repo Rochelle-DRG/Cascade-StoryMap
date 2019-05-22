@@ -53,7 +53,9 @@ html,body {
 }
 .sm-textbox p {
     background-color: bisque;
-    // margin-bottom: 200px;
+}
+.sm-textbox p:not(:last-child){
+    margin-bottom: 200px;
 }
 
 .main-body {
@@ -65,3 +67,4 @@ html,body {
     // position: absolute;
     // z-index: 20;
 }
+
