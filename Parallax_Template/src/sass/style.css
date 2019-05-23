@@ -1,7 +1,7 @@
 .general-map {
-  padding: 0;
+  padding-top: 0px;
   margin-top: 0px;
-  height: 500px;
+  height: 100vh;
   width: 100%;
 }
 
@@ -17,14 +17,14 @@
   /* border: 3px solid gold; */
 }
 
-.header {
+/* .header {
   height: 50px;
   color: whitesmoke;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
   background: rgba(0, 0, 0, 0.75);
   border-bottom: black;
-}
+} */
 
 .large-sticky {
   position: -webkit-sticky;
@@ -37,6 +37,7 @@
   color: black;
   width: 25%;
   padding: 20px;
+  border: 2px solid black;
 }
 
 .sm-textbox p {
