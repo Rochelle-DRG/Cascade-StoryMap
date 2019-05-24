@@ -1,40 +1,57 @@
+// @import "reset.css"; 
+
 html,body {
-    // height: 2000px;
-    // margin:0;
-    // padding:0;
-    // perspective: 1px;
-    // transform-style: preserve-3d;
-    // height: 100%;
-    // overflow-y: scroll;
-    // overflow-x: hidden;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+.everything-after-nav {
+    text-align: center;
+}
+.welcome-container {
+    background-image: url("/dist/img/umbrella-lady.gif");
+    background-size: 100%;
+    background-color: gray;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    // margin: 
+   
+    .welcome-content{
+        background-color: rgba(250, 138, 73, 0.6);
+        padding-top: 2em;
+        padding-bottom: 2em;
+        margin-left: 20%;
+        margin-right: 20%;
+        position: absolute;
+        top: 20%;
+        border: 2px solid rgb(68, 185, 0);
+        font-weight: bold;
+
+        
+        h1 {
+            color: rgb(65, 204, 0);
+            text-shadow: 3px 3px 2px black; //x y blur color
+            font-size: 3em;
+        }
+        p {
+            color: black;
+            text-shadow: 1px 1px 10px white;
+            margin-top: 2em;
+            padding-left: 3em;
+            padding-right: 3em;
+            line-height: 150%;
+ 
+        }
+        
+    }
+} 
 
 .general-map {
     padding: 0;
     margin-top: 0px;
-    height: 500px;
+    height: 100vh;
     width: 100%;
 }
-.my-element {
-    height: 350px;
-    width: 100%;
-    /* margin-top: -500px; */
-    padding : 20px;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: whitesmoke;
-    /* border: 3px solid gold; */
-}
-
-.header {
-    height: 50px;
-    color: whitesmoke;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.75);
-    border-bottom: black;
-}
-
 
 .large-sticky {
     position: sticky;
@@ -43,28 +60,31 @@ html,body {
 }
 
 .sm-textbox {
-    // z-index: 20;
-    color: black;
-    // position:absolute;
     width: 25%;
     
     padding: 20px;
     
 }
 .sm-textbox p {
-    background-color: bisque;
-}
-.sm-textbox p:not(:last-child){
-    margin-bottom: 200px;
-}
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20em;
 
-.main-body {
-    // position: relative;
-    // z-index: 0;
 }
+// .sm-textbox p:not(:last-child){
+//     margin-bottom: 20em;
+// }
 
-.lg-text-div {
-    // position: absolute;
-    // z-index: 20;
+.lg-text-area {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 3em;
+    margin-bottom: 5em;
+
+    p {
+        margin-top: 3em;
+    }
 }
-

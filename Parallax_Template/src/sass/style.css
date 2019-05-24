@@ -1,30 +1,54 @@
+html, body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.everything-after-nav {
+  text-align: center;
+}
+
+.welcome-container {
+  background-image: url("/dist/img/umbrella-lady.gif");
+  background-size: 100%;
+  background-color: gray;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.welcome-container .welcome-content {
+  background-color: rgba(250, 138, 73, 0.6);
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-left: 20%;
+  margin-right: 20%;
+  position: absolute;
+  top: 20%;
+  border: 2px solid #44b900;
+  font-weight: bold;
+}
+
+.welcome-container .welcome-content h1 {
+  color: #41cc00;
+  text-shadow: 3px 3px 2px black;
+  font-size: 3em;
+}
+
+.welcome-container .welcome-content p {
+  color: black;
+  text-shadow: 1px 1px 10px white;
+  margin-top: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+  line-height: 150%;
+}
+
 .general-map {
-  padding-top: 0px;
+  padding: 0;
   margin-top: 0px;
   height: 100vh;
   width: 100%;
 }
-
-.my-element {
-  height: 350px;
-  width: 100%;
-  /* margin-top: -500px; */
-  padding: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: center;
-  background-color: whitesmoke;
-  /* border: 3px solid gold; */
-}
-
-/* .header {
-  height: 50px;
-  color: whitesmoke;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.75);
-  border-bottom: black;
-} */
 
 .large-sticky {
   position: -webkit-sticky;
@@ -34,17 +58,27 @@
 }
 
 .sm-textbox {
-  color: black;
   width: 25%;
   padding: 20px;
-  border: 2px solid black;
 }
 
 .sm-textbox p {
-  background-color: bisque;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 20em;
 }
 
-.sm-textbox p:not(:last-child) {
-  margin-bottom: 200px;
+.lg-text-area {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 3em;
+  margin-bottom: 5em;
+}
+
+.lg-text-area p {
+  margin-top: 3em;
 }
 /*# sourceMappingURL=style.css.map */

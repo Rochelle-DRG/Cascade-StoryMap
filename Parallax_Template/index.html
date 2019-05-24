@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="src/sass/reset.css">
+
+
     <link rel="stylesheet" href="src/sass/style.css">
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
@@ -19,90 +22,158 @@
 
 <body>
 
-
     <nav class="navabar navbar-dark bg-dark fixed-top">
         <div class="container">
             <span class="navbar-brand mb-0 h1">Story Map</span>
         </div>
     </nav>
 
-    <div id="splash" class="jumbotron" style="background-image: url(dist/img/gt_splash.jpg) ">
-        <div class="container for-about" style="height: 500px">
-            <h1 style="color: white">About</h1>
-        </div <!--end container for-about-->>
-    </div end splash>
+    <div class="everything-after-nav">
 
-    <div class="main-body">
-        <section>
-            <div id="viewDiv" class="general-map content-section large-sticky"
-            style="z-index: 1">
-
-            </div end viewDiv>
-            <!-- viewDiv is a topo-vector map -->
-
-
-            <div class="sm-textbox"
-            style="z-index: 2; position: relative">
-                <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="welcome-container">
+            <div class="welcome-content">
+                <h1>About This StoryMap</h1>
+                <p>This is Davey Resource Groups's customizable cascading Template. <br>
+                    All colors and images are customizable. <br>
+                    There are a variety of basemap options displayed here, and the styling and colors of the map may be customizable as well.</p>
             </div>
-        </section>
+        </div end welcome>
+
+        <div class="main-body">
+            <section>
+                <div id="viewDiv" class="general-map content-section large-sticky" style="z-index: 1">
+
+                </div end viewDiv>
+                <!-- viewDiv is a topo-vector map -->
+
+                <div class="sm-textbox" style="z-index: 2; position: relative">
+                    <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                    <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua. sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua.</p>
+                    <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                    <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                    <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                </div>
+            </section>
 
 
-        <span class="lg-text-div ">
-            <h1>Big Box 1</h1>
-            1Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis lectus nulla at volutpat
-            diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus egestas tellus rutrum tellus pellentesque
-            eu. Aliquam sem et tortor consequat. Nulla porttitor massa id neque aliquam vestibulum morbi. Viverra vitae
-            congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris. Purus in mollis nunc sed id
-            semper risus. Vulputate dignissim suspendisse in est. Venenatis a condimentum vitae sapien. Pretium nibh
-            ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna neque. Nulla pharetra diam sit amet nisl suscipit
-            adipiscing bibendum est. Sed libero enim sed faucibus turpis in. Turpis massa sed elementum tempus egestas
-            sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing commodo. Ornare massa
-            eget egestas purus viverra accumsan in nisl.
-        </span>
+            <div class="lg-text-area ">
+                <h1>Big Box 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis
+                    lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus
+                    egestas tellus rutrum tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor
+                    massa id neque aliquam vestibulum morbi.
+                    </br></br>
+                    Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris.
+                    Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a
+                    condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna
+                    neque. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed
+                    faucibus turpis in. Turpis massa sed elementum tempus
+                    egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing
+                    commodo. Ornare massa eget egestas purus viverra accumsan in nisl.</p>
+            </div>
 
-        <div id="viewDiv2" class="general-map large-sticky"></div>
-        <!-- viewDiv2 is a streets map -->
+            <section>
+                <div id="viewDiv2" class="general-map content-section large-sticky" style="z-index: 1">
 
+                </div end viewDiv2>
+                <!-- viewDiv2 is a street map -->
 
+                <div class="sm-textbox" style="z-index: 2; position: relative">
+                    <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                    <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                    <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua. sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. </p>
+                    <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                    <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                </div>
+            </section>
 
-        <div class="my-element ">
-            <span class="lg-text-div">
+            <div class="lg-text-area ">
                 <h1>Big Box 2</h1>
-                2Odio morbi quis commodo odio aenean sed adipiscing diam donec. Pellentesque dignissim enim sit amet.
-                Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. In tellus integer feugiat
-                scelerisque varius morbi enim nunc faucibus. Enim ut tellus elementum sagittis. Placerat in egestas erat
-                imperdiet sed. Euismod quis viverra nibh cras. Malesuada fames ac turpis egestas maecenas pharetra
-                convallis posuere morbi. Cursus mattis molestie a iaculis at. Posuere sollicitudin aliquam ultrices
-                sagittis orci a. Sociis natoque penatibus et magnis dis. Non curabitur gravida arcu ac tortor dignissim
-                convallis. Mauris ultrices eros in cursus turpis massa tincidunt dui. Egestas quis ipsum suspendisse
-                ultrices.
-            </span>
-        </div <!--end my element large sticky-->>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis
+                    lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus
+                    egestas tellus rutrum tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor
+                    massa id neque aliquam vestibulum morbi.
+                    </br></br>
+                    Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris.
+                    Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a
+                    condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna
+                    neque. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed
+                    faucibus turpis in. Turpis massa sed elementum tempus
+                    egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing
+                    commodo. Ornare massa eget egestas purus viverra accumsan in nisl.</p>
+            </div>
 
-        <div id="viewDiv3" class="general-map large-sticky"></div>
-        <!-- viewDiv3 is a gray map -->
+            <section>
+                <div id="viewDiv3" class="general-map content-section large-sticky" style="z-index: 1">
 
+                </div end viewDiv3>
+                <!-- viewDiv3 is a grey map -->
 
-        <div class="my-element ">
-            <span class="lg-text-div">
-                3Nulla malesuada pellentesque elit eget. Non quam lacus suspendisse faucibus. Leo vel fringilla est
-                ullamcorper eget nulla facilisi. Pellentesque diam volutpat commodo sed egestas egestas. Leo vel orci
-                porta non. Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Lorem ipsum dolor sit
-                amet consectetur adipiscing. Nec nam aliquam sem et tortor. Maecenas volutpat blandit aliquam etiam erat
-                velit scelerisque. Mi quis hendrerit dolor magna eget est lorem ipsum. Eu facilisis sed odio morbi.
-                Consectetur lorem donec massa sapien faucibus et. Mattis nunc sed blandit libero volutpat sed cras
-                ornare. Eget lorem dolor sed viverra.
-            </span>
-        </div <!--end my element large sticky-->>
+                <div class="sm-textbox" style="z-index: 2; position: relative">
+                    <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                    <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua. sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. </p>
+                    <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                    <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                    <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt
+                        ut labore et dolore magna aliqua.</p>
+                </div>
+            </section>
+            <div class="lg-text-area ">
+                <h1>Big Box 3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis
+                    lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus
+                    egestas tellus rutrum tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor
+                    massa id neque aliquam vestibulum morbi.
+                    </br></br>
+                    Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris.
+                    Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a
+                    condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna
+                    neque. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed
+                    faucibus turpis in. Turpis massa sed elementum tempus
+                    egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing
+                    commodo. Ornare massa eget egestas purus viverra accumsan in nisl.</p>
+            </div>
 
-    </div>
-
+        </div>
+    </div everything-after-nav>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
