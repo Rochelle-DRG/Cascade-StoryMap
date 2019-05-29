@@ -1,0 +1,43 @@
+$page-font: Arial, Helvetica, sans-serif;
+$backup-color: gray; //for when images do not load
+
+$welcome-img-url: url("/dist/img/umbrella-lady.gif");
+$welcome-box-background-color: rgba(250, 138, 73, 0.6);
+$welcome-box-border-color: 2px solid rgb(68, 185, 0);
+$welcome-h1-color: white;
+$welcome-h1-shadow: 3px 3px 2px black; //x y blur color;
+$welcome-p-color: black;
+$welcome-p-shadow: .08em .08em 1em white;
+
+$map-h1-bkgnd-color: rgba(255, 255, 255, 0.8);
+$map-h1-text-color: black;
+
+$sm-textbox-text-color: white;
+$sm-textbox-bkgnd-color: rgba(0, 0, 0, 0.8);
+$sm-textbox-border-color: .2em solid black;
+
+$lg-text-h1-color: black;
+$lg-text-h1-shadow: .05em .05em .1em rgb(76, 168, 0); //x y blur color
+$lg-text-img-shadow: .3em .3em .4em rgb(76, 168, 0);
+
+$credits-bkgnd-color: rgb(1, 24, 1);
+$credits-text-color: white;
+
+//################### MEDIA & MIX-INS
+
+@mixin for-phone-only {             //aqua
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {   //magenta
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {   //yellow
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {           //green
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {       //orange
+    @media (min-width: 1800px) { @content; }
+  }
+

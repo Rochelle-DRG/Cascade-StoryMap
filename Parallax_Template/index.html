@@ -5,22 +5,22 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Cascade StoryMap</title>
     <!-- Bootstrap css -->
+    <link rel="stylesheet" href="src/sass/reset.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="src/sass/reset.css">
-
+    <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
 
     <link rel="stylesheet" href="src/sass/style.css">
 
-    <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
 
     <!-- <link rel="stylesheet" href="src/sass/sticky.css"> -->
 
 
 </head>
 
-<body>
+<body id="bootstrap-overrides">
 
     <nav class="navabar navbar-dark bg-dark fixed-top">
         <div class="container">
@@ -35,27 +35,32 @@
                 <h1>About This StoryMap</h1>
                 <p>This is Davey Resource Groups's customizable cascading Template. <br>
                     All colors and images are customizable. <br>
-                    There are a variety of basemap options displayed here, and the styling and colors of the map may be customizable as well.</p>
+                    There are a variety of basemap options displayed here, and the styling and colors of the map may be
+                    customizable as well.</p>
             </div>
         </div end welcome>
 
         <div class="main-body">
             <section>
-                <div id="viewDiv" class="general-map content-section large-sticky" style="z-index: 1">
+                <div class="section-title">
+                    <h1>Section Title</h1>
+                </div>
 
+                <div id="viewDiv" class="general-map content-section sticky">
                 </div end viewDiv>
                 <!-- viewDiv is a topo-vector map -->
 
-                <div class="sm-textbox" style="z-index: 2; position: relative">
-                    <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt
-                        ut labore et dolore magna aliqua.</p>
-                    <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt
-                        ut labore et dolore magna aliqua. sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing
+                <div class="sm-textbox">
+                    <p>First sm-textbox: There can be as many or few of these as you like.</p>
+                    <p>Second sm-textbox Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                        <br />
+                        <img src="dist/img/bargraph1.jpg">
+                        <br />
+                        sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit, sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua.</p>
-                    <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    <p>Third sm-textbox Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt
                         ut labore et dolore magna aliqua.</p>
                     <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -69,13 +74,15 @@
 
 
             <div class="lg-text-area ">
-                <h1>Big Box 1</h1>
+                <h1>Large Text Area 1</h1>
+                <img src="dist/img/trees_aerial.jpg">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis
                     lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus
                     egestas tellus rutrum tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor
                     massa id neque aliquam vestibulum morbi.
-                    </br></br>
+                </p>
+                <p>
                     Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris.
                     Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a
                     condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna
@@ -83,10 +90,28 @@
                     faucibus turpis in. Turpis massa sed elementum tempus
                     egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing
                     commodo. Ornare massa eget egestas purus viverra accumsan in nisl.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis
+                    lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus
+                    egestas tellus rutrum tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor
+                    massa id neque aliquam vestibulum morbi.
+                </p>
+                <p>
+                    Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris.
+                    Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a
+                    condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna
+                    neque. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed
+                    faucibus turpis in. Turpis massa sed elementum tempus
+                    egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing
+                    commodo. Ornare massa eget egestas purus viverra accumsan in nisl.</p>
+
             </div>
 
             <section>
-                <div id="viewDiv2" class="general-map content-section large-sticky" style="z-index: 1">
+                <div class="section-title">
+                    <h1>Section 2 Title</h1>
+                </div>
+                <div id="viewDiv2" class="general-map content-section sticky" style="z-index: 1">
 
                 </div end viewDiv2>
                 <!-- viewDiv2 is a street map -->
@@ -113,13 +138,15 @@
             </section>
 
             <div class="lg-text-area ">
-                <h1>Big Box 2</h1>
+                <h1>Large Text Area 2</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis
                     lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus
                     egestas tellus rutrum tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor
                     massa id neque aliquam vestibulum morbi.
-                    </br></br>
+                    </br>
+                    <img src="dist/img/pie-chart.png">
+                    </br>
                     Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris.
                     Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a
                     condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna
@@ -130,7 +157,10 @@
             </div>
 
             <section>
-                <div id="viewDiv3" class="general-map content-section large-sticky" style="z-index: 1">
+                <div class="section-title">
+                    <h1>Section 3 Title</h1>
+                </div>
+                <div id="viewDiv3" class="general-map content-section sticky" style="z-index: 1">
 
                 </div end viewDiv3>
                 <!-- viewDiv3 is a grey map -->
@@ -156,7 +186,7 @@
                 </div>
             </section>
             <div class="lg-text-area ">
-                <h1>Big Box 3</h1>
+                <h1>Large Text Area 3</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis
                     lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus
@@ -171,7 +201,16 @@
                     egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing
                     commodo. Ornare massa eget egestas purus viverra accumsan in nisl.</p>
             </div>
+            <div class="credits">
+                <h1>With thanks to</h1>
+                <ul>
+                    <li>Bill</li>
+                    <li>Rochelle</li>
+                    <li>Will</li>
+                    <li>And all of our testers!</li>
 
+                </ul>
+            </div>
         </div>
     </div everything-after-nav>
 

@@ -1,90 +1,221 @@
-// @import "reset.css"; 
+@import "variables.scss"; 
+#bootstrap-overrides{
+
+.navbar-brand { //color changes for testing only
+    color: aqua; //for-phone-only / default
+    @include for-tablet-portrait-up {
+        color: magenta;
+    }
+    @include for-tablet-landscape-up {
+        color: yellow;
+    }
+    @include for-desktop-up {
+        color: greenyellow;
+    }
+    @include for-big-desktop-up {
+        color: rgb(255, 208, 0); 
+    }
+}
+
 
 html,body {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: $page-font;
 }
 .everything-after-nav {
     text-align: center;
 }
+
+h1{
+    font-size: 2em;
+    @include for-tablet-portrait-up {
+        font-size: 2.5em;
+    }
+    @include for-tablet-landscape-up {
+        font-size: 3em;
+    }
+    @include for-big-desktop-up {
+        font-size: 6em;
+    }
+}
+p{
+    @include for-big-desktop-up {
+        font-size: 2em;
+    }
+}
+
 .welcome-container {
-    background-image: url("/dist/img/umbrella-lady.gif");
-    background-size: 100%;
-    background-color: gray;
+    background-image: $welcome-img-url;
+    // background-size: 100%;
+    background-size: cover;
+    background-color: $backup-color;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     position: relative;
-    // margin: 
-   
+    
     .welcome-content{
-        background-color: rgba(250, 138, 73, 0.6);
-        padding-top: 2em;
-        padding-bottom: 2em;
-        margin-left: 20%;
-        margin-right: 20%;
+        background-color: $welcome-box-background-color;
         position: absolute;
-        top: 20%;
-        border: 2px solid rgb(68, 185, 0);
+        border: $welcome-box-border-color;
         font-weight: bold;
+        top: 3em;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 1em;
+        margin-top: 20%;
 
+        @include for-tablet-portrait-up {
+            top: 15%;
+            margin-left: 15%;
+            margin-right: 15%;
+            padding-top: 1.5em;
+            margin-top: 0%;
+        }
+        @include for-tablet-landscape-up {
+            padding-top: 2em;
+            padding-bottom: 2em;
+            margin-left: 20%;
+            margin-right: 20%;
+            top: 20%;
+        }
+        @include for-big-desktop-up {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
         
         h1 {
-            color: rgb(65, 204, 0);
-            text-shadow: 3px 3px 2px black; //x y blur color
-            font-size: 3em;
+            color: $welcome-h1-color;
+            text-shadow: $welcome-h1-shadow; //x y blur color
+            padding-left: .3em;
+            padding-right: .3em;
         }
         p {
-            color: black;
-            text-shadow: 1px 1px 10px white;
+            color: $welcome-p-color;
+            text-shadow: $welcome-p-shadow;
             margin-top: 2em;
-            padding-left: 3em;
-            padding-right: 3em;
+            // padding-left: 3em;
+            // padding-right: 3em;
             line-height: 150%;
- 
         }
         
     }
 } 
+section {
+    .general-map {
+        padding: 0;
+        margin-top: 0px;
+        height: 100vh;
+        width: 100%;
+        z-index: 1 ;
+        // border: .2em solid black;
+    }
+    .section-title{ /// must be fixed, opacity 0, change when map stick
+        z-index: 3;
+        position: relative;
+        position: sticky;
+        top: 0;
+    
+            h1 {
+                color: $map-h1-text-color;
+                font-weight: bold;
+                background-color: $map-h1-bkgnd-color;
+                padding: .3em;
+                margin-left: 20%;
+                margin-right: 20%;
+                padding-top: 1em; //to place it below the nav bar instead of behind
+            }
 
-.general-map {
-    padding: 0;
-    margin-top: 0px;
-    height: 100vh;
-    width: 100%;
+    }
+    .sm-textbox {
+        width: 90%;
+        z-index: 5;
+        position: relative;
+        padding: 2em;
+        margin-left: 5%;
+        margin-right: 5%;
+        @include for-tablet-portrait-up {
+            width: 40%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @include for-tablet-landscape-up {
+            width: 35%;
+        }
+        @include for-desktop-up {
+            width: 25%;
+        }
+        
+    }
+    .sm-textbox p {
+        background-color: $sm-textbox-bkgnd-color;  
+        padding: .8em;
+        color: $sm-textbox-text-color;
+        border: $sm-textbox-border-color;
+        border-radius: 1em;
+        margin-bottom: 20em;
+    }
+    .sm-textbox img {
+        margin-top: 1em; 
+        margin-bottom: 1em;
+        border-radius: 1.5em;
+        max-width: 90%;
+    }
 }
-
-.large-sticky {
+.sticky {
     position: sticky;
     top: 0;
-    z-index:5;
 }
 
-.sm-textbox {
-    width: 25%;
-    
-    padding: 20px;
-    
-}
-.sm-textbox p {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-bottom: 20em;
 
-}
-// .sm-textbox p:not(:last-child){
-//     margin-bottom: 20em;
-// }
 
 .lg-text-area {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 3em;
     margin-bottom: 5em;
+    font-weight: bold;
+    @include for-tablet-portrait-up {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    @include for-tablet-landscape-up {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    @include for-desktop-up {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
 
+
+    h1{
+        color: $lg-text-h1-color;
+        text-shadow: $lg-text-h1-shadow;
+    }
     p {
         margin-top: 3em;
+        line-height: 140%;
     }
+    img {
+        background-color: $backup-color;
+        size: auto;
+        // margin-left: 50%;
+        // margin-right: 50%;
+        max-width: 50%;
+        border-radius: 2em;
+        box-shadow: $lg-text-img-shadow;
+        margin: 2em;
+        @include for-tablet-portrait-up {
+            max-width: 50%;
+        }
+    }
+}
+
+.credits {
+    background-color: $credits-bkgnd-color;
+    color: $credits-text-color;
+    text-shadow: $lg-text-h1-shadow;
+}
+
+
 }
