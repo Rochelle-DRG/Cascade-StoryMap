@@ -1,6 +1,5 @@
 /** just a function wrapper so that i can delay code execution until after the JSON loads */
 var enableMapControls = function () {
-
     /** bit of a helper function that Returns a map layer given a layer name (layer1, layer2 etc..) */
     var layerFind = function (layerID) {
         for (var i = 0; i < (map.layers).length; i++) {

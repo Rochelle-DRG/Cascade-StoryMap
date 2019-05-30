@@ -31,27 +31,28 @@
     <div class="everything-after-nav">
 
         <div class="welcome-container">
-            <div class="welcome-content">
-                <h1>About This StoryMap</h1>
+            <div id="welcome" class="welcome-content">
+                <!-- <h1>About This StoryMap</h1>
                 <p>This is Davey Resource Groups's customizable cascading Template. <br>
                     All colors and images are customizable. <br>
                     There are a variety of basemap options displayed here, and the styling and colors of the map may be
-                    customizable as well.</p>
+                    customizable as well.</p> -->
             </div>
         </div end welcome>
 
-        <div class="main-body">
-            <section>
-                <div class="section-title">
-                    <h1>Section Title</h1>
-                </div>
+        <div id="main-body" class="main-body">
+            
+            <!-- <section id="thisSectionsID">
+                <div id="section-title" class="section-title">
+                     <h1>Section Title</h1> -->
+                <!-- </div>
 
-                <div id="viewDiv" class="general-map content-section sticky">
+                <div id="viewDiv4" class="general-map content-section sticky" style="z-index: 1">
                 </div end viewDiv>
-                <!-- viewDiv is a topo-vector map -->
+                 viewDiv is a topo-vector map -->
 
-                <div class="sm-textbox">
-                    <p>First sm-textbox: There can be as many or few of these as you like.</p>
+                <!-- <div id="sm-textbox" class="sm-textbox"> --> -->
+                    <!-- <p>First sm-textbox: There can be as many or few of these as you like.</p>
                     <p>Second sm-textbox Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua.
                         <br />
@@ -68,9 +69,9 @@
                         ut labore et dolore magna aliqua.</p>
                     <p>sm-textbox2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt
-                        ut labore et dolore magna aliqua.</p>
-                </div>
-            </section>
+                        ut labore et dolore magna aliqua.</p> -->
+                <!-- </div>
+            </section> --> 
 
 
             <div class="lg-text-area ">
@@ -107,16 +108,16 @@
 
             </div>
 
-            <section>
+            <!-- <section>
                 <div class="section-title">
                     <h1>Section 2 Title</h1>
                 </div>
                 <div id="viewDiv2" class="general-map content-section sticky" style="z-index: 1">
 
-                </div end viewDiv2>
+                </div end viewDiv2> -->
                 <!-- viewDiv2 is a street map -->
 
-                <div class="sm-textbox" style="z-index: 2; position: relative">
+                <!-- <div class="sm-textbox" style="z-index: 2; position: relative">
                     <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt
                         ut labore et dolore magna aliqua.</p>
@@ -135,7 +136,7 @@
                         incididunt
                         ut labore et dolore magna aliqua.</p>
                 </div>
-            </section>
+            </section> -->
 
             <div class="lg-text-area ">
                 <h1>Large Text Area 2</h1>
@@ -156,16 +157,16 @@
                     commodo. Ornare massa eget egestas purus viverra accumsan in nisl.</p>
             </div>
 
-            <section>
-                <div class="section-title">
+            <!-- <section> -->
+                <!-- <div class="section-title">
                     <h1>Section 3 Title</h1>
                 </div>
                 <div id="viewDiv3" class="general-map content-section sticky" style="z-index: 1">
 
-                </div end viewDiv3>
+                </div end viewDiv3> -->
                 <!-- viewDiv3 is a grey map -->
 
-                <div class="sm-textbox" style="z-index: 2; position: relative">
+                <!-- <div class="sm-textbox" style="z-index: 2; position: relative">
                     <p>sm-textbox1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt
                         ut labore et dolore magna aliqua.</p>
@@ -184,7 +185,8 @@
                         incididunt
                         ut labore et dolore magna aliqua.</p>
                 </div>
-            </section>
+            </section> -->
+
             <div class="lg-text-area ">
                 <h1>Large Text Area 3</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -201,17 +203,17 @@
                     egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing
                     commodo. Ornare massa eget egestas purus viverra accumsan in nisl.</p>
             </div>
-            <div class="credits">
+            
+        </div end main-body>
+        <div class="credits">
                 <h1>With thanks to</h1>
                 <ul>
                     <li>Bill</li>
                     <li>Rochelle</li>
                     <li>Will</li>
                     <li>And all of our testers!</li>
-
                 </ul>
             </div>
-        </div>
     </div everything-after-nav>
 
 
@@ -229,14 +231,13 @@
         crossorigin="anonymous"></script>
     <!-- Esri API -->
     <script src="https://js.arcgis.com/4.11/"></script>
+
     <script src="src/javascript/map.js"></script>
+    <!-- <script src="src/javascript/map1.js"></script> -->
+    <script src="src/javascript/map_controller.js"></script>
+    <script src="src/javascript/page_controls.js"></script>
+    <script src="src/javascript/main.js"></script>
 
-    <script>
-        $(document).ready(function () {
-
-            // $(".my-element").paroller({ factor: 0.5, factorXs: 0.2, factorSm: 0.3, type: 'foreground', direction: 'vertical' });  
-        }); 
-    </script>
 </body>
 
 </html>
