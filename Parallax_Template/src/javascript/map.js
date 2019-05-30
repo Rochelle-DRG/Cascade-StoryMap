@@ -4,7 +4,8 @@ makeAMap = function (mapBasemap) {
 makeAView = function (mapContainer, theMap, mapCenter, mapZoom) {
 };
 
-$(document).ready(function () {
+// $(document).ready(function () {
+loadTheMapController = function(){
     console.log("ready");
     console.log(makeAMap);
     require([
@@ -81,4 +82,5 @@ $(document).ready(function () {
         };
 
     });
-});
+// }); //end doc.ready
+} //end loadTheMapController

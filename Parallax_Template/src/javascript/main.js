@@ -7,6 +7,7 @@
 
 var mapPoints = {};
 var mapLayers = {}; //dict of layers
+loadTheMapController();
 
 // Returning info from our "DB"
 $.getJSON("ajax/page.json", function (data) {
