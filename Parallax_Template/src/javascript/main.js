@@ -20,11 +20,6 @@ $.getJSON("ajax/page.json", function (data) {
         mapLayers[k] = layer;
     });
 
-    // $.getScript("./map.js", function(){
-    //     console.log("Map.js loaded but not necessarily executed.");
-    // });
-
-
     // Loop each slide
     $.each(data.slides, function (k, jsonSlide) {
         // THe index is used for the mobile slides somehow
@@ -34,15 +29,7 @@ $.getJSON("ajax/page.json", function (data) {
         mapPoints[k] = jsonSlide.MapAttributes;
 
         makeTheSlide(jsonSlide);
-
-        // // maping a map list
-        // $.each(data.maps, function (k, mymaps) {
-        //     mapMaps[k] = mymaps;
-        // });
-
     });//end .each
-
-
 
     // adding the title to the page
     $("title").replaceWith("<title>" + data.page_info.page_title + "</title>");
@@ -149,12 +136,3 @@ var makeTheSlide = function (jsonSlide) {
     // else {console.log("There has been an error.");} //for some reason this executes when it shouldn't so I'm turning it off
 }; //end makeTheSlide function
 
-function loadScript(src, callback) {
-    let script = document.createElement('script');
-    script.src = src;
-
-    script.onload = () => callback(null, script);
-    script.onerror = () => callback(new Error(`Script load error for ${src}`));
-
-    document.head.append(script);
-};

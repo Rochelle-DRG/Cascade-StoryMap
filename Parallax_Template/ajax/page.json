@@ -423,7 +423,7 @@
                 "viewType": "map",
                 "sectionID": "slide13_section",
                 "containerID": "slide13_map",
-                "basemap": "top-vector",
+                "basemap": "topo-vector",
                 "mapCenter": [-122.035534, 47.616567],
                 "zoom": 13,
                 "featureArray": ["Layer1", "Layer8"],
