@@ -1,30 +1,30 @@
 // varFromMapJS = "hello world";
-makeAMap = function (mapBasemap) {
-};
-makeAView = function (mapContainer, theMap, mapCenter, mapZoom) {
-};
+// makeAMap = function (mapBasemap) {
+// };
+// makeAView = function (mapContainer, theMap, mapCenter, mapZoom) {
+// };
 
 // $(document).ready(function () {
 loadTheMapController = function(){
     console.log("ready");
-    console.log(makeAMap);
+    // console.log(makeAMap);
     require([
         "esri/Map",
         "esri/views/MapView"
     ], function (Map, MapView) {
 
-        var map = new Map({
+        var aMap = new Map({
             basemap: "topo-vector"
         });
 
-        makeAMap = function(mapBasemap){
-            var map = new Map({
+        window.makeAMap = function(mapBasemap){
+            var theMap = new Map({
                 basemap: mapBasemap
             });
-            return map;
+            return theMap;
         }
         console.log(makeAMap);
-        makeAView = function (mapContainer, theMap, mapCenter, mapZoom) {
+        var makeAView = function (mapContainer, theMap, mapCenter, mapZoom) {
             var mapview = new MapView({
                 container: mapContainer,
                 map: theMap,
