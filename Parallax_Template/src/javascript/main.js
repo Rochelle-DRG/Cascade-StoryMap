@@ -7,6 +7,7 @@ $.ajax({ crossDomain: true });
 
 var mapPoints = {};
 var mapLayers = {}; //dict of layers
+var mapMaps = {};
 // loadTheMapController();
 
 // Returning info from our "DB"
@@ -32,6 +33,11 @@ $.getJSON("ajax/page.json", function (data) {
         mapPoints[k] = jsonSlide.MapAttributes;
 
         makeTheSlide(jsonSlide);
+    
+    // maping a map list
+    $.each(data.maps, function (k, mymaps){
+        mapMaps[k] = mymaps;
+    });
 
     });//end .each
 
@@ -97,21 +103,21 @@ var makeTheSlide = function (jsonSlide) {
         var slideContainer = jsonSlide.MapAttributes.containerID;
 
         //Trying callback for a solution
-        loadScript('src/javascript/map.js', function(error, script){
-            if (error) {
-                console.log("error loading script");
-                console.log(makeAMap);
+        // loadScript('src/javascript/map.js', function(error, script){
+        //     if (error) {
+        //         console.log("error loading script");
+        //         console.log(makeAMap);
 
-              } else {
-                loadTheMapController();
+        //       } else {
+        //         loadTheMapController();
 
-                console.log("script loaded okay");
-                console.log(window.makeAMap);
+        //         console.log("script loaded okay");
+        //         console.log(window.makeAMap);
 
-                var slideMap = makeAMap(slideBasemap); //calls global function from map.js
-                var slideView = makeAView(slideContainer, slideMap, slideCenter);
-                  }
-        });
+        //         var slideMap = makeAMap(slideBasemap); //calls global function from map.js
+        //         var slideView = makeAView(slideContainer, slideMap, slideCenter);
+        //           }
+        // });
 
 
         // turned off d/t problems getting the function from map.js

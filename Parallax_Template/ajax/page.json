@@ -125,6 +125,28 @@
             "order": 6
         }
     },
+    "maps": {
+        "map1": {
+            "mapname": "map1",
+            "container": "slide2_map",
+            "basemap": "topo-vector",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13
+        },
+        "map2": {
+            "mapname": "map4",
+            "container": "slide4_map",
+            "basemap": "streets",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13
+        }
+    },
     "slides": {
         "slide1": {
             "slideType": "welcome",

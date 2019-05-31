@@ -4,83 +4,38 @@
 // makeAView = function (mapContainer, theMap, mapCenter, mapZoom) {
 // };
 
-// $(document).ready(function () {
-loadTheMapController = function(){
-    console.log("ready");
+$(document).ready(function () {
+// loadTheMapController = function(){
+    console.log("-- Page loaded, adding the maps");
     // console.log(makeAMap);
     require([
         "esri/Map",
         "esri/views/MapView"
     ], function (Map, MapView) {
 
-        var aMap = new Map({
-            basemap: "topo-vector"
-        });
-
-        window.makeAMap = function(mapBasemap){
-            var theMap = new Map({
-                basemap: mapBasemap
+        $.each(mapMaps, function(k, mapattribute) {
+            var currentmap = new Map({
+                basemap:mapattribute.basemap,
             });
-            return theMap;
-        }
-        console.log(makeAMap);
-        var makeAView = function (mapContainer, theMap, mapCenter, mapZoom) {
-            var mapview = new MapView({
-                container: mapContainer,
-                map: theMap,
-                center: mapCenter,
-                zoom: mapZoom
-            })
-            return mapview;
-        };
 
-        var mapview1 = new MapView({
-            container: "viewDiv4", //div ID must match
-            map: map,
-            center: [-73.988015, 40.739561], // NYC
-            zoom: 11
+            // console.log(" -- adding the map view to div")
+            var currentview = new MapView({
+                container: mapattribute.container,
+                map: currentmap,
+                center: mapattribute.mapCenter,
+                zoom: mapattribute.zoom
+            });
+
+            currentview.ui.move("zoom", "bottom-right");
+            currentview.on("mouse-wheel", function (event) {
+                //disable mouse wheel scroll zooming on the view
+                event.stopPropagation();
+            });
+            currentview.on("drag", function (event) {
+                //disable panning
+                event.stopPropagation();
+            });
         });
-
-        var map2 = new Map({
-            basemap: "streets"
-        });
-
-        var mapview2 = new MapView({
-            container: "viewDiv2",
-            map: map2,
-            center: [-81.693914, 41.498157], // CLE
-            zoom: 10
-        });
-
-        var map3 = new Map({
-            basemap: "gray"
-        });
-
-        var mapview3 = new MapView({
-            container: "viewDiv3",
-            map: map3,
-            center: [-77.035123, 38.889262],
-            zoom: 10
-        });
-
-        mapview1.on("mouse-wheel", function (event) {
-            //disable mouse wheel scroll zooming on the view
-            event.stopPropagation();
-        });
-
-        mapview2.on("mouse-wheel", function (event) {
-            //disable mouse wheel scroll zooming on the view
-            event.stopPropagation();
-        });
-
-        mapview1.ui.move("zoom", "bottom-left");
-        mapview2.ui.move("zoom", "bottom-left");
-        mapview3.ui.move("zoom", "bottom-left");
-
-        thisIsFunction = function (message) {
-            console.log('Your msg: ' + message);
-        };
 
     });
-// }); //end doc.ready
-} //end loadTheMapController
+}); //end doc.ready
