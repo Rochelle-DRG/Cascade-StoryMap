@@ -9,6 +9,7 @@ var mapPoints = {};
 var mapLayers = {}; //dict of layers
 var mapMaps = {};
 var mapAttributes = [];
+// var layerDictionary = {};
 // loadTheMapController();
 
 // Returning info from our "DB"
@@ -19,6 +20,9 @@ $.getJSON("ajax/page.json", function (data) {
     $.each(data.Layers, function (k, layer) {
         mapLayers[k] = layer;
     });
+    // $.each(data.Layers, function (k, layer) {
+
+    // })
 
     // Loop each slide
     $.each(data.slides, function (k, jsonSlide) {
