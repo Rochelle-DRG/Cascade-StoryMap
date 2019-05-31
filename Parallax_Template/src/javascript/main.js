@@ -8,6 +8,7 @@ $.ajax({ crossDomain: true });
 var mapPoints = {};
 var mapLayers = {}; //dict of layers
 var mapMaps = {};
+var mapAttributes = [];
 // loadTheMapController();
 
 // Returning info from our "DB"
@@ -33,11 +34,11 @@ $.getJSON("ajax/page.json", function (data) {
         mapPoints[k] = jsonSlide.MapAttributes;
 
         makeTheSlide(jsonSlide);
-    
-    // maping a map list
-    $.each(data.maps, function (k, mymaps){
-        mapMaps[k] = mymaps;
-    });
+
+        // // maping a map list
+        // $.each(data.maps, function (k, mymaps) {
+        //     mapMaps[k] = mymaps;
+        // });
 
     });//end .each
 
@@ -82,6 +83,8 @@ var makeTheSlide = function (jsonSlide) {
     } //end if(welcome)
 
     if (jsonSlide.slideType === "mapSection") {
+        //add the mapAttributes to a global array for map.js to build the maps with
+        mapAttributes.push(jsonSlide.MapAttributes);
         //create <section >
         var nodeSection = document.createElement("section");
         nodeSection.setAttribute("id", jsonSlide.MapAttributes.sectionID);
@@ -96,40 +99,10 @@ var makeTheSlide = function (jsonSlide) {
         var textnodeh1 = document.createTextNode(jsonSlide.title);
         nodeh1.appendChild(textnodeh1);
         document.getElementById(jsonSlide.headerDivID).appendChild(nodeh1);
-        //next create a map and append it to the html
-        var slideBasemap = jsonSlide.MapAttributes.basemap;
-        var slideZoom = jsonSlide.MapAttributes.zoom;
-        var slideCenter = jsonSlide.MapAttributes.mapCenter; // (2) [-122.035534, 47.616567]
-        var slideContainer = jsonSlide.MapAttributes.containerID;
-
-        //Trying callback for a solution
-        // loadScript('src/javascript/map.js', function(error, script){
-        //     if (error) {
-        //         console.log("error loading script");
-        //         console.log(makeAMap);
-
-        //       } else {
-        //         loadTheMapController();
-
-        //         console.log("script loaded okay");
-        //         console.log(window.makeAMap);
-
-        //         var slideMap = makeAMap(slideBasemap); //calls global function from map.js
-        //         var slideView = makeAView(slideContainer, slideMap, slideCenter);
-        //           }
-        // });
-
-
-        // turned off d/t problems getting the function from map.js
-        // createMap(slideBasemap, slideZoom, slideCenter, slideContainer);
-        // var slideMap = makeAMap(slideBasemap); //calls global function from map.js
-        // var slideView = makeAView(slideContainer, slideMap, slideCenter);
-        // console.log(slideMap);
-        // console.log(makeAMap); //not defined yet
-        // append it to the html
+        //next create a mapDiv and append it to the html
         //make a div with the id=slideContainer
         var nodeMapDiv = document.createElement("div");
-        nodeMapDiv.setAttribute("id", slideContainer);
+        nodeMapDiv.setAttribute("id", jsonSlide.MapAttributes.containerID);
         nodeMapDiv.setAttribute("class", "general-map content-section sticky");
         nodeMapDiv.setAttribute("style", "z-index: 1");
         //append it to <section id= >
@@ -149,7 +122,7 @@ var makeTheSlide = function (jsonSlide) {
             document.getElementById(jsonSlide.paragraphDivID).appendChild(nodep);
         } //end for
     }; //end if mapSection
-    if (jsonSlide.slideType === "textSection"){
+    if (jsonSlide.slideType === "textSection") {
         //1 make a div with an id=@ and class="lg-text-area"
         var nodeTextDiv = document.createElement("div");
         nodeTextDiv.setAttribute("id", jsonSlide.textSectionDivID);
@@ -170,13 +143,13 @@ var makeTheSlide = function (jsonSlide) {
             document.getElementById(jsonSlide.textSectionDivID).appendChild(nodep);
         } //end for
     } //end if "textSection"
-    if (jsonSlide.slideType !== "textSection" && jsonSlide.slideType !== "mapSection" && jsonSlide.slideType !== "welcome"){ 
+    if (jsonSlide.slideType !== "textSection" && jsonSlide.slideType !== "mapSection" && jsonSlide.slideType !== "welcome") {
         console.log("There has been a very strange error.");
     }
     // else {console.log("There has been an error.");} //for some reason this executes when it shouldn't so I'm turning it off
 }; //end makeTheSlide function
 
-function loadScript(src, callback){
+function loadScript(src, callback) {
     let script = document.createElement('script');
     script.src = src;
 

@@ -125,28 +125,6 @@
             "order": 6
         }
     },
-    "maps": {
-        "map1": {
-            "mapname": "map1",
-            "container": "slide2_map",
-            "basemap": "topo-vector",
-            "mapCenter": [
-                -122.035534,
-                47.616567
-            ],
-            "zoom": 13
-        },
-        "map2": {
-            "mapname": "map4",
-            "container": "slide4_map",
-            "basemap": "streets",
-            "mapCenter": [
-                -122.035534,
-                47.616567
-            ],
-            "zoom": 13
-        }
-    },
     "slides": {
         "slide1": {
             "slideType": "welcome",
@@ -172,7 +150,7 @@
                 "viewType": "map",
                 "sectionID": "slide2_section",
                 "containerID": "slide2_map",
-                "basemap": "topo-vector",
+                "basemap": "topo",
                 "mapCenter": [
                     -122.035534,
                     47.616567
@@ -221,8 +199,8 @@
                 "viewType": "map",
                 "sectionID": "slide4_section",
                 "containerID": "slide4_map",
-                "basemap": "topo-vector",
-                "MapCenter": [-122.035534, 47.616567],
+                "basemap": "streets",
+                "mapCenter": [-122.035534, 47.616567],
                 "zoom": 13,
                 "featureArray": ["Layer1", "Layer7"],
                 "searchLayer": "Layer1",
@@ -262,8 +240,8 @@
                 "viewType": "map",
                 "sectionID": "slide6_section",
                 "containerID": "slide6_map",
-                "basemap": "topo-vector",
-                "MapCenter": [-122.035534, 47.616567],
+                "basemap": "satellite",
+                "mapCenter": [-122.035534, 47.616567],
                 "zoom": 13,
                 "featureArray": ["Layer1", "Layer5"],
                 "searchLayer": "Layer1",
@@ -288,8 +266,8 @@
                 "viewType": "map",
                 "sectionID": "slide7_section",
                 "containerID": "slide7_map",
-                "basemap": "topo-vector",
-                "MapCenter": [-122.035534, 47.616567],
+                "basemap": "hybrid",
+                "mapCenter": [-122.035534, 47.616567],
                 "zoom": 13,
                 "featureArray": ["Layer1", "Layer2"],
                 "searchLayer": "Layer1",
@@ -314,8 +292,8 @@
                 "viewType": "map",
                 "sectionID": "slide8_section",
                 "containerID": "slide8_map",
-                "basemap": "topo-vector",
-                "MapCenter": [-122.035534, 47.616567],
+                "basemap": "gray",
+                "mapCenter": [-122.035534, 47.616567],
                 "zoom": 13,
                 "featureArray": ["Layer1", "Layer3"],
                 "searchLayer": "Layer1",
@@ -341,8 +319,8 @@
                 "viewType": "map",
                 "sectionID": "slide9_section",
                 "containerID": "slide9_map",
-                "basemap": "topo-vector",
-                "MapCenter": [-122.035534, 47.616567],
+                "basemap": "national-geographic",
+                "mapCenter": [-122.035534, 47.616567],
                 "zoom": 13,
                 "featureArray": ["Layer1", "Layer4"],
                 "searchLayer": "Layer1",
@@ -367,8 +345,86 @@
                 "viewType": "map",
                 "sectionID": "slide10_section",
                 "containerID": "slide10_map",
-                "basemap": "topo-vector",
-                "MapCenter": [-122.035534, 47.616567],
+                "basemap": "terrain",
+                "mapCenter": [-122.035534, 47.616567],
+                "zoom": 13,
+                "featureArray": ["Layer1", "Layer8"],
+                "searchLayer": "Layer1",
+                "searchFld": "",
+                "searchAttr": ""
+            },
+            "writtenContent": [
+                "In general, a sustainable urban forest is a forest in which the trees are of different ages and diverse with species well-suited to site conditions, and that are insect and disease resistant and low maintenance. A tree population meeting these criteria is sustainable, resilient, and produces maximum social, economic, and ecological benefits for the community.",
+                "<div class='quote'>'We cannot separate sustainable urban forests from the people who live in and around them. Sustainable urban forests are not born, they are made. They do not arise at random, but result from a community-wide commitment to their creation and management.  Obtaining the commitment of a broad community, of numerous constituencies, cannot be dictated or legislated. It must arise out of compromise and respect.'<br> -- Clark, et. al., A Model of Urban Forest Sustainability</div>",
+                "In recent months, the City has conducted a public opinion survey and worked with consultants to explore all the ways that the City and residents connect with urban forestry issues.  By the autumn of 2018, this page will be updated with summary positions that will help the city realize its vision for the future forest in Sammamish."
+                                ]
+        },
+        "slide11": {
+            "slideType": 
+            "mapSection",
+            "title": "Managing for the Future Forest",
+            "Subtitle": "",
+            "paragraphTitle": "",
+            "headerDivID": "slide11Header",
+            "paragraphDivID": "slide11paragraphs",
+            "MapAttributes": {
+                "viewType": "map",
+                "sectionID": "slide11_section",
+                "containerID": "slide11_map",
+                "basemap": "osm",
+                "mapCenter": [-122.035534, 47.616567],
+                "zoom": 13,
+                "featureArray": ["Layer1", "Layer8"],
+                "searchLayer": "Layer1",
+                "searchFld": "",
+                "searchAttr": ""
+            },
+            "writtenContent": [
+                "In general, a sustainable urban forest is a forest in which the trees are of different ages and diverse with species well-suited to site conditions, and that are insect and disease resistant and low maintenance. A tree population meeting these criteria is sustainable, resilient, and produces maximum social, economic, and ecological benefits for the community.",
+                "<div class='quote'>'We cannot separate sustainable urban forests from the people who live in and around them. Sustainable urban forests are not born, they are made. They do not arise at random, but result from a community-wide commitment to their creation and management.  Obtaining the commitment of a broad community, of numerous constituencies, cannot be dictated or legislated. It must arise out of compromise and respect.'<br> -- Clark, et. al., A Model of Urban Forest Sustainability</div>",
+                "In recent months, the City has conducted a public opinion survey and worked with consultants to explore all the ways that the City and residents connect with urban forestry issues.  By the autumn of 2018, this page will be updated with summary positions that will help the city realize its vision for the future forest in Sammamish."
+                                ]
+        },
+        "slide12": {
+            "slideType": 
+            "mapSection",
+            "title": "Managing for the Future Forest",
+            "Subtitle": "",
+            "paragraphTitle": "",
+            "headerDivID": "slide12Header",
+            "paragraphDivID": "slide12paragraphs",
+            "MapAttributes": {
+                "viewType": "map",
+                "sectionID": "slide12_section",
+                "containerID": "slide12_map",
+                "basemap": "gray-vector",
+                "mapCenter": [-122.035534, 47.616567],
+                "zoom": 13,
+                "featureArray": ["Layer1", "Layer8"],
+                "searchLayer": "Layer1",
+                "searchFld": "",
+                "searchAttr": ""
+            },
+            "writtenContent": [
+                "In general, a sustainable urban forest is a forest in which the trees are of different ages and diverse with species well-suited to site conditions, and that are insect and disease resistant and low maintenance. A tree population meeting these criteria is sustainable, resilient, and produces maximum social, economic, and ecological benefits for the community.",
+                "<div class='quote'>'We cannot separate sustainable urban forests from the people who live in and around them. Sustainable urban forests are not born, they are made. They do not arise at random, but result from a community-wide commitment to their creation and management.  Obtaining the commitment of a broad community, of numerous constituencies, cannot be dictated or legislated. It must arise out of compromise and respect.'<br> -- Clark, et. al., A Model of Urban Forest Sustainability</div>",
+                "In recent months, the City has conducted a public opinion survey and worked with consultants to explore all the ways that the City and residents connect with urban forestry issues.  By the autumn of 2018, this page will be updated with summary positions that will help the city realize its vision for the future forest in Sammamish."
+                                ]
+        },
+        "slide13": {
+            "slideType": 
+            "mapSection",
+            "title": "Managing for the Future Forest",
+            "Subtitle": "",
+            "paragraphTitle": "",
+            "headerDivID": "slide13Header",
+            "paragraphDivID": "slide13paragraphs",
+            "MapAttributes": {
+                "viewType": "map",
+                "sectionID": "slide13_section",
+                "containerID": "slide13_map",
+                "basemap": "top-vector",
+                "mapCenter": [-122.035534, 47.616567],
                 "zoom": 13,
                 "featureArray": ["Layer1", "Layer8"],
                 "searchLayer": "Layer1",
@@ -381,6 +437,9 @@
                 "In recent months, the City has conducted a public opinion survey and worked with consultants to explore all the ways that the City and residents connect with urban forestry issues.  By the autumn of 2018, this page will be updated with summary positions that will help the city realize its vision for the future forest in Sammamish."
                                 ]
         }
+
+
+
 
     }
 }

@@ -1,29 +1,20 @@
-// varFromMapJS = "hello world";
-// makeAMap = function (mapBasemap) {
-// };
-// makeAView = function (mapContainer, theMap, mapCenter, mapZoom) {
-// };
 
 $(document).ready(function () {
-// loadTheMapController = function(){
-    console.log("-- Page loaded, adding the maps");
-    // console.log(makeAMap);
     require([
         "esri/Map",
         "esri/views/MapView"
     ], function (Map, MapView) {
 
-        $.each(mapMaps, function(k, mapattribute) {
+        $.each(mapAttributes, function(k, slideMap) {
             var currentmap = new Map({
-                basemap:mapattribute.basemap,
+                basemap:slideMap.basemap,
             });
 
-            // console.log(" -- adding the map view to div")
             var currentview = new MapView({
-                container: mapattribute.container,
+                container: slideMap.containerID,
                 map: currentmap,
-                center: mapattribute.mapCenter,
-                zoom: mapattribute.zoom
+                center: slideMap.mapCenter,
+                zoom: slideMap.zoom
             });
 
             currentview.ui.move("zoom", "bottom-right");
@@ -35,7 +26,7 @@ $(document).ready(function () {
                 //disable panning
                 event.stopPropagation();
             });
-        });
+        }); //end .each
 
-    });
+    }); //end require/function
 }); //end doc.ready
