@@ -6,7 +6,7 @@
 $.ajax({ crossDomain: true });
 
 var mapPoints = {};
-var mapLayers = {}; //dict of layers
+var mapLayers = {}; //dict of all the layers
 var mapMaps = {};
 var mapAttributes = [];
 // loadTheMapController();
