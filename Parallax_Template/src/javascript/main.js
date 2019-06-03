@@ -58,7 +58,7 @@ $.getJSON("ajax/page.json", function (data) {
 }).always(function () {
     console.log("Data Loaded, Generating page...");
     // createMap();
-    enableMapControls();
+    // enableMapControls();
     // enableMainControls();
 
 
