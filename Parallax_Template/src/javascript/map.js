@@ -12,7 +12,8 @@ $(document).ready(function () {
     ], function (Map, FeatureLayer, WMSLayer, WMSLayerInfo, Extent, esriConfig, LayerSwipe) {
 
         //dealing with the CORS/wms problem
-        esriConfig.defaults.io.corsEnabledServers.push("gis.davey.com");
+        // esriConfig.defaults.io.corsEnabledServers.push("gis.davey.com");
+        esriConfig.defaults.io.corsDetection = false;
 
         $.each(mapAttributes, function (k, slideMap) {
             // console.log(slideMap); //good
@@ -28,16 +29,51 @@ $(document).ready(function () {
                 //  console.log(mapLayers);
                 //  console.log(mapLayers[layerNumber]);
                 //  console.log(mapLayers[layerNumber].url);
-                var layer = mapLayers[layerNumber];
+                var slide = mapLayers[layerNumber];
                 var newLayer;
-                // if (slide.type === "raster") {
+                if (slide.type === "raster") {
+                    var layer1 = new WMSLayerInfo({
+                        name: '1',
+                        title: 'Rivers'
+                      });
+                      var layer2 = new WMSLayerInfo({
+                        name: '2',
+                        title: 'Cities'
+                      });
+                      var resourceInfo = {
+                        extent: new Extent(-126.40869140625, 31.025390625, -109.66552734375, 41.5283203125, {
+                          wkid: 4326
+                        }),
+                        layerInfos: [layer1, layer2]
+                      };
+                    //   var wmsLayer = new WMSLayer('https://sampleserver1.arcgisonline.com/ArcGIS/services/Specialty/ESRI_StatesCitiesRivers_USA/MapServer/WMSServer', {
+                        var wmsLayer = new WMSLayer('https://gis.davey.com/arcgis/services/Sammamish/SammamishFeatures/MapServer/WMSServer', {
+   
+                    resourceInfo: resourceInfo,
+                        visibleLayers: ['1', '2']
+                      });
+                      currentMap.addLayers([wmsLayer]);
 
-                newLayer = new FeatureLayer(layer.url)
-                currentMap.addLayer(newLayer);
 
-            }); //end .each slideMap
 
-        }); //end .each mapAttributs
+                    newLayer = new WMSLayer(slide.url,
+                        {
+                            resourceInfo: resourceInfo,
+                            visibleLayers: ['name1', 'name2'] 
+                        });
+            } //end if raster
 
-    }); //end require/function
+            if (slide.type === "feature") {
+                newLayer = new FeatureLayer(slide.url)
+            }
+            currentMap.addLayer(newLayer);
+            console.log(currentMap.FeatureLayer);
+
+        }); //end .each layerNumber
+
+
+
+    }); //end .each
+
+}); //end require/function
 }); //end doc.ready
