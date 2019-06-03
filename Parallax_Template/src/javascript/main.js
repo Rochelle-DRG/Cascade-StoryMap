@@ -20,11 +20,6 @@ $.getJSON("ajax/page.json", function (data) {
         mapLayers[k] = layer;
     });
 
-    // $.getScript("./map.js", function(){
-    //     console.log("Map.js loaded but not necessarily executed.");
-    // });
-
-
     // Loop each slide
     $.each(data.slides, function (k, jsonSlide) {
         // THe index is used for the mobile slides somehow
