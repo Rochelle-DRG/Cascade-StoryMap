@@ -107,7 +107,7 @@
             "popupContent": [
                 ""
             ],
-            "order": 51
+            "order": 6
         },
         "Layer8": {
             "title": "Priority Planting",
@@ -122,7 +122,203 @@
                 "Planting Priority: {priority}",
                 "Area (SQFT): {sqft:NumberFormat(places:2)}"
             ],
-            "order": 6
+            "order": 7
+        },
+        "Layer9": {
+            "title": "Lower Grand City Limits",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/0",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "City Limits",
+            "legend": false,
+            "popup": false,
+            "popupContent": [
+                ""
+            ],
+            "order": 8
+        },
+        "Layer10": {
+            "title": "Lower Grand Census Blocks",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/1",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Census Blocks",
+            "legend": true,
+            "popup": true,
+            "popupContent": [
+                "",
+                "Tree Type: {Type}"
+            ],
+            "order": 9
+        },
+        "Layer11": {
+            "title": "Lower Grand Land Cover",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/2",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Land Cover",
+            "legend": true,
+            "popup": true,
+            "popupContent": [
+                "",
+                "Name: {NAME}",
+                "Type: {TYPE}",
+                "Canopy Acres: {canopy_acres:NumberFormat(places:2)}",
+                "Canopy %: {canopy_percent:NumberFormat(places:2)}"
+            ],
+            "order": 10
+        },
+        "Layer12": {
+            "title": "Sparta's Parcels",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/3",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Sparta's Parcels",
+            "legend": true,
+            "popup": true,
+            "popupContent": [
+                "",
+                "Name: {basinname}",
+                "Canopy Acres: {canopy_acres:NumberFormat(places:2)}",
+                "Canopy %: {canopy_percent:NumberFormat(places:2)}",
+                "Preferrable Acres: {preferrable_acres:NumberFormat(places:2)}",
+                "Preferrable %: {preferrable_percent:NumberFormat(places:2)}",
+                "Maximum UTC %: {maximum_utc_percent:NumberFormat(places:2)}"
+            ],
+            "order": 11
+        },
+        "Layer13": {
+            "title": "Lower Grand Land Use Classification",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/4",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Land Use Classification",
+            "legend": true,
+            "popup": true,
+            "popupContent": [
+                "",
+                "Name: {basinname}",
+                "Canopy Acres: {canopy_acres:NumberFormat(places:2)}",
+                "Canopy %: {canopy_percent:NumberFormat(places:2)}",
+                "Preferrable Acres: {preferrable_acres:NumberFormat(places:2)}",
+                "Preferrable %: {preferrable_percent:NumberFormat(places:2)}",
+                "Maximum UTC %: {maximum_utc_percent:NumberFormat(places:2)}"
+            ],
+            "order": 12
+        },
+        "Layer14": {
+            "title": "Lower Grand Priority Planting Level",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/5",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Priority Planting Level",
+            "legend": true,
+            "popup": true,
+            "popupContent": [
+                "",
+                "Name: {basinname}",
+                "Canopy Acres: {canopy_acres:NumberFormat(places:2)}",
+                "Canopy %: {canopy_percent:NumberFormat(places:2)}",
+                "Preferrable Acres: {preferrable_acres:NumberFormat(places:2)}",
+                "Preferrable %: {preferrable_percent:NumberFormat(places:2)}",
+                "Maximum UTC %: {maximum_utc_percent:NumberFormat(places:2)}"
+            ],
+            "order": 13
+        },
+        "Layer15": {
+            "title": "Lower Grand Land Use",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/6",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Land Use",
+            "legend": true,
+            "popup": true,
+            "popupContent": [
+                "",
+                "Name: {basinname}",
+                "Canopy Acres: {canopy_acres:NumberFormat(places:2)}",
+                "Canopy %: {canopy_percent:NumberFormat(places:2)}",
+                "Preferrable Acres: {preferrable_acres:NumberFormat(places:2)}",
+                "Preferrable %: {preferrable_percent:NumberFormat(places:2)}",
+                "Maximum UTC %: {maximum_utc_percent:NumberFormat(places:2)}"
+            ],
+            "order": 14
+        },
+        "Layer16": {
+            "title": "Hudsonville's Tree Placement Points",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/7",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Hudsonville's Tree Placement Points",
+            "legend": true,
+            "popup": true,
+            "popupContent": [
+                "",
+                "Name: {basinname}",
+                "Canopy Acres: {canopy_acres:NumberFormat(places:2)}",
+                "Canopy %: {canopy_percent:NumberFormat(places:2)}",
+                "Preferrable Acres: {preferrable_acres:NumberFormat(places:2)}",
+                "Preferrable %: {preferrable_percent:NumberFormat(places:2)}",
+                "Maximum UTC %: {maximum_utc_percent:NumberFormat(places:2)}"
+            ],
+            "order": 15
+        },
+        "Layer17": {
+            "title": "Hudsonville's Tree Size",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/8",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Hudsonville's Tree Size",
+            "legend": true,
+            "popup": true,
+            "popupContent": [
+                "",
+                "Name: {basinname}",
+                "Canopy Acres: {canopy_acres:NumberFormat(places:2)}",
+                "Canopy %: {canopy_percent:NumberFormat(places:2)}",
+                "Preferrable Acres: {preferrable_acres:NumberFormat(places:2)}",
+                "Preferrable %: {preferrable_percent:NumberFormat(places:2)}",
+                "Maximum UTC %: {maximum_utc_percent:NumberFormat(places:2)}"
+            ],
+            "order": 16
+        },
+        "Layer18": {
+            "title": "Hudsonville's Creekside Park Boundary",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/9",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Hudsonville's Creekside Park Boundary",
+            "legend": true,
+            "popup": true,
+            "popupContent": [
+                "",
+                "Name: {basinname}",
+                "Canopy Acres: {canopy_acres:NumberFormat(places:2)}",
+                "Canopy %: {canopy_percent:NumberFormat(places:2)}",
+                "Preferrable Acres: {preferrable_acres:NumberFormat(places:2)}",
+                "Preferrable %: {preferrable_percent:NumberFormat(places:2)}",
+                "Maximum UTC %: {maximum_utc_percent:NumberFormat(places:2)}"
+            ],
+            "order": 17
+        },
+        "Layer19": {
+            "title": "Ferrysburg Tree Health Index",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/13",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Ferrysburg Tree Health Index",
+            "legend": true,
+            "popup": true,
+            "popupContent": [
+                "",
+                "Name: {basinname}",
+                "Canopy Acres: {canopy_acres:NumberFormat(places:2)}",
+                "Canopy %: {canopy_percent:NumberFormat(places:2)}",
+                "Preferrable Acres: {preferrable_acres:NumberFormat(places:2)}",
+                "Preferrable %: {preferrable_percent:NumberFormat(places:2)}",
+                "Maximum UTC %: {maximum_utc_percent:NumberFormat(places:2)}"
+            ],
+            "order": 18
         }
     },
     "slides": {
