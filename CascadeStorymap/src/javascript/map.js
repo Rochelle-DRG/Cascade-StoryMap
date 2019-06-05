@@ -23,6 +23,18 @@ $(document).ready(function () {
                 zoom: slideMap.zoom
             });
 
+            currentMap.on("load", function(){
+                currentMap.disableMapNavigation();
+            });
+
+            currentMap.on("mouse-drag-start", function(){
+                currentmap.enableMapNavigation();
+            });
+
+            currentMap.on('mouse-out', function(){
+                currentMap.disableMapNavigation();
+            });
+
             //loop through MapAttributes.featureArray
             $.each(slideMap.featureArray, function (j, layerNumber) {
                 //  console.log(layerNumber);

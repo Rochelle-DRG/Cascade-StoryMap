@@ -52,13 +52,13 @@
 
 @media (min-width: 1800px) {
   #bootstrap-overrides h1 {
-    font-size: 6em;
+    font-size: 4em;
   }
 }
 
 @media (min-width: 1800px) {
   #bootstrap-overrides p {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
@@ -184,8 +184,8 @@
   background-color: rgba(0, 0, 0, 0.8);
   padding: .8em;
   color: white;
-  border: 0.2em solid black;
-  border-radius: 1em;
+  border: 1px solid black;
+  border-radius: 0.5em;
   margin-bottom: 20em;
 }
 

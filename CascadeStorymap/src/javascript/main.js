@@ -12,7 +12,7 @@ var mapAttributes = [];
 // loadTheMapController();
 
 // Returning info from our "DB"
-$.getJSON("ajax/page.json", function (data) {
+$.getJSON("database/page.json", function (data) {
     var slides = [];
 
     // forming a dict of layers to populate the map with in the next step

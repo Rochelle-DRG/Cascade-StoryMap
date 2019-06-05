@@ -34,12 +34,12 @@ h1{
         font-size: 3em;
     }
     @include for-big-desktop-up {
-        font-size: 6em;
+        font-size: 4em;
     }
 }
 p{
     @include for-big-desktop-up {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
@@ -151,7 +151,7 @@ section {
         padding: .8em;
         color: $sm-textbox-text-color;
         border: $sm-textbox-border-color;
-        border-radius: 1em;
+        border-radius: 0.5em;
         margin-bottom: 20em;
     }
     .sm-textbox img {
