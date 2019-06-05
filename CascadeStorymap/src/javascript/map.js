@@ -27,13 +27,13 @@ $(document).ready(function () {
                 currentMap.disableMapNavigation();
             });
 
-            currentMap.on("mouse-drag-start", function(){
-                currentmap.enableMapNavigation();
-            });
+            // currentMap.on("click", function(){
+            //     currentmap.enableMapNavigation();
+            // });
 
-            currentMap.on('mouse-out', function(){
-                currentMap.disableMapNavigation();
-            });
+            // currentMap.on('mouse-out', function(){
+            //     currentMap.disableMapNavigation();
+            // });
 
             //loop through MapAttributes.featureArray
             $.each(slideMap.featureArray, function (j, layerNumber) {
