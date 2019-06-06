@@ -17,6 +17,7 @@ $(document).ready(function () {
         "esri/dijit/LayerSwipe",
 
         "dojo/domReady!"
+<<<<<<< HEAD
     ], function (Map,
         FeatureLayer,
         WMSLayer,
@@ -124,4 +125,5 @@ $(document).ready(function () {
             }); //end .each
 
         }); //end require/function
+
 }); //end doc.ready
