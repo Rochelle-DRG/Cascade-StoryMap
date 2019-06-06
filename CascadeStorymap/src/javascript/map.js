@@ -17,7 +17,7 @@ $(document).ready(function () {
         "esri/dijit/LayerSwipe",
 
         "dojo/domReady!"
-<<<<<<< HEAD
+
     ], function (Map,
         FeatureLayer,
         WMSLayer,
@@ -92,17 +92,17 @@ $(document).ready(function () {
                     var deferred = identifyTask
                         .execute(identifyParams)
                         .addCallback(function (response) {
-                            //skipping the if (response.length > 0)
-                            console.log(currentMap);//currentMap.basemapLayerID 
-                            console.log(currentMap.basemapLayerID);                     //undefined
-                            // console.log(currentMap.infoWindow.featureLayers);        // undefined
-                            console.log(currentMap.layerIds);                        // currentMap.layerIds ["layer0"]I think this is actually returning the slide?
-                            console.log(response); //THIS CODE IS BEING REACHED BUT THE RESPONSE IS EMPTY sometimes
+                            // //skipping the if (response.length > 0)
+                            // console.log(currentMap);//currentMap.basemapLayerID 
+                            // console.log(currentMap.basemapLayerID);                     //undefined
+                            // // console.log(currentMap.infoWindow.featureLayers);        // undefined
+                            // console.log(currentMap.layerIds);                        // currentMap.layerIds ["layer0"]I think this is actually returning the slide?
+                            // console.log(response); //THIS CODE IS BEING REACHED BUT THE RESPONSE IS EMPTY sometimes
                             // response should include layerID, layerName, displayFieldName, value, geomtryType....
 
                             if (response.length > 0) {//if there should be a popup
                                 return arrayUtils.map(response, function (result) {
-                                    console.log("this code is being executed"); 
+                                    // console.log("this code is being executed"); 
                                     var feature = result.feature;
                                     var layerName = result.layerName;
                                     feature.attributes.layerName = layerName;
