@@ -311,6 +311,7 @@
             "paragraphTitle": "",
             "headerDivID": "slide9Header",
             "paragraphDivID": "slide9paragraphs",
+            "legendClass": "legend, legend-right",
             "MapAttributes": {
                 "viewType": "map",
                 "sectionID": "slide9_section",

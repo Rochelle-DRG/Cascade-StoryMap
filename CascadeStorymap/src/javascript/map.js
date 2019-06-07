@@ -59,22 +59,12 @@ $(document).ready(function () {
                 });
 
                 legendDivId = slideMap.containerID + "_legend"; //the same as the div made in main.js
-                console.log("The legend div is "+legendDivId);    
+                // console.log("The legend div is "+legendDivId);    
                 legendDijit = new Legend({
                     map: currentMap,
                     layerInfos: [{ layer: dynamicMSL }]
-                }, 'esriLegend'); //end legendDijit new
-                // }, 'legendDivId'); //end legendDijit new
-                // console.log(currentMap);
-
-                // testMap2 = new Map({
-                //     basemap: "topo"
-                // });
-                legendDijit2 = new Legend({
-                    map: currentMap,
-                    layerInfos: [{ layer: dynamicMSL }]
                 // }, 'esriLegend'); //end legendDijit new
-                }, 'legendDivId2'); //end legendDijit new
+                }, legendDivId); //end legendDijit new
 
 
 

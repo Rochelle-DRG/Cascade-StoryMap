@@ -160,20 +160,62 @@ section {
         border-radius: 1.5em;
         max-width: 90%;
     }
+    .legend {
+        background-color: $sm-textbox-bkgnd-color;  
+        padding: .8em;
+        color: $sm-textbox-text-color;
+        border: $sm-textbox-border-color;
+        border-radius: 0.5em;
+        margin-bottom: 20em;
+        // margin-left: auto; //no effect
+        // margin-right: auto;
+    }
+    .legend-right {
+        position: sticky;
+        top: 0;
+        // margin-right: 10%;
 
+    }
+    table{
+        margin-left: auto; //no effect
+        margin-right: auto;
+
+    }
+    .esriLegendLayer td { //the text by the images
+        color: white;
+        line-height: .2em; //no effect
+        border-bottom-color: aqua; //no effect
+        margin-bottom: 0px; //no effect
+        margin-top: 0px;    //no effect
+        background-color: black; //yes this is where we set the background color
+
+    }
+    .esriLegendLayerLabel  { // the subheading (the heading we want)
+        color: black;
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-right: 10%;
+        // background-color: rgb(122, 122, 122); //works, but using .esriLegendService instead
+    }
+    .esriLegendServiceLabel { 
+        display: none;  //turns off the title I don't want
+    }
+    .esriLegendGroupLayer {
+        background-color: red; //no effect
+    }
+    .esriLegendLayer {
+        background-color: maroon; //no effect
+    }
+    .esriLegendService {
+        background-color: rgb(153, 226, 153);
+    }
+    
+    
 }
-.legend {
-    border-color: red;
-    min-height: 20px;
-    min-width: 20px;
-    background-color: violet;
-}
-.legend2 {
-    border-color: rgb(15, 234, 250);
-    min-height: 20px;
-    min-width: 20px;
-    background-color: rgb(15, 234, 250);
-}
+
 
 .sticky {
     position: sticky;

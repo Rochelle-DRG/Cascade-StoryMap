@@ -196,18 +196,59 @@
   max-width: 90%;
 }
 
-#bootstrap-overrides .legend {
-  border-color: red;
-  min-height: 20px;
-  min-width: 20px;
-  background-color: violet;
+#bootstrap-overrides section .legend {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: .8em;
+  color: white;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  margin-bottom: 20em;
 }
 
-#bootstrap-overrides .legend2 {
-  border-color: #0feafa;
-  min-height: 20px;
-  min-width: 20px;
-  background-color: #0feafa;
+#bootstrap-overrides section .legend-right {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#bootstrap-overrides section table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#bootstrap-overrides section .esriLegendLayer td {
+  color: white;
+  line-height: .2em;
+  border-bottom-color: aqua;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background-color: black;
+}
+
+#bootstrap-overrides section .esriLegendLayerLabel {
+  color: black;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-right: 10%;
+}
+
+#bootstrap-overrides section .esriLegendServiceLabel {
+  display: none;
+}
+
+#bootstrap-overrides section .esriLegendGroupLayer {
+  background-color: red;
+}
+
+#bootstrap-overrides section .esriLegendLayer {
+  background-color: maroon;
+}
+
+#bootstrap-overrides section .esriLegendService {
+  background-color: #99e299;
 }
 
 #bootstrap-overrides .sticky {

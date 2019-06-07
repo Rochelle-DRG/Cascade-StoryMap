@@ -81,16 +81,6 @@ var makeTheSlide = function (jsonSlide) {
         //add the mapAttributes to a global array for map.js to build the maps with
         mapAttributes.push(jsonSlide.MapAttributes);
 
-        //##@@** Let's try putting the legend into one of these
-        //for starts, just add the legends all to the top of the page
-        var nodeDivLegend = document.createElement("div");
-        var legendId = jsonSlide.MapAttributes.containerID+"_legend";
-        var textLegDiv = document.createTextNode("Hey, it's the legend div!");
-        nodeDivLegend.appendChild(textLegDiv);
-        nodeDivLegend.setAttribute("id", legendId);
-        nodeDivLegend.setAttribute("class", "legend");
-        document.getElementById("main-body").appendChild(nodeDivLegend);
-        console.log("The divID is "+ legendId);
 
 
 
@@ -121,6 +111,16 @@ var makeTheSlide = function (jsonSlide) {
         nodePDiv.setAttribute("id", jsonSlide.paragraphDivID);
         nodePDiv.setAttribute("class", "sm-textbox");
         document.getElementById(jsonSlide.MapAttributes.sectionID).appendChild(nodePDiv);
+
+        //##@@** Let's try putting the legend into one of these
+        var nodeDivLegend = document.createElement("div");
+        var legendId = jsonSlide.MapAttributes.containerID+"_legend";
+        // var textLegDiv = document.createTextNode("Hey, it's the legend div!");
+        // nodeDivLegend.appendChild(textLegDiv);
+        nodeDivLegend.setAttribute("id", legendId);
+        nodeDivLegend.setAttribute("class", jsonSlide.legendClass);
+        document.getElementById(jsonSlide.paragraphDivID).appendChild(nodeDivLegend);
+
 
 
         //add the paragraph boxes
