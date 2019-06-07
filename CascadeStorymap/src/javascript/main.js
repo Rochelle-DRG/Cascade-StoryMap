@@ -87,9 +87,10 @@ var makeTheSlide = function (jsonSlide) {
         var legendId = jsonSlide.MapAttributes.containerID+"_legend";
         var textLegDiv = document.createTextNode("Hey, it's the legend div!");
         nodeDivLegend.appendChild(textLegDiv);
-        nodeDivLegend.setAttribute("id", "legendId");
+        nodeDivLegend.setAttribute("id", legendId);
         nodeDivLegend.setAttribute("class", "legend");
         document.getElementById("main-body").appendChild(nodeDivLegend);
+        console.log("The divID is "+ legendId);
 
 
 

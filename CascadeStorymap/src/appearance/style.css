@@ -203,6 +203,13 @@
   background-color: violet;
 }
 
+#bootstrap-overrides .legend2 {
+  border-color: #0feafa;
+  min-height: 20px;
+  min-width: 20px;
+  background-color: #0feafa;
+}
+
 #bootstrap-overrides .sticky {
   position: -webkit-sticky;
   position: sticky;

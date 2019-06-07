@@ -47,27 +47,37 @@ $(document).ready(function () {
             esriConfig.defaults.io.corsDetection = false;
 
             makeTheLegend = function (slideMap, currentMap) {
-                console.log("2.) makeTheLegend called");
                 var detailLayer = mapLayers[slideMap.searchLayer].layerID;
                 var imageParameters = new ImageParameters();
                 imageParameters.layerIds = detailLayer;
                 imageParameters.layerOption = ImageParameters.LAYER_OPTION_SHOW; //defines that you only see the layer(s) listed above
                 imageParameters.transparent = true; //the website says "Whether or not background of dynamic image is transparent."
                 imageParameters.format = "png32" //this makes the opacity set at the service level actually work (untested outside of chrome)
-                console.log("A");
                 //maybe we can just use the featureLayer here
                 dynamicMSL = new ArcGISDynamicMapServiceLayer(layersURL,{ 
                     "imageParameters": imageParameters 
                 });
-                console.log("B");
 
                 legendDivId = slideMap.containerID + "_legend"; //the same as the div made in main.js
-                console.log("C");    
+                console.log("The legend div is "+legendDivId);    
                 legendDijit = new Legend({
                     map: currentMap,
                     layerInfos: [{ layer: dynamicMSL }]
                 }, 'esriLegend'); //end legendDijit new
-                console.log("D");
+                // }, 'legendDivId'); //end legendDijit new
+                // console.log(currentMap);
+
+                // testMap2 = new Map({
+                //     basemap: "topo"
+                // });
+                legendDijit2 = new Legend({
+                    map: currentMap,
+                    layerInfos: [{ layer: dynamicMSL }]
+                // }, 'esriLegend'); //end legendDijit new
+                }, 'legendDivId2'); //end legendDijit new
+
+
+
 
             }; //end makeTheLegend
 
@@ -75,7 +85,7 @@ $(document).ready(function () {
 
             // mapAttributes is the list of individula map details from all of the Slides
             $.each(mapAttributes, function (k, slideMap) {
-                console.log("1.) current map: " + slideMap.containerID); //good
+                // console.log("1.) current map: " + slideMap.containerID); //good
                 var currentMap = new Map(slideMap.containerID, {
                     basemap: slideMap.basemap,
                     center: slideMap.mapCenter,
@@ -89,7 +99,7 @@ $(document).ready(function () {
 
                 //loop through MapAttributes.featureArray (featureArray is a list of the layer #'s for the slide)
                 $.each(slideMap.featureArray, function (j, layerNumber) {
-                    console.log("3.) making " + layerNumber + " of " + slideMap.containerID);
+                    // console.log("3.) making " + layerNumber + " of " + slideMap.containerID);
                     var slide = mapLayers[layerNumber];
                     var newLayer;
 
@@ -108,7 +118,7 @@ $(document).ready(function () {
                     }
 
                     currentMap.addLayer(newLayer);
-                    console.log("4.) end of .each layer");
+                    // console.log("4.) end of .each layer");
                 }); //end .each layerNumber
 
                 legendDijit.refresh();
@@ -118,7 +128,7 @@ $(document).ready(function () {
                 currentMap.on("click", function (event) {
                     setPopups(event, slideMap, currentMap);
                 }); //end on-click
-                console.log("!LAST)end of .each map/slide");
+                // console.log("!LAST)end of .each map/slide");
             }); //end .each
 
 
