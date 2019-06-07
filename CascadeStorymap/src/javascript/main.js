@@ -80,6 +80,19 @@ var makeTheSlide = function (jsonSlide) {
     if (jsonSlide.slideType === "mapSection") {
         //add the mapAttributes to a global array for map.js to build the maps with
         mapAttributes.push(jsonSlide.MapAttributes);
+
+        //##@@** Let's try putting the legend into one of these
+        //for starts, just add the legends all to the top of the page
+        var nodeDivLegend = document.createElement("div");
+        var legendId = jsonSlide.MapAttributes.containerID+"_legend";
+        var textLegDiv = document.createTextNode("Hey, it's the legend div!");
+        nodeDivLegend.appendChild(textLegDiv);
+        nodeDivLegend.setAttribute("id", "legendId");
+        nodeDivLegend.setAttribute("class", "legend");
+        document.getElementById("main-body").appendChild(nodeDivLegend);
+
+
+
         //create <section >
         var nodeSection = document.createElement("section");
         nodeSection.setAttribute("id", jsonSlide.MapAttributes.sectionID);
@@ -107,6 +120,8 @@ var makeTheSlide = function (jsonSlide) {
         nodePDiv.setAttribute("id", jsonSlide.paragraphDivID);
         nodePDiv.setAttribute("class", "sm-textbox");
         document.getElementById(jsonSlide.MapAttributes.sectionID).appendChild(nodePDiv);
+
+
         //add the paragraph boxes
         for (var i = 0, len = (jsonSlide.writtenContent).length; i < len; i++) {
             // console.log(jsonSlide.writtenContent);
@@ -137,7 +152,7 @@ var makeTheSlide = function (jsonSlide) {
             nodep.innerHTML = jsonSlide.writtenContent[i];
             document.getElementById(jsonSlide.textSectionDivID).appendChild(nodep);
         } //end for
-    } //end if "textSection"
+    } //end if "textSection" 
     if (jsonSlide.slideType !== "textSection" && jsonSlide.slideType !== "mapSection" && jsonSlide.slideType !== "welcome") {
         console.log("There has been a very strange error.");
     }

@@ -196,6 +196,13 @@
   max-width: 90%;
 }
 
+#bootstrap-overrides .legend {
+  border-color: red;
+  min-height: 20px;
+  min-width: 20px;
+  background-color: violet;
+}
+
 #bootstrap-overrides .sticky {
   position: -webkit-sticky;
   position: sticky;
