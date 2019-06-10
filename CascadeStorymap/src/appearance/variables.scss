@@ -1,5 +1,12 @@
-$page-font: Arial, Helvetica, sans-serif;
+$page-font: 'Lato', sans-serif;
 $backup-color: gray; //for when images do not load
+$nav-links-hover: rgba(255, 255, 255, 1);
+$nav-bkgnd-color: rgb(0, 20, 7);
+$nav-links-color: rgba(255, 255, 255, 0.7);
+$nav-toggle-color:  rgba(255,255,255,0.8);
+
+
+
 
 $welcome-img-url: url("/CascadeStorymap/src/appearance/img/umbrella-lady.gif"); 
 $welcome-box-background-color: rgba(250, 138, 73, 0.6);

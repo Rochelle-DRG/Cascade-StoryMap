@@ -293,6 +293,7 @@
     "slides": {
         "slide1": {
             "slideType": "welcome",
+            "navLinkTitle": "Welcome",
             "title": "About This StoryMap",
             "Subtitle": "",
             "paragraphTitle": "",
@@ -304,8 +305,8 @@
             ]
         },
         "slide9": {
-            "slideType": 
-            "mapSection",
+            "slideType": "mapSection",
+            "navLinkTitle": "Benefits",
             "title": "Tree Benefits",
             "Subtitle": "",
             "paragraphTitle": "",
@@ -333,6 +334,7 @@
         "slide3": {
             "slideType": 
             "textSection",
+            "navLinkTitle": "Text Area 1",
             "title": "Large Text Area 1",
             "Subtitle": "",
             "paragraphTitle": "",
@@ -349,6 +351,7 @@
         "slide8": {
             "slideType": 
             "mapSection",
+            "navLinkTitle": "Parks",
             "title": "Parks",
             "Subtitle": "",
             "paragraphTitle": "",
@@ -392,6 +395,8 @@
         "slide7": {
             "slideType": 
             "mapSection",
+            "navLinkTitle": "Public Trees",
+
             "title": "Public Trees",
             "Subtitle": "",
             "paragraphTitle": "",

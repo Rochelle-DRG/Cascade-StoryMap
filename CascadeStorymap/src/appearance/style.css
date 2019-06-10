@@ -1,33 +1,149 @@
-#bootstrap-overrides .navbar-brand {
+#bootstrap-overrides * {
+  font-family: "Lato", sans-serif;
+  line-height: 1.3em;
+}
+
+#bootstrap-overrides a {
+  color: #d7ff98;
+}
+
+#bootstrap-overrides .navbar {
+  font-size: 1em;
+  background-color: #001407;
+  padding-bottom: 1em;
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 0;
+    height: 3em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+#bootstrap-overrides .main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 2em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+#bootstrap-overrides .nav-links, #bootstrap-overrides .logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#bootstrap-overrides .main-nav li {
+  text-align: center;
+  margin: 2em auto;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .main-nav li {
+    margin: 0;
+  }
+}
+
+#bootstrap-overrides .logo {
+  display: inline-block;
+  font-size: 2.5em;
+  margin-top: .05em;
+  margin-left: .8em;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .logo {
+    margin-top: 0;
+  }
+}
+
+#bootstrap-overrides .navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .navbar-toggle {
+    display: none;
+  }
+}
+
+#bootstrap-overrides .active {
+  display: block;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .nav-links {
+    margin-left: 2.5em;
+  }
+}
+
+#bootstrap-overrides .logo:hover {
+  color: white;
+}
+
+#bootstrap-overrides .nav-links:hover {
+  color: white;
+}
+
+#bootstrap-overrides .logo {
   color: aqua;
 }
 
 @media (min-width: 600px) {
-  #bootstrap-overrides .navbar-brand {
+  #bootstrap-overrides .logo {
     color: magenta;
   }
 }
 
 @media (min-width: 900px) {
-  #bootstrap-overrides .navbar-brand {
+  #bootstrap-overrides .logo {
     color: yellow;
   }
 }
 
 @media (min-width: 1200px) {
-  #bootstrap-overrides .navbar-brand {
+  #bootstrap-overrides .logo {
     color: greenyellow;
   }
 }
 
 @media (min-width: 1800px) {
-  #bootstrap-overrides .navbar-brand {
+  #bootstrap-overrides .logo {
     color: #ffd000;
   }
-}
-
-#bootstrap-overrides html, #bootstrap-overrides body {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 #bootstrap-overrides .everything-after-nav {

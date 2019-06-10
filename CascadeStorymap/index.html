@@ -7,13 +7,14 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="src/appearance/reset.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
     <!-- <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css"> -->
     <link rel="stylesheet" href="https://js.arcgis.com/3.28/esri/css/esri.css">
 
-
+    <script src="https://kit.fontawesome.com/4c71ca277e.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/appearance/style.css">
 
 
@@ -21,23 +22,36 @@
 
 <body id="bootstrap-overrides">
 
-    <nav class="navabar navbar-dark bg-dark fixed-top">
+    <!-- <nav class="navabar navbar-dark bg-dark fixed-top">
         <div class="container">
             <span class="navbar-brand mb-0 h1">Story Map</span>
         </div>
+    </nav> -->
+
+    <nav class="navbar" id="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo">logo</a>
+        <ul class="main-nav" id="js-menu">
+            <!-- <li>
+                <a href="#" class="nav-links">Home</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Products</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">About Us</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Contact Us</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Blog</a>
+            </li> -->
+        </ul>
     </nav>
 
-    <!-- <div data-dojo-type="dijit/layout/AccordionContainer"> -->
-    <!-- <div data-dojo-type="dijit/layout/ContentPane" id="legendPane"
-             data-dojo-props="title:'Legend', selected:true"> -->
-    <div id="esriLegend" class="legend"></div>
-    <div id="esriLegend2" class="legend2"></div>
-    <!-- </div> -->
-    <!-- <div data-dojo-type="dijit/layout/ContentPane"
-             data-dojo-props="title:'Pane 2'">
-          This pane could contain tools or additional content<br/><br/> Hello
-        </div> -->
-    <!-- </div> -->
 
 
     <div class="everything-after-nav">
@@ -72,9 +86,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <!-- Esri API -->
     <!-- <script src="https://js.arcgis.com/4.11/"></script> -->
     <script src="https://js.arcgis.com/3.28/"></script>

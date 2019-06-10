@@ -65,16 +65,25 @@ $.getJSON("database/page.json", function (data) {
 var makeTheSlide = function (jsonSlide) {
     //make the <h1>
     if (jsonSlide.slideType === "welcome") {
-        var nodeh1 = document.createElement("h1");                  //creates the h1 element
+        var nodeh1 = document.createElement("h1");
+        nodeh1.setAttribute("id", jsonSlide.navLinkTitle);
+        //creates the h1 element
         var textnodeh1 = document.createTextNode(jsonSlide.title);  //creates a text node (neccessary)
         nodeh1.appendChild(textnodeh1);                             // appends the text node to the element
         document.getElementById("welcome").appendChild(nodeh1);     // appends the new element to the existing element in the html
+
+
+        // createNavbarLinks(jsonSlide);
+
+
+
         //make the <p>
         var nodep = document.createElement("p");
         var textnodep = document.createTextNode("");         //there is an extra step here because the string includes html markup that would otherwise be treated literally and be visible instead of working
         nodep.appendChild(textnodep);
         nodep.innerHTML = jsonSlide.writtenContent.join(" ");  //^ and the join removes the otherwise visible commas from the array
         document.getElementById("welcome").appendChild(nodep);
+
     } //end if(welcome)
 
     if (jsonSlide.slideType === "mapSection") {
@@ -93,9 +102,10 @@ var makeTheSlide = function (jsonSlide) {
         nodeDiv.setAttribute("id", jsonSlide.headerDivID);
         nodeDiv.setAttribute("class", "section-title");
         document.getElementById(jsonSlide.MapAttributes.sectionID).appendChild(nodeDiv);
-        
+
         //h1 goes in ^ div 
         var nodeh1 = document.createElement("h1");
+        nodeh1.setAttribute("id", jsonSlide.navLinkTitle);
         var textnodeh1 = document.createTextNode(jsonSlide.title);
         nodeh1.appendChild(textnodeh1);
         document.getElementById(jsonSlide.headerDivID).appendChild(nodeh1);
@@ -155,6 +165,7 @@ var makeTheSlide = function (jsonSlide) {
         var nodeh1 = document.createElement("h1");
         var textnodeh1 = document.createTextNode(jsonSlide.title);
         nodeh1.appendChild(textnodeh1);
+        nodeh1.setAttribute("id", jsonSlide.navLinkTitle);
         document.getElementById(jsonSlide.textSectionDivID).appendChild(nodeh1);
         //p's
         for (var i = 0, len = (jsonSlide.writtenContent).length; i < len; i++) {
@@ -170,6 +181,8 @@ var makeTheSlide = function (jsonSlide) {
         console.log("There has been a very strange error.");
     }
     // else {console.log("There has been an error.");} //for some reason this executes when it shouldn't so I'm turning it off
+    createNavbarLinks(jsonSlide);
+
 }; //end makeTheSlide function
 
 function loadScript(src, callback) {
@@ -181,3 +194,41 @@ function loadScript(src, callback) {
 
     document.head.append(script);
 };
+var createNavbarLinks = function (jsonSlide) {
+    //if the slide has a field navLinkTitle
+    if (jsonSlide.hasOwnProperty("navLinkTitle")){
+        //create an li
+        var nodeListItem = document.createElement("li");
+        //create the link
+        var nodeAnchor = document.createElement("a");
+        nodeAnchor.setAttribute("href", "#" + jsonSlide.navLinkTitle);
+        nodeAnchor.setAttribute("class", "nav-links");
+        var textnodeLi = document.createTextNode(jsonSlide.navLinkTitle);
+        nodeAnchor.appendChild(textnodeLi);
+        //add the achorto li
+        nodeListItem.appendChild(nodeAnchor);
+        //add the li to to ul
+        document.getElementById("js-menu").appendChild(nodeListItem);
+        //anchor to the h1's id
+    }; //end if
+}; //end createNavbarLinks
+
+//nav bar behavior: toggle dropdown
+let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
+navBarToggle.addEventListener('click', function () {
+    mainNav.classList.toggle('active');
+});
+//nav bar behavior: show/hide navbar
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+    } else {
+        document.getElementById("navbar").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+} //end of window.onscroll
+
+

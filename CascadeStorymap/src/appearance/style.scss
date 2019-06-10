@@ -1,7 +1,92 @@
 @import "variables.scss";  
 #bootstrap-overrides{
+    *{
+        font-family: $page-font;
+        line-height: 1.3em;
+    }  
+    a {
+        color: #d7ff98;
+    }
+    .navbar {
+        font-size: 1em;
+        // background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
+        background-color: $nav-bkgnd-color;
+        padding-bottom: 1em;
+        z-index: 500;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: top 0.3s; //Transition effect when sliding up/down
+        @include for-tablet-landscape-up {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0;
+            height: 3em;
+            align-items: center;
+        }
+    }
+    .main-nav {
+        list-style-type: none;
+        display: none;
+        @include for-tablet-landscape-up {
+            display: flex;
+            margin-right: 2em;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+    .nav-links, .logo {
+        text-decoration: none;
+        color: $nav-links-color;
+    }
+    .main-nav li {
+        text-align: center;
+        margin: 2em auto;
+        @include for-tablet-landscape-up {
+            margin: 0;
+        }
+    }
+    .logo {
+        display: inline-block;
+        font-size: 2.5em;
+        margin-top: .05em;
+        margin-left: .8em;
+        @include for-tablet-landscape-up{
+            margin-top: 0;
+        }
+    }
+    
+    
+    .navbar-toggle {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer; 
+        color: $nav-toggle-color;
+        font-size: 24px;
+        @include for-tablet-landscape-up{
+            display: none;
+        }
+    }
+    .active {
+        display: block;
+      }
+    .nav-links{
+        @include for-tablet-landscape-up{
+            margin-left: 2.5em;
+        }
+    }
+    .logo:hover{ 
+        color: $nav-links-hover;
+    }
+    .nav-links:hover{
+        color: $nav-links-hover;
+    }
 
-.navbar-brand { //color changes for testing only
+
+
+
+.logo { //color changes for testing only
     color: aqua; //for-phone-only / default
     @include for-tablet-portrait-up {
         color: magenta;
@@ -18,9 +103,7 @@
 }
 
 
-html,body {
-    font-family: $page-font;
-}
+
 .everything-after-nav {
     text-align: center;
 }
