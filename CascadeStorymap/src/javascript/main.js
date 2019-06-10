@@ -93,11 +93,17 @@ var makeTheSlide = function (jsonSlide) {
         nodeDiv.setAttribute("id", jsonSlide.headerDivID);
         nodeDiv.setAttribute("class", "section-title");
         document.getElementById(jsonSlide.MapAttributes.sectionID).appendChild(nodeDiv);
+        
         //h1 goes in ^ div 
         var nodeh1 = document.createElement("h1");
         var textnodeh1 = document.createTextNode(jsonSlide.title);
         nodeh1.appendChild(textnodeh1);
         document.getElementById(jsonSlide.headerDivID).appendChild(nodeh1);
+
+
+
+
+
         //next create a mapDiv and append it to the html
         //make a div with the id=slideContainer
         var nodeMapDiv = document.createElement("div");
@@ -106,20 +112,26 @@ var makeTheSlide = function (jsonSlide) {
         nodeMapDiv.setAttribute("style", "z-index: 1");
         //append it to <section id= >
         document.getElementById(jsonSlide.MapAttributes.sectionID).appendChild(nodeMapDiv);
+
+
+        //##@@** Let's try putting the legend into one of these
+        var nodeDivLegend = document.createElement("div");
+        var legendId = jsonSlide.MapAttributes.containerID + "_legend";
+        // var textLegDiv = document.createTextNode("Hey, it's the legend div!");
+        // nodeDivLegend.appendChild(textLegDiv);
+        nodeDivLegend.setAttribute("id", legendId);
+        nodeDivLegend.setAttribute("class", jsonSlide.legendClass);
+        // nodeDivLegend.setAttribute("style", "position: sticky; top: 10px");
+        document.getElementById(jsonSlide.MapAttributes.sectionID).appendChild(nodeDivLegend);
+
+
+
         //need div for p's
         var nodePDiv = document.createElement("div");
         nodePDiv.setAttribute("id", jsonSlide.paragraphDivID);
         nodePDiv.setAttribute("class", "sm-textbox");
         document.getElementById(jsonSlide.MapAttributes.sectionID).appendChild(nodePDiv);
 
-        //##@@** Let's try putting the legend into one of these
-        var nodeDivLegend = document.createElement("div");
-        var legendId = jsonSlide.MapAttributes.containerID+"_legend";
-        // var textLegDiv = document.createTextNode("Hey, it's the legend div!");
-        // nodeDivLegend.appendChild(textLegDiv);
-        nodeDivLegend.setAttribute("id", legendId);
-        nodeDivLegend.setAttribute("class", jsonSlide.legendClass);
-        document.getElementById(jsonSlide.paragraphDivID).appendChild(nodeDivLegend);
 
 
 

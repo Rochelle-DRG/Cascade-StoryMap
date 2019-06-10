@@ -197,58 +197,76 @@
 }
 
 #bootstrap-overrides section .legend {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: .8em;
-  color: white;
-  border: 1px solid black;
-  border-radius: 0.5em;
-  margin-bottom: 20em;
+  width: 25%;
+  z-index: 30;
+  padding: 2em;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 #bootstrap-overrides section .legend-right {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 1em;
+  margin-left: 75%;
+  width: 25%;
+}
+
+#bootstrap-overrides section .legend-bottom-right {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 70%;
+  margin-left: 75%;
+  width: 25%;
 }
 
 #bootstrap-overrides section table {
   margin-left: auto;
   margin-right: auto;
-}
-
-#bootstrap-overrides section .esriLegendLayer td {
   color: white;
-  line-height: .2em;
-  border-bottom-color: aqua;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  background-color: black;
 }
 
 #bootstrap-overrides section .esriLegendLayerLabel {
   color: black;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: .9em;
   margin-bottom: 5px;
   margin-left: 10%;
   margin-right: 10%;
-  padding-right: 10%;
+}
+
+#bootstrap-overrides section .esriLegendLayerLabel tbody {
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+#bootstrap-overrides section .esriLegendLayerLabel tbody tr td {
+  padding-top: .2em;
 }
 
 #bootstrap-overrides section .esriLegendServiceLabel {
   display: none;
 }
 
-#bootstrap-overrides section .esriLegendGroupLayer {
-  background-color: red;
+#bootstrap-overrides section .esriLegendLayer {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-#bootstrap-overrides section .esriLegendLayer {
-  background-color: maroon;
+#bootstrap-overrides section .esriLegendLayer table {
+  position: relative;
+  left: 20%;
+  font-size: .8em;
+}
+
+#bootstrap-overrides section td img {
+  position: relative;
+  left: 1em;
 }
 
 #bootstrap-overrides section .esriLegendService {
-  background-color: #99e299;
+  background-color: rgba(252, 255, 209, 0.8);
+  border-radius: 5%;
 }
 
 #bootstrap-overrides .sticky {

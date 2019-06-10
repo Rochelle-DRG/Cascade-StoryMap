@@ -144,7 +144,6 @@ section {
         @include for-desktop-up {
             width: 25%;
         }
-        
     }
     .sm-textbox p {
         background-color: $sm-textbox-bkgnd-color;  
@@ -159,61 +158,69 @@ section {
         margin-bottom: 1em;
         border-radius: 1.5em;
         max-width: 90%;
-    }
+    }  
+
     .legend {
-        background-color: $sm-textbox-bkgnd-color;  
-        padding: .8em;
-        color: $sm-textbox-text-color;
-        border: $sm-textbox-border-color;
-        border-radius: 0.5em;
-        margin-bottom: 20em;
-        // margin-left: auto; //no effect
-        // margin-right: auto;
+        width: 25%;
+        z-index: 30;
+        padding: 2em;
+        margin-left: 5%;
+        margin-right: 5%;
     }
     .legend-right {
-        position: sticky;
-        top: 0;
-        // margin-right: 10%;
-
+        position: sticky !important;
+        top: 1em;
+        margin-left: 75%;
+        width: 25%;
+    }
+    .legend-bottom-right{
+        position: sticky !important;
+        top: 70%;
+        margin-left: 75%;
+        width: 25%;
     }
     table{
-        margin-left: auto; //no effect
+        margin-left: auto; 
         margin-right: auto;
-
-    }
-    .esriLegendLayer td { //the text by the images
         color: white;
-        line-height: .2em; //no effect
-        border-bottom-color: aqua; //no effect
-        margin-bottom: 0px; //no effect
-        margin-top: 0px;    //no effect
-        background-color: black; //yes this is where we set the background color
-
     }
     .esriLegendLayerLabel  { // the subheading (the heading we want)
         color: black;
         font-weight: bold;
-        font-size: 1.1em;
+        font-size: .9em;
         margin-bottom: 5px;
         margin-left: 10%;
         margin-right: 10%;
-        padding-right: 10%;
-        // background-color: rgb(122, 122, 122); //works, but using .esriLegendService instead
+        tbody {
+            margin-left: auto;
+            margin-right: auto;
+            color: black;
+            tr {
+                td{
+                    padding-top: .2em;
+                }
+            }
+        }
     }
     .esriLegendServiceLabel { 
         display: none;  //turns off the title I don't want
     }
-    .esriLegendGroupLayer {
-        background-color: red; //no effect
-    }
     .esriLegendLayer {
-        background-color: maroon; //no effect
+        background-color: rgba(0, 0, 0, 0.8); 
+    }
+    .esriLegendLayer table{
+        position: relative;
+        left: 20%; 
+        font-size: .8em;
+    }
+    td img {
+        position: relative;
+        left: 1em;
     }
     .esriLegendService {
-        background-color: rgb(153, 226, 153);
+        background-color: rgba(252, 255, 209, .8);
+        border-radius: 5%;
     }
-    
-    
 }
 
 

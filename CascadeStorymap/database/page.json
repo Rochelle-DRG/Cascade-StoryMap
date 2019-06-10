@@ -311,7 +311,7 @@
             "paragraphTitle": "",
             "headerDivID": "slide9Header",
             "paragraphDivID": "slide9paragraphs",
-            "legendClass": "legend, legend-right",
+            "legendClass": "legend legend-right",
             "MapAttributes": {
                 "viewType": "map",
                 "sectionID": "slide9_section",
@@ -354,6 +354,7 @@
             "paragraphTitle": "",
             "headerDivID": "slide8Header",
             "paragraphDivID": "slide8paragraphs",
+            "legendClass": "legend",
             "MapAttributes": {
                 "viewType": "map",
                 "sectionID": "slide8_section",
@@ -396,6 +397,7 @@
             "paragraphTitle": "",
             "headerDivID": "slide7Header",
             "paragraphDivID": "slide7paragraphs",
+            "legendClass": "legend legend-bottom-right",
             "MapAttributes": {
                 "viewType": "map",
                 "sectionID": "slide7_section",
