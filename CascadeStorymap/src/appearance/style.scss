@@ -82,7 +82,11 @@
     .nav-links:hover{
         color: $nav-links-hover;
     }
-
+    #bars {
+        position: relative;
+        height: 2.5em;
+        margin-top: -.2em;
+    }
 
 
 
