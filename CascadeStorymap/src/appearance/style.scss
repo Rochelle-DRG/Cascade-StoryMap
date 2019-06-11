@@ -2,7 +2,8 @@
 #bootstrap-overrides{
     *{
         font-family: $page-font;
-        line-height: 1.3em;
+        line-height: 1.5em;
+        // overflow-x: hidden; //messes up layering
     }  
     a {
         color: #d7ff98;
@@ -17,6 +18,7 @@
         top: 0;
         width: 100%;
         transition: top 0.3s; //Transition effect when sliding up/down
+        height: 2.5em;
         @include for-tablet-landscape-up {
             display: flex;
             justify-content: space-between;
@@ -112,19 +114,22 @@
     text-align: center;
 }
 
-h1{
+h1{ //generic
     font-size: 2em;
     @include for-tablet-portrait-up {
-        font-size: 2.5em;
+        font-size: 2.0em;
     }
     @include for-tablet-landscape-up {
-        font-size: 3em;
+        font-size: 2.1em;
+    }
+    @include for-desktop-up{
+        font-size: 2.5em;
     }
     @include for-big-desktop-up {
         font-size: 4em;
     }
 }
-p{
+p{ //generic
     @include for-big-desktop-up {
         font-size: 1.5em;
     }
@@ -184,7 +189,6 @@ p{
             // padding-right: 3em;
             line-height: 150%;
         }
-        
     }
 } 
 section {
@@ -201,7 +205,6 @@ section {
         position: relative;
         position: sticky;
         top: 0;
-    
             h1 {
                 color: $map-h1-text-color;
                 font-weight: bold;
@@ -209,21 +212,25 @@ section {
                 padding: .3em;
                 margin-left: 20%;
                 margin-right: 20%;
-                padding-top: 1em; //to place it below the nav bar instead of behind
+                // padding-top: 1em; //to place it below the nav bar instead of behind
             }
-
     }
     .sm-textbox {
         width: 90%;
         z-index: 5;
         position: relative;
-        padding: 2em;
-        margin-left: 5%;
-        margin-right: 5%;
+        padding: 2%;  
+        margin-left: auto;
+        margin-right: auto;
+    @media screen and (min-width : 430px){
+        width: 70%;
+        padding: 5%;
+    }
         @include for-tablet-portrait-up {
-            width: 40%;
-            margin-left: 0;
-            margin-right: 0;
+            width: 30%;
+            margin-left: 2em;
+            // margin-right: 0;
+            // padding: 2em;
         }
         @include for-tablet-landscape-up {
             width: 35%;
@@ -248,23 +255,35 @@ section {
     }  
 
     .legend {
-        width: 25%;
-        z-index: 30;
-        padding: 2em;
-        margin-left: 5%;
-        margin-right: 5%;
+        display: none;
+        @include for-tablet-portrait-up {
+            display: block;
+            width: 25%;
+            z-index: 30;
+            padding: 2em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        @include for-desktop-up {
+            width: 12em; 
+            $legend-width: 12em;
+        }
     }
     .legend-right {
         position: sticky !important;
         top: 1em;
-        margin-left: 75%;
-        width: 25%;
+        margin-left: 70%;
+        @include for-desktop-up {
+            margin-left: 80%; 
+        }
     }
     .legend-bottom-right{
         position: sticky !important;
-        top: 70%;
-        margin-left: 75%;
-        width: 25%;
+        top: 60%;
+        margin-left: 70%;
+        @include for-desktop-up {
+            margin-left: 80%; 
+        }
     }
     table{
         margin-left: auto; 
@@ -293,7 +312,7 @@ section {
         display: none;  //turns off the title I don't want
     }
     .esriLegendLayer {
-        background-color: rgba(0, 0, 0, 0.8); 
+        background-color: rgba(0, 0, 0, 0.8);
     }
     .esriLegendLayer table{
         position: relative;

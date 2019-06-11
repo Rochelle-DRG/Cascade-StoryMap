@@ -31,20 +31,24 @@ $credits-bkgnd-color: rgb(1, 24, 1);
 $credits-text-color: white;
 
 //################### MEDIA & MIX-INS
-
-@mixin for-phone-only {             //aqua
+//aqua
+@mixin for-phone-only {             
     @media (max-width: 599px) { @content; }
   }
-  @mixin for-tablet-portrait-up {   //magenta
+  //magenta
+  @mixin for-tablet-portrait-up {   
     @media (min-width: 600px) { @content; }
   }
-  @mixin for-tablet-landscape-up {   //yellow
+  //yellow
+  @mixin for-tablet-landscape-up {   
     @media (min-width: 900px) { @content; }
   }
-  @mixin for-desktop-up {           //green
+  //green
+  @mixin for-desktop-up {           
     @media (min-width: 1200px) { @content; }
   }
-  @mixin for-big-desktop-up {       //orange
+  //orange
+  @mixin for-big-desktop-up {       
     @media (min-width: 1800px) { @content; }
   }
 

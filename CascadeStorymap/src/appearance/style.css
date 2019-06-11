@@ -1,6 +1,6 @@
 #bootstrap-overrides * {
   font-family: "Lato", sans-serif;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 
 #bootstrap-overrides a {
@@ -17,6 +17,7 @@
   width: 100%;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
+  height: 2.5em;
 }
 
 @media (min-width: 900px) {
@@ -162,13 +163,19 @@
 
 @media (min-width: 600px) {
   #bootstrap-overrides h1 {
-    font-size: 2.5em;
+    font-size: 2.0em;
   }
 }
 
 @media (min-width: 900px) {
   #bootstrap-overrides h1 {
-    font-size: 3em;
+    font-size: 2.1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides h1 {
+    font-size: 2.5em;
   }
 }
 
@@ -270,23 +277,28 @@
   padding: .3em;
   margin-left: 20%;
   margin-right: 20%;
-  padding-top: 1em;
 }
 
 #bootstrap-overrides section .sm-textbox {
   width: 90%;
   z-index: 5;
   position: relative;
-  padding: 2em;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 430px) {
+  #bootstrap-overrides section .sm-textbox {
+    width: 70%;
+    padding: 5%;
+  }
 }
 
 @media (min-width: 600px) {
   #bootstrap-overrides section .sm-textbox {
-    width: 40%;
-    margin-left: 0;
-    margin-right: 0;
+    width: 30%;
+    margin-left: 2em;
   }
 }
 
@@ -319,27 +331,50 @@
 }
 
 #bootstrap-overrides section .legend {
-  width: 25%;
-  z-index: 30;
-  padding: 2em;
-  margin-left: 5%;
-  margin-right: 5%;
+  display: none;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides section .legend {
+    display: block;
+    width: 25%;
+    z-index: 30;
+    padding: 2em;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides section .legend {
+    width: 12em;
+  }
 }
 
 #bootstrap-overrides section .legend-right {
   position: -webkit-sticky !important;
   position: sticky !important;
   top: 1em;
-  margin-left: 75%;
-  width: 25%;
+  margin-left: 70%;
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides section .legend-right {
+    margin-left: 80%;
+  }
 }
 
 #bootstrap-overrides section .legend-bottom-right {
   position: -webkit-sticky !important;
   position: sticky !important;
-  top: 70%;
-  margin-left: 75%;
-  width: 25%;
+  top: 60%;
+  margin-left: 70%;
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides section .legend-bottom-right {
+    margin-left: 80%;
+  }
 }
 
 #bootstrap-overrides section table {
