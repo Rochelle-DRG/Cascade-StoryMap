@@ -13,8 +13,10 @@ $(document).ready(function () {
         "esri/dijit/Popup",
         "esri/dijit/PopupTemplate",
         "dojo/_base/array",
+        "dojo/_base/array",//this is not a mistake
 
         "esri/dijit/LayerSwipe",
+        "esri/arcgis/utils",
         "esri/dijit/Legend",
         "esri/layers/ArcGISDynamicMapServiceLayer",
         "esri/layers/ImageParameters",
@@ -34,8 +36,10 @@ $(document).ready(function () {
         Popup,
         PopupTemplate,
         arrayUtils,
+        array,
 
         LayerSwipe,
+        arcgisUtils,
         Legend,
         ArcGISDynamicMapServiceLayer,
         ImageParameters) {
@@ -54,8 +58,8 @@ $(document).ready(function () {
                 imageParameters.transparent = true; //the website says "Whether or not background of dynamic image is transparent."
                 imageParameters.format = "png32" //this makes the opacity set at the service level actually work (untested outside of chrome)
                 //maybe we can just use the featureLayer here
-                dynamicMSL = new ArcGISDynamicMapServiceLayer(layersURL,{ 
-                    "imageParameters": imageParameters 
+                dynamicMSL = new ArcGISDynamicMapServiceLayer(layersURL, {
+                    "imageParameters": imageParameters
                 });
 
                 legendDivId = slideMap.containerID + "_legend"; //the same as the div made in main.js
@@ -63,7 +67,7 @@ $(document).ready(function () {
                 legendDijit = new Legend({
                     map: currentMap,
                     layerInfos: [{ layer: dynamicMSL }]
-                // }, 'esriLegend'); //end legendDijit new
+                    // }, 'esriLegend'); //end legendDijit new
                 }, legendDivId); //end legendDijit new
 
 
@@ -166,7 +170,36 @@ $(document).ready(function () {
                 currentMap.infoWindow.setFeatures([deferred]);
             }; //end setPopups()
 
-
+            var mapDeferred = arcgisUtils.createMap("62702544d70648e593bc05d65180fd64", "map");
+            mapDeferred.then(function (response) {
+                var id;
+                var map = response.map;
+                var title = "2009 Obesity Rates";
+                //loop through all the operational layers in the web map 
+                //to find the one with the specified title;
+                var layers = response.itemInfo.itemData.operationalLayers;
+                array.some(layers, function (layer) {
+                    if (layer.title === title) {
+                        id = layer.id;
+                        if (layer.featureCollection && layer.featureCollection.layers.length) {
+                            id = layer.featureCollection.layers[0].id;
+                        }
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }); //end array.some
+                //get the layer from the map using the id and set it as the swipe layer
+                if(id){
+                    var swipeLayer = map.getLayer(id);
+                    var swipeWidget = new LayerSwipe({
+                        type: "vertical", //Try switching to "scope" or "horizontal"
+                        map:map,
+                        layers: [swipeLayer]
+                    }, "swipeDiv");
+                    swipeWidget.startup();
+                }
+            }) //end mapDeferred.then
 
 
         }); //end require/function
