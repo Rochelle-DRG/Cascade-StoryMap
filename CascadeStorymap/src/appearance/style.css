@@ -17,7 +17,6 @@
   width: 100%;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
-  height: 2.5em;
 }
 
 @media (min-width: 900px) {
@@ -424,6 +423,17 @@
 #bootstrap-overrides section .esriLegendService {
   background-color: rgba(252, 255, 209, 0.8);
   border-radius: 5%;
+}
+
+#bootstrap-overrides .esriSimpleSlider {
+  background-color: rgba(180, 234, 255, 0.904);
+  margin-top: 2em;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides .esriSimpleSlider {
+    margin-left: 90%;
+  }
 }
 
 #bootstrap-overrides .sticky {

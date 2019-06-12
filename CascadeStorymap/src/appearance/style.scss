@@ -18,7 +18,7 @@
         top: 0;
         width: 100%;
         transition: top 0.3s; //Transition effect when sliding up/down
-        height: 2.5em;
+        // height: 2.5em;
         @include for-tablet-landscape-up {
             display: flex;
             justify-content: space-between;
@@ -328,6 +328,14 @@ section {
         border-radius: 5%;
     }
 }
+.esriSimpleSlider {
+    background-color: rgba(180, 234, 255, 0.904);
+    margin-top: 2em;
+    @include for-tablet-portrait-up {
+        margin-left: 90%;
+    }
+}
+
 
 
 .sticky {
