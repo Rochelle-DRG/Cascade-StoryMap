@@ -1,0 +1,398 @@
+@import "variables.scss";  
+#bootstrap-overrides{
+    *{
+        font-family: $page-font;
+        line-height: 1.5em;
+        // overflow-x: hidden; //messes up layering
+    }  
+    a {
+        color: #d7ff98;
+    }
+    .navbar {
+        font-size: 1em;
+        // background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
+        background-color: $nav-bkgnd-color;
+        padding-bottom: 1em;
+        z-index: 500;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: top 0.3s; //Transition effect when sliding up/down
+        // height: 2.5em;
+        @include for-tablet-landscape-up {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0;
+            height: 3em;
+            align-items: center;
+        }
+    }
+    .main-nav {
+        list-style-type: none;
+        display: none;
+        @include for-tablet-landscape-up {
+            display: flex;
+            margin-right: 2em;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+    .nav-links, .logo {
+        text-decoration: none;
+        color: $nav-links-color;
+    }
+    .main-nav li {
+        text-align: center;
+        margin: 2em auto;
+        @include for-tablet-landscape-up {
+            margin: 0;
+        }
+    }
+    .logo {
+        display: inline-block;
+        font-size: 2.5em;
+        margin-top: .05em;
+        margin-left: .8em;
+        @include for-tablet-landscape-up{
+            margin-top: 0;
+        }
+    }
+    
+    
+    .navbar-toggle {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer; 
+        color: $nav-toggle-color;
+        font-size: 24px;
+        @include for-tablet-landscape-up{
+            display: none;
+        }
+    }
+    .active {
+        display: block;
+      }
+    .nav-links{
+        @include for-tablet-landscape-up{
+            margin-left: 2.5em;
+        }
+    }
+    .logo:hover{ 
+        color: $nav-links-hover;
+    }
+    .nav-links:hover{
+        color: $nav-links-hover;
+    }
+    #bars {
+        position: relative;
+        height: 2.5em;
+        margin-top: -.2em;
+    }
+
+
+
+.logo { //color changes for testing only
+    color: aqua; //for-phone-only / default
+    @include for-tablet-portrait-up {
+        color: magenta;
+    }
+    @include for-tablet-landscape-up {
+        color: yellow;
+    }
+    @include for-desktop-up {
+        color: greenyellow;
+    }
+    @include for-big-desktop-up {
+        color: rgb(255, 208, 0); 
+    }
+}
+
+
+
+.everything-after-nav {
+    text-align: center;
+}
+
+h1{ //generic
+    font-size: 2em;
+    @include for-tablet-portrait-up {
+        font-size: 2.0em;
+    }
+    @include for-tablet-landscape-up {
+        font-size: 2.1em;
+    }
+    @include for-desktop-up{
+        font-size: 2.5em;
+    }
+    @include for-big-desktop-up {
+        font-size: 4em;
+    }
+}
+p{ //generic
+    @include for-big-desktop-up {
+        font-size: 1.5em;
+    }
+}
+
+.welcome-container {
+    background-image: $welcome-img-url;
+    // background-size: 100%;
+    background-size: cover;
+    background-color: $backup-color;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    
+    .welcome-content{
+        background-color: $welcome-box-background-color;
+        position: absolute;
+        border: $welcome-box-border-color;
+        font-weight: bold;
+        top: 3em;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 1em;
+        margin-top: 20%;
+
+        @include for-tablet-portrait-up {
+            top: 15%;
+            margin-left: 15%;
+            margin-right: 15%;
+            padding-top: 1.5em;
+            margin-top: 0%;
+        }
+        @include for-tablet-landscape-up {
+            padding-top: 2em;
+            padding-bottom: 2em;
+            margin-left: 20%;
+            margin-right: 20%;
+            top: 20%;
+        }
+        @include for-big-desktop-up {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        
+        h1 {
+            color: $welcome-h1-color;
+            text-shadow: $welcome-h1-shadow; //x y blur color
+            padding-left: .3em;
+            padding-right: .3em;
+        }
+        p {
+            color: $welcome-p-color;
+            text-shadow: $welcome-p-shadow;
+            margin-top: 2em;
+            // padding-left: 3em;
+            // padding-right: 3em;
+            line-height: 150%;
+        }
+    }
+} 
+section {
+    .general-map {
+        padding: 0;
+        margin-top: 0px;
+        height: 100vh;
+        width: 100%;
+        z-index: 1 ;
+        // border: .2em solid black;
+    }
+    .section-title{ /// must be fixed, opacity 0, change when map stick
+        z-index: 3;
+        position: relative;
+        position: sticky;
+        top: 0;
+            h1 {
+                color: $map-h1-text-color;
+                font-weight: bold;
+                background-color: $map-h1-bkgnd-color;
+                padding: .3em;
+                margin-left: 20%;
+                margin-right: 20%;
+                // padding-top: 1em; //to place it below the nav bar instead of behind
+            }
+    }
+    .sm-textbox {
+        width: 90%;
+        z-index: 5;
+        position: relative;
+        padding: 2%;  
+        margin-left: auto;
+        margin-right: auto;
+    @media screen and (min-width : 430px){
+        width: 70%;
+        padding: 5%;
+    }
+        @include for-tablet-portrait-up {
+            width: 30%;
+            margin-left: 2em;
+            // margin-right: 0;
+            // padding: 2em;
+        }
+        @include for-tablet-landscape-up {
+            width: 35%;
+        }
+        @include for-desktop-up {
+            width: 25%;
+        }
+    }
+    .sm-textbox p {
+        background-color: $sm-textbox-bkgnd-color;  
+        padding: .8em;
+        color: $sm-textbox-text-color;
+        border: $sm-textbox-border-color;
+        border-radius: 0.5em;
+        margin-bottom: 20em;
+    }
+    .sm-textbox img {
+        margin-top: 1em; 
+        margin-bottom: 1em;
+        border-radius: 1.5em;
+        max-width: 90%;
+    }  
+
+    .legend {
+        display: none;
+        @include for-tablet-portrait-up {
+            display: block;
+            width: 25%;
+            z-index: 30;
+            padding: 2em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        @include for-desktop-up {
+            width: 12em; 
+            $legend-width: 12em;
+        }
+    }
+    .legend-right {
+        position: sticky !important;
+        top: 1em;
+        margin-left: 70%;
+        @include for-desktop-up {
+            margin-left: 80%; 
+        }
+    }
+    .legend-bottom-right{
+        position: sticky !important;
+        top: 60%;
+        margin-left: 70%;
+        @include for-desktop-up {
+            margin-left: 80%; 
+        }
+    }
+    table{
+        margin-left: auto; 
+        margin-right: auto;
+        color: white;
+    }
+    .esriLegendLayerLabel  { // the subheading (the heading we want)
+        color: black;
+        font-weight: bold;
+        font-size: .9em;
+        margin-bottom: 5px;
+        margin-left: 10%;
+        margin-right: 10%;
+        tbody {
+            margin-left: auto;
+            margin-right: auto;
+            color: black;
+            tr {
+                td{
+                    padding-top: .2em;
+                }
+            }
+        }
+    }
+    .esriLegendServiceLabel { 
+        display: none;  //turns off the title I don't want
+    }
+    .esriLegendLayer {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .esriLegendLayer table{
+        position: relative;
+        left: 20%; 
+        font-size: .8em;
+    }
+    td img {
+        position: relative;
+        left: 1em;
+    }
+    .esriLegendService {
+        background-color: rgba(252, 255, 209, .8);
+        border-radius: 5%;
+    }
+}
+.esriSimpleSlider {
+    background-color: rgba(180, 234, 255, 0.904);
+    margin-top: 2em;
+    @include for-tablet-portrait-up {
+        margin-left: 90%;
+    }
+}
+
+
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+
+
+.lg-text-area {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    font-weight: bold;
+    @include for-tablet-portrait-up {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    @include for-tablet-landscape-up {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    @include for-desktop-up {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+
+    h1{
+        color: $lg-text-h1-color;
+        text-shadow: $lg-text-h1-shadow;
+    }
+    p {
+        margin-top: 3em;
+        line-height: 140%;
+    }
+    img {
+        background-color: $backup-color;
+        size: auto;
+        // margin-left: 50%;
+        // margin-right: 50%;
+        max-width: 50%;
+        border-radius: 2em;
+        box-shadow: $lg-text-img-shadow;
+        margin: 2em;
+        @include for-tablet-portrait-up {
+            max-width: 50%;
+        }
+    }
+}
+
+.credits {
+    background-color: $credits-bkgnd-color;
+    color: $credits-text-color;
+    text-shadow: $lg-text-h1-shadow;
+}
+
+
+}

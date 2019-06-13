@@ -1,0 +1,505 @@
+#bootstrap-overrides * {
+  font-family: "Lato", sans-serif;
+  line-height: 1.5em;
+}
+
+#bootstrap-overrides a {
+  color: #d7ff98;
+}
+
+#bootstrap-overrides .navbar {
+  font-size: 1em;
+  background-color: #001407;
+  padding-bottom: 1em;
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 0;
+    height: 3em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+#bootstrap-overrides .main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 2em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+#bootstrap-overrides .nav-links, #bootstrap-overrides .logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#bootstrap-overrides .main-nav li {
+  text-align: center;
+  margin: 2em auto;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .main-nav li {
+    margin: 0;
+  }
+}
+
+#bootstrap-overrides .logo {
+  display: inline-block;
+  font-size: 2.5em;
+  margin-top: .05em;
+  margin-left: .8em;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .logo {
+    margin-top: 0;
+  }
+}
+
+#bootstrap-overrides .navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .navbar-toggle {
+    display: none;
+  }
+}
+
+#bootstrap-overrides .active {
+  display: block;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .nav-links {
+    margin-left: 2.5em;
+  }
+}
+
+#bootstrap-overrides .logo:hover {
+  color: white;
+}
+
+#bootstrap-overrides .nav-links:hover {
+  color: white;
+}
+
+#bootstrap-overrides #bars {
+  position: relative;
+  height: 2.5em;
+  margin-top: -.2em;
+}
+
+#bootstrap-overrides .logo {
+  color: aqua;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides .logo {
+    color: magenta;
+  }
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .logo {
+    color: yellow;
+  }
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides .logo {
+    color: greenyellow;
+  }
+}
+
+@media (min-width: 1800px) {
+  #bootstrap-overrides .logo {
+    color: #ffd000;
+  }
+}
+
+#bootstrap-overrides .everything-after-nav {
+  text-align: center;
+}
+
+#bootstrap-overrides h1 {
+  font-size: 2em;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides h1 {
+    font-size: 2.0em;
+  }
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides h1 {
+    font-size: 2.1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1800px) {
+  #bootstrap-overrides h1 {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 1800px) {
+  #bootstrap-overrides p {
+    font-size: 1.5em;
+  }
+}
+
+#bootstrap-overrides .welcome-container {
+  background-image: url("/CascadeStorymap/src/appearance/img/umbrella-lady.gif");
+  background-size: cover;
+  background-color: gray;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#bootstrap-overrides .welcome-container .welcome-content {
+  background-color: rgba(250, 138, 73, 0.6);
+  position: absolute;
+  border: 2px solid #44b900;
+  font-weight: bold;
+  top: 3em;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 1em;
+  margin-top: 20%;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides .welcome-container .welcome-content {
+    top: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 1.5em;
+    margin-top: 0%;
+  }
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .welcome-container .welcome-content {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-left: 20%;
+    margin-right: 20%;
+    top: 20%;
+  }
+}
+
+@media (min-width: 1800px) {
+  #bootstrap-overrides .welcome-container .welcome-content {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+#bootstrap-overrides .welcome-container .welcome-content h1 {
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  padding-left: .3em;
+  padding-right: .3em;
+}
+
+#bootstrap-overrides .welcome-container .welcome-content p {
+  color: black;
+  text-shadow: 0.08em 0.08em 1em white;
+  margin-top: 2em;
+  line-height: 150%;
+}
+
+#bootstrap-overrides section .general-map {
+  padding: 0;
+  margin-top: 0px;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+
+#bootstrap-overrides section .section-title {
+  z-index: 3;
+  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#bootstrap-overrides section .section-title h1 {
+  color: black;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: .3em;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#bootstrap-overrides section .sm-textbox {
+  width: 90%;
+  z-index: 5;
+  position: relative;
+  padding: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 430px) {
+  #bootstrap-overrides section .sm-textbox {
+    width: 70%;
+    padding: 5%;
+  }
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides section .sm-textbox {
+    width: 30%;
+    margin-left: 2em;
+  }
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides section .sm-textbox {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides section .sm-textbox {
+    width: 25%;
+  }
+}
+
+#bootstrap-overrides section .sm-textbox p {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: .8em;
+  color: white;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  margin-bottom: 20em;
+}
+
+#bootstrap-overrides section .sm-textbox img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  border-radius: 1.5em;
+  max-width: 90%;
+}
+
+#bootstrap-overrides section .legend {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides section .legend {
+    display: block;
+    width: 25%;
+    z-index: 30;
+    padding: 2em;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides section .legend {
+    width: 12em;
+  }
+}
+
+#bootstrap-overrides section .legend-right {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 1em;
+  margin-left: 70%;
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides section .legend-right {
+    margin-left: 80%;
+  }
+}
+
+#bootstrap-overrides section .legend-bottom-right {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 60%;
+  margin-left: 70%;
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides section .legend-bottom-right {
+    margin-left: 80%;
+  }
+}
+
+#bootstrap-overrides section table {
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+#bootstrap-overrides section .esriLegendLayerLabel {
+  color: black;
+  font-weight: bold;
+  font-size: .9em;
+  margin-bottom: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#bootstrap-overrides section .esriLegendLayerLabel tbody {
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+#bootstrap-overrides section .esriLegendLayerLabel tbody tr td {
+  padding-top: .2em;
+}
+
+#bootstrap-overrides section .esriLegendServiceLabel {
+  display: none;
+}
+
+#bootstrap-overrides section .esriLegendLayer {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#bootstrap-overrides section .esriLegendLayer table {
+  position: relative;
+  left: 20%;
+  font-size: .8em;
+}
+
+#bootstrap-overrides section td img {
+  position: relative;
+  left: 1em;
+}
+
+#bootstrap-overrides section .esriLegendService {
+  background-color: rgba(252, 255, 209, 0.8);
+  border-radius: 5%;
+}
+
+#bootstrap-overrides .esriSimpleSlider {
+  background-color: rgba(180, 234, 255, 0.904);
+  margin-top: 2em;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides .esriSimpleSlider {
+    margin-left: 90%;
+  }
+}
+
+#bootstrap-overrides .sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+#bootstrap-overrides .lg-text-area {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3em;
+  margin-bottom: 5em;
+  font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides .lg-text-area {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .lg-text-area {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #bootstrap-overrides .lg-text-area {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+#bootstrap-overrides .lg-text-area h1 {
+  color: black;
+  text-shadow: 0.05em 0.05em 0.1em #4ca800;
+}
+
+#bootstrap-overrides .lg-text-area p {
+  margin-top: 3em;
+  line-height: 140%;
+}
+
+#bootstrap-overrides .lg-text-area img {
+  background-color: gray;
+  size: auto;
+  max-width: 50%;
+  border-radius: 2em;
+  -webkit-box-shadow: 0.3em 0.3em 0.4em #4ca800;
+          box-shadow: 0.3em 0.3em 0.4em #4ca800;
+  margin: 2em;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides .lg-text-area img {
+    max-width: 50%;
+  }
+}
+
+#bootstrap-overrides .credits {
+  background-color: #011801;
+  color: white;
+  text-shadow: 0.05em 0.05em 0.1em #4ca800;
+}
+/*# sourceMappingURL=style.css.map */

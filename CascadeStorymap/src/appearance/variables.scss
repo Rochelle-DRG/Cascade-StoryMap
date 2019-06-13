@@ -1,0 +1,54 @@
+$page-font: 'Lato', sans-serif;
+$backup-color: gray; //for when images do not load
+$nav-links-hover: rgba(255, 255, 255, 1);
+$nav-bkgnd-color: rgb(0, 20, 7);
+$nav-links-color: rgba(255, 255, 255, 0.7);
+$nav-toggle-color:  rgba(255,255,255,0.8);
+
+
+
+
+$welcome-img-url: url("/CascadeStorymap/src/appearance/img/umbrella-lady.gif"); 
+$welcome-box-background-color: rgba(250, 138, 73, 0.6);
+$welcome-box-border-color: 2px solid rgb(68, 185, 0);
+$welcome-h1-color: white;
+$welcome-h1-shadow: 3px 3px 2px black; //x y blur color;
+$welcome-p-color: black;
+$welcome-p-shadow: .08em .08em 1em white;
+
+$map-h1-bkgnd-color: rgba(255, 255, 255, 0.8);
+$map-h1-text-color: black; 
+
+$sm-textbox-text-color: white;
+$sm-textbox-bkgnd-color: rgba(0, 0, 0, 0.8);
+$sm-textbox-border-color: 1px solid black;
+
+$lg-text-h1-color: black;
+$lg-text-h1-shadow: .05em .05em .1em rgb(76, 168, 0); //x y blur color
+$lg-text-img-shadow: .3em .3em .4em rgb(76, 168, 0);
+
+$credits-bkgnd-color: rgb(1, 24, 1);
+$credits-text-color: white;
+
+//################### MEDIA & MIX-INS
+//aqua
+@mixin for-phone-only {             
+    @media (max-width: 599px) { @content; }
+  }
+  //magenta
+  @mixin for-tablet-portrait-up {   
+    @media (min-width: 600px) { @content; }
+  }
+  //yellow
+  @mixin for-tablet-landscape-up {   
+    @media (min-width: 900px) { @content; }
+  }
+  //green
+  @mixin for-desktop-up {           
+    @media (min-width: 1200px) { @content; }
+  }
+  //orange
+  @mixin for-big-desktop-up {       
+    @media (min-width: 1800px) { @content; }
+  }
+
