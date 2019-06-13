@@ -106,8 +106,6 @@ $(document).ready(function () {
                         var feature = slide;
                         // console.log(slide);
 
-
-
                         newLayer = new FeatureLayer(slide.url)
                     }
 
@@ -170,36 +168,84 @@ $(document).ready(function () {
                 currentMap.infoWindow.setFeatures([deferred]);
             }; //end setPopups()
 
-            var mapDeferred = arcgisUtils.createMap("62702544d70648e593bc05d65180fd64", "map");
-            mapDeferred.then(function (response) {
-                var id;
-                var map = response.map;
-                var title = "2009 Obesity Rates";
-                //loop through all the operational layers in the web map 
-                //to find the one with the specified title;
-                var layers = response.itemInfo.itemData.operationalLayers;
-                array.some(layers, function (layer) {
-                    if (layer.title === title) {
-                        id = layer.id;
-                        if (layer.featureCollection && layer.featureCollection.layers.length) {
-                            id = layer.featureCollection.layers[0].id;
-                        }
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }); //end array.some
-                //get the layer from the map using the id and set it as the swipe layer
-                if(id){
-                    var swipeLayer = map.getLayer(id);
-                    var swipeWidget = new LayerSwipe({
-                        type: "vertical", //Try switching to "scope" or "horizontal"
-                        map:map,
-                        layers: [swipeLayer]
-                    }, "swipeDiv");
-                    swipeWidget.startup();
-                }
-            }) //end mapDeferred.then
+
+// // first swipe example
+            // var mapDeferred = arcgisUtils.createMap("62702544d70648e593bc05d65180fd64", "map");
+            // mapDeferred.then(function (response) {
+            //     var id;
+            //     var map = response.map;
+            //     var title = "2009 Obesity Rates";
+            //     //loop through all the operational layers in the web map 
+            //     //to find the one with the specified title;
+            //     var layers = response.itemInfo.itemData.operationalLayers;
+            //     array.some(layers, function (layer) {
+            //         if (layer.title === title) {
+            //             id = layer.id;
+            //             if (layer.featureCollection && layer.featureCollection.layers.length) {
+            //                 id = layer.featureCollection.layers[0].id;
+            //             }
+            //             return true;
+            //         } else {
+            //             return false;
+            //         }
+            //     }); //end array.some
+            //     //get the layer from the map using the id and set it as the swipe layer
+            //     if (id) {
+            //         var swipeLayer = map.getLayer(id);
+            //         var swipeWidget = new LayerSwipe({
+            //             type: "vertical", //Try switching to "scope" or "horizontal"
+            //             map: map,
+            //             layers: [swipeLayer]
+            //         }, "swipeDiv");
+            //         swipeWidget.startup();
+            //         console.log([swipeLayer]);
+            //     }
+            // }); //end mapDeferred.then
+            //end 1st swipe example
+
+
+            // // // //second swipe example
+            // mapTest2 = new Map("map", {
+            //     basemap: "gray",
+            //     center: [-96.5, 38.3],
+            //     zoom: 6
+            // });
+            // var cities = new ArcGISDynamicMapServiceLayer("http://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer");
+            // cities.setVisibleLayers([0]);
+            // var Hurricanes = new ArcGISDynamicMapServiceLayer("http://sampleserver6.arcgisonline.com/arcgis/rest/services/Hurricanes/MapServer");
+            // Hurricanes._div = map.root;
+            // cities._div = map.root;
+
+            // mapTest2.addLayers([Hurricanes, cities]);
+
+            // var swipeWidget2 = new LayerSwipe({
+            //     type: "vertical",  //Try switching to "scope" or "horizontal"  
+            //     map: mapTest2,
+            //     layers: [Hurricanes]
+            // }, "swipeDiv2");
+
+            // swipeWidget2.startup();
+
+
+// //MY first swipe test
+            // mapTestMe = new Map("map", {
+            //     basemap: "gray",
+            //     center: [-122.035534, 47.616567],
+            //     zoom: 13
+            // });
+            // featureSwipeLayer1 = new FeatureLayer(mapLayers["Layer1"].url);
+            // featureSwipeLayer2 = new FeatureLayer(mapLayers["Layer2"].url);
+
+            // mapTestMe.addLayers([featureSwipeLayer1, featureSwipeLayer2]);
+
+            // console.log(mapTestMe);
+            // var mySwipeWidget = new LayerSwipe({
+            //     type:"vertical",
+            //     map: mapTestMe,
+            //     layers: featureSwipeLayer1
+            // }, "mySwipeTest");
+            // mySwipeWidget.startup();
+
 
 
         }); //end require/function
