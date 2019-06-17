@@ -65,9 +65,14 @@
     }
     .logo {
         display: inline-block;
-        font-size: 2.5em;
-        margin-top: .05em;
-        margin-left: .8em;
+        font-size: 2em;
+        // margin-top: .05em;
+        // margin-left: .8em;
+        color: white;
+        // padding-left: 1em;
+        // padding-right: 1em; 
+        //text-shadow: $nav-title-shadow;
+        background-color: rgba(0, 0, 173, 0.849);
         @include for-tablet-landscape-up{
             margin-top: 0;
         }
@@ -107,21 +112,21 @@
 
 
 
-.logo { //color changes for testing only
-    color: aqua; //for-phone-only / default
-    @include for-tablet-portrait-up {
-        color: magenta;
-    }
-    @include for-tablet-landscape-up {
-        color: yellow;
-    }
-    @include for-desktop-up {
-        color: greenyellow;
-    }
-    @include for-big-desktop-up {
-        color: rgb(255, 208, 0); 
-    }
-}
+// .logo { //color changes for testing only
+//     color: aqua; //for-phone-only / default
+//     @include for-tablet-portrait-up {
+//         color: magenta;
+//     }
+//     @include for-tablet-landscape-up {
+//         color: yellow;
+//     }
+//     @include for-desktop-up {
+//         color: greenyellow;
+//     }
+//     @include for-big-desktop-up {
+//         color: rgb(255, 208, 0); 
+//     }
+// }
 
 
 
@@ -130,7 +135,7 @@
 }
 
 h1{ //generic
-    font-size: 2em;
+    font-size: 1.5em;
     @include for-tablet-portrait-up {
         font-size: 2.0em;
     }
@@ -224,7 +229,7 @@ section {
                 color: $map-h1-text-color;
                 font-weight: bold;
                 background-color: $map-h1-bkgnd-color;
-                padding: .3em;
+                padding: .1em;
                 margin-left: 20%;
                 margin-right: 20%;
                 // padding-top: 1em; //to place it below the nav bar instead of behind
@@ -393,13 +398,10 @@ section {
         size: auto;
         // margin-left: 50%;
         // margin-right: 50%;
-        max-width: 50%;
+        max-width: 90%;
         border-radius: 2em;
         box-shadow: $lg-text-img-shadow;
-        margin: 2em;
-        @include for-tablet-portrait-up {
-            max-width: 50%;
-        }
+        margin: auto;
     }
 }
 

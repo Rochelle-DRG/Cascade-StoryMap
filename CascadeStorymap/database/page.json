@@ -327,6 +327,8 @@
             },
             "writtenContent": [
                 "Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits annually. In addition to the annual benefits, the carbon stored by the current UTC contributes an additional $28 million in benefits, bringing the collective benefit amount to $32 million. This information was calculated using models and methods derived from <a href='http://www.itreetools.org'>www.itreetools.org.</a>",
+                "<img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'>",
+
                 "Sammamish’s trees are amazing because they:<br/><ul><li>Remove almost 360,000 pounds of pollutants from the air every year, and these air quality improvements have the impressive value of $626,000 annually.</li><li>Intercept a staggering 88 million gallons of stormwater annually; this important infrastructure service is valued at approximately $2.4 million each year.</li><li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li></ul>",
                 "This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the local environment. Knowledge about the UTC within these areas provides a benchmark for understanding and optimizing stormwater mitigation benefits and other environmental services."
                             ]
@@ -341,9 +343,11 @@
             "textSectionDivID": "slide3Div",
             "paragraphDivID": "slide3paragraphs",
             "writtenContent": [
-                "<img src='/CascadeStorymap/src/appearance/img/trees_aerial.jpg'>",
+                "<img src='/CascadeStorymap/src/appearance/img/bloomington/20170330_143646_edit.jpg'>",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Aliquam sem  massa id neque aliquam vestibulum morbi.",
                 "Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris. Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna neque. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed faucibus turpis in. Turpis massa sed elementum tempus egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing commodo. Ornare massa eget egestas purus viverra accumsan in nisl.",
+                "<img src='/CascadeStorymap/src/appearance/img/gifs/slides2.gif'>",
+
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor massa id neque aliquam vestibulum morbi.",
                 "Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris. Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna neque. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed faucibus turpis in. Turpis massa sed elementum tempus egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing commodo. Ornare massa eget egestas purus viverra accumsan in nisl."
             ]

@@ -4,12 +4,14 @@ $nav-links-hover: rgba(255, 255, 255, 1);
 $nav-bkgnd-color: rgb(0, 20, 7);
 $nav-links-color: rgba(255, 255, 255, 0.7);
 $nav-toggle-color:  rgba(255,255,255,0.8);
+$nav-title-color: rgb(0, 0, 173);
+$nav-title-shadow: 3px 3px 2px white;
 
 
 
 
 $welcome-img-url: url("/CascadeStorymap/src/appearance/img/gifs/gifVidPhoto2_croppedshorter.gif"); 
-$welcome-box-background-color: rgba(0, 0, 0, 0.678);
+$welcome-box-background-color: rgba(173, 156, 127, 0.8);
 $welcome-box-border-color: 2px solid rgb(0, 0, 173);
 $welcome-h1-color: white;
 $welcome-h1-shadow: 3px 3px 2px black; //x y blur color;
@@ -24,8 +26,8 @@ $sm-textbox-bkgnd-color: rgba(0, 0, 0, 0.8);
 $sm-textbox-border-color: 1px solid black;
 
 $lg-text-h1-color: black;
-$lg-text-h1-shadow: .05em .05em .1em rgb(76, 168, 0); //x y blur color
-$lg-text-img-shadow: .3em .3em .4em rgb(76, 168, 0);
+$lg-text-h1-shadow: .05em .05em .1em rgb(0, 0, 173); //x y blur color
+$lg-text-img-shadow: .3em .3em .4em rgb(0, 0, 173);
 
 $credits-bkgnd-color: rgb(1, 24, 1);
 $credits-text-color: white;
