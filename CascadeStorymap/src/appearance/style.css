@@ -17,6 +17,8 @@
   width: 100%;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
+  height: 2.5em;
+  overflow: hidden;
 }
 
 @media (min-width: 900px) {
@@ -32,6 +34,23 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+#bootstrap-overrides #logo {
+  max-height: 1.4em !important;
+  background-color: white;
+  position: relative;
+  margin-top: 0em;
+  margin-left: 0em;
+  height: 2.5em;
+  max-width: 2.5em;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides #logo {
+    height: 3em;
+    max-width: 1.5em;
   }
 }
 
@@ -191,7 +210,7 @@
 }
 
 #bootstrap-overrides .welcome-container {
-  background-image: url("/CascadeStorymap/src/appearance/img/umbrella-lady.gif");
+  background-image: url("/CascadeStorymap/src/appearance/img/gifs/gifVidPhoto2_croppedshorter.gif");
   background-size: cover;
   background-color: gray;
   background-repeat: no-repeat;
@@ -201,9 +220,9 @@
 }
 
 #bootstrap-overrides .welcome-container .welcome-content {
-  background-color: rgba(250, 138, 73, 0.6);
+  background-color: rgba(0, 0, 0, 0.678);
   position: absolute;
-  border: 2px solid #44b900;
+  border: 2px solid #0000ad;
   font-weight: bold;
   top: 3em;
   margin-left: 5%;
@@ -247,8 +266,8 @@
 }
 
 #bootstrap-overrides .welcome-container .welcome-content p {
-  color: black;
-  text-shadow: 0.08em 0.08em 1em white;
+  color: white;
+  text-shadow: 0.08em 0.08em 1em black;
   margin-top: 2em;
   line-height: 150%;
 }

@@ -18,13 +18,28 @@
         top: 0;
         width: 100%;
         transition: top 0.3s; //Transition effect when sliding up/down
-        // height: 2.5em;
+        height: 2.5em;
+        overflow: hidden;
+
         @include for-tablet-landscape-up {
             display: flex;
             justify-content: space-between;
             padding-bottom: 0;
             height: 3em;
             align-items: center;
+        }
+    }
+    #logo {
+        max-height: 1.4em !important;
+        background-color: white;
+        position: relative;
+        margin-top: 0em;
+        margin-left: 0em;
+        height: 2.5em;
+        max-width: 2.5em;
+        @include for-tablet-landscape-up {
+            height: 3em;
+            max-width: 1.5em;
         }
     }
     .main-nav {
