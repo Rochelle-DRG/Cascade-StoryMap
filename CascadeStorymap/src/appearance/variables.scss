@@ -1,4 +1,7 @@
-$page-font: 'Lato', sans-serif;
+// @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Lobster|Merienda|Shrikhand&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Contrail+One|Noto+Sans+HK&display=swap');
+
+$page-font: 'Noto Sans HK', sans-serif;
 $backup-color: gray; //for when images do not load
 $nav-links-hover: rgba(255, 255, 255, 1);
 $nav-bkgnd-color: rgb(0, 20, 7);
@@ -6,13 +9,14 @@ $nav-links-color: rgba(255, 255, 255, 0.7);
 $nav-toggle-color:  rgba(255,255,255,0.8);
 $nav-title-color: rgb(0, 0, 173);
 $nav-title-shadow: 3px 3px 2px white;
+$logo-font: 'Contrail One', cursive;
 
 
 
 
 $welcome-img-url: url("/CascadeStorymap/src/appearance/img/gifs/gifVidPhoto2_croppedshorter.gif"); 
-$welcome-box-background-color: rgba(173, 156, 127, 0.8);
-$welcome-box-border-color: 2px solid rgb(0, 0, 173);
+$welcome-box-background-color: rgba(0, 0, 0, .65);
+$welcome-box-border-color: 2px solid rgba(0, 0, 0,0);
 $welcome-h1-color: white;
 $welcome-h1-shadow: 3px 3px 2px black; //x y blur color;
 $welcome-p-color: white;
@@ -51,6 +55,6 @@ $credits-text-color: white;
   }
   //orange
   @mixin for-big-desktop-up {       
-    @media (min-width: 1800px) { @content; }
+    @media (min-width: 1930px) { @content; }
   }
 

@@ -1,96 +1,5 @@
-@import "variables.scss";  
-#bootstrap-overrides{
-    *{
-        font-family: $page-font;
-        line-height: 1.5em;
-        // overflow-x: hidden; //messes up layering
-    }  
-    a {
-        color: #cec083;
-    }
-    .navbar {
-        font-size: 1em;
-        // background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
-        background-color: $nav-bkgnd-color;
-        padding-bottom: 1em;
-        z-index: 500;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        transition: top 0.3s; //Transition effect when sliding up/down
-        // height: 2.5em;
-        overflow: hidden;
-        @include for-tablet-landscape-up {
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 0;
-            height: 3em;
-            align-items: center;
-        }
-    }
-    .main-nav {
-        list-style-type: none;
-        display: none;
-        @include for-tablet-landscape-up {
-            display: flex;
-            margin-right: 2em;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-    }
-    .nav-links {
-        text-decoration: none;
-        color: $nav-links-color;
-    }
-    .main-nav li {
-        text-align: center;
-        margin: 2em auto;
-        @include for-tablet-landscape-up {
-            margin: 0;
-        }
-    }
-    .logo {
-        display: inline-block;
-        text-decoration: none;
-        font-size: 2em;
-        font-family: $logo-font;
-        // background-color: white;
-        // color: rgba(0, 0, 173, 0.849);
-        //text-shadow: $nav-title-shadow;
-        // background-color: rgba(0, 0, 173, 0.849);
-        @include for-tablet-landscape-up{
-            margin-top: 0;
-        }
-    }
-    .logo-hide {
-        display: none;
-    }
-    #logo-img {
-        background-color: white;
 
-        max-height: 1.4em !important;
-        // position: relative;
-        padding-top: .1em;
-        margin-left: 0em;
-        height: 2.5em;
-        max-width: 2.5em;
-        @include for-tablet-landscape-up {
-            height: 3em;
-            max-width: 1.5em;
-        }
-    }
-    .logo-text {
-        display: none;
-        @include for-tablet-landscape-up {
-            display: flex;
-            color: $nav-title-color;
-            font-weight: bold;
-            margin-left: .1em;
-            margin-top: auto;
-            color: rgba(0, 0, 173, 1);
-            text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
-        }
-    }
+
     #left-logo { //the image and text
         float: left;
         list-style-type: none;
@@ -98,41 +7,10 @@
         margin-right: 2em;
         flex-direction: row;
         justify-content: flex-end;
+
     }
-
-
     
     
-    .navbar-toggle {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        cursor: pointer; 
-        color: $nav-toggle-color;
-        font-size: 24px;
-        @include for-tablet-landscape-up{
-            display: none;
-        }
-    }
-    .active {
-        display: block;
-      }
-    .nav-links{
-        @include for-tablet-landscape-up{
-            margin-left: 2.5em;
-        }
-    }
-    .logo:hover{ 
-        color: $nav-links-hover;
-    }
-    .nav-links:hover{
-        color: $nav-links-hover;
-    }
-    #bars {
-        position: relative;
-        height: 2.5em;
-        margin-top: -.4em;
-    }
 
 
 
@@ -159,15 +37,15 @@
 }
 
 h1{ //generic
-    font-size: 2em;
+    font-size: 1.5em;
     @include for-tablet-portrait-up {
         font-size: 2.0em;
     }
     @include for-tablet-landscape-up {
-        font-size: 2.1em;
+        font-size: 2em;
     }
     @include for-desktop-up{
-        font-size: 2.5em;
+        font-size: 2em;
     }
     @include for-big-desktop-up {
         font-size: 4em;
@@ -214,9 +92,13 @@ p{ //generic
             margin-right: 20%;
             top: 20%;
         }
+        @include for-desktop-up {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
         @include for-big-desktop-up {
-            margin-left: 20%;
-            margin-right: 20%;
+            margin-left: 25%;
+            margin-right: 25%;
         }
         
         h1 {
@@ -253,7 +135,7 @@ section {
                 color: $map-h1-text-color;
                 font-weight: bold;
                 background-color: $map-h1-bkgnd-color;
-                padding: .3em;
+                padding: .1em;
                 margin-left: 20%;
                 margin-right: 20%;
                 // padding-top: 1em; //to place it below the nav bar instead of behind
@@ -297,6 +179,11 @@ section {
         border-radius: 1.5em;
         max-width: 90%;
     }  
+    .sm-textbox ul {
+        list-style-type: circle;
+        list-style-position: inside;
+        text-align: left;
+    }
 
     .legend {
         display: none;
@@ -422,13 +309,10 @@ section {
         size: auto;
         // margin-left: 50%;
         // margin-right: 50%;
-        max-width: 50%;
+        max-width: 90%;
         border-radius: 2em;
         box-shadow: $lg-text-img-shadow;
-        margin: 2em;
-        @include for-tablet-portrait-up {
-            max-width: 50%;
-        }
+        margin: auto;
     }
 }
 

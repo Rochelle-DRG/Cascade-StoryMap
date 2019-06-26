@@ -209,9 +209,11 @@ var createNavbarLinks = function (jsonSlide) {
 
 //nav bar behavior: toggle dropdown
 let mainNav = document.getElementById('js-menu');
+let logos = document.getElementById('logo-img');
 let navBarToggle = document.getElementById('js-navbar-toggle');
 navBarToggle.addEventListener('click', function () {
     mainNav.classList.toggle('active');
+    logos.classList.toggle('logo-hide'); //without this line, the top item in the dropdown is out of alignment
 });
 //nav bar behavior: show/hide navbar
 var prevScrollpos = window.pageYOffset;

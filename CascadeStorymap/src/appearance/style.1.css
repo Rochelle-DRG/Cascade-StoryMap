@@ -4,7 +4,7 @@
 }
 
 #bootstrap-overrides a {
-  color: #cec083;
+  color: #d7ff98;
 }
 
 #bootstrap-overrides .navbar {
@@ -36,43 +36,6 @@
   }
 }
 
-#bootstrap-overrides .main-nav {
-  list-style-type: none;
-  display: none;
-}
-
-@media (min-width: 900px) {
-  #bootstrap-overrides .main-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: 2em;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-}
-
-#bootstrap-overrides .nav-links {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-#bootstrap-overrides .main-nav li {
-  text-align: center;
-  margin: 2em auto;
-}
-
-@media (min-width: 900px) {
-  #bootstrap-overrides .main-nav li {
-    margin: 0;
-  }
-}
-
 #bootstrap-overrides .logo {
   display: inline-block;
   text-decoration: none;
@@ -84,10 +47,6 @@
   #bootstrap-overrides .logo {
     margin-top: 0;
   }
-}
-
-#bootstrap-overrides .logo-hide {
-  display: none;
 }
 
 #bootstrap-overrides #logo-img {
@@ -140,6 +99,43 @@
           justify-content: flex-end;
 }
 
+#bootstrap-overrides .main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 2em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+#bootstrap-overrides .nav-links {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#bootstrap-overrides .main-nav li {
+  text-align: center;
+  margin: 2em auto;
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .main-nav li {
+    margin: 0;
+  }
+}
+
 #bootstrap-overrides .navbar-toggle {
   position: absolute;
   top: 10px;
@@ -184,7 +180,7 @@
 }
 
 #bootstrap-overrides h1 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 @media (min-width: 600px) {
@@ -195,13 +191,13 @@
 
 @media (min-width: 900px) {
   #bootstrap-overrides h1 {
-    font-size: 2.1em;
+    font-size: 2em;
   }
 }
 
 @media (min-width: 1200px) {
   #bootstrap-overrides h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 
@@ -259,10 +255,17 @@
   }
 }
 
+@media (min-width: 1200px) {
+  #bootstrap-overrides .welcome-container .welcome-content {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
 @media (min-width: 1930px) {
   #bootstrap-overrides .welcome-container .welcome-content {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
 }
 
@@ -300,7 +303,7 @@
   color: black;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: .3em;
+  padding: .1em;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -354,6 +357,12 @@
   margin-bottom: 1em;
   border-radius: 1.5em;
   max-width: 90%;
+}
+
+#bootstrap-overrides section .sm-textbox ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  text-align: left;
 }
 
 #bootstrap-overrides section .legend {
@@ -511,17 +520,11 @@
 #bootstrap-overrides .lg-text-area img {
   background-color: gray;
   size: auto;
-  max-width: 50%;
+  max-width: 90%;
   border-radius: 2em;
   -webkit-box-shadow: 0.3em 0.3em 0.4em #0000ad;
           box-shadow: 0.3em 0.3em 0.4em #0000ad;
-  margin: 2em;
-}
-
-@media (min-width: 600px) {
-  #bootstrap-overrides .lg-text-area img {
-    max-width: 50%;
-  }
+  margin: auto;
 }
 
 #bootstrap-overrides .credits {
@@ -529,4 +532,4 @@
   color: white;
   text-shadow: 0.05em 0.05em 0.1em #0000ad;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.1.css.map */

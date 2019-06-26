@@ -344,8 +344,8 @@
             "paragraphDivID": "slide3paragraphs",
             "writtenContent": [
                 "<img src='/CascadeStorymap/src/appearance/img/bloomington/20170330_143646_edit.jpg'>",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Aliquam sem  massa id neque aliquam vestibulum morbi.",
-                "Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris. Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna neque. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed faucibus turpis in. Turpis massa sed elementum tempus egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing commodo. Ornare massa eget egestas purus viverra accumsan in nisl.",
+                "I have included a variety of basemap options in this demo, but you can find the whole list here: <a href='https://developers.arcgis.com/javascript/3/jsapi/esri.basemaps-amd.html'>View Basemap Options</a>",
+                "If you are interested in selecting your own fonts, look here: <a href='https://fonts.google.com/'>Google Fonts</a>",
                 "<img src='/CascadeStorymap/src/appearance/img/gifs/slides2.gif'>",
 
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor massa id neque aliquam vestibulum morbi.",
