@@ -17,6 +17,7 @@
   width: 100%;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
+  height: 2.5em;
   overflow: hidden;
 }
 
@@ -76,8 +77,8 @@
 #bootstrap-overrides .logo {
   display: inline-block;
   text-decoration: none;
-  font-size: 2em;
-  font-family: "Contrail One", cursive;
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
 }
 
 @media (min-width: 900px) {
@@ -91,19 +92,9 @@
 }
 
 #bootstrap-overrides #logo-img {
-  background-color: white;
-  max-height: 1.4em !important;
-  padding-top: .1em;
+  position: fixed;
   margin-left: 0em;
-  height: 2.5em;
-  max-width: 2.5em;
-}
-
-@media (min-width: 900px) {
-  #bootstrap-overrides #logo-img {
-    height: 3em;
-    max-width: 1.5em;
-  }
+  width: 5em;
 }
 
 #bootstrap-overrides .logo-text {
@@ -117,10 +108,10 @@
     display: flex;
     color: #0000ad;
     font-weight: bold;
-    margin-left: .1em;
+    margin-left: 5.1em;
     margin-top: auto;
-    color: #0000ad;
-    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    color: white;
+    text-shadow: 2px 0 0 #56b, -2px 0 0 #56b, 0 2px 0 #56b, 0 -2px 0 #56b, 1px 1px #56b, -1px -1px 0 #56b, 1px -1px 0 #56b, -1px 1px 0 #56b;
   }
 }
 
@@ -218,7 +209,7 @@
 }
 
 #bootstrap-overrides .welcome-container {
-  background-image: url("/CascadeStorymap/src/appearance/img/gifs/gifVidPhoto2_croppedshorter.gif");
+  background-image: url("/CascadeStorymap/src/appearance/img/bloomington/IMG_8075_edit.JPG");
   background-size: cover;
   background-color: gray;
   background-repeat: no-repeat;
@@ -293,7 +284,7 @@
   position: relative;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 4em;
 }
 
 #bootstrap-overrides section .section-title h1 {

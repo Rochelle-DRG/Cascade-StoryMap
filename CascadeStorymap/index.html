@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Cascade StoryMap</title>
+    <title>Bloomington Trees</title>
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="src/appearance/reset.css">
 
@@ -17,27 +17,26 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Contrail+One|Noto+Sans+HK&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/appearance/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body id="bootstrap-overrides">
 
-    <!-- <nav class="navabar navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <span class="navbar-brand mb-0 h1">Story Map</span>
-        </div>
-    </nav> -->
-
     <nav class="navbar" id="navbar">
         <span class="navbar-toggle" id="js-navbar-toggle">
             <img id="bars" src="/CascadeStorymap/src/appearance/img/barsblackround.png" class="fas fa-bars"></i>
         </span>
         <ul id="left-logo">
-        <li><img id="logo-img" src="/CascadeStorymap/src/appearance/img/logos/CityofBloomingtonSeal.png" class="logo logo-img"></li>
-        <li id="logo-text"><a href="#" class="logo logo-text">Bloomington StoryMap</a></li>
+        <li><img id="logo-img" src="/CascadeStorymap/src/appearance/img/logos/BloomingtonLogos1.png" class="logo logo-img"></li>
+        <li id="logo-text"><a href="#" class="logo logo-text">Bloomington Indiana Urban Forest Assessment</a></li>
         </ul>
         <ul class="main-nav" id="js-menu">
+            <li><a href="#Welcome"      class="nav-links">Welcome</a></li>
+            <li><a href="#Benefits"     class="nav-links">Benefits</a></li>
+            <li><a href="#Text Area 1"  class="nav-links">Text Area 1</a></li>
+
         </ul>
     </nav>
 
@@ -51,10 +50,44 @@
 
         <div class="welcome-container">
             <div id="welcome" class="welcome-content">
+                <h1 id="Welcome">About This StoryMap</h1>
+                <p>This is Davey Resource Groups's customizable cascading Template.<br/>
+                    All colors and images are customizable.<br/>
+                    There are a variety of basemap options displayed here, and the styling and colors of the map may be customizable as well.
+                </p>
             </div>
         </div end welcome>
 
         <div id="main-body" class="main-body">
+            <section id="slide9_section">
+                <div id="slide9Header" class="section-title" >
+                    <h1 id="Benefits">Tree Benefits</h1>
+                </div>
+                <div id="slide9_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="slide9_map_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits annually. In addition to the annual benefits, the carbon stored by the current UTC contributes an additional $28 million in benefits, bringing the collective benefit amount to $32 million. This information was calculated using models and methods derived from <a href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br/>
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul></p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the local environment. Knowledge about the UTC within these areas provides a benchmark for understanding and optimizing stormwater mitigation benefits and other environmental services.</p>
+                </div>
+            </section>
+
+            <div id="slide3Div" class="lg-text-area">
+                <h1 id="Text Area 1">Large Text Area 1</h1>
+                <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20170330_143646_edit.jpg'></p>
+                <p>I have included a variety of basemap options in this demo, but you can find the whole list here: <a href='https://developers.arcgis.com/javascript/3/jsapi/esri.basemaps-amd.html'>View Basemap Options</a></p>
+                <p>If you are interested in selecting your own fonts, look here: <a href='https://fonts.google.com/'>Google Fonts</a></p>
+                <p><img src='/CascadeStorymap/src/appearance/img/gifs/slides2.gif'></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor massa id neque aliquam vestibulum morbi.</p>
+                <p>Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris. Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna neque. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed faucibus turpis in. Turpis massa sed elementum tempus egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing commodo. Ornare massa eget egestas purus viverra accumsan in nisl.</p>
+            </div>
 
 
         </div end main-body>

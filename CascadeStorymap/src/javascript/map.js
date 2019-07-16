@@ -45,6 +45,18 @@ $(document).ready(function () {
         ImageParameters) {
 
             var layersURL = "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer";
+            var isTouchScreen;
+            
+            function isTouchDevice() {
+                return 'ontouchstart' in document.documentElement;
+            }
+            if (isTouchDevice()){   // on mobile
+                isTouchScreen = true;
+            }
+            else {                  // on desktop
+                isTouchScreen = false;
+            };
+            console.log(isTouchScreen);
 
             //dealing with the CORS/wms problem
             // esriConfig.defaults.io.corsEnabledServers.push("gis.davey.com");
@@ -69,10 +81,6 @@ $(document).ready(function () {
                     layerInfos: [{ layer: dynamicMSL }]
                     // }, 'esriLegend'); //end legendDijit new
                 }, legendDivId); //end legendDijit new
-
-
-
-
             }; //end makeTheLegend
 
 
@@ -90,6 +98,13 @@ $(document).ready(function () {
                     currentMap.disableScrollWheel();
                 });
                 makeTheLegend(slideMap, currentMap);
+
+                //disable map drag for touchcreen
+                if (isTouchScreen === true){
+                    currentMap.disablePan();
+                } ;
+
+
 
                 //loop through MapAttributes.featureArray (featureArray is a list of the layer #'s for the slide)
                 $.each(slideMap.featureArray, function (j, layerNumber) {
@@ -168,6 +183,7 @@ $(document).ready(function () {
                 currentMap.infoWindow.setFeatures([deferred]);
             }; //end setPopups()
 
+            
 
 // // first swipe example
             // var mapDeferred = arcgisUtils.createMap("62702544d70648e593bc05d65180fd64", "map");
