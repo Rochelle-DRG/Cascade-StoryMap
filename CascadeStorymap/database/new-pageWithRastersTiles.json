@@ -1,0 +1,637 @@
+{
+    "page_info": {
+        "page_title": "Cascade Storymap - Example/Template",
+        "nav_header_img": "img/Logo_square_small.jpg",
+        "nav_header_text": "Storymap, YourTitle",
+        "nav_header_subtext": "Header subtext here",
+        "rest_legend_json_url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer?f=pjson"
+    },
+    "Layers": {
+        "Layer1": {
+            "layerID": [
+                0
+            ],
+            "title": "Sammamish Boundary",
+            "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer/0",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Sammamish Boundary",
+            "legend": false,
+            "popup": false,
+            "popupContent": [
+                ""
+            ],
+            "order": 0
+        },
+        "Layer2": {
+            "layerID": [
+                1
+            ],
+            "title": "ROWtrees",
+            "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer/1",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "ROWtrees",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Tree Type: ${Type}",
+            "order": 1
+        },
+        "Layer3": {
+            "layerID": [
+                2
+            ],
+            "title": "Park Tree Canopy",
+            "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer/2",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Park Tree Canopy",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${NAME}</br>Type: ${TYPE}</br>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}</br>Canopy %: ${canopy_percent:NumberFormat(places:2)}",
+            "order": 2
+        },
+        "Layer4": {
+            "layerID": [
+                3
+            ],
+            "title": "SubBasin Tree Canopy",
+            "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer/3",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "SubBasin Tree Canopy",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 3
+        },
+        "Layer5": {
+            "layerID": [
+                4
+            ],
+            "title": "Tree Health Index",
+            "url": "https://gis.davey.com/arcgis/services/Sammamish/SammamishFeatures/MapServer/WMSServer",
+            "type": "raster",
+            "opacity": 0.5,
+            "layername": "Tree Health Index",
+            "legend": true,
+            "popup": false,
+            "popupContent": [
+                ""
+            ],
+            "order": 4
+        },
+        "Layer6": {
+            "layerID": [
+                5
+            ],
+            "title": "Land Cover",
+            "url": "https://gis.davey.com/arcgis/services/Sammamish/SammamishFeatures/MapServer/WMSServer",
+            "type": "raster",
+            "opacity": 0.6,
+            "layername": "Land Cover",
+            "legend": true,
+            "popup": false,
+            "popupContent": [
+                ""
+            ],
+            "order": 5
+        },
+        "Layer7": {
+            "layerID": [
+                6
+            ],
+            "title": "Fragmentation",
+            "url": "https://gis.davey.com/arcgis/services/Sammamish/SammamishFeatures/MapServer/WMSServer",
+            "type": "raster",
+            "opacity": 0.6,
+            "layername": "Fragmentation",
+            "legend": true,
+            "popup": false,
+            "popupContent": [
+                ""
+            ],
+            "order": 6
+        },
+        "Layer8": {
+            "layerID": [
+                7
+            ],
+            "title": "Priority Planting",
+            "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SAM_PriorityPlanting/MapServer",
+            "type": "tiled",
+            "opacity": 0.6,
+            "layername": "Priority Planting",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Planting Priority: ${priority}<br/>Area (SQFT): ${sqft:NumberFormat(places:2)}",
+            "order": 7
+        },
+        "Layer9": {
+            "layerID": [
+                8
+            ],
+            "title": "Lower Grand City Limits",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/0",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "City Limits",
+            "legend": false,
+            "popup": false,
+            "popupContent": [
+                ""
+            ],
+            "order": 8
+        },
+        "Layer10": {
+            "layerID": [
+                9
+            ],
+            "title": "Lower Grand Census Blocks",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/1",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Census Blocks",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Tree Type: ${Type}",
+            "order": 9
+        },
+        "Layer11": {
+            "layerID": [
+                10
+            ],
+            "title": "Lower Grand Land Cover",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/2",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Land Cover",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${NAME}<br/>Type: ${TYPE}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}",
+            "order": 10
+        },
+        "Layer12": {
+            "layerID": [
+                11
+            ],
+            "title": "Sparta's Parcels",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/3",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Sparta's Parcels",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 11
+        },
+        "Layer13": {
+            "layerID": [
+                12
+            ],
+            "title": "Lower Grand Land Use Classification",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/4",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Land Use Classification",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 12
+        },
+        "Layer14": {
+            "layerID": [
+                13
+            ],
+            "title": "Lower Grand Priority Planting Level",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/5",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Priority Planting Level",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 13
+        },
+        "Layer15": {
+            "layerID": [
+                14
+            ],
+            "title": "Lower Grand Land Use",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/6",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Land Use",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 14
+        },
+        "Layer16": {
+            "layerID": [
+                15
+            ],
+            "title": "Hudsonville's Tree Placement Points",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/7",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Hudsonville's Tree Placement Points",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 15
+        },
+        "Layer17": {
+            "layerID": [
+                16
+            ],
+            "title": "Hudsonville's Tree Size",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/8",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Hudsonville's Tree Size",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 16
+        },
+        "Layer18": {
+            "layerID": [
+                17
+            ],
+            "title": "Hudsonville's Creekside Park Boundary",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/9",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Hudsonville's Creekside Park Boundary",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 17
+        },
+        "Layer19": {
+            "layerID": [
+                18
+            ],
+            "title": "Ferrysburg Tree Health Index",
+            "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/13",
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "Ferrysburg Tree Health Index",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 18
+        },
+        "Layer20": {
+            "layerID": [
+                19
+            ],
+            "title": "Poles",
+            "url": "https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms",
+            "type": "geo",
+            "opacity": 1.0,
+            "layername": "Treekeeper:BloomingtonIN_StreetJoin",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 19
+        },
+        "Layer21": {
+            "layerID": [
+                20
+            ],
+            "title": "Poles2",
+            "url": "https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms",
+            "type": "geo",
+            "opacity": 1.0,
+            "layername": "Treekeeper:BloomingtonIN_CityLimits",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Name: ${basinname}<br/>Canopy Acres: ${canopy_acres:NumberFormat(places:2)}<br/>Canopy %: ${canopy_percent:NumberFormat(places:2)}<br/>Preferrable Acres: ${preferrable_acres:NumberFormat(places:2)}<br/>Preferrable %: ${preferrable_percent:NumberFormat(places:2)}<br/>Maximum UTC %: ${maximum_utc_percent:NumberFormat(places:2)}",
+            "order": 20
+        }
+    },
+    "maps": {
+        "bloomtest1": {
+            "viewType": "map",
+            "sectionID": "bloomtest1_section",
+            "containerID": "bloomtest1_map",
+            "legendID": "bloomtest1_legend",
+            "basemap": "topo",
+            "mapCenter": [
+                -86.522406,
+                39.167872
+            ],
+            "zoom": 12,
+            "featureArray": [
+                "Layer20",
+                "Layer21"
+            ],
+            "searchLayer": "Layer1",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map1": {
+            "viewType": "map",
+            "sectionID": "slide2_section",
+            "containerID": "slide2_map",
+            "legendID": "map1_legend",
+            "basemap": "topo",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer6"
+            ],
+            "searchLayer": "Layer1",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map2": {
+            "viewType": "map",
+            "sectionID": "slide4_section",
+            "containerID": "slide4_map",
+            
+            "legendID": "map2_legend",
+            "basemap": "streets",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer7"
+            ],
+            "searchLayer": "Layer7",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map3": {
+            "viewType": "map",
+            "sectionID": "slide6_section",
+            "containerID": "slide6_map",
+            
+            "legendID": "map3_legend",
+            "basemap": "satellite",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer5"
+            ],
+            "searchLayer": "Layer5",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map4": {
+            "viewType": "map",
+            "sectionID": "slide7_section",
+            "containerID": "slide7_map",
+            
+            "legendID": "map4_legend",
+            "basemap": "hybrid",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer2"
+            ],
+            "searchLayer": "Layer2",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map5": {
+            "viewType": "map",
+            "sectionID": "slide8_section",
+            "containerID": "slide8_map",
+            
+            "legendID": "map5_legend",
+            "basemap": "gray",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer3"
+            ],
+            "searchLayer": "Layer3",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map6": {
+            "viewType": "map",
+            "sectionID": "slide9_section",
+            "containerID": "slide9_map",
+            
+            "legendID": "map6_legend",
+            "basemap": "national-geographic",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer4"
+            ],
+            "searchLayer": "Layer4",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map7": {
+            "viewType": "map",
+            "sectionID": "slide10_section",
+            "containerID": "slide10_map",
+            
+            "legendID": "map7_legend",
+            "basemap": "terrain",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer8"
+            ],
+            "searchLayer": "Layer8",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map8": {
+            "viewType": "map",
+            "sectionID": "slide11_section",
+            "containerID": "slide11_map",
+            
+            "legendID": "map8_legend",
+            "basemap": "osm",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer8"
+            ],
+            "searchLayer": "Layer8",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map9": {
+            "viewType": "map",
+            "sectionID": "slide12_section",
+            "containerID": "slide12_map",
+            
+            "legendID": "map9_legend",
+            "basemap": "gray-vector",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer8"
+            ],
+            "searchLayer": "Layer8",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map10": {
+            "viewType": "map",
+            "sectionID": "slide13_section",
+            "containerID": "slide13_map",
+            
+            "legendID": "map10_legend",
+            "basemap": "topo-vector",
+            "mapCenter": [
+                -122.035534,
+                47.616567
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer8"
+            ],
+            "searchLayer": "Layer8",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map11": {
+            "viewType": "map",
+            "sectionID": "slide14_section",
+            "containerID": "slide14_map",
+            
+            "legendID": "map11_legend",
+            "basemap": "hybrid",
+            "mapCenter": [
+                -85.865986,
+                42.858307
+            ],
+            "zoom": 17,
+            "featureArray": [
+                "Layer9",
+                "Layer16",
+                "Layer17",
+                "Layer18"
+            ],
+            "searchLayer": "Layer16",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map12": {
+            "viewType": "map",
+            "sectionID": "slide15_section",
+            "containerID": "slide15_map",
+            
+            "legendID": "map12_legend",
+            "basemap": "terrain",
+            "mapCenter": [
+                -85.865150,
+                42.862521
+            ],
+            "zoom": 14,
+            "featureArray": [
+                "Layer9",
+                "Layer10"
+            ],
+            "searchLayer": "Layer9",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map13": {
+            "viewType": "map",
+            "sectionID": "slide16_section",
+            "containerID": "slide16_map",
+            
+            "legendID": "map13_legend",
+            "basemap": "gray",
+            "mapCenter": [
+                -85.709438,
+                43.157597
+            ],
+            "zoom": 14,
+            "featureArray": [
+                "Layer9",
+                "Layer11"
+            ],
+            "searchLayer": "Layer9",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map14": {
+            "viewType": "map",
+            "sectionID": "slide17_section",
+            "containerID": "slide17_map",
+            
+            "legendID": "map14_legend",
+            "basemap": "national-geographic",
+            "mapCenter": [
+                -85.709438,
+                43.157597
+            ],
+            "zoom": 14,
+            "featureArray": [
+                "Layer9",
+                "Layer12"
+            ],
+            "searchLayer": "Layer9",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map15": {
+            "viewType": "map",
+            "sectionID": "slide18_section",
+            "containerID": "slide18_map",
+            
+            "legendID": "map15_legend",
+            "basemap": "streets",
+            "mapCenter": [
+                -86.214169,
+                43.088371
+            ],
+            "zoom": 14,
+            "featureArray": [
+                "Layer3",
+                "Layer14"
+            ],
+            "searchLayer": "Layer14",
+            "searchFld": "",
+            "searchAttr": ""
+        }
+    }
+}

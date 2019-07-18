@@ -11,7 +11,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
     <!-- <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css"> -->
-    <link rel="stylesheet" href="https://js.arcgis.com/3.28/esri/css/esri.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.29/esri/css/esri.css">
 
     <!-- <script src="https://kit.fontawesome.com/88fcf8727c.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
@@ -29,64 +29,605 @@
             <img id="bars" src="/CascadeStorymap/src/appearance/img/barsblackround.png" class="fas fa-bars"></i>
         </span>
         <ul id="left-logo">
-        <li><img id="logo-img" src="/CascadeStorymap/src/appearance/img/logos/BloomingtonLogos1.png" class="logo logo-img"></li>
-        <li id="logo-text"><a href="#" class="logo logo-text">Bloomington Indiana Urban Forest Assessment</a></li>
+            <li><img id="logo-img" src="/CascadeStorymap/src/appearance/img/logos/BloomingtonLogos1.png"
+                    class="logo logo-img"></li>
+            <li id="logo-text"><a href="#" class="logo logo-text">Bloomington Indiana Urban Forest Assessment</a></li>
         </ul>
         <ul class="main-nav" id="js-menu">
-            <li><a href="#Welcome"      class="nav-links">Welcome</a></li>
-            <li><a href="#Benefits"     class="nav-links">Benefits</a></li>
-            <li><a href="#Text Area 1"  class="nav-links">Text Area 1</a></li>
+            <li><a href="#Welcome" class="nav-links">Welcome</a></li>
+            <li><a href="#Benefits" class="nav-links">Benefits</a></li>
+            <li><a href="#Text Area 1" class="nav-links">Text Area 1</a></li>
 
         </ul>
     </nav>
 
     <div class="everything-after-nav">
-<!--Part of LayerSwipe Experiment-->        
-    <!-- <section class="general-map" style:"height: 100vh !important;"> -->
-       <!-- <div id="map" class="map"><div id="swipeDiv"></div></div> -->
-       <!-- <div id="map" class="map"><div id="swipeDiv2"></div></div> -->
-            <!-- <div id="map" class="map"><div id="mySwipeTest"></div></div> -->
+        <!--Part of LayerSwipe Experiment-->
+        <!-- <section class="general-map" style:"height: 100vh !important;"> -->
+        <!-- <div id="map" class="map"><div id="swipeDiv"></div></div> -->
+        <!-- <div id="map" class="map"><div id="swipeDiv2"></div></div> -->
+        <!-- <div id="map" class="map"><div id="mySwipeTest"></div></div> -->
         <!-- </section> -->
 
         <div class="welcome-container">
             <div id="welcome" class="welcome-content">
                 <h1 id="Welcome">About This StoryMap</h1>
-                <p>This is Davey Resource Groups's customizable cascading Template.<br/>
-                    All colors and images are customizable.<br/>
-                    There are a variety of basemap options displayed here, and the styling and colors of the map may be customizable as well.
+                <p>This is Davey Resource Groups's customizable cascading Template.<br />
+                    All colors and images are customizable.<br />
+                    There are a variety of basemap options displayed here, and the styling and colors of the map may be
+                    customizable as well.
                 </p>
             </div>
         </div end welcome>
 
         <div id="main-body" class="main-body">
-            <section id="slide9_section">
-                <div id="slide9Header" class="section-title" >
-                    <h1 id="Benefits">Tree Benefits</h1>
+
+
+            <section id="bloomtest1_section">
+                <div id="bloomtest1Header" class="section-title">
+                    <h1 id="bloomtest1">First Bloomington map made from Json</h1>
                 </div>
-                <div id="slide9_map" class="general-map content-section sticky" style="z-index: 1"></div>
-                <div id="slide9_map_legend" class="legend legend-right"></div>
-                <div id="slide9paragraphs" class="sm-textbox">
-                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits annually. In addition to the annual benefits, the carbon stored by the current UTC contributes an additional $28 million in benefits, bringing the collective benefit amount to $32 million. This information was calculated using models and methods derived from <a href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                <div id="bloomtest1_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="bloomtest1_legend" class="legend legend-right"></div>
+                <div id="bloomtest1paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
                     <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
                     <p>Sammamish’s trees are amazing because they:
-                        <br/>
+                        <br />
                         <ul>
-                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air quality improvements have the impressive value of $626,000 annually.</li>
-                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
                             <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
-                        </ul></p>
-                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the local environment. Knowledge about the UTC within these areas provides a benchmark for understanding and optimizing stormwater mitigation benefits and other environmental services.</p>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+
+            <section id="wmstest6_section">
+                <div id="wmstest6Header" class="section-title">
+                    <h1 id="wmstest6">MY TK Trees 1st Working Experiment</h1>
+                </div>
+                <div id="map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="wmstest6_legend" class="legend legend-right"></div>
+                <div id="wmstest6paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+
+            <section id="wmstest5_section">
+                <div id="wmstest5Header" class="section-title">
+                    <h1 id="wmstest5">Bill's working geoserver layer</h1>
+                </div>
+                <div id="wmstest5_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="wmstest5_legend" class="legend legend-right"></div>
+                <div id="wmstest5paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+
+
+            <section id="slide2_section">
+                <div id="slide9Header" class="section-title">
+                    <h1 id="Benefits">Map 1</h1>
+                </div>
+                <div id="slide2_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map1_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide4_section">
+                <div id="slide9Header" class="section-title">
+                    <h1 id="Benefits">Map 2</h1>
+                </div>
+                <div id="slide4_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map2_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide6_section">
+                <div id="slide6Header" class="section-title">
+                    <h1 id="Benefits">Map 3</h1>
+                </div>
+                <div id="slide6_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map3_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide7_section">
+                <div id="slide7Header" class="section-title">
+                    <h1 id="Benefits">Map 4</h1>
+                </div>
+                <div id="slide7_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map4_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide8_section">
+                <div id="slide8Header" class="section-title">
+                    <h1 id="Benefits">Map 5</h1>
+                </div>
+                <div id="slide8_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map5_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide9_section">
+                <div id="slide79Header" class="section-title">
+                    <h1 id="Benefits">Map 6</h1>
+                </div>
+                <div id="slide9_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map5_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide10_section">
+                <div id="slide10Header" class="section-title">
+                    <h1 id="Benefits">Map 7</h1>
+                </div>
+                <div id="slide10_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map7_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide11_section">
+                <div id="slide11Header" class="section-title">
+                    <h1 id="Benefits">Map 8</h1>
+                </div>
+                <div id="slide11_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map8_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide12_section">
+                <div id="slide12Header" class="section-title">
+                    <h1 id="Benefits">Map 9</h1>
+                </div>
+                <div id="slide12_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map9_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide13_section">
+                <div id="slide13Header" class="section-title">
+                    <h1 id="Benefits">Map 10</h1>
+                </div>
+                <div id="slide13_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map10_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide14_section">
+                <div id="slide14Header" class="section-title">
+                    <h1 id="Benefits">Map 11</h1>
+                </div>
+                <div id="slide14_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map11_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide15_section">
+                <div id="slide15Header" class="section-title">
+                    <h1 id="Benefits">Map 12</h1>
+                </div>
+                <div id="slide15_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map12_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide16_section">
+                <div id="slide16Header" class="section-title">
+                    <h1 id="Benefits">Map 13</h1>
+                </div>
+                <div id="slide16_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map13_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide17_section">
+                <div id="slide17Header" class="section-title">
+                    <h1 id="Benefits">Map 14</h1>
+                </div>
+                <div id="slide17_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map14_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide18_section">
+                <div id="slide18Header" class="section-title">
+                    <h1 id="Benefits">Map 15</h1>
+                </div>
+                <div id="slide18_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="map15_legend" class="legend legend-right"></div>
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>Sammamish’s trees are amazing because they:
+                        <br />
+                        <ul>
+                            <li>Remove almost 360,000 pounds of pollutants from the air every year, and these air
+                                quality improvements have the impressive value of $626,000 annually.</li>
+                            <li>Intercept a staggering 88 million gallons of stormwater annually; this important
+                                infrastructure service is valued at approximately $2.4 million each year.</li>
+                            <li>Sequester 26,859 tons of Carbon each year valued at $946,916 annually.</li>
+                        </ul>
+                    </p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
                 </div>
             </section>
 
             <div id="slide3Div" class="lg-text-area">
                 <h1 id="Text Area 1">Large Text Area 1</h1>
                 <p><img src='/CascadeStorymap/src/appearance/img/bloomington/20170330_143646_edit.jpg'></p>
-                <p>I have included a variety of basemap options in this demo, but you can find the whole list here: <a href='https://developers.arcgis.com/javascript/3/jsapi/esri.basemaps-amd.html'>View Basemap Options</a></p>
-                <p>If you are interested in selecting your own fonts, look here: <a href='https://fonts.google.com/'>Google Fonts</a></p>
+                <p>I have included a variety of basemap options in this demo, but you can find the whole list here: <a
+                        href='https://developers.arcgis.com/javascript/3/jsapi/esri.basemaps-amd.html'>View Basemap
+                        Options</a></p>
+                <p>If you are interested in selecting your own fonts, look here: <a
+                        href='https://fonts.google.com/'>Google Fonts</a></p>
                 <p><img src='/CascadeStorymap/src/appearance/img/gifs/slides2.gif'></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis lectus nulla at volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor massa id neque aliquam vestibulum morbi.</p>
-                <p>Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris. Purus in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a condimentum vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna neque. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed faucibus turpis in. Turpis massa sed elementum tempus egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis at erat pellentesque adipiscing commodo. Ornare massa eget egestas purus viverra accumsan in nisl.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis lectus nulla at
+                    volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus egestas tellus rutrum
+                    tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor massa id neque aliquam
+                    vestibulum morbi.</p>
+                <p>Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris. Purus
+                    in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a condimentum
+                    vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna neque. Nulla
+                    pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed faucibus turpis
+                    in. Turpis massa sed elementum tempus egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis
+                    at erat pellentesque adipiscing commodo. Ornare massa eget egestas purus viverra accumsan in nisl.
+                </p>
             </div>
 
 
@@ -117,7 +658,7 @@
         crossorigin="anonymous"></script> -->
     <!-- Esri API -->
     <!-- <script src="https://js.arcgis.com/4.11/"></script> -->
-    <script src="https://js.arcgis.com/3.28/"></script>
+    <script src="https://js.arcgis.com/3.29/"></script>
 
     <script src="src/javascript/map.js"></script>
     <!-- <script src="src/javascript/map1.js"></script> -->

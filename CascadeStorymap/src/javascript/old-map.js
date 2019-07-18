@@ -1,77 +1,69 @@
 
 $(document).ready(function () {
     require([
-        "esri/map",                     //1
-        "esri/layers/FeatureLayer",     //2
-        "esri/layers/WMSLayer",         //3
-        "esri/layers/WMSLayerInfo",     //4
-        "esri/config",                  //5
-        "esri/geometry/Extent",         //6
-        "esri/config",                  //7
-        "esri/tasks/IdentifyTask",      //8
-        "esri/tasks/IdentifyParameters",//9
-        "esri/InfoTemplate",            //10
-        "esri/dijit/Popup",             //11
-        "esri/dijit/PopupTemplate",     //12
-        "dojo/_base/array",             //13
-        "dojo/_base/array",             //14 this "duplicate" is not a mistake
+        "esri/map",
+        "esri/layers/FeatureLayer",
+        "esri/layers/WMSLayer",
+        "esri/layers/WMSLayerInfo",
+        "esri/geometry/Extent",
+        "esri/config",
+        "esri/tasks/IdentifyTask",
+        "esri/tasks/IdentifyParameters",
+        "esri/InfoTemplate",
+        "esri/dijit/Popup",
+        "esri/dijit/PopupTemplate",
+        "dojo/_base/array",
+        "dojo/_base/array",//this is not a mistake
 
+        "esri/dijit/LayerSwipe",
+        "esri/arcgis/utils",
+        "esri/dijit/Legend",
+        "esri/layers/ArcGISDynamicMapServiceLayer",
+        "esri/layers/ImageParameters",
 
-        "esri/dijit/LayerSwipe",        //15
-        "esri/arcgis/utils",            //16
-        "esri/dijit/Legend",            //17
-        "esri/layers/ArcGISDynamicMapServiceLayer",//18
-        "esri/layers/ImageParameters",  //19
-        "dojo/dom-construct",           //20
-        "dojo/dom",                     //21
-        "dojo/parser",                  //22
+        "dojo/domReady!"
 
+    ], function (Map,
+        FeatureLayer,
+        WMSLayer,
+        WMSLayerInfo,
+        Extent,
+        esriConfig,
+        IdentifyTask,
+        IdentifyParameters,
+        InfoTemplate,
 
-        "dijit/layout/BorderContainer", //always last, no function match
-        "dijit/layout/ContentPane",     //always last, no function match
-        "dojo/domReady!"                //always last, no function match
+        Popup,
+        PopupTemplate,
+        arrayUtils,
+        array,
 
-    ], function (Map,                   //1
-        FeatureLayer,                   //2
-        WMSLayer,                       //3
-        WMSLayerInfo,                   //4
-        esriConfig,                     //5
-        Extent,                         //6
-        esriConfig,                     //7
-        IdentifyTask,                   //8
-        IdentifyParameters,             //9
-        InfoTemplate,                   //10
-
-        Popup,                          //11
-        PopupTemplate,                  //12
-        arrayUtils,                     //13
-        array,                          //14
-
-        LayerSwipe,                     //15
-        arcgisUtils,                    //16
-        Legend,                         //17
-        ArcGISDynamicMapServiceLayer,   //18
-        ImageParameters,                //19
-        domConst,                       //20
-        dom,                            //21
-        parser) {                       //22
-
-            parser.parse(); //part of wms2 test
+        LayerSwipe,
+        arcgisUtils,
+        Legend,
+        ArcGISDynamicMapServiceLayer,
+        ImageParameters) {
 
             var layersURL = "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer";
             var isTouchScreen;
-
-            function isTouchDevice() { return 'ontouchstart' in document.documentElement; }
-            if (isTouchDevice()) {  /*on mobile*/ isTouchScreen = true; }
-            else { /*on desktop*/ isTouchScreen = false; };
+            
+            function isTouchDevice() {
+                return 'ontouchstart' in document.documentElement;
+            }
+            if (isTouchDevice()){   // on mobile
+                isTouchScreen = true;
+            }
+            else {                  // on desktop
+                isTouchScreen = false;
+            };
             console.log(isTouchScreen);
 
             //dealing with the CORS/wms problem
             // esriConfig.defaults.io.corsEnabledServers.push("gis.davey.com");
             esriConfig.defaults.io.corsDetection = false;
 
-            makeTheLegend = function (mapDetailsFromJson, currentMap) {
-                var detailLayer = mapLayers[mapDetailsFromJson.searchLayer].layerID;
+            makeTheLegend = function (slideMap, currentMap) {
+                var detailLayer = mapLayers[slideMap.searchLayer].layerID;
                 var imageParameters = new ImageParameters();
                 imageParameters.layerIds = detailLayer;
                 imageParameters.layerOption = ImageParameters.LAYER_OPTION_SHOW; //defines that you only see the layer(s) listed above
@@ -82,21 +74,20 @@ $(document).ready(function () {
                     "imageParameters": imageParameters
                 });
 
+                legendDivId = slideMap.containerID + "_legend"; //the same as the div made in main.js
+                // console.log("The legend div is "+legendDivId);    
                 legendDijit = new Legend({
                     map: currentMap,
                     layerInfos: [{ layer: dynamicMSL }]
                     // }, 'esriLegend'); //end legendDijit new
-                }, mapDetailsFromJson.legendID); //end legendDijit new
+                }, legendDivId); //end legendDijit new
             }; //end makeTheLegend
 
 
 
-            // mapDetails is the list of individula map details from all of the Slides
-            $.each(mapDetails, function (k, slideMap) {
+            // mapAttributes is the list of individula map details from all of the Slides
+            $.each(mapAttributes, function (k, slideMap) {
                 // console.log("1.) current map: " + slideMap.containerID); //good
-                // console.log(slideMap.containerID);
-                // console.log(mapDetails); //good
-                // console.log(slideMap);
                 var currentMap = new Map(slideMap.containerID, {
                     basemap: slideMap.basemap,
                     center: slideMap.mapCenter,
@@ -109,44 +100,21 @@ $(document).ready(function () {
                 makeTheLegend(slideMap, currentMap);
 
                 //disable map drag for touchcreen
-                if (isTouchScreen === true) {
+                if (isTouchScreen === true){
                     currentMap.disablePan();
-                };
+                } ;
 
 
-                //loop through slideMap.featureArray for each map (featureArray is a list of the layer #'s for the slide)
+
+                //loop through MapAttributes.featureArray (featureArray is a list of the layer #'s for the slide)
                 $.each(slideMap.featureArray, function (j, layerNumber) {
-                    var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
+                    // console.log("3.) making " + layerNumber + " of " + slideMap.containerID);
+                    var slide = mapLayers[layerNumber];
                     var newLayer;
 
                     if (slide.type === "raster") {
                         console.log(layerNumber + " is a raster layer");
                     } //end if raster
-
-                    if (slide.type === "geo") {
-                        console.log(layerNumber + " is a geo layer");
-
-                        var layerInfo = new WMSLayerInfo({
-                            name: slide.layername,
-                            title: slide.title
-                        });
-                        newLayer = new WMSLayer("https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms", {
-                            resourceInfo: {
-                                layerInfos: [layerInfo],
-                                extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                                featureInfoFormat: "text/html",
-                                // getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
-                                //getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
-                            },
-                            visibleLayers: [
-                                slide.layername
-                            ],
-                            version: "1.3.0"
-                        });
-                        // currentMap.addLayer(newLayer);
-
-
-                    } //end if slidetype = geo
 
                     if (slide.type === "feature") {
 
@@ -157,14 +125,14 @@ $(document).ready(function () {
                     }
 
                     currentMap.addLayer(newLayer);
+                    // console.log("4.) end of .each layer");
                 }); //end .each layerNumber
 
                 legendDijit.refresh();
 
-                //still inside for-each-mapDetails loop
+                //still inside for-each-mapslide loop
                 // console.log(mapLayers[slideMap.searchLayer].layerID); //returns a number
                 currentMap.on("click", function (event) {
-                    console.log(slideMap.searchLayer + " has been clicked");
                     setPopups(event, slideMap, currentMap);
                 }); //end on-click
                 // console.log("!LAST)end of .each map/slide");
@@ -173,6 +141,7 @@ $(document).ready(function () {
 
             setPopups = function (event, slideMap, currentMap) {
                 var popupLayer = mapLayers[slideMap.searchLayer];
+                // console.log(popupLayer);
                 identifyTask = new IdentifyTask(layersURL);
                 identifyParams = new IdentifyParameters();
                 identifyParams.tolerance = 10; //i think the bigger the number the bigger the area around your click it searches.
@@ -187,6 +156,13 @@ $(document).ready(function () {
                 var deferred = identifyTask
                     .execute(identifyParams)
                     .addCallback(function (response) {
+                        // //skipping the if (response.length > 0)
+                        // console.log(currentMap);//currentMap.basemapLayerID 
+                        // console.log(currentMap.basemapLayerID);                     //undefined
+                        // // console.log(currentMap.infoWindow.featureLayers);        // undefined
+                        // console.log(currentMap.layerIds);                        // currentMap.layerIds ["layer0"]I think this is actually returning the slide?
+                        // console.log(response); //THIS CODE IS BEING REACHED BUT THE RESPONSE IS EMPTY sometimes
+                        // response should include layerID, layerName, displayFieldName, value, geomtryType....
 
                         if (response.length > 0) {//if there should be a popup
                             return arrayUtils.map(response, function (result) {
@@ -207,86 +183,9 @@ $(document).ready(function () {
                 currentMap.infoWindow.setFeatures([deferred]);
             }; //end setPopups()
 
+            
 
-
-
-            //      // ####5th wms test, geo layer from Bill Sample 
-            // it works 
-            esriConfig.defaults.io.corsEnabledServers.push("geo.rowkeeper.com");
-
-            var wmstest5_map = new Map('wmstest5_map', {
-                basemap: 'streets',
-                center: [-85.035534,
-                    40.616567],
-                zoom: 8
-            });
-
-            var wmstest5_layer1 = new WMSLayerInfo({
-                name: 'Treekeeper:AEPOH_Poles',
-                title: 'Poles'
-            });
-
-            var resourceInfo = {
-                extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                layerInfos: [wmstest5_layer1]
-            };
-            wmstest5_layer = new WMSLayer("http://geo.rowkeeper.com/geoserver/Treekeeper/wms", {
-                //visible: true,
-                resourceInfo: {
-                    layerInfos: [wmstest5_layer1],
-                    //spatialReferences:[26916],
-                    extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                    featureInfoFormat: "text/html",
-                    getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
-                    getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
-                },
-                visibleLayers: [
-                    "Treekeeper:AEPIM_Counties"
-                ],
-                version: "1.3.0"
-            });
-            wmstest5_map.addLayer(wmstest5_layer);
-
-
-
-            //      // ####6th wms test, bring in my tk trees
-
-            var map = new Map('map', {
-                basemap: 'streets',
-                center: [-86.522406,
-                    39.167872],
-                zoom: 12
-            });
-
-            var layer1 = new WMSLayerInfo({
-                name: 'Treekeeper:BloomingtonIN_StreetJoin',
-                title: 'Poles'
-            });
-
-            var test_layer = new WMSLayer("https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms", {
-                //visible: true,
-                resourceInfo: {
-                    layerInfos: [layer1],
-                    //spatialReferences:[26916],
-                    extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                    featureInfoFormat: "text/html",
-                    // getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
-                    //getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
-                },
-                visibleLayers: [
-                    "Treekeeper:BloomingtonIN_StreetJoin"
-                ],
-                version: "1.3.0"
-            });
-            map.addLayer(test_layer)
-
-
-
-
-
-
-
-            // // first swipe example
+// // first swipe example
             // var mapDeferred = arcgisUtils.createMap("62702544d70648e593bc05d65180fd64", "map");
             // mapDeferred.then(function (response) {
             //     var id;
@@ -344,7 +243,7 @@ $(document).ready(function () {
             // swipeWidget2.startup();
 
 
-            // //MY first swipe test
+// //MY first swipe test
             // mapTestMe = new Map("map", {
             //     basemap: "gray",
             //     center: [-122.035534, 47.616567],
