@@ -13,6 +13,8 @@
             ],
             "title": "Sammamish Boundary",
             "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer/0",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer",
+
             "type": "feature",
             "opacity": 1.0,
             "layername": "Sammamish Boundary",
@@ -29,6 +31,8 @@
             ],
             "title": "ROWtrees",
             "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer/1",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer",
+
             "type": "feature",
             "opacity": 1.0,
             "layername": "ROWtrees",
@@ -43,6 +47,8 @@
             ],
             "title": "Park Tree Canopy",
             "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer/2",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer",
+
             "type": "feature",
             "opacity": 1.0,
             "layername": "Park Tree Canopy",
@@ -57,6 +63,8 @@
             ],
             "title": "SubBasin Tree Canopy",
             "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer/3",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer",
+
             "type": "feature",
             "opacity": 1.0,
             "layername": "SubBasin Tree Canopy",
@@ -103,6 +111,7 @@
             ],
             "title": "Fragmentation",
             "url": "https://gis.davey.com/arcgis/services/Sammamish/SammamishFeatures/MapServer/WMSServer",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer",
             "type": "raster",
             "opacity": 0.6,
             "layername": "Fragmentation",
@@ -133,6 +142,8 @@
             ],
             "title": "Lower Grand City Limits",
             "url": "https://gis.davey.com/arcgis/rest/services/MichiganRelief/MichiganReleaf/MapServer/0",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer",
+
             "type": "feature",
             "opacity": 1.0,
             "layername": "City Limits",

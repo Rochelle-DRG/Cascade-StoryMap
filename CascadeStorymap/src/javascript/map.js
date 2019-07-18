@@ -56,7 +56,7 @@ $(document).ready(function () {
         dom,                            //21
         parser) {                       //22
 
-            parser.parse(); //part of wms2 test
+            dojo.require("esri.tasks.query"); //part of 1st attempt setGeoPopups https://developers.arcgis.com/javascript/3/jssamples/query_clickinfowindow.html
 
             var layersURL = "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer";
             var isTouchScreen;
@@ -142,8 +142,21 @@ $(document).ready(function () {
                                 slide.layername
                             ],
                             version: "1.3.0"
-                        });
-                        // currentMap.addLayer(newLayer);
+
+                        });// end new WMSLayer
+                        // console.log(newLayer.featureInfoFormat);     // text/html (not helpful)
+                        // console.log(newLayer.layerInfos);            //only shows the information I assigned
+                        // console.log(newLayer.showAttribution);       //true
+                        // console.log(newLayer.title);                 //comes back blank
+                        //console.log(newLayer.getImageFormat());       // png
+                        // console.log(newLayer);
+                        // console.log(newLayer);
+                        // console.log(newLayer);
+                        // console.log(newLayer);
+                        // console.log(newLayer);
+
+                        // console.log(newLayer);
+
 
 
                     } //end if slidetype = geo
@@ -172,8 +185,9 @@ $(document).ready(function () {
 
 
             setPopups = function (event, slideMap, currentMap) {
+                console.log("setPopups has been called");
                 var popupLayer = mapLayers[slideMap.searchLayer];
-                identifyTask = new IdentifyTask(layersURL);
+                identifyTask = new IdentifyTask(popupLayer.infoUrl);
                 identifyParams = new IdentifyParameters();
                 identifyParams.tolerance = 10; //i think the bigger the number the bigger the area around your click it searches.
                 identifyParams.returnGeometry = true;
@@ -183,7 +197,7 @@ $(document).ready(function () {
                 identifyParams.height = currentMap.height;
                 identifyParams.geometry = event.mapPoint;
                 identifyParams.mapExtent = currentMap.extent;
-                // console.log(identifyParams); //working
+                console.log(identifyParams); //working
                 var deferred = identifyTask
                     .execute(identifyParams)
                     .addCallback(function (response) {
@@ -202,11 +216,29 @@ $(document).ready(function () {
 
                             }); //end return arrayUtils
                         } //end if response.length
-                        else { if (map.infoWindow) { map.infoWindow.hide(); } };
+                        else {
+                            if (map.infoWindow) {
+                                console.log("execute(identifyParams) returned nothing");
+                                setGeoPopups(event, slideMap, currentMap);
+                                // map.infoWindow.hide(); 
+                            }
+                        }; //end else nothing returned
                     }); //end .addCalback
                 currentMap.infoWindow.setFeatures([deferred]);
             }; //end setPopups()
 
+            setGeoPopups = function (event, slideMap, currentMap) {
+                console.log("setGeoPopups has been called");
+                var popupLayer = mapLayers[slideMap.searchLayer];
+                console.log(popupLayer);
+                console.log(currentMap);
+
+
+
+
+
+
+            }; //end setGeoPopups
 
 
 
