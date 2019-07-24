@@ -4,6 +4,11 @@
         font-family: $page-font;
         line-height: 1.5em;
         // overflow-x: hidden; //messes up layering
+
+        //troubleshooting nav dropdown //no effect
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
     }  
     a {
         color: #cec083;
@@ -12,13 +17,13 @@
         font-size: 1em;
         // background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
         background-color: $nav-bkgnd-color;
-        padding-bottom: 1em;
+        padding-bottom: 4em;
         z-index: 500;
         position: fixed;
         top: 0;
         width: 100%;
         transition: top 0.3s; //Transition effect when sliding up/down
-        height: 2.5em;
+        // height: 2.5em;
         overflow: hidden;
         @include for-tablet-landscape-up {
             display: flex;
@@ -29,6 +34,7 @@
         }
     }
     .main-nav {
+
         list-style-type: none;
         display: none;
         @include for-tablet-landscape-up {
@@ -134,6 +140,7 @@
         position: relative;
         height: 2.5em;
         margin-top: -.4em;
+        margin-bottom: 2em;
     }
 
 
@@ -266,7 +273,7 @@ section {
     }
     .sm-textbox {
         width: 90%;
-        z-index: 5;
+        z-index: 2;
         position: relative;
         padding: 2%;  
         margin-left: auto;
@@ -308,7 +315,7 @@ section {
         @include for-tablet-portrait-up {
             display: block;
             width: 25%;
-            z-index: 30;
+            z-index: 2;
             padding: 2em;
             margin-left: 5%;
             margin-right: 5%;
@@ -318,22 +325,22 @@ section {
             $legend-width: 12em;
         }
     }
-    .legend-right {
-        position: sticky !important;
-        top: 1em;
-        margin-left: 70%;
-        @include for-desktop-up {
-            margin-left: 80%; 
-        }
-    }
-    .legend-bottom-right{
-        position: sticky !important;
-        top: 60%;
-        margin-left: 70%;
-        @include for-desktop-up {
-            margin-left: 80%; 
-        }
-    }
+    // .legend-right {
+    //     position: sticky !important;
+    //     top: 1em;
+    //     margin-left: 70%;
+    //     @include for-desktop-up {
+    //         margin-left: 80%; 
+    //     }
+    // }
+    // .legend-bottom-right{
+    //     position: sticky !important;
+    //     top: 60%;
+    //     margin-left: 70%;
+    //     @include for-desktop-up {
+    //         margin-left: 80%; 
+    //     }
+    // }
     table{
         margin-left: auto; 
         margin-right: auto;

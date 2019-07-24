@@ -23,14 +23,14 @@ $welcome-p-color: white;
 $welcome-p-shadow: .08em .08em 1em black;
 
 $map-h1-bkgnd-color: rgba(0, 19, 136, 0.95);
-$map-h1-text-color: black; 
+$map-h1-text-color: rgb(255, 255, 255); 
 
 $sm-textbox-text-color: white;
 $sm-textbox-bkgnd-color: rgba(0, 0, 0, 0.8);
 $sm-textbox-border-color: 1px solid black;
 
 $lg-text-h1-color: black;
-$lg-text-h1-shadow: .05em .05em .1em rgb(0, 0, 189); //x y blur color
+$lg-text-h1-shadow: .05em .05em .1em rgb(0, 0, 0); //x y blur color
 $lg-text-img-shadow: .3em .3em .4em rgb(0, 0, 173);
 
 $credits-bkgnd-color: rgb(1, 24, 1);
