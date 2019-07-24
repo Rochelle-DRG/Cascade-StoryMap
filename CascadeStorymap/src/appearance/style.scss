@@ -83,6 +83,7 @@
     .logo-text {
         display: none;
         @include for-tablet-landscape-up {
+            // letter-spacing: .1em;
             display: flex;
             color: $nav-title-color;
             font-weight: bold;
@@ -160,6 +161,8 @@
 }
 
 h1{ //generic
+    font-family: $logo-font;
+    // letter-spacing: .07em;
     font-size: 2em;
     @include for-tablet-portrait-up {
         font-size: 2.0em;
@@ -249,14 +252,15 @@ section {
         z-index: 3;
         position: relative;
         position: sticky;
-        top: 4em;
+        top: 3em;
             h1 {
                 color: $map-h1-text-color;
                 font-weight: bold;
                 background-color: $map-h1-bkgnd-color;
                 padding: .3em;
-                margin-left: 20%;
-                margin-right: 20%;
+                width: 100%;
+                // margin-left: 20%;
+                // margin-right: 20%;
                 // padding-top: 1em; //to place it below the nav bar instead of behind
             }
     }

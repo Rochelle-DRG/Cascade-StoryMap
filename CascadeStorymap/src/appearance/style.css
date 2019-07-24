@@ -1,5 +1,5 @@
 #bootstrap-overrides * {
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Serif", serif;
   line-height: 1.5em;
 }
 
@@ -78,7 +78,7 @@
   display: inline-block;
   text-decoration: none;
   font-size: 1.5em;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 @media (min-width: 900px) {
@@ -175,6 +175,7 @@
 }
 
 #bootstrap-overrides h1 {
+  font-family: "Oswald", sans-serif;
   font-size: 2em;
 }
 
@@ -284,16 +285,15 @@
   position: relative;
   position: -webkit-sticky;
   position: sticky;
-  top: 4em;
+  top: 3em;
 }
 
 #bootstrap-overrides section .section-title h1 {
   color: black;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 19, 136, 0.8);
   padding: .3em;
-  margin-left: 20%;
-  margin-right: 20%;
+  width: 100%;
 }
 
 #bootstrap-overrides section .sm-textbox {
@@ -491,7 +491,7 @@
 
 #bootstrap-overrides .lg-text-area h1 {
   color: black;
-  text-shadow: 0.05em 0.05em 0.1em #0000ad;
+  text-shadow: 0.05em 0.05em 0.1em #0000bd;
 }
 
 #bootstrap-overrides .lg-text-area p {
@@ -518,6 +518,6 @@
 #bootstrap-overrides .credits {
   background-color: #011801;
   color: white;
-  text-shadow: 0.05em 0.05em 0.1em #0000ad;
+  text-shadow: 0.05em 0.05em 0.1em #0000bd;
 }
 /*# sourceMappingURL=style.css.map */

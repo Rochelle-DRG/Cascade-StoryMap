@@ -1,7 +1,7 @@
 // @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Lobster|Merienda|Shrikhand&display=swap');
 // @import url('https://fonts.googleapis.com/css?family=Contrail+One|Noto+Sans+HK&display=swap');
 
-$page-font: 'Noto Sans HK', sans-serif;
+$page-font: 'Noto Serif', serif; // 'Libre Baskerville', serif; //'Roboto', sans-serif;
 $backup-color: gray; //for when images do not load
 $nav-links-hover: rgba(255, 255, 255, 1);
 $nav-bkgnd-color: rgb(0, 20, 7);
@@ -9,7 +9,7 @@ $nav-links-color: rgba(255, 255, 255, 0.7);
 $nav-toggle-color:  rgba(255,255,255,0.8);
 $nav-title-color: rgb(0, 0, 173);
 $nav-title-shadow: 3px 3px 2px white;
-$logo-font: 'Roboto', sans-serif;
+$logo-font: 'Oswald', sans-serif; //'Raleway', sans-serif; //'Anton', sans-serif;
 
 
 
@@ -22,7 +22,7 @@ $welcome-h1-shadow: 3px 3px 2px black; //x y blur color;
 $welcome-p-color: white;
 $welcome-p-shadow: .08em .08em 1em black;
 
-$map-h1-bkgnd-color: rgba(255, 255, 255, 0.8);
+$map-h1-bkgnd-color: rgba(0, 19, 136, 0.95);
 $map-h1-text-color: black; 
 
 $sm-textbox-text-color: white;
@@ -30,7 +30,7 @@ $sm-textbox-bkgnd-color: rgba(0, 0, 0, 0.8);
 $sm-textbox-border-color: 1px solid black;
 
 $lg-text-h1-color: black;
-$lg-text-h1-shadow: .05em .05em .1em rgb(0, 0, 173); //x y blur color
+$lg-text-h1-shadow: .05em .05em .1em rgb(0, 0, 189); //x y blur color
 $lg-text-img-shadow: .3em .3em .4em rgb(0, 0, 173);
 
 $credits-bkgnd-color: rgb(1, 24, 1);
