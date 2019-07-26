@@ -110,7 +110,8 @@ $(document).ready(function () {
 
                 //disable map drag for touchcreen
                 if (isTouchScreen === true) {
-                    currentMap.disablePan();
+                    // currentMap.disablePan();
+                    // currentMap.disableNavigation(); //not a function for esri, this works for googlemaps
                 };
 
 
@@ -183,6 +184,8 @@ $(document).ready(function () {
                 // console.log("!LAST)end of .each map/slide");
             }); //end .each
 
+          
+
 
             setPopups = function (event, slideMap, currentMap) {
                 console.log("setPopups has been called");
@@ -227,18 +230,12 @@ $(document).ready(function () {
                 currentMap.infoWindow.setFeatures([deferred]);
             }; //end setPopups()
 
-            setGeoPopups = function (event, slideMap, currentMap) {
-                console.log("setGeoPopups has been called");
-                var popupLayer = mapLayers[slideMap.searchLayer];
-                console.log(popupLayer);
-                console.log(currentMap);
-
-
-
-
-
-
-            }; //end setGeoPopups
+            // setGeoPopups = function (event, slideMap, currentMap) {
+            //     console.log("setGeoPopups has been called");
+            //     var popupLayer = mapLayers[slideMap.searchLayer];
+            //     console.log(popupLayer);
+            //     console.log(currentMap);
+            // }; //end setGeoPopups
 
 
 

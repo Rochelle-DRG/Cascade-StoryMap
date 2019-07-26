@@ -55,6 +55,41 @@ navBarToggle.addEventListener('click', function () {
     mainNav.classList.toggle('active');
     logos.classList.toggle('logo-hide'); //without this line, the top item in the dropdown is out of alignment
 });
+
+// For map overlay and button toggle
+function toggleOverlay(overlayId, buttonId) {
+    var x = document.getElementById(overlayId);
+    var y = document.getElementById(buttonId)
+    if (y.innerHTML === "Click Here To Interact With Map"){
+        x.style.display = "none";
+        y.innerHTML= "Stop Exploring";
+    }
+    else {
+        x.style.display = "block";
+        y.innerHTML= "Click Here To Interact With Map";
+    }
+};
+
+//For toggle legend
+function toggleLegend(legendId, buttonId){
+    var x = document.getElementById(legendId);
+    var y = document.getElementById(buttonId);
+    var y = document.getElementById(buttonId)
+    if (y.innerHTML === "View The Legend"){
+        x.style.display = "block"
+        y.innerHTML= "Hide The Legend";
+    }
+    else {
+        x.style.display = "none";
+        y.innerHTML= "View The Legend";
+    }
+}
+
+
+
+
+
+
 // //nav bar behavior: show/hide navbar // decision was made to fix nav at top at all times
 // var prevScrollpos = window.pageYOffset;
 // window.onscroll = function () {
