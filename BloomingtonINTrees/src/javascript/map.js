@@ -70,6 +70,51 @@ $(document).ready(function () {
             // esriConfig.defaults.io.corsEnabledServers.push("gis.davey.com");
             esriConfig.defaults.io.corsDetection = false;
 
+            setPopups = function (event, slideMap, currentMap) {
+                console.log("setPopups has been called");
+                var popupLayer = mapLayers[slideMap.searchLayer];
+                identifyTask = new IdentifyTask(popupLayer.infoUrl);
+                identifyParams = new IdentifyParameters();
+                identifyParams.tolerance = 10; //i think the bigger the number the bigger the area around your click it searches.
+                identifyParams.returnGeometry = true;
+                identifyParams.layerIds = popupLayer.layerID; //this can be multiple layers, but we're just using one right now
+                identifyParams.layerOption = IdentifyParameters.LAYER_OPTION_VISIBLE;
+                identifyParams.width = currentMap.width;
+                identifyParams.height = currentMap.height;
+                identifyParams.geometry = event.mapPoint;
+                identifyParams.mapExtent = currentMap.extent;
+                console.log(identifyParams); //working
+                var deferred = identifyTask
+                    .execute(identifyParams)
+                    .addCallback(function (response) {
+
+                        if (response.length > 0) {//if there should be a popup
+                            return arrayUtils.map(response, function (result) {
+                                // console.log("this code is being executed"); 
+                                var feature = result.feature;
+                                var layerName = result.layerName;
+                                feature.attributes.layerName = layerName;
+                                //temporary hard-code
+                                var popupTemplate = new InfoTemplate(popupLayer.title, popupLayer.popupContent);
+                                feature.setInfoTemplate(popupTemplate);
+                                currentMap.infoWindow.show(event.mapPoint);
+                                return feature;
+
+                            }); //end return arrayUtils
+                        } //end if response.length
+                        else {
+                            if (map.infoWindow) {
+                                console.log("execute(identifyParams) returned nothing");
+                                setGeoPopups(event, slideMap, currentMap);
+                                // map.infoWindow.hide(); 
+                            }
+                        }; //end else nothing returned
+                    }); //end .addCalback
+                currentMap.infoWindow.setFeatures([deferred]);
+            }; //end setPopups()
+
+
+
             makeTheLegend = function (mapDetailsFromJson, currentMap) {
                 var detailLayer = mapLayers[mapDetailsFromJson.searchLayer].layerID;
                 var imageParameters = new ImageParameters();
@@ -187,48 +232,6 @@ $(document).ready(function () {
           
 
 
-            setPopups = function (event, slideMap, currentMap) {
-                console.log("setPopups has been called");
-                var popupLayer = mapLayers[slideMap.searchLayer];
-                identifyTask = new IdentifyTask(popupLayer.infoUrl);
-                identifyParams = new IdentifyParameters();
-                identifyParams.tolerance = 10; //i think the bigger the number the bigger the area around your click it searches.
-                identifyParams.returnGeometry = true;
-                identifyParams.layerIds = popupLayer.layerID; //this can be multiple layers, but we're just using one right now
-                identifyParams.layerOption = IdentifyParameters.LAYER_OPTION_VISIBLE;
-                identifyParams.width = currentMap.width;
-                identifyParams.height = currentMap.height;
-                identifyParams.geometry = event.mapPoint;
-                identifyParams.mapExtent = currentMap.extent;
-                console.log(identifyParams); //working
-                var deferred = identifyTask
-                    .execute(identifyParams)
-                    .addCallback(function (response) {
-
-                        if (response.length > 0) {//if there should be a popup
-                            return arrayUtils.map(response, function (result) {
-                                // console.log("this code is being executed"); 
-                                var feature = result.feature;
-                                var layerName = result.layerName;
-                                feature.attributes.layerName = layerName;
-                                //temporary hard-code
-                                var popupTemplate = new InfoTemplate(popupLayer.title, popupLayer.popupContent);
-                                feature.setInfoTemplate(popupTemplate);
-                                currentMap.infoWindow.show(event.mapPoint);
-                                return feature;
-
-                            }); //end return arrayUtils
-                        } //end if response.length
-                        else {
-                            if (map.infoWindow) {
-                                console.log("execute(identifyParams) returned nothing");
-                                setGeoPopups(event, slideMap, currentMap);
-                                // map.infoWindow.hide(); 
-                            }
-                        }; //end else nothing returned
-                    }); //end .addCalback
-                currentMap.infoWindow.setFeatures([deferred]);
-            }; //end setPopups()
 
             // setGeoPopups = function (event, slideMap, currentMap) {
             //     console.log("setGeoPopups has been called");

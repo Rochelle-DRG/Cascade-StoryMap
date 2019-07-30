@@ -11,7 +11,7 @@ var mapMaps = {};
 var mapDetails = []; //array of maps //formerly mapAttributes
 
 // Returning info from our "DB"
-$.getJSON("database/new-pageWithRastersTiles.json", function (data) {
+$.getJSON("database/4newpage.json", function (data) {
 
     // forming a dict of layers to populate the map with in the next step
     $.each(data.Layers, function (k, layer) {

@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd"> <!--working on browser compatibility-->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Bloomington Trees</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="src/appearance/reset.css">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+    <!-- <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css"> -->
+    <link rel="stylesheet" href="https://js.arcgis.com/3.29/esri/css/esri.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Contrail+One|Noto+Sans+HK&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/appearance/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Raleway:800&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body id="bootstrap-overrides">
+
+    <nav class="navbar" id="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <img id="bars" src="/BloomingtonINTrees/src/appearance/img/barsblackround.png" class="fas fa-bars"></i>
+        </span>
+        <ul id="left-logo">
+            <li><img id="logo-img" src="/BloomingtonINTrees/src/appearance/img/logos/BloomingtonLogos1.png"
+                    class="logo logo-img"></li>
+            <li id="logo-text"><a href="#" class="logo logo-text">BLOOMINGTON INDIANA URBAN FOREST ASSESSMENT</a></li>
+        </ul>
+        <ul class="main-nav" id="js-menu">
+            <li><a href="#Welcome" class="nav-links">Welcome</a></li>
+            <li><a href="#Benefits" class="nav-links">Benefits</a></li>
+            <li><a href="#Text Area 1" class="nav-links">Text Area 1</a></li>
+        </ul>
+    </nav>
+
+    <div class="everything-after-nav">
+        <!--Part of LayerSwipe Experiment-->
+        <!-- <section class="general-map" style:"height: 100vh !important;"> -->
+        <!-- <div id="map" class="map"><div id="swipeDiv"></div></div> -->
+        <!-- <div id="map" class="map"><div id="swipeDiv2"></div></div> -->
+        <!-- <div id="map" class="map"><div id="mySwipeTest"></div></div> -->
+        <!-- </section> -->
+
+        <section class="welcome-container">
+            <div id="welcome" class="welcome-content">
+                <h1 id="Welcome">ABOUT THIS STORYMAP</h1>
+                <p>This is Davey Resource Groups's customizable cascading Template.<br />
+                    All colors and images are customizable.<br />
+                    There are a variety of basemap options displayed here, and the styling and colors of the map may be
+                    customizable as well.
+                </p>
+            </div>
+        </section end welcome>
+
+        <div id="main-body" class="main-body">
+
+
+            <section id="slide7_section">
+                <div id="slide7Header" class="section-title">
+                    <h1 id="bloomtest1">Map 4</h1>
+                </div>
+                <div id="slide7_map" class="general-map content-section sticky" style="z-index: 1"></div>
+
+                <!-- <div class="right-content">
+                    <button id="bloomtest1_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('bloomtest1_map_overlay','bloomtest1_button')">Explore the Map</button>
+
+                    <div id="bloomtest1_legend" class="legend legend-right"></div>
+                </div> -->
+
+                <div id="slide7_map_overlay" class="general-map content-section sticky overlay" style="z-index: 2"></div>
+
+                <div class="right-content">
+                    <button id="bloomtest1_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('slide7_map_overlay','bloomtest1_button')">Click Here To Interact
+                        With Map</button>
+                    <button id="bloomtest1_legendbutton" class="toggleButton legend-right legendButton"
+                        onclick="toggleLegend('map4_legend','bloomtest1_legendbutton')">View The Legend</button>
+
+                    <div id="map4_legend" class="legend legend-right"></div>
+                </div>
+
+
+                <div id="bloomtest1paragraphs" class="sm-textbox">
+
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <div id="slide3Div" class="lg-text-area">
+                <h1 id="Text Area 1">Large Text Area 1</h1>
+                <p><img src='/BloomingtonINTrees/src/appearance/img/bloomington/20170330_143646_edit.jpg'></p>
+                <p>I have included a variety of basemap options in this demo, but you can find the whole list here: <a
+                        href='https://developers.arcgis.com/javascript/3/jsapi/esri.basemaps-amd.html'>View Basemap
+                        Options</a></p>
+                <p>If you are interested in selecting your own fonts, look here: <a
+                        href='https://fonts.google.com/'>Google Fonts</a></p>
+                <p><img src='/BloomingtonINTrees/src/appearance/img/gifs/slides2.gif'></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis lectus nulla at
+                    volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus egestas tellus rutrum
+                    tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor massa id neque aliquam
+                    vestibulum morbi.</p>
+                <p>Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris. Purus
+                    in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a condimentum
+                    vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna neque. Nulla
+                    pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed faucibus turpis
+                    in. Turpis massa sed elementum tempus egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis
+                    at erat pellentesque adipiscing commodo. Ornare massa eget egestas purus viverra accumsan in nisl.
+                </p>
+            </div>
+
+            <section id="slide8_section">
+                <div id="slide8Header" class="section-title">
+                    <h1 id="Benefits">Map 5</h1>
+                </div>
+                <div id="slide8_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div class="right-content">
+                    <button id="slide8_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('slide8_map_overlay','slide8_button')">Click Here To Interact With
+                        Map</button>
+                    <button id="slide13_legendbutton" class="toggleButton legend-right"
+                        onclick="toggleLegend('map5_legend','slide13_legendbutton')">View The Legend</button>
+                    <div id="map5_legend" class="legend legend-right"></div>
+                </div>
+
+                <div id="slide8_map_overlay" class="general-map content-section sticky overlay" style="z-index: 2">
+                </div>
+
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+            <section id="slide9_section">
+                <div id="slide79Header" class="section-title">
+                    <h1 id="Benefits">Map 6</h1>
+                </div>
+                <div id="slide9_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div class="right-content">
+                    <button id="slide9_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('slide9_map_overlay','slide9_button')">Click Here To Interact With
+                        Map</button>
+                    <button id="slide13_legendbutton" class="toggleButton legend-right"
+                        onclick="toggleLegend('map5_legend','slide13_legendbutton')">View The Legend</button>
+                    <div id="map5_legend" class="legend legend-right"></div>
+                </div>
+
+                <div id="slide9_map_overlay" class="general-map content-section sticky overlay" style="z-index: 2">
+                </div>
+
+                <div id="slide9paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section>
+
+
+
+
+            <!-- <section id="wmstest6_section">
+                <div id="wmstest6Header" class="section-title">
+                    <h1 id="wmstest6">MY TK Trees 1st Working Experiment</h1>
+                </div>
+                <div id="map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="wmstest6_legend" class="legend legend-right"></div>
+                <div id="wmstest6paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section> -->
+
+
+            <!-- <section id="wmstest5_section">
+                <div id="wmstest5Header" class="section-title">
+                    <h1 id="wmstest5">Bill's working geoserver layer</h1>
+                </div>
+                <div id="wmstest5_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="wmstest5_legend" class="legend legend-right"></div>
+                <div id="wmstest5paragraphs" class="sm-textbox">
+                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
+                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
+                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
+                        This information was calculated using models and methods derived from <a
+                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p><img src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'></p>
+                    
+                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                        local environment. Knowledge about the UTC within these areas provides a benchmark for
+                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    </p>
+                </div>
+            </section> -->
+
+
+
+            <div id="slide3Div" class="lg-text-area">
+                <h1 id="Text Area 1">Large Text Area 1</h1>
+                <p><img src='/BloomingtonINTrees/src/appearance/img/bloomington/20170330_143646_edit.jpg'></p>
+                <p>I have included a variety of basemap options in this demo, but you can find the whole list here: <a
+                        href='https://developers.arcgis.com/javascript/3/jsapi/esri.basemaps-amd.html'>View Basemap
+                        Options</a></p>
+                <p>If you are interested in selecting your own fonts, look here: <a
+                        href='https://fonts.google.com/'>Google Fonts</a></p>
+                <p><img src='/BloomingtonINTrees/src/appearance/img/gifs/slides2.gif'></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida arcu ac. Quis lectus nulla at
+                    volutpat diam ut. Accumsan tortor posuere ac ut consequat. Orci phasellus egestas tellus rutrum
+                    tellus pellentesque eu. Aliquam sem et tortor consequat. Nulla porttitor massa id neque aliquam
+                    vestibulum morbi.</p>
+                <p>Viverra vitae congue eu consequat. Magnis dis parturient montes nascetur ridiculus mus mauris. Purus
+                    in mollis nunc sed id semper risus. Vulputate dignissim suspendisse in est. Venenatis a condimentum
+                    vitae sapien. Pretium nibh ipsum consequat nisl vel. Nisl rhoncus mattis rhoncus urna neque. Nulla
+                    pharetra diam sit amet nisl suscipit adipiscing bibendum est. Sed libero enim sed faucibus turpis
+                    in. Turpis massa sed elementum tempus egestas sed sed. Tincidunt ornare massa eget egestas. Iaculis
+                    at erat pellentesque adipiscing commodo. Ornare massa eget egestas purus viverra accumsan in nisl.
+                </p>
+            </div>
+
+
+        </div end main-body>
+        <div class="credits">
+            <h1>With thanks to</h1>
+            <ul>
+                <li>Bill</li>
+                <li>Rochelle</li>
+                <li>Will</li>
+                <li>And all of our testers!</li>
+            </ul>
+        </div>
+    </div everything-after-nav>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- <script src="plugins/paroller.js-master/dist/jquery.paroller.js"></script> -->
+
+    <!-- BootStrap imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script> -->
+    <!-- Esri API -->
+    <!-- <script src="https://js.arcgis.com/4.11/"></script> -->
+    <script src="https://js.arcgis.com/3.29/"></script>
+
+    <script src="src/javascript/map.js"></script>
+    <!-- <script src="src/javascript/map1.js"></script> -->
+    <!-- <script src="src/javascript/map_controller.js"></script> -->
+    <script src="src/javascript/page_controls.js"></script>
+    <script src="src/javascript/main.js"></script>
+
+</body>
+
+</html>
