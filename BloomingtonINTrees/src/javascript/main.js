@@ -48,13 +48,21 @@ function loadScript(src, callback) {
 };
 
 //nav bar behavior: toggle dropdown
-let mainNav = document.getElementById('js-menu');
-let logos = document.getElementById('logo-img');
-let navBarToggle = document.getElementById('js-navbar-toggle');
+let mainNav         = document.getElementById('js-menu');
+let logos           = document.getElementById('logo-img');
+let navBarToggle    = document.getElementById('js-navbar-toggle');
 navBarToggle.addEventListener('click', function () {
     mainNav.classList.toggle('active');
     logos.classList.toggle('logo-hide'); //without this line, the top item in the dropdown is out of alignment
 });
+let navList         = document.getElementsByClassName('main-nav');
+console.log(navList);
+navList[0].addEventListener('click', function () {
+    mainNav.classList.toggle('active');
+    logos.classList.toggle('logo-hide'); //without this line, the top item in the dropdown is out of alignment
+});
+
+
 
 // For map overlay and button toggle
 function toggleOverlay(overlayId, buttonId) {
