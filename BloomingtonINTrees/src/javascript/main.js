@@ -56,7 +56,6 @@ navBarToggle.addEventListener('click', function () {
     logos.classList.toggle('logo-hide'); //without this line, the top item in the dropdown is out of alignment
 });
 let navList         = document.getElementsByClassName('main-nav');
-console.log(navList);
 navList[0].addEventListener('click', function () {
     mainNav.classList.toggle('active');
     logos.classList.toggle('logo-hide'); //without this line, the top item in the dropdown is out of alignment
