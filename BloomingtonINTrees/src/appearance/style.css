@@ -591,7 +591,7 @@
 
 #bootstrap-overrides .lg-text-area h1 {
   color: black;
-  text-shadow: 0.05em 0.05em 0.1em black;
+  font-weight: 900;
 }
 
 #bootstrap-overrides .lg-text-area p {
@@ -606,12 +606,6 @@
   margin-right: auto;
   max-width: 100%;
   border-radius: .28em;
-}
-
-@media (min-width: 600px) {
-  #bootstrap-overrides .lg-text-area img {
-    max-width: 50%;
-  }
 }
 
 #bootstrap-overrides .lg-text-area .caption-for-large-text-area {

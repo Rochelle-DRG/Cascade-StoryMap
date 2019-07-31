@@ -574,7 +574,8 @@ section {
 
     h1{
         color: $lg-text-h1-color;
-        text-shadow: $lg-text-h1-shadow;
+        font-weight: 900;
+        // text-shadow: $lg-text-h1-shadow;
     }
     p {
         margin-top: 3em;
@@ -590,9 +591,9 @@ section {
         
         // box-shadow: $lg-text-img-shadow;
         // margin: 2em;
-        @include for-tablet-portrait-up {
-            max-width: 50%;
-        }
+        // @include for-tablet-portrait-up {
+        //     max-width: 50%;
+        // }
     }
     .caption-for-large-text-area {
         max-width: 100%;
