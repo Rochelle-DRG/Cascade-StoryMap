@@ -58,7 +58,7 @@ $(document).ready(function () {
 
             dojo.require("esri.tasks.query"); //part of 1st attempt setGeoPopups https://developers.arcgis.com/javascript/3/jssamples/query_clickinfowindow.html
 
-            var layersURL = "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer";
+            var layersURL = "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer";
             var isTouchScreen;
 
             function isTouchDevice() { return 'ontouchstart' in document.documentElement; }

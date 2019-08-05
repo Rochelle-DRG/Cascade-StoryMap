@@ -11,13 +11,13 @@
             "layerID": [
                 0
             ],
-            "title": "Sammamish Boundary",
-            "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer/0",
-            "infoUrl": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer",
+            "title": "Bloomington City Limits",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/0",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
             "opacity": 1.0,
-            "layername": "Sammamish Boundary",
+            "layername": "CityLimits",
             "legend": false,
             "popup": false,
             "popupContent": [
@@ -29,13 +29,13 @@
             "layerID": [
                 1
             ],
-            "title": "ROWtrees",
-            "url": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer/1",
-            "infoUrl": "https://gis.davey.com/arcgis/rest/services/Sammamish/SammamishFeatures/MapServer",
+            "title": "Fragmentation",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/3",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
             "opacity": 1.0,
-            "layername": "ROWtrees",
+            "layername": "Fragmentation",
             "legend": true,
             "popup": true,
             "popupContent": "Tree Type: ${Type}",
@@ -248,8 +248,8 @@
             "legendID": "map4_legend",
             "basemap": "topo",
             "mapCenter": [
-                -122.035534,
-                47.616567
+                -86.522406,
+                39.167872
             ],
             "zoom": 13,
             "featureArray": [
