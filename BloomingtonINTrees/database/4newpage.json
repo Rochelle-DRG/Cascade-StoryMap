@@ -26,6 +26,8 @@
             "order": 0
         },
         "Layer2": {
+            "swipe": "true",
+
             "layerID": [
                 3
             ],
@@ -112,6 +114,30 @@
         
     },
     "maps": {
+
+        "swipetest_map": {
+            "swipeWidgetID": "swipeDiv2",
+            "viewType": "map",
+            "sectionID": "swipetest_section",
+            "containerID": "map",
+            
+            "legendID": "swipetest_legend",
+            "basemap": "gray",
+            "mapCenter": [
+                -86.522406,
+                39.167872
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer3",
+                "Layer2"
+            ],
+            "searchLayer": "Layer2",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+
 
         "fragmentation_map": {
             "viewType": "map",

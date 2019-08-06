@@ -70,6 +70,94 @@ $(document).ready(function () {
             // esriConfig.defaults.io.corsEnabledServers.push("gis.davey.com");
             esriConfig.defaults.io.corsDetection = false;
 
+
+            // // //second swipe example
+            // mapTest2 = new Map("map", {
+            //     basemap: "gray",
+            //     center: [-96.5, 38.3],
+            //     zoom: 6
+            // });
+            // var cities = new ArcGISDynamicMapServiceLayer("http://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer");
+            // cities.setVisibleLayers([0]);
+            // var Hurricanes = new ArcGISDynamicMapServiceLayer("http://sampleserver6.arcgisonline.com/arcgis/rest/services/Hurricanes/MapServer");
+            // Hurricanes._div = map.root;
+            // cities._div = map.root;
+
+
+            // mapTest2.addLayers([Hurricanes, cities]);
+
+            // var swipeWidget2 = new LayerSwipe({
+            //     type: "vertical",  //Try switching to "scope" or "horizontal"  
+            //     map: mapTest2,
+            //     layers: [Hurricanes]
+            // }, "swipeDiv2");
+
+            // swipeWidget2.startup();
+
+         // // // my bloomington swipe hard-coded example
+            // mapTest2 = new Map("map", {
+            //     basemap: "topo",
+            //     center: [-86.522406, 39.167872 ],
+            //     zoom: 13
+            // });
+            // var parksLayer = mapLayers["Layer5"].url;
+            // var waterLayer = mapLayers["Layer6"].url;
+
+            // mapTest2.addLayer(parksLayer);
+
+            // var swipeWidget2 = new LayerSwipe({
+            //     type: "vertical",  //Try switching to "scope" or "horizontal"  
+            //     map: mapTest2,
+            //     layers: ["Layer5"]
+            // }, "swipeDiv2");
+
+            // swipeWidget2.startup();
+
+
+
+
+                        // // first swipe example
+            // var mapDeferred = arcgisUtils.createMap("62702544d70648e593bc05d65180fd64", "map");
+            // mapDeferred.then(function (response) {
+            //     var id;
+            //     var map = response.map;
+            //     var title = "2009 Obesity Rates";
+            //     //loop through all the operational layers in the web map 
+            //     //to find the one with the specified title;
+            //     var layers = response.itemInfo.itemData.operationalLayers;
+            //     array.some(layers, function (layer) {
+            //         if (layer.title === title) {
+            //             id = layer.id;
+            //             if (layer.featureCollection && layer.featureCollection.layers.length) {
+            //                 id = layer.featureCollection.layers[0].id;
+            //             }
+            //             return true;
+            //         } else {
+            //             return false;
+            //         }
+            //     }); //end array.some
+            //     //get the layer from the map using the id and set it as the swipe layer
+            //     if (id) {
+            //         var swipeLayer = map.getLayer(id);
+            //         var swipeWidget = new LayerSwipe({
+            //             type: "vertical", //Try switching to "scope" or "horizontal"
+            //             map: map,
+            //             layers: [swipeLayer]
+            //         }, "swipeDiv");
+            //         swipeWidget.startup();
+            //         console.log([swipeLayer]);
+            //         console.log(swipeWidget);
+            //     }
+            // }); //end mapDeferred.then
+            // //end 1st swipe example
+
+            
+
+
+
+
+
+
             setPopups = function (event, slideMap, currentMap) {
                 console.log("setPopups has been called");
                 var popupLayer = mapLayers[slideMap.searchLayer];
@@ -132,8 +220,6 @@ $(document).ready(function () {
                     layerInfos: [{ layer: dynamicMSL }]
                     // }, 'esriLegend'); //end legendDijit new
                 }, mapDetailsFromJson.legendID); //end legendDijit new
-                console.log(legendDijit.map);
-                console.log(legendDijit.layerInfos);
             }; //end makeTheLegend
 
 
@@ -214,10 +300,23 @@ $(document).ready(function () {
                         var feature = slide;
                         // console.log(slide);
 
-                        newLayer = new FeatureLayer(slide.url)
+                        newLayer = new FeatureLayer(slide.url);
                     }
 
                     currentMap.addLayer(newLayer);
+
+                    if (slide.swipe === "true"){
+                        // console.log(currentMap);
+                        // console.log(currentMap.layerIds);
+                        var layerIds = currentMap.layerIds;
+                        var swipeWidget = new LayerSwipe({
+                            type: "vertical",
+                            map: currentMap,
+                            layers: [layerIds[1]]
+                        }, "currentMap.swipeWidgetID");
+                        swipeWidget.startup();
+                        console.log("tried to startup");
+                    }
                 }); //end .each layerNumber
 
                 legendDijit.refresh();
@@ -244,75 +343,75 @@ $(document).ready(function () {
 
 
 
-            //      // ####5th wms test, geo layer from Bill Sample 
-            // it works 
-            esriConfig.defaults.io.corsEnabledServers.push("geo.rowkeeper.com");
+            // //      // ####5th wms test, geo layer from Bill Sample 
+            // // it works 
+            // esriConfig.defaults.io.corsEnabledServers.push("geo.rowkeeper.com");
 
-            var wmstest5_map = new Map('wmstest5_map', {
-                basemap: 'streets',
-                center: [-85.035534,
-                    40.616567],
-                zoom: 8
-            });
+            // var wmstest5_map = new Map('wmstest5_map', {
+            //     basemap: 'streets',
+            //     center: [-85.035534,
+            //         40.616567],
+            //     zoom: 8
+            // });
 
-            var wmstest5_layer1 = new WMSLayerInfo({
-                name: 'Treekeeper:AEPOH_Poles',
-                title: 'Poles'
-            });
+            // var wmstest5_layer1 = new WMSLayerInfo({
+            //     name: 'Treekeeper:AEPOH_Poles',
+            //     title: 'Poles'
+            // });
 
-            var resourceInfo = {
-                extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                layerInfos: [wmstest5_layer1]
-            };
-            wmstest5_layer = new WMSLayer("http://geo.rowkeeper.com/geoserver/Treekeeper/wms", {
-                //visible: true,
-                resourceInfo: {
-                    layerInfos: [wmstest5_layer1],
-                    //spatialReferences:[26916],
-                    extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                    featureInfoFormat: "text/html",
-                    getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
-                    getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
-                },
-                visibleLayers: [
-                    "Treekeeper:AEPIM_Counties"
-                ],
-                version: "1.3.0"
-            });
-            wmstest5_map.addLayer(wmstest5_layer);
+            // var resourceInfo = {
+            //     extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
+            //     layerInfos: [wmstest5_layer1]
+            // };
+            // wmstest5_layer = new WMSLayer("http://geo.rowkeeper.com/geoserver/Treekeeper/wms", {
+            //     //visible: true,
+            //     resourceInfo: {
+            //         layerInfos: [wmstest5_layer1],
+            //         //spatialReferences:[26916],
+            //         extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
+            //         featureInfoFormat: "text/html",
+            //         getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
+            //         getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
+            //     },
+            //     visibleLayers: [
+            //         "Treekeeper:AEPIM_Counties"
+            //     ],
+            //     version: "1.3.0"
+            // });
+            // wmstest5_map.addLayer(wmstest5_layer);
 
 
 
             //      // ####6th wms test, bring in my tk trees
 
-            var map = new Map('map', {
-                basemap: 'streets',
-                center: [-86.522406,
-                    39.167872],
-                zoom: 12
-            });
+            // var map = new Map('map', {
+            //     basemap: 'streets',
+            //     center: [-86.522406,
+            //         39.167872],
+            //     zoom: 12
+            // });
 
-            var layer1 = new WMSLayerInfo({
-                name: 'Treekeeper:BloomingtonIN_StreetJoin',
-                title: 'Poles'
-            });
+            // var layer1 = new WMSLayerInfo({
+            //     name: 'Treekeeper:BloomingtonIN_StreetJoin',
+            //     title: 'Poles'
+            // });
 
-            var test_layer = new WMSLayer("https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms", {
-                //visible: true,
-                resourceInfo: {
-                    layerInfos: [layer1],
-                    //spatialReferences:[26916],
-                    extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                    featureInfoFormat: "text/html",
-                    // getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
-                    //getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
-                },
-                visibleLayers: [
-                    "Treekeeper:BloomingtonIN_StreetJoin"
-                ],
-                version: "1.3.0"
-            });
-            map.addLayer(test_layer)
+            // var test_layer = new WMSLayer("https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms", {
+            //     //visible: true,
+            //     resourceInfo: {
+            //         layerInfos: [layer1],
+            //         //spatialReferences:[26916],
+            //         extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
+            //         featureInfoFormat: "text/html",
+            //         // getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
+            //         //getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
+            //     },
+            //     visibleLayers: [
+            //         "Treekeeper:BloomingtonIN_StreetJoin"
+            //     ],
+            //     version: "1.3.0"
+            // });
+            // map.addLayer(test_layer)
 
 
 
@@ -361,6 +460,7 @@ $(document).ready(function () {
             //     center: [-96.5, 38.3],
             //     zoom: 6
             // });
+            // console.log("here");
             // var cities = new ArcGISDynamicMapServiceLayer("http://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer");
             // cities.setVisibleLayers([0]);
             // var Hurricanes = new ArcGISDynamicMapServiceLayer("http://sampleserver6.arcgisonline.com/arcgis/rest/services/Hurricanes/MapServer");
@@ -378,7 +478,7 @@ $(document).ready(function () {
             // swipeWidget2.startup();
 
 
-            // //MY first swipe test
+            //MY first swipe test
             // mapTestMe = new Map("map", {
             //     basemap: "gray",
             //     center: [-122.035534, 47.616567],
