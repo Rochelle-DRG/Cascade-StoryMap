@@ -126,12 +126,14 @@ $(document).ready(function () {
                 dynamicMSL = new ArcGISDynamicMapServiceLayer(layersURL, {
                     "imageParameters": imageParameters
                 });
-
+                // console.log(currentMap);
                 legendDijit = new Legend({
                     map: currentMap,
                     layerInfos: [{ layer: dynamicMSL }]
                     // }, 'esriLegend'); //end legendDijit new
                 }, mapDetailsFromJson.legendID); //end legendDijit new
+                console.log(legendDijit.map);
+                console.log(legendDijit.layerInfos);
             }; //end makeTheLegend
 
 
