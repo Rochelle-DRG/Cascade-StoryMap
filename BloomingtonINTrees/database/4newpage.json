@@ -35,7 +35,7 @@
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/3",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
-            "type": "feature",
+            "type": "ArcGISDynamic",
             "opacity": 1.0,
             "layername": "Fragmentation",
             "legend": true,
@@ -51,7 +51,7 @@
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/4",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
-            "type": "feature",
+            "type": "ArcGISDynamic",
             "opacity": 1.0,
             "layername": "CouncilDistricts",
             "legend": true,

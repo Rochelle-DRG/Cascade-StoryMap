@@ -278,21 +278,6 @@ $(document).ready(function () {
                             version: "1.3.0"
 
                         });// end new WMSLayer
-                        // console.log(newLayer.featureInfoFormat);     // text/html (not helpful)
-                        // console.log(newLayer.layerInfos);            //only shows the information I assigned
-                        // console.log(newLayer.showAttribution);       //true
-                        // console.log(newLayer.title);                 //comes back blank
-                        //console.log(newLayer.getImageFormat());       // png
-                        // console.log(newLayer);
-                        // console.log(newLayer);
-                        // console.log(newLayer);
-                        // console.log(newLayer);
-                        // console.log(newLayer);
-
-                        // console.log(newLayer);
-
-
-
                     } //end if slidetype = geo
 
                     if (slide.type === "feature") {
@@ -302,21 +287,50 @@ $(document).ready(function () {
 
                         newLayer = new FeatureLayer(slide.url);
                     }
+                    
+                    if (slide.type === "ArcGISDynamic"){
+                        // var layerOptions = {
+                        //     "id":       slide.layername,
+                        //     "opacity":  1
+                        // }
+
+                        // newLayer = new ArcGISDynamicMapServiceLayer(slide.url,layerOptions);
+                        // // newLayer.setVisibleLayers([slide.layerID]);
+                        // console.log(newLayer);
+
+                        var newLayerOptions = {
+                          "id": slide.layername,
+                          "opacity": 1
+                        };
+                        newLayer = new ArcGISDynamicMapServiceLayer(slide.infoUrl, newLayerOptions);
+                        newLayer.setVisibleLayers([slide.layerID]);
+
+
+
+                    }
 
                     currentMap.addLayer(newLayer);
 
                     if (slide.swipe === "true"){
                         // console.log(currentMap);
-                        // console.log(currentMap.layerIds);
+                        console.log(currentMap.layerIds);
                         var layerIds = currentMap.layerIds;
+                        console.log(layerIds);
+                        var layer = layerIds[2];
+                        console.log(layer);
+
+                        var wholeLayer= currentMap.getLayer(layer);
+                        console.log(wholeLayer);
+
                         var swipeWidget = new LayerSwipe({
                             type: "vertical",
                             map: currentMap,
-                            layers: [layerIds[1]]
-                        }, "currentMap.swipeWidgetID");
+                            layers: [layer]
+                        }, currentMap.swipeWidgetID);
                         swipeWidget.startup();
-                        console.log("tried to startup");
-                    }
+                        
+                        console.log(layerIds[2]);
+                    } // end if swipe
                 }); //end .each layerNumber
 
                 legendDijit.refresh();
