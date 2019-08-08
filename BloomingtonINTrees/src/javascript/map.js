@@ -286,6 +286,7 @@ $(document).ready(function () {
                         // console.log(slide);
 
                         newLayer = new FeatureLayer(slide.url);
+                        currentMap.addLayer(newLayer);
                     }
 
                     if (slide.type === "ArcGISDynamic") {
@@ -298,18 +299,21 @@ $(document).ready(function () {
                         // // newLayer.setVisibleLayers([slide.layerID]);
                         // console.log(newLayer);
 
-                        var newLayerOptions = {
-                            "id": slide.layername,
-                            "opacity": 1
-                        };
-                        newLayer = new ArcGISDynamicMapServiceLayer(slide.infoUrl, newLayerOptions);
-                        newLayer.setVisibleLayers([slide.layerID]);
-
-
+                        // var newLayerOptions = {
+                        //     "id": slide.layername,
+                        //     "opacity": 1
+                        // };
+                        // newLayer = new ArcGISDynamicMapServiceLayer(slide.infoUrl, newLayerOptions);
+                        // newLayer.setVisibleLayers([slide.layerID]);
+                    
+                        newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");  
+                        newLayer.setVisibleLayers([4]);
+                        newLayer._div = currentMap.root;
+                        currentMap.addLayers([newLayer]);
 
                     }
 
-                    currentMap.addLayer(newLayer);
+                    
 
                     if (slideMap.swipe === "true") {
                         if (slide.swipe === "true") {
@@ -327,10 +331,19 @@ $(document).ready(function () {
                                 map: currentMap,
                                 layers: [newLayer]
                             }, currentMap.swipeWidgetID);
-                            swipeWidget.startup();
+                            // console.log(swipeWidget);
+                            // window.alert(swipeWidget);
 
-                        }
-                    } // end if swipe
+                            swipeWidget.startup();
+                            console.log("widget should have started");
+
+
+
+
+
+
+                        }   //end if slide swipe
+                    } // end if map swipe
                 }); //end .each layerNumber
 
                 legendDijit.refresh();
