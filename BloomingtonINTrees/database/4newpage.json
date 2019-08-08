@@ -116,6 +116,7 @@
     "maps": {
 
         "swipetest_map": {
+            "swipe": "true",
             "swipeWidgetID": "swipeDiv2",
             "viewType": "map",
             "sectionID": "swipetest_section",

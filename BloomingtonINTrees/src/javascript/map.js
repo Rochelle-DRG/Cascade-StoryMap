@@ -94,7 +94,7 @@ $(document).ready(function () {
 
             // swipeWidget2.startup();
 
-         // // // my bloomington swipe hard-coded example
+            // // // my bloomington swipe hard-coded example
             // mapTest2 = new Map("map", {
             //     basemap: "topo",
             //     center: [-86.522406, 39.167872 ],
@@ -116,7 +116,7 @@ $(document).ready(function () {
 
 
 
-                        // // first swipe example
+            // // first swipe example
             // var mapDeferred = arcgisUtils.createMap("62702544d70648e593bc05d65180fd64", "map");
             // mapDeferred.then(function (response) {
             //     var id;
@@ -151,7 +151,7 @@ $(document).ready(function () {
             // }); //end mapDeferred.then
             // //end 1st swipe example
 
-            
+
 
 
 
@@ -287,8 +287,8 @@ $(document).ready(function () {
 
                         newLayer = new FeatureLayer(slide.url);
                     }
-                    
-                    if (slide.type === "ArcGISDynamic"){
+
+                    if (slide.type === "ArcGISDynamic") {
                         // var layerOptions = {
                         //     "id":       slide.layername,
                         //     "opacity":  1
@@ -299,8 +299,8 @@ $(document).ready(function () {
                         // console.log(newLayer);
 
                         var newLayerOptions = {
-                          "id": slide.layername,
-                          "opacity": 1
+                            "id": slide.layername,
+                            "opacity": 1
                         };
                         newLayer = new ArcGISDynamicMapServiceLayer(slide.infoUrl, newLayerOptions);
                         newLayer.setVisibleLayers([slide.layerID]);
@@ -311,25 +311,25 @@ $(document).ready(function () {
 
                     currentMap.addLayer(newLayer);
 
-                    if (slide.swipe === "true"){
-                        // console.log(currentMap);
-                        console.log(currentMap.layerIds);
-                        var layerIds = currentMap.layerIds;
-                        console.log(layerIds);
-                        var layer = layerIds[2];
-                        console.log(layer);
+                    if (slideMap.swipe === "true") {
+                        if (slide.swipe === "true") {
+                            // // console.log(currentMap);
+                            // var layerIds = currentMap.layerIds;
+                            // console.log(layerIds);
+                            // var layer = layerIds[2];
+                            // console.log(layer);
 
-                        var wholeLayer= currentMap.getLayer(layer);
-                        console.log(wholeLayer);
+                            // var wholeLayer = currentMap.getLayer(layer);
+                            // console.log(wholeLayer);
 
-                        var swipeWidget = new LayerSwipe({
-                            type: "vertical",
-                            map: currentMap,
-                            layers: [layer]
-                        }, currentMap.swipeWidgetID);
-                        swipeWidget.startup();
-                        
-                        console.log(layerIds[2]);
+                            var swipeWidget = new LayerSwipe({
+                                type: "vertical",
+                                map: currentMap,
+                                layers: [newLayer]
+                            }, currentMap.swipeWidgetID);
+                            swipeWidget.startup();
+
+                        }
                     } // end if swipe
                 }); //end .each layerNumber
 
@@ -344,7 +344,7 @@ $(document).ready(function () {
                 // console.log("!LAST)end of .each map/slide");
             }); //end .each
 
-          
+
 
 
 
