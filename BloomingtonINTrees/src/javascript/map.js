@@ -318,9 +318,9 @@ $(document).ready(function () {
                     if (slideMap.swipe === "true") {
                         if (slide.swipe === "true") {
                             // // console.log(currentMap);
-                            // var layerIds = currentMap.layerIds;
-                            // console.log(layerIds);
-                            // var layer = layerIds[2];
+                            var layerIds = currentMap.layerIds;
+                            console.log(layerIds);
+                            // var layer = layerIds[1];
                             // console.log(layer);
 
                             // var wholeLayer = currentMap.getLayer(layer);
@@ -330,8 +330,8 @@ $(document).ready(function () {
                                 type: "vertical",
                                 map: currentMap,
                                 layers: [newLayer]
-                            }, currentMap.swipeWidgetID);
-                            // console.log(swipeWidget);
+                            }, slideMap.swipeWidgetID);
+                            console.log(slideMap.swipeWidgetID);
                             // window.alert(swipeWidget);
 
                             swipeWidget.startup();
