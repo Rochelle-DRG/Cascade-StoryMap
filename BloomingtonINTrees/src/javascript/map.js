@@ -280,16 +280,16 @@ $(document).ready(function () {
                         });// end new WMSLayer
                     } //end if slidetype = geo
 
+                    // if (slide.type === "feature") {
+
+                    //     var feature = slide;
+                    //     // console.log(slide);
+
+                    //     newLayer = new FeatureLayer(slide.url);
+                    //     currentMap.addLayer(newLayer);
+                    // }
+
                     if (slide.type === "feature") {
-
-                        var feature = slide;
-                        // console.log(slide);
-
-                        newLayer = new FeatureLayer(slide.url);
-                        currentMap.addLayer(newLayer);
-                    }
-
-                    if (slide.type === "ArcGISDynamic") {
                         // var layerOptions = {
                         //     "id":       slide.layername,
                         //     "opacity":  1
