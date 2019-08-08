@@ -433,7 +433,7 @@
   position: -webkit-sticky;
   position: sticky;
   bottom: 0em !important;
-  z-index: 4;
+  z-index: 33;
   left: 80%;
   background-color: #f0f0f0;
   height: auto;

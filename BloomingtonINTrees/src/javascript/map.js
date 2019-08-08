@@ -337,11 +337,6 @@ $(document).ready(function () {
                             swipeWidget.startup();
                             console.log("widget should have started");
 
-
-
-
-
-
                         }   //end if slide swipe
                     } // end if map swipe
                 }); //end .each layerNumber
