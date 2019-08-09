@@ -71,88 +71,6 @@ $(document).ready(function () {
             esriConfig.defaults.io.corsDetection = false;
 
 
-            // // //second swipe example
-            // mapTest2 = new Map("map", {
-            //     basemap: "gray",
-            //     center: [-96.5, 38.3],
-            //     zoom: 6
-            // });
-            // var cities = new ArcGISDynamicMapServiceLayer("http://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer");
-            // cities.setVisibleLayers([0]);
-            // var Hurricanes = new ArcGISDynamicMapServiceLayer("http://sampleserver6.arcgisonline.com/arcgis/rest/services/Hurricanes/MapServer");
-            // Hurricanes._div = map.root;
-            // cities._div = map.root;
-
-
-            // mapTest2.addLayers([Hurricanes, cities]);
-
-            // var swipeWidget2 = new LayerSwipe({
-            //     type: "vertical",  //Try switching to "scope" or "horizontal"  
-            //     map: mapTest2,
-            //     layers: [Hurricanes]
-            // }, "swipeDiv2");
-
-            // swipeWidget2.startup();
-
-            // // // my bloomington swipe hard-coded example
-            // mapTest2 = new Map("map", {
-            //     basemap: "topo",
-            //     center: [-86.522406, 39.167872 ],
-            //     zoom: 13
-            // });
-            // var parksLayer = mapLayers["Layer5"].url;
-            // var waterLayer = mapLayers["Layer6"].url;
-
-            // mapTest2.addLayer(parksLayer);
-
-            // var swipeWidget2 = new LayerSwipe({
-            //     type: "vertical",  //Try switching to "scope" or "horizontal"  
-            //     map: mapTest2,
-            //     layers: ["Layer5"]
-            // }, "swipeDiv2");
-
-            // swipeWidget2.startup();
-
-
-
-
-            // // first swipe example
-            // var mapDeferred = arcgisUtils.createMap("62702544d70648e593bc05d65180fd64", "map");
-            // mapDeferred.then(function (response) {
-            //     var id;
-            //     var map = response.map;
-            //     var title = "2009 Obesity Rates";
-            //     //loop through all the operational layers in the web map 
-            //     //to find the one with the specified title;
-            //     var layers = response.itemInfo.itemData.operationalLayers;
-            //     array.some(layers, function (layer) {
-            //         if (layer.title === title) {
-            //             id = layer.id;
-            //             if (layer.featureCollection && layer.featureCollection.layers.length) {
-            //                 id = layer.featureCollection.layers[0].id;
-            //             }
-            //             return true;
-            //         } else {
-            //             return false;
-            //         }
-            //     }); //end array.some
-            //     //get the layer from the map using the id and set it as the swipe layer
-            //     if (id) {
-            //         var swipeLayer = map.getLayer(id);
-            //         var swipeWidget = new LayerSwipe({
-            //             type: "vertical", //Try switching to "scope" or "horizontal"
-            //             map: map,
-            //             layers: [swipeLayer]
-            //         }, "swipeDiv");
-            //         swipeWidget.startup();
-            //         console.log([swipeLayer]);
-            //         console.log(swipeWidget);
-            //     }
-            // }); //end mapDeferred.then
-            // //end 1st swipe example
-
-
-
 
 
 
@@ -307,7 +225,7 @@ $(document).ready(function () {
                         // newLayer.setVisibleLayers([slide.layerID]);
                     
                         newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");  
-                        newLayer.setVisibleLayers([4]);
+                        newLayer.setVisibleLayers([slide.layerID]);
                         newLayer._div = currentMap.root;
                         currentMap.addLayers([newLayer]);
 

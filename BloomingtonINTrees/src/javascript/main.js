@@ -65,8 +65,12 @@ navList[0].addEventListener('click', function () {
 
 // For map overlay and button toggle
 function toggleOverlay(overlayId, buttonId) {
+    console.log("toggleOverlay called");
+    
     var x = document.getElementById(overlayId);
     var y = document.getElementById(buttonId)
+    console.log(y.innerHTML);
+    console.log(y.innerHTML);
     if (y.innerHTML === "Click Here To Interact With Map"){
         x.style.display = "none";
         y.innerHTML= "Stop Exploring";
@@ -79,9 +83,11 @@ function toggleOverlay(overlayId, buttonId) {
 
 //For toggle legend
 function toggleLegend(legendId, buttonId){
+    console.log("toggleLegend has been called");
     var x = document.getElementById(legendId);
     var y = document.getElementById(buttonId);
     var y = document.getElementById(buttonId)
+    console.log(y.innerHTML);
     if (y.innerHTML === "View The Legend"){
         x.style.display = "block"
         y.innerHTML= "Hide The Legend";

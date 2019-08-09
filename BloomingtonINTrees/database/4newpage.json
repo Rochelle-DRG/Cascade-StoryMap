@@ -122,7 +122,7 @@
             "sectionID": "swipetest_section",
             "containerID": "map",
             
-            "legendID": "swipetest_legend",
+            "legendID": "swipe_legend",
             "basemap": "gray",
             "mapCenter": [
                 -86.522406,
