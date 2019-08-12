@@ -64,7 +64,7 @@ $(document).ready(function () {
             function isTouchDevice() { return 'ontouchstart' in document.documentElement; }
             if (isTouchDevice()) {  /*on mobile*/ isTouchScreen = true; }
             else { /*on desktop*/ isTouchScreen = false; };
-            console.log(isTouchScreen);
+            console.log("isTouchScreen: "+isTouchScreen);
 
             //dealing with the CORS/wms problem
             // esriConfig.defaults.io.corsEnabledServers.push("gis.davey.com");
@@ -237,7 +237,7 @@ $(document).ready(function () {
                         if (slide.swipe === "true") {
                             // // console.log(currentMap);
                             var layerIds = currentMap.layerIds;
-                            console.log(layerIds);
+                            // console.log(layerIds);
                             // var layer = layerIds[1];
                             // console.log(layer);
 
@@ -249,11 +249,11 @@ $(document).ready(function () {
                                 map: currentMap,
                                 layers: [newLayer]
                             }, slideMap.swipeWidgetID);
-                            console.log(slideMap.swipeWidgetID);
+                            // console.log(slideMap.swipeWidgetID);
                             // window.alert(swipeWidget);
 
                             swipeWidget.startup();
-                            console.log("widget should have started");
+                            // console.log("widget should have started");
 
                         }   //end if slide swipe
                     } // end if map swipe

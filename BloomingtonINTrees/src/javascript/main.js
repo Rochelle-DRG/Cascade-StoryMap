@@ -62,32 +62,57 @@ navList[0].addEventListener('click', function () {
 });
 
 
+// function hideSwipeOnStart(){
+//     var z = document.getElementById("swipeDiv2");
+//     console.log(z.style);
+//     z.style.display = "none !important";
+//     console.log(z.style);
+// }
+// hideSwipeOnStart();
+// $('swipeDiv2').css('display', '');
+// var huh = $('swipeDiv2');
+// console.log(huh);
+
+function makeSwiper(parentDivId, swipeDivId){
+    console.log("makeSwiper called");
+    var swipeDiv = document.createElement('div');
+    swipeDiv.id = swipeDivId;
+    document.getElementById(parentDivId).appendChild(swipeDiv);
+}
+
 
 // For map overlay and button toggle
-function toggleOverlay(overlayId, buttonId) {
+function toggleOverlay(overlayId, buttonId, swipeId) {
     console.log("toggleOverlay called");
-    
+    //console.log(swipeId);
     var x = document.getElementById(overlayId);
-    var y = document.getElementById(buttonId)
-    console.log(y.innerHTML);
-    console.log(y.innerHTML);
+    var y = document.getElementById(buttonId);
+    // var z = document.getElementById(swipeId);
+    // console.log(z.style.display);
     if (y.innerHTML === "Click Here To Interact With Map"){
         x.style.display = "none";
         y.innerHTML= "Stop Exploring";
+        // z.style.removeProperty("display");
+        // console.log(z.style.display);
+        // z.style.display = "block !important";
+        // console.log(z.style);
     }
     else {
         x.style.display = "block";
         y.innerHTML= "Click Here To Interact With Map";
+        // z.style.display = "none !important";
     }
 };
+function tryThis(param){
+    console.log("called tryThis");
+    console.log(param);
+}
 
 //For toggle legend
 function toggleLegend(legendId, buttonId){
     console.log("toggleLegend has been called");
     var x = document.getElementById(legendId);
     var y = document.getElementById(buttonId);
-    var y = document.getElementById(buttonId)
-    console.log(y.innerHTML);
     if (y.innerHTML === "View The Legend"){
         x.style.display = "block"
         y.innerHTML= "Hide The Legend";

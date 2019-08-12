@@ -4,6 +4,15 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145459930-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-145459930-1');
+</script>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Bloomington Trees</title>
@@ -71,17 +80,20 @@
                     <h1>Swipe Test</h1>
                 </div>
                 <div id="map" class="general-map content-section sticky" style="z-index: 1">
-                    <div id="swipeDiv2"></div>
+                   <div class='sliderHolder'> 
+                       <div id="swipeDiv2"></div>
+                    </div>
                 </div>
                 <div id="swipe_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
                 </div>
 
                 <div class="right-content">
                     <button id="swipe_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('swipe_map_overlay','swipe_button')"
+                        onclick="toggleOverlay('swipe_map_overlay','swipe_button');makeSwiper('map','swipeDiv2')"
                         >Click Here To Interact With Map</button>
+
                     <button id="swipe_legendbutton" class="toggleButton legend-right legendButton"
-                        onclick="toggleLegend('swipe_legend','swipe_legendbutton')"
+                        onclick="toggleLegend('swipe_legend','swipe_legendbutton');"
                         >View The Legend</button>
 
                     <div id="swipe_legend" class="legend legend-right"></div>

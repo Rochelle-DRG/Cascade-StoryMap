@@ -277,6 +277,18 @@ section {
         background-color: rgba(0,0,0,0.0);
         z-index: 2;
     }
+    // .LayerSwipe { //works, but hard to turn back on
+    //     display:none !important;
+    // }
+    // #swipeDiv2 { 
+    //     display:none !important;
+    // }
+    .slideHolder {
+        z-index: -1;
+    }
+
+
+
     .toggleButton{
         // display: block;
         // position: sticky;
