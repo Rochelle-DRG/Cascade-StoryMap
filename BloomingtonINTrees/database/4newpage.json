@@ -106,6 +106,22 @@
             "popup": true,
             "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
             "order": 7
+        },
+        "Layer7": {
+            "layerID": [
+                1
+            ],
+            "title": "TreeHealthIndex",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/1",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
+
+            "type": "feature",
+            "opacity": 1.0,
+            "layername": "TreeHealthIndex",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "order": 8
         }
 
 
@@ -114,6 +130,29 @@
         
     },
     "maps": {
+        "rastertest_map": {
+            "swipe": "false",
+            "swipeWidgetID": "rasterDiv2",
+            "viewType": "map",
+            "sectionID": "rastertest_section",
+            "containerID": "rastermap",
+            
+            "legendID": "raster_legend",
+            "basemap": "gray",
+            "mapCenter": [
+                -86.522406,
+                39.167872
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer3",
+                "Layer2"
+            ],
+            "searchLayer": "Layer2",
+            "searchFld": "",
+            "searchAttr": ""
+        },
 
         "swipetest_map": {
             "swipe": "true",
