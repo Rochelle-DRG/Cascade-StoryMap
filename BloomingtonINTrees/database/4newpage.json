@@ -115,7 +115,7 @@
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/1",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
-            "type": "feature",
+            "type": "raster",
             "opacity": 1.0,
             "layername": "TreeHealthIndex",
             "legend": true,
@@ -146,10 +146,9 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer3",
-                "Layer2"
+                "Layer7"
             ],
-            "searchLayer": "Layer2",
+            "searchLayer": "Layer7",
             "searchFld": "",
             "searchAttr": ""
         },

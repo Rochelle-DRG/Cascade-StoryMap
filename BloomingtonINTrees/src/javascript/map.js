@@ -25,7 +25,8 @@ $(document).ready(function () {
         "dojo/dom-construct",           //20
         "dojo/dom",                     //21
         "dojo/parser",                  //22
-
+        "esri/layers/RasterLayer",      //23
+        "esri/layers/RasterFunction",   //24
 
         "dijit/layout/BorderContainer", //always last, no function match
         "dijit/layout/ContentPane",     //always last, no function match
@@ -54,7 +55,9 @@ $(document).ready(function () {
         ImageParameters,                //19
         domConst,                       //20
         dom,                            //21
-        parser) {                       //22
+        parser,                         //22
+        RasterLayer,                    //23
+        RasterFunction            ) {                 //24
 
             dojo.require("esri.tasks.query"); //part of 1st attempt setGeoPopups https://developers.arcgis.com/javascript/3/jssamples/query_clickinfowindow.html
 
@@ -172,7 +175,26 @@ $(document).ready(function () {
                     var newLayer;
 
                     if (slide.type === "raster") {
-                        console.log(layerNumber + " is a raster layer");
+                        // console.log(layerNumber + " is a raster layer");
+                        // var testUrl = "https://sampleserver6.arcgisonline.com/arcgis/rest/services/ScientificData/SeaTemperature/ImageServer";
+                        // var sammamishUrl = "https://gis.davey.com/arcgis/rest/services/Sammamish/SAM_dem/ImageServer";
+                        // newLayer = new RasterLayer(sammamishUrl, {
+                        //     opacity: 1,
+
+                        //     // imageServiceParameters: params
+                        // });
+                        // currentMap.addLayer(newLayer);
+                        // console.log("raster layer should have been added");
+                        // console.log(newLayer.visible);
+
+                        newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");  
+                        newLayer.setVisibleLayers([slide.layerID]);
+                        newLayer._div = currentMap.root;
+                        currentMap.addLayers([newLayer]);
+
+
+
+
                     } //end if raster
 
                     if (slide.type === "geo") {
