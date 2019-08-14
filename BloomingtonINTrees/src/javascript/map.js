@@ -57,7 +57,7 @@ $(document).ready(function () {
         dom,                            //21
         parser,                         //22
         RasterLayer,                    //23
-        RasterFunction            ) {                 //24
+        RasterFunction) {                 //24
 
             dojo.require("esri.tasks.query"); //part of 1st attempt setGeoPopups https://developers.arcgis.com/javascript/3/jssamples/query_clickinfowindow.html
 
@@ -67,7 +67,7 @@ $(document).ready(function () {
             function isTouchDevice() { return 'ontouchstart' in document.documentElement; }
             if (isTouchDevice()) {  /*on mobile*/ isTouchScreen = true; }
             else { /*on desktop*/ isTouchScreen = false; };
-            console.log("isTouchScreen: "+isTouchScreen);
+            console.log("isTouchScreen: " + isTouchScreen);
 
             //dealing with the CORS/wms problem
             // esriConfig.defaults.io.corsEnabledServers.push("gis.davey.com");
@@ -187,11 +187,52 @@ $(document).ready(function () {
                         // console.log("raster layer should have been added");
                         // console.log(newLayer.visible);
 
-                        newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");  
+                        newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
                         newLayer.setVisibleLayers([slide.layerID]);
                         newLayer._div = currentMap.root;
                         currentMap.addLayers([newLayer]);
 
+                        currentMap.on("click", function (event) {
+                            console.log("currentMap was clicked");
+                            identifyTask = new IdentifyTask("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
+
+                            identifyParams = new IdentifyParameters();
+                            identifyParams.tolerance = 10;
+                            identifyParams.returnGeometry = true;
+                            identifyParams.layerIds = slideMap.searchLayer;
+                            identifyParams.layerOption = IdentifyParameters.LAYER_OPTION_VISIBLE;
+                            identifyParams.width = currentMap.width;
+                            identifyParams.height = currentMap.height;
+                            identifyParams.geometry = event.mapPoint;
+                            identifyParams.mapExtent = currentMap.extent;
+                            // console.log(identifyParams);
+                            // console.log(identifyTask);
+
+                            var deferred = identifyTask
+
+                                .execute(identifyParams)
+                                .addCallback(function (response) {
+                                    // response is an array of identify result objects
+                                    // following line makes the info box show up if there are results to return
+                                    console.log(response);
+                                    console.log('here');
+                                    if (response.length > 0) {
+                                        return arrayUtils.currentMap(response, function (result) {
+                                            var feature = result.feature;
+                                            var layerName = result.layerName;
+                                            feature.attributes.layerName = layerName;
+                                            console.log(feature);
+
+                                            var testTemplate = new InfoTemplate(slide.title, slide.popupContent);
+                                            feature.setInfoTemplate(testTemplate);
+
+                                            currentMap.infoWindow.show(event.mapPoint);
+                                            return feature;
+                                        }); //end return
+                                    } //end if response > 0
+                                }); //end callback
+                            currentMap.infoWindow.setFeatures([deferred]);
+                        }); //end on click
 
 
 
@@ -245,15 +286,15 @@ $(document).ready(function () {
                         // };
                         // newLayer = new ArcGISDynamicMapServiceLayer(slide.infoUrl, newLayerOptions);
                         // newLayer.setVisibleLayers([slide.layerID]);
-                    
-                        newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");  
+
+                        newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
                         newLayer.setVisibleLayers([slide.layerID]);
                         newLayer._div = currentMap.root;
                         currentMap.addLayers([newLayer]);
 
                     }
 
-                    
+
 
                     if (slideMap.swipe === "true") {
                         if (slide.swipe === "true") {
@@ -285,10 +326,10 @@ $(document).ready(function () {
 
                 //still inside for-each-mapDetails loop
                 // console.log(mapLayers[slideMap.searchLayer].layerID); //returns a number
-                currentMap.on("click", function (event) {
-                    console.log(slideMap.searchLayer + " has been clicked");
-                    setPopups(event, slideMap, currentMap);
-                }); //end on-click
+                // currentMap.on("click", function (event) {                                //!@#!%!@#$ Turned off while developing Raster popups
+                //     console.log(slideMap.searchLayer + " has been clicked");
+                //     setPopups(event, slideMap, currentMap);
+                // }); //end on-click
                 // console.log("!LAST)end of .each map/slide");
             }); //end .each
 
