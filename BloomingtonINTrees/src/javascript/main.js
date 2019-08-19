@@ -72,13 +72,13 @@ function makeSwiper(parentDivId, swipeDivId){
 function toggleOverlay(overlayId, buttonId, swipeId) {
     var x = document.getElementById(overlayId);
     var y = document.getElementById(buttonId);
-    if (y.innerHTML === "Click Here To Interact With Map"){
+    if (y.innerText === "Click Here To Interact With Map"){
         x.style.display = "none";
-        y.innerHTML= "Stop Exploring";
+        y.innerText= "Stop Exploring";
     }
     else {
         x.style.display = "block";
-        y.innerHTML= "Click Here To Interact With Map";
+        y.innerText= "Click Here To Interact With Map";
     }
 };
 function tryThis(param){
@@ -91,13 +91,13 @@ function toggleLegend(legendId, buttonId){
     console.log("toggleLegend has been called");
     var x = document.getElementById(legendId);
     var y = document.getElementById(buttonId);
-    if (y.innerHTML === "View The Legend"){
+    if (y.innerText === "View The Legend"){
         x.style.display = "block"
-        y.innerHTML= "Hide The Legend";
+        y.innerText= "Hide The Legend";
     }
     else {
         x.style.display = "none";
-        y.innerHTML= "View The Legend";
+        y.innerText= "View The Legend";
     }
 }
 
