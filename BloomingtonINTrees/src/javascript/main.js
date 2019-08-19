@@ -61,18 +61,6 @@ navList[0].addEventListener('click', function () {
     logos.classList.toggle('logo-hide'); //without this line, the top item in the dropdown is out of alignment
 });
 
-
-// function hideSwipeOnStart(){
-//     var z = document.getElementById("swipeDiv2");
-//     console.log(z.style);
-//     z.style.display = "none !important";
-//     console.log(z.style);
-// }
-// hideSwipeOnStart();
-// $('swipeDiv2').css('display', '');
-// var huh = $('swipeDiv2');
-// console.log(huh);
-
 function makeSwiper(parentDivId, swipeDivId){
     console.log("makeSwiper called");
     var swipeDiv = document.createElement('div');
@@ -80,27 +68,17 @@ function makeSwiper(parentDivId, swipeDivId){
     document.getElementById(parentDivId).appendChild(swipeDiv);
 }
 
-
 // For map overlay and button toggle
 function toggleOverlay(overlayId, buttonId, swipeId) {
-    console.log("toggleOverlay called");
-    //console.log(swipeId);
     var x = document.getElementById(overlayId);
     var y = document.getElementById(buttonId);
-    // var z = document.getElementById(swipeId);
-    // console.log(z.style.display);
     if (y.innerHTML === "Click Here To Interact With Map"){
         x.style.display = "none";
         y.innerHTML= "Stop Exploring";
-        // z.style.removeProperty("display");
-        // console.log(z.style.display);
-        // z.style.display = "block !important";
-        // console.log(z.style);
     }
     else {
         x.style.display = "block";
         y.innerHTML= "Click Here To Interact With Map";
-        // z.style.display = "none !important";
     }
 };
 function tryThis(param){
@@ -122,22 +100,5 @@ function toggleLegend(legendId, buttonId){
         y.innerHTML= "View The Legend";
     }
 }
-
-
-
-
-
-
-// //nav bar behavior: show/hide navbar // decision was made to fix nav at top at all times
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function () {
-//     var currentScrollPos = window.pageYOffset;
-//     if (prevScrollpos > currentScrollPos) {
-//         document.getElementById("navbar").style.top = "0";
-//     } else {
-//         document.getElementById("navbar").style.top = "-50px";
-//     }
-//     prevScrollpos = currentScrollPos;
-// } //end of window.onscroll
 
 
