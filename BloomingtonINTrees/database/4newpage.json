@@ -138,7 +138,7 @@
             "containerID": "rastermap",
             
             "legendID": "raster_legend",
-            "basemap": "gray",
+            "basemap": "osm",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -184,7 +184,7 @@
             "containerID": "fragmentation_map",
             
             "legendID": "fragmentation_legend",
-            "basemap": "gray",
+            "basemap": "osm",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -206,7 +206,7 @@
             "containerID": "councilDistricts_map",
             
             "legendID": "councilDistricts_legend",
-            "basemap": "topo",
+            "basemap": "osm",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -230,7 +230,7 @@
             "containerID": "neighborhoodAssociation_map",
             
             "legendID": "neighborhoodAssociation_legend",
-            "basemap": "gray",
+            "basemap": "osm",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -250,7 +250,7 @@
             "containerID": "parks_map",
             
             "legendID": "parks_legend",
-            "basemap": "terrain",
+            "basemap": "osm",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -270,7 +270,7 @@
             "containerID": "watershed_map",
             
             "legendID": "watershed_legend",
-            "basemap": "gray",
+            "basemap": "osm",
             "mapCenter": [
                 -86.522406,
                 39.167872

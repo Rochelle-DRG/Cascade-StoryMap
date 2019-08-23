@@ -86,7 +86,7 @@
 
 @media (min-width: 900px) {
   #bootstrap-overrides .logo {
-    margin-top: 0;
+    margin-top: -.45em;
   }
 }
 
@@ -111,7 +111,7 @@
     display: flex;
     color: #0000ad;
     font-weight: bold;
-    margin-left: 5.1em;
+    margin-left: 7em;
     margin-top: auto;
     color: white;
     text-shadow: 2px 0 0 #56b, -2px 0 0 #56b, 0 2px 0 #56b, 0 -2px 0 #56b, 1px 1px #56b, -1px -1px 0 #56b, 1px -1px 0 #56b, -1px 1px 0 #56b;
@@ -126,7 +126,7 @@
     display: flex;
     color: #0000ad;
     font-weight: bold;
-    margin-left: 5.1em;
+    margin-left: 7em;
     margin-top: auto;
     color: white;
     text-shadow: 2px 0 0 #56b, -2px 0 0 #56b, 0 2px 0 #56b, 0 -2px 0 #56b, 1px 1px #56b, -1px -1px 0 #56b, 1px -1px 0 #56b, -1px 1px 0 #56b;
@@ -333,7 +333,7 @@
   text-align: center;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  background-color: #67db7b;
+  background-color: #7f3d17;
 }
 
 #bootstrap-overrides section .toggleButton .toggleButton:hover {

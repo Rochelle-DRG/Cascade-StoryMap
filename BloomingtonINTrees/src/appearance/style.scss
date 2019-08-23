@@ -65,7 +65,7 @@
         //text-shadow: $nav-title-shadow;
         // background-color: rgba(0, 0, 173, 0.849);
         @include for-tablet-landscape-up{
-            margin-top: 0;
+            margin-top: -.45em; 
         }
     }
     .logo-hide {
@@ -92,7 +92,7 @@
             display: flex;
             color: $nav-title-color;
             font-weight: bold;
-            margin-left: 5.1em;
+            margin-left: 7em;
             margin-top: auto;
             color: rgb(255, 255, 255);
             text-shadow: 2px 0 0 #56b, -2px 0 0 #56b, 0 2px 0 #56b, 0 -2px 0 #56b, 1px 1px #56b, -1px -1px 0 #56b, 1px -1px 0 #56b, -1px 1px 0 #56b;
@@ -103,7 +103,7 @@
             display: flex;
             color: $nav-title-color;
             font-weight: bold;
-            margin-left: 5.1em;
+            margin-left: 7em;
             margin-top: auto;
             color: rgb(255, 255, 255);
             text-shadow: 2px 0 0 #56b, -2px 0 0 #56b, 0 2px 0 #56b, 0 -2px 0 #56b, 1px 1px #56b, -1px -1px 0 #56b, 1px -1px 0 #56b, -1px 1px 0 #56b;
@@ -307,7 +307,7 @@ section {
         color: #FFFFFF;
         text-align: center;
         transition: all 0.2s; 
-        background-color: rgb(103, 219, 123);
+        background-color: rgb(127,61,23);  //rgb(103, 219, 123);
 
         .toggleButton:hover {
             color: #000000;
