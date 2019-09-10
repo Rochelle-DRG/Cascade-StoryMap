@@ -143,22 +143,6 @@
             "layerID": [
                 9
             ],
-            "title": "BLOOMpriority_tree",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/9",
-            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
-
-            "type": "raster",
-            "opacity": 1.0,
-            "layername": "BLOOMpriority_tree",
-            "legend": true,
-            "popup": true,
-            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
-            "order": 10
-        },
-        "Layer10": {
-            "layerID": [
-                10
-            ],
             "title": "PriorityPlantingLevel",
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/10",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
@@ -166,6 +150,22 @@
             "type": "raster",
             "opacity": 1.0,
             "layername": "PriorityPlantingLevel",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "order": 10
+        },
+        "Layer10": {
+            "layerID": [
+                
+            ],
+            "title": "Poles",
+            "url": "https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms",
+            "infoUrl": "https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms",
+
+            "type": "geo",
+            "opacity": 1.0,
+            "layername": "Treekeeper:BloomingtonIN_StreetJoin",
             "legend": true,
             "popup": true,
             "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
@@ -194,9 +194,9 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer10"
+                "Layer9"
             ],
-            "searchLayer": "Layer10",
+            "searchLayer": "Layer9",
             "searchFld": "",
             "searchAttr": ""
         },
