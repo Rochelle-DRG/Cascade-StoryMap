@@ -97,7 +97,7 @@
 #bootstrap-overrides #logo-img {
   position: fixed;
   margin-left: 0em;
-  width: 5em;
+  width: 8em;
 }
 
 #bootstrap-overrides .logo-text {
@@ -111,7 +111,7 @@
     display: flex;
     color: #0000ad;
     font-weight: bold;
-    margin-left: 7em;
+    margin-left: 11em;
     margin-top: auto;
     color: white;
     text-shadow: 2px 0 0 #56b, -2px 0 0 #56b, 0 2px 0 #56b, 0 -2px 0 #56b, 1px 1px #56b, -1px -1px 0 #56b, 1px -1px 0 #56b, -1px 1px 0 #56b;
@@ -126,7 +126,7 @@
     display: flex;
     color: #0000ad;
     font-weight: bold;
-    margin-left: 7em;
+    margin-left: 11em;
     margin-top: auto;
     color: white;
     text-shadow: 2px 0 0 #56b, -2px 0 0 #56b, 0 2px 0 #56b, 0 -2px 0 #56b, 1px 1px #56b, -1px -1px 0 #56b, 1px -1px 0 #56b, -1px 1px 0 #56b;

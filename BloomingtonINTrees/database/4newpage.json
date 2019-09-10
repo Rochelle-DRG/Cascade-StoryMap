@@ -122,6 +122,54 @@
             "popup": true,
             "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
             "order": 8
+        } ,
+        "Layer8": {
+            "layerID": [
+                2
+            ],
+            "title": "Land Cover",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/2",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
+
+            "type": "raster",
+            "opacity": 1.0,
+            "layername": "Land Cover",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "order": 9
+        },
+        "Layer9": {
+            "layerID": [
+                9
+            ],
+            "title": "BLOOMpriority_tree",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/9",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
+
+            "type": "raster",
+            "opacity": 1.0,
+            "layername": "BLOOMpriority_tree",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "order": 10
+        },
+        "Layer10": {
+            "layerID": [
+                10
+            ],
+            "title": "PriorityPlantingLevel",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/10",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
+
+            "type": "raster",
+            "opacity": 1.0,
+            "layername": "PriorityPlantingLevel",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "order": 11
         }
 
 
@@ -130,6 +178,51 @@
         
     },
     "maps": {
+        "priority_map2": {
+            "swipe": "false",
+            "swipeWidgetID": "priority2",
+            "viewType": "map",
+            "sectionID": "priority2_section",
+            "containerID": "priority2_map",
+            
+            "legendID": "priority2_legend",
+            "basemap": "gray",
+            "mapCenter": [
+                -86.522406,
+                39.167872
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer10"
+            ],
+            "searchLayer": "Layer10",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+
+        "landcover_map": {
+            "swipe": "false",
+            "swipeWidgetID": "landcover2",
+            "viewType": "map",
+            "sectionID": "landcover_section",
+            "containerID": "landcover_map",
+            
+            "legendID": "landcover_legend",
+            "basemap": "gray",
+            "mapCenter": [
+                -86.522406,
+                39.167872
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer8"
+            ],
+            "searchLayer": "Layer8",
+            "searchFld": "",
+            "searchAttr": ""
+        },
         "rastertest_map": {
             "swipe": "false",
             "swipeWidgetID": "rasterDiv2",
