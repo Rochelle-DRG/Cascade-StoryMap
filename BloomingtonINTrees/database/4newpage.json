@@ -178,6 +178,29 @@
         
     },
     "maps": {
+        "geo_map": {
+            "swipe": "false",
+            "swipeWidgetID": "geo",
+            "viewType": "map",
+            "sectionID": "geo_section",
+            "containerID": "geo_map",
+            
+            "legendID": "geo_legend",
+            "basemap": "gray",
+            "mapCenter": [
+                -86.522406,
+                39.167872
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1",
+                "Layer10"
+            ],
+            "searchLayer": "Layer1",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+
         "priority_map2": {
             "swipe": "false",
             "swipeWidgetID": "priority2",
