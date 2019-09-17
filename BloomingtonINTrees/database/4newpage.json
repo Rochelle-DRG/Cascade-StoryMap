@@ -40,7 +40,7 @@
             "layername": "Fragmentation",
             "legend": true,
             "popup": true,
-            "popupContent": "Fragment Level: ${FRAGLEVEL}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "popupContent": "Fragment Level: ${FRAGLEVEL}",
             "order": 3
         },
         "Layer3": {
@@ -56,7 +56,7 @@
             "layername": "CouncilDistricts",
             "legend": true,
             "popup": true,
-            "popupContent": "District: ${DISTRICT}</br>Name: ${NAME}</br>Rep Name: ${REPNAME}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "popupContent": "District: ${DISTRICT}</br>Name: ${NAME}</br>Rep Name: ${REPNAME}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}",
             "order": 4
         },
         "Layer4": {
@@ -72,7 +72,7 @@
             "layername": "NeighborhoodAssociation",
             "legend": true,
             "popup": true,
-            "popupContent": "Neighborhood: ${Neighborhood}</br>Quadrant: ${Quadrant}</br>Jurisdiction: ${Jurisdiction}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "popupContent": "Neighborhood: ${Neighborhood}</br>Quadrant: ${Quadrant}</br>Jurisdiction: ${Jurisdiction}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}",
             "order": 5
         },
         "Layer5": {
@@ -88,7 +88,7 @@
             "layername": "Parks",
             "legend": true,
             "popup": true,
-            "popupContent": "Name: ${NAME}</br>Type: ${TYPE}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "popupContent": "Name: ${NAME}</br>Type: ${TYPE}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}",
             "order": 6
         },
         "Layer6": {
@@ -104,7 +104,7 @@
             "layername": "Watershed",
             "legend": true,
             "popup": true,
-            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}",
             "order": 7
         },
         "Layer7": {
@@ -120,7 +120,7 @@
             "layername": "TreeHealthIndex",
             "legend": true,
             "popup": true,
-            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "popupContent": "Health Rating: ${ratings}",
             "order": 8
         } ,
         "Layer8": {
@@ -168,7 +168,7 @@
             "layername": "Treekeeper:BloomingtonIN_planttrees",
             "legend": true,
             "popup": true,
-            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}</br>ST Area: ${st_area(shape):NumberFormat(places:2)}</br>ST Length: ${st_length(shape):NumberFormat(places:2)}",
+            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}",
             "order": 11
         },
         "Layer11": {
@@ -280,7 +280,7 @@
                 "Layer1",
                 "Layer7"
             ],
-            "searchLayer": "Layer2",
+            "searchLayer": "Layer7",
             "searchFld": "",
             "searchAttr": ""
         },
