@@ -73,13 +73,17 @@ function toggleOverlay(overlayId, buttonId, swipeId) {
     var x = document.getElementById(overlayId);
     var y = document.getElementById(buttonId);
     if (y.innerText === "Click Here To Interact With Map"){
-        x.style.display = "none";
+        console.log(x.style.visibility);
+
+        x.style.visibility = "hidden";
         y.innerText= "Stop Exploring";
     }
     else {
-        x.style.display = "block";
+        x.style.visibility = "visible";
         y.innerText= "Click Here To Interact With Map";
     }
+    console.log(x.style.visibility);
+
 };
 function tryThis(param){
     console.log("called tryThis");
