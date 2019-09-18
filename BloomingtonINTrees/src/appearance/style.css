@@ -589,12 +589,24 @@
 
 #bootstrap-overrides .esriSimpleSlider {
   background-color: rgba(255, 255, 255, 0.904);
-  margin-top: 12em;
+  margin-top: 7em;
 }
 
 @media (min-width: 600px) {
   #bootstrap-overrides .esriSimpleSlider {
     margin-left: 90%;
+  }
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides .esriSimpleSlider {
+    margin-left: 93%;
+  }
+}
+
+@media (min-width: 1480px) {
+  #bootstrap-overrides .esriSimpleSlider {
+    margin-left: 96%;
   }
 }
 

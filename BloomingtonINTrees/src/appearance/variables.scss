@@ -51,6 +51,9 @@ $credits-text-color: white;
   @mixin for-desktop-up {           
     @media (min-width: 1200px) { @content; }
   }
+  @mixin for-desktop-med-up {           
+    @media (min-width: 1480px) { @content; }
+  }
   //orange
   @mixin for-big-desktop-up {       
     @media (min-width: 1930px) { @content; }
