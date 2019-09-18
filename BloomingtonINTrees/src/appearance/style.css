@@ -45,7 +45,7 @@
   display: none;
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 1480px) {
   #bootstrap-overrides .main-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -158,7 +158,7 @@
   font-size: 24px;
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 1480px) {
   #bootstrap-overrides .navbar-toggle {
     display: none;
   }
@@ -170,7 +170,7 @@
 
 @media (min-width: 900px) {
   #bootstrap-overrides .nav-links {
-    margin-left: 2.5em;
+    margin-left: 1.3em;
   }
 }
 

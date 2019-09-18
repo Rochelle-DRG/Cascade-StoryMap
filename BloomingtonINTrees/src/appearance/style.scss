@@ -37,7 +37,7 @@
 
         list-style-type: none;
         display: none;
-        @include for-tablet-landscape-up {
+        @media screen and (min-width: 1480px) {
             display: flex;
             margin-right: 2em;
             flex-direction: row;
@@ -128,7 +128,7 @@
         cursor: pointer; 
         color: $nav-toggle-color;
         font-size: 24px;
-        @include for-tablet-landscape-up{
+        @media screen and (min-width: 1480px) { //same as set for links to disappear
             display: none;
         }
     }
@@ -137,7 +137,7 @@
       }
     .nav-links{
         @include for-tablet-landscape-up{
-            margin-left: 2.5em;
+            margin-left: 1.3em;
         }
     }
     .logo:hover{ 
