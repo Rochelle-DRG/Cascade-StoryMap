@@ -404,7 +404,7 @@
 #bootstrap-overrides section .section-title h1 {
   color: white;
   font-weight: bold;
-  background-color: rgba(0, 19, 136, 0.95);
+  background-color: #001388;
   padding: .3em;
   width: 100%;
 }
