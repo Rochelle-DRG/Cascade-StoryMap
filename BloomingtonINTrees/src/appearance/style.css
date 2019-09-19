@@ -409,6 +409,12 @@
   width: 100%;
 }
 
+#bootstrap-overrides section .section-title .subsection {
+  background-color: #97c0e6;
+  padding: 0px;
+  font-size: 2em;
+}
+
 #bootstrap-overrides section .sm-textbox {
   width: 90%;
   z-index: 4;
