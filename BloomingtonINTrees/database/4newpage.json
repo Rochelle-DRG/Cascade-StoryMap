@@ -172,6 +172,8 @@
             "order": 11
         },
         "Layer11": {
+            "swipe": "true",
+
             "layerID": [
                 10
             ],
@@ -202,7 +204,7 @@
             "containerID": "geo_map",
             
             "legendID": "geo_legend",
-            "basemap": "gray",
+            "basemap": "osm",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -218,7 +220,7 @@
         },
 
         "priority_map2": {
-            "swipe": "false",
+            "swipe": "true",
             "swipeWidgetID": "priority2",
             "viewType": "map",
             "sectionID": "priority2_section",
@@ -233,7 +235,8 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer9"
+                "Layer9",
+                "Layer11"
             ],
             "searchLayer": "Layer9",
             "searchFld": "",
@@ -248,7 +251,7 @@
             "containerID": "landcover_map",
             
             "legendID": "landcover_legend",
-            "basemap": "gray",
+            "basemap": "osm",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -293,7 +296,7 @@
             "containerID": "map",
             
             "legendID": "swipe_legend",
-            "basemap": "gray",
+            "basemap": "osm",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -301,10 +304,10 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer3",
+                "Layer8",
                 "Layer2"
             ],
-            "searchLayer": "Layer2",
+            "searchLayer": "Layer8",
             "searchFld": "",
             "searchAttr": ""
         },

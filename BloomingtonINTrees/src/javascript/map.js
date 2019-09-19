@@ -192,6 +192,7 @@ $(document).ready(function () {
 
                 if (slideMap.swipe === "true") {
                     if (slide.swipe === "true") {
+                        console.log("it should be swiping");
                         var layerIds = currentMap.layerIds;
                         var swipeWidget = new LayerSwipe({
                             type: "vertical",
