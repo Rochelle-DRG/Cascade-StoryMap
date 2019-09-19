@@ -220,30 +220,20 @@ p{ //generic
         position: absolute;
         border: $welcome-box-border-color;
         border-radius: 0.5em;
-        // font-weight: bold;
-        // top: 3em;
-        // margin-left: 5%;
-        // margin-right: 5%;
         padding-top: 50%; 
-        // margin-top: 20%;
 
         @include for-tablet-portrait-up {
             text-align: left;
-
-            // top: 15%;
             padding-left: 10%;
             padding-right: 15%;
             padding-top: 30%;
-            // margin-top: 0%;
         }
         @include for-tablet-landscape-up {
             padding-left: 15%;
-            // padding-right: 15%;
             padding-top: 14%;
         }
         @include for-desktop-up {
             padding-left: 15%;
-            // margin-right: 20%;
         }
         
         h1 {
@@ -304,8 +294,8 @@ p{ //generic
 
 section {
     .general-map {
-        padding: 0;
-        margin-top: 0px;
+        padding: 0px !important;
+        margin-top: 0px !important;
         height: 100vh;
         width: 100%;
         z-index: 1 ;
@@ -334,14 +324,9 @@ section {
 
 
     .toggleButton{
-        // display: block;
-        // position: sticky;
-        // top: 12.5em !important;
-        // z-index: 4;
         font-family: $logo-font;
         padding: 0.35em 1.2em;
         border: 0.1em solid #FFFFFF;
-        // margin: 0 0.3em 0;
         border-radius: 0.23em;
         box-sizing: border-box;
         text-decoration:none;
@@ -357,11 +342,6 @@ section {
             color: #000000;
             background-color: #ffffff 
         }
-        // @media all and (max-width:30em){
-        //     .toggleButton{
-        //         // margin:.4em auto;
-        //     }
-        // }
         @include for-tablet-portrait-up {
             top: 10em !important;
         }
@@ -386,9 +366,6 @@ section {
                 background-color: $map-h1-bkgnd-color;
                 padding: .3em;
                 width: 100%;
-                // margin-left: 20%;
-                // margin-right: 20%;
-                // padding-top: 1em; //to place it below the nav bar instead of behind
             }
     }
     .sm-textbox {
@@ -405,8 +382,6 @@ section {
     }
         @include for-tablet-portrait-up {
             width: auto;
-            // margin-left: 2em;
-            // margin-right: 0;
             padding: 0;
             padding-left: 5%;
             padding-right: 70%;
@@ -433,7 +408,6 @@ section {
     }
     .sm-textbox img {
         margin-top: .2em; 
-        // margin-bottom: 1em;
         border-radius: 0.28em;
         max-width: 100%;
         padding-bottom: .2em;
@@ -484,30 +458,9 @@ section {
             $legend-width: 12em;
         }
     }
-    // .legend-right {
-    //     position: sticky !important;
-    //     top: 7em;
-    //     margin-left: 70%;
-    //     margin-bottom: 2em;
-    //     @include for-desktop-up {
-    //         margin-left: 80%; 
-    //     }
-    //}
-    // .legend-bottom-right{
-    //     position: sticky !important;
-    //     top: 60%;
-    //     margin-left: 70%;
-    //     @include for-desktop-up {
-    //         margin-left: 80%; 
-    //     }
-    // }
     table{
         margin-left: auto; 
         margin-right: auto;
-        // padding-bottom: 2em;
-        // margin-bottom: 2em;
-
-        // color: white;
     }
     .esriLegendLayerLabel  { // the subheading (the heading we want)
         color: black;
@@ -619,7 +572,7 @@ section {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 3em;
-    margin-bottom: 5em;
+    // margin-bottom: 5em;
     font-weight: bold;
     @include for-tablet-portrait-up {
         margin-left: 15%;
@@ -651,12 +604,6 @@ section {
         margin-right: auto;
         max-width: 100%;
         border-radius: .28em;
-        
-        // box-shadow: $lg-text-img-shadow;
-        // margin: 2em;
-        // @include for-tablet-portrait-up {
-        //     max-width: 50%;
-        // }
     }
     .caption-for-large-text-area {
         max-width: 100%;
