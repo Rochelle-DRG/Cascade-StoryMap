@@ -428,10 +428,15 @@ section {
     }  
 
     .photo-caption {
-        max-width: 90%;
+        // max-width: 90%;
         font-size: 90%;
         text-align: center;
     }
+    a:hover {
+        color: rgb(243, 252, 128);
+        // background-color: transparent;
+        text-decoration: underline;
+      }
 
 
 

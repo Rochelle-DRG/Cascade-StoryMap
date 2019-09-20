@@ -477,9 +477,13 @@
 }
 
 #bootstrap-overrides section .photo-caption {
-  max-width: 90%;
   font-size: 90%;
   text-align: center;
+}
+
+#bootstrap-overrides section a:hover {
+  color: #f3fc80;
+  text-decoration: underline;
 }
 
 #bootstrap-overrides section .right-content {
