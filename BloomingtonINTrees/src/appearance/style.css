@@ -272,9 +272,9 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1480px) {
   #bootstrap-overrides .welcome-container .welcome-content {
-    padding-left: 15%;
+    padding-top: 10%;
   }
 }
 
@@ -303,9 +303,15 @@
   }
 }
 
+@media (min-width: 1480px) {
+  #bootstrap-overrides .welcome-container .welcome-content h1 {
+    font-size: 11em;
+  }
+}
+
 #bootstrap-overrides .welcome-container .welcome-content p {
   color: white;
-  text-shadow: 0.08em 0.08em 1em black;
+  text-shadow: 3px 3px 2px black;
   margin-top: 1em;
   line-height: 150%;
   font-size: 1.4em;
@@ -323,6 +329,12 @@
   }
 }
 
+@media (min-width: 1480px) {
+  #bootstrap-overrides .welcome-container .welcome-content p {
+    font-size: 3.6em;
+  }
+}
+
 #bootstrap-overrides .welcome-hr {
   width: .8em;
   margin: auto;
@@ -330,6 +342,7 @@
   margin-bottom: .6em;
   height: 5px;
   background-color: white;
+  text-shadow: 3px 3px 2px black;
 }
 
 @media (min-width: 600px) {

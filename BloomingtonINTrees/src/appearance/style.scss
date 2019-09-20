@@ -236,8 +236,11 @@ p{ //generic
             padding-left: 15%;
             padding-top: 14%;
         }
+        @include for-desktop-med-up {
+            padding-top: 10%;
+        }
         @include for-desktop-up {
-            padding-left: 15%;
+            // padding-left: 15%;
         }
         
         h1 {
@@ -257,11 +260,14 @@ p{ //generic
             @include for-tablet-landscape-up {
                 font-size:7em;
             }
+            @include for-desktop-med-up {
+                font-size: 11em;
+            }
 
         }
         p{
             color: $welcome-p-color;
-            text-shadow: $welcome-p-shadow;
+            text-shadow: $welcome-h1-shadow;
             margin-top: 1em;
             // padding-left: 3em;
             // padding-right: 3em;
@@ -274,6 +280,9 @@ p{ //generic
             @include for-tablet-landscape-up {
                 font-size:3em;
             }
+            @include for-desktop-med-up {
+                font-size: 3.6em;
+            }
 
         }
     }
@@ -285,6 +294,8 @@ p{ //generic
     margin-bottom: .6em;
     height: 5px;
     background-color: white;
+    text-shadow: $welcome-h1-shadow;
+
 
     @include for-tablet-portrait-up {
         padding-left: 15;
