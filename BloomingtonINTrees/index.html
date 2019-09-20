@@ -36,13 +36,13 @@
             <li id="logo-text"><a href="#" class="logo logo-text">BLOOMINGTON, INDIANA URBAN FOREST ASSESSMENT</a></li>
         </ul>
         <ul class="main-nav" id="js-menu">
-            <li><a href="#"                 class="nav-links">Introduction</a></li>
-            <li style="display: none;"><a href="#Tree-Inventory"       class="nav-links">Tree Inventory</a></li>
-            <li><a href="#landcover_section"    class="nav-links">Forest Resources</a></li>
-            <li><a href="#"    class="nav-links">Tree Benefits</a></li>
-            
-            <li><a href="#manage_section"       class="nav-links">Future Forest</a></li>
-            <li><a href="#acknowledge_section"  class="nav-links">Acknowledgements</a></li>
+            <li><a href="#intro_section" class="nav-links">Introduction</a></li>
+            <li style="display: none;"><a href="#Tree-Inventory" class="nav-links">Tree Inventory</a></li>
+            <li><a href="#landcover_section" class="nav-links">Forest Resources</a></li>
+            <li><a href="#" class="nav-links">Tree Benefits</a></li>
+
+            <li><a href="#manage_section" class="nav-links">Future Forest</a></li>
+            <li><a href="#acknowledge_section" class="nav-links">Acknowledgements</a></li>
 
         </ul>
     </nav>
@@ -65,12 +65,249 @@
 
 
 
+            <section id="intro_section">
+                <div class="section-title">
+                    <h1>Introduction</h1>
+                </div>
+                <img id="intro" class="general-map content-section sticky" style="z-index: 1"
+                    src='/BloomingtonINTrees/src/appearance/img/bloomington/Conclusions_lighten_resize.jpg'>
+                </img>
 
+                <div id="intro_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                </div>
+
+                <div class="sm-textbox">
+
+                    <p style="display: none;" class="photo-caption"><img
+                            src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'>
+                        This is a test caption. Testing: 1, 2, 3. </p>
+                    <p>Bloomington’s tree canopy has quite a story to tell you!
+                        <br><br>
+
+                        Simply scroll through the following pages to learn all about the strengths and benefits of our
+                        urban forest, as well as the opportunities and challenges that it currently faces.
+                    </p>
+
+                    <p>Publicly and privately-owned forests combine to create an urban tree canopy that provides
+                        numerous benefits to city residents, businesses, students, and visitors.
+                        <br><br>
+                        These benefits come from significant contributions to stormwater management, public health
+                        improvement, energy use reduction, air pollution abatement, and overall quality of life. These
+                        ecosystem, economic, and social services provided by trees become even more important to
+                        Bloomington as the City grows and changes with time.</p>
+                    <p>Recognizing the value of the urban forest, the City of Bloomington has assessed the extent of the
+                        current total tree canopy and conducted a public tree inventory. An analysis of this information
+                        answers the question “What do we have.” The City will begin planning the next steps in the
+                        city’s effort to proactively plan for and manage this valuable asset. Those questions are “What
+                        do we want” and “How do we get there.”</p>
+                    <p>The following pages and interactive maps will show you information about current urban forest
+                        conditions in Bloomington via the urban tree canopy data analysis and tree inventory findings.
+                    </p>
+                </div>
+            </section>
+            <!--end intro-->
+
+
+
+
+
+
+            <section id="landcover_section">
+                <div class="section-title">
+                    <h1>What Do We Have?: Forest Resources</h1>
+                </div>
+
+                <div class="lg-text-area">
+                    <p class="middle-text">Canopy cover is a measure of the physical coverage of the tree canopy over
+                        the land.
+                        <!-- <br><br> -->
+                        It represents a way of expressing, as a percentage, how much of any given area is shaded or
+                        protected by trees.
+                        <!-- <br><br> -->
+                        Canopy cover is an important way of measuring the character, location, extent, and benefits of
+                        an urban forest.</p>
+                </div>
+            </section>
+
+            <section id="utc">
+                <div class="section-title">
+                    <h1 class="subsection">Urban Tree Canopy</h1>
+                </div>
+
+                <div id="landcover_map" class="general-map content-section sticky" style="z-index: 1">
+                </div>
+                <div id="landcover_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                </div>
+
+                <div class="right-content">
+                    <button id="landcover_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('landcover_overlay','landcover_button');">Click Here To Interact With
+                        Map</button>
+                    <button id="landcover_legendbutton" class="toggleButton legend-right legendButton"
+                        onclick="toggleLegend('landcover_legend','landcover_legendbutton');">View The Legend</button>
+
+                    <div id="landcover_legend" class="legend legend-right"></div>
+                </div>
+
+                <div class="sm-textbox">
+
+                    <p>The urban tree canopy (UTC) analysis found that 38% of Bloomington is covered by tree canopy,
+                        while 34% of the city is covered by impervious surfaces (roads, buildings) that repel stormwater
+                        and contribute to heat island effects. The remaining land in the city is previous areas of low
+                        vegetation such as understory (24%), bare soil (3%) such as athletic fields, and open water
+                        (1%).</p>
+
+                    <ul>The analysis further reveals:
+                        <li>The theoretical maximum canopy for the city is 61% UTC.</li>
+                        <li>Bloomington directly manages 1,762 acres of public property with 64% UTC comprising 20% of
+                            the city’s total tree cover.</li>
+                        <li>Neighborhoods Bittner Woods (71%), South Griffy (61%), and Woodlands-Winding Brook (59%)
+                            have the greatest distribution of UTC, while South Griffy (85%), Bittner Woods (83%), and
+                            Matlock Heights (81%) have the greatest potential for UTC.</li>
+                        <li>Zoning types Residential Estate (67%), Institutional (47%), and Quarry (47%) have the
+                            greatest distribution of UTC, while Residential Estate (94%), Quarry (83%), and Residential
+                            Single Family (71%) have the greatest potential for UTC.</li>
+                        <li>Toggle on and off the neighborhood canopy distribution map and the zoning canopy
+                            distribution map. **This is not built yet**</li>
+                        <li>Historically, Bloomington has been losing canopy at the rate of nearly 2% over the last 20
+                            years. </li>
+                        <li>**Insert canopy loss figure. **</li>
+                        <li>Neighborhoods Trail View (-65%), Longwood-Devon (-25%), and Eastern Heights (-20%) have lost
+                            the greatest percentage of UTC, while Autumn View (18%), Southern Pines (14%), and Highland
+                            Village (13%) have gained the greatest percentage of UTC.</li>
+                        <li>Zoning types Residential Core (-8%), Manufactured/Mobile Home Park (-6%), and Residential
+                            Single Family (-5%) have lost the greatest percentage of UTC, while Quarry (12%),
+                            Residential Estate (4%), and Business Park (3%) have gained the greatest percentage for UTC.
+                        </li>
+                    </ul>
+
+                    <ul>According to U.S. Forest Service Research Forester, Greg McPherson (AmericanForests.org), canopy
+                        goals are best developed on a city-by-city basis and should consider constraints to creating
+                        canopy such as:
+                        <li>Development densities (i.e., dense development patterns with more impervious surfaces have
+                            less opportunity for cover)</li>
+                        <li>Land use patterns (i.e., residential areas may have more opportunity for canopy than
+                            commercial areas, but the canopy cover tends to be lower in residential areas of
+                            disadvantaged communities versus wealthy ones)</li>
+                        <li>Ordinances (i.e., parking lot shade ordinances promote cover over some impervious areas);
+                            and climate (i.e., canopy cover in desert cities is often less than tropical cities)</li>
+                    </ul>
+                </div>
+            </section>
+            <!--end Land Cover / UTC-->
+
+            <section id="fragmentation_section">
+                <div class="section-title">
+                    <h1 class="subsection">Forest Fragmentation</h1>
+                </div>
+                <div id="fragmentation_map" class="general-map content-section sticky" style="z-index: 1"></div>
+
+                <div id="fragmentation_map_overlay" class="general-map content-section sticky overlay"
+                    style="z-index: 2">
+                </div>
+
+                <div class="right-content">
+                    <button id="fragmentation_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('fragmentation_map_overlay','fragmentation_button')">Click Here To
+                        Interact
+                        With Map</button>
+                    <button id="fragmentation_legendbutton" class="toggleButton legend-right legendButton"
+                        onclick="toggleLegend('fragmentation_legend','fragmentation_legendbutton')">View The
+                        Legend</button>
+
+                    <div id="fragmentation_legend" class="legend legend-right"></div>
+                </div>
+
+                <div class="sm-textbox">
+
+                    <p>The overall health of Bloomington’s urban ecosystem depends greatly on the ability of trees,
+                        plants, wildlife, insects, and humans to interact as a whole. Ecosystem health declines when
+                        there is urban build-up and land clearing that results in tree removals and a decrease in
+                        overall tree canopy cover.
+                        <br><br>Land development often causes tree canopies to be fragmented and leads to a decline in
+                        habitat quality and canopy connectivity. In turn, this decline results in decreased wildlife
+                        populations and increased risk and susceptibility to non-native, invasive plants and insects,
+                        and disease to both woodlands and landscapes in the city.</p>
+
+                    <ul>Bloomington has approximately 5,735 acres of tree canopy in four classifications, establishing
+                        the following baseline measures for the city:
+                        <li>Core Canopy and Perforated Canopy - This is a high quality, high-functioning forestland and
+                            represents 17% of Bloomington’s forests. Because of small clearings within them, perforated
+                            areas of the canopy are just beginning to lose connectivity with large forest tracts.</li>
+                        <li>Edge Canopy - This type of forest is defined as the boundary between core forests and large
+                            tracts of developed and non-forested land. This category accounts for 28% of Bloomington’s
+                            canopy.</li>
+                        <li>Patch Canopy -This classification is for tree canopy that comprises a small forested area
+                            that is surrounded by non-forested land cover. This category of forests is the least
+                            productive and beneficial and comprises 55% of Bloomington’s urban tree canopy.
+                        </li>
+                    </ul>
+
+
+                    <p>Knowing the locations of the forest types can guide land acquisition decisions and tree planting
+                        priorities so that these kinds of efforts are targeted in areas that can connect isolated areas
+                        of trees to create more contiguous and larger urban forests tracts.
+                    </p>
+                </div>
+            </section>
+            <!--end Fragmentation-->
+
+            <section id="rastertest_section">
+                <div class="section-title">
+                    <h1 class="subsection">Forest Health Issues</h1>
+                </div>
+                <div id="rastermap" class="general-map content-section sticky" style="z-index: 1">
+                </div>
+                <div id="raster_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                </div>
+
+                <div class="right-content">
+                    <button id="raster_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('raster_map_overlay','raster_button');">Click Here To Interact With
+                        Map</button>
+
+                    <button id="raster_legendbutton" class="toggleButton legend-right legendButton"
+                        onclick="toggleLegend('raster_legend','raster_legendbutton');">View The Legend</button>
+
+                    <div id="raster_legend" class="legend legend-right"></div>
+                </div>
+
+
+                <div class="sm-textbox">
+
+                    <p>The overall health of trees has a direct impact on the sustainability of Bloomington’s urban
+                        forest. Trees in worse condition require more maintenance, are more susceptible to insect and
+                        disease problems, and can present a health and safety risk to the public. Trees in better
+                        condition require less maintenance, are less prone to storm damage, look better, and provide
+                        maximum environmental services to the city.</p>
+
+
+
+                    <p>Using the citywide UTC data, a relative health assessment established a benchmark that over 39%
+                        of the urban tree canopy could be in Good and Very Good health. Almost 35% was classified as in
+                        Fair health, and approximately 24% of the canopy is in relatively Poor health or Dead.
+                    </p>
+
+                    <p>Trees growing in an urban environment face many challenges that threaten their vigor, increase
+                        risk, and shorten their service lives: poor soil quality, restricted rooting area, air
+                        pollution, increased temperatures, construction damage, vehicular accidents, soil compaction,
+                        drought stress, and stress-induced insect and disease infestations. Of particular concern for
+                        Bloomington are remnant issues from its emerald ash borer and and future issues from climate
+                        change.</p>
+                    <p>If unmanaged, these risks to forest health may result in the trees that are in Fair condition
+                        falling into the Poor/Dead classification. For the entire urban forest, this puts over half of
+                        Bloomington’s canopy at an elevated risk. The city and property owners should stay aware of
+                        these threats and understand the best actions they can take to protect the tree canopy on public
+                        and private property.</p>
+
+                </div>
+            </section>
+            <!--end Forest Health-->
 
 
             <section id="geo_section">
                 <div id="Tree-Inventory" class="section-title">
-                    <h1>Tree Inventory</h1>
+                    <h1 class="subsection">Public Trees</h1>
                 </div>
                 <div id="geo_map" class="general-map content-section sticky" style="z-index: 1">
                 </div>
@@ -89,67 +326,297 @@
 
                 <div class="sm-textbox">
 
-                    <p>This is not the actual Tree Inventory, just a placeholder in case we want to include this
-                        section. The layer shown is one the developer had on-hand displaying only the locations marked
-                        "needs planted." This basemap is called OSM.</p>
+                    <p>While comprehensive urban forest management considers all trees across the entire jurisdiction
+                        and takes action to improve the condition and extent of the citywide urban tree canopy, the City
+                        of Bloomington’s primary responsibility is to properly manage public trees. Therefore, an
+                        important step in developing proactive management strategies is to assess the current
+                        composition and distribution of Bloomington’s public trees and their associated ecosystem
+                        services.</p>
 
-                    <p class="photo-caption"><img
-                            src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'>
-                        This is a test caption. Testing: 1, 2, 3. </p>
+                    <ul>From February to August 2019, a team of DRG staff assessed and inventoried trees, stumps, and
+                        planting sites along the public street ROW and select parks:
+                        <li>24,371 sites were inventoried</li>
+                        <li>19,013 trees (17,541 street and 1,472 park)</li>
+                        <li>741 stumps
+                        </li>
+                        <li>4,617 planting sites</li>
+                    </ul>
 
-
-                    <p>Placeholder text: This City of Sammamish has mapped the watershed sub-basins as a key approach to
-                        managing the
-                        local environment. Knowledge about the UTC within these areas provides a benchmark for
-                        understanding and optimizing stormwater mitigation benefits and other environmental services.
+                    <p>Species diversity is high. The mix of species in Blooming’s publicly-managed trees is 168 species
+                        representing 63 genera. Red maple is present within the population at 13%. The other four of the
+                        top five include callery pear, northern red oak, and sugar maple. Species diversity, or the
+                        number and variety of species in a specific population, affects the tree population’s ability to
+                        withstand threats from invasive pests and diseases. Species diversity also impacts tree
+                        maintenance needs and costs, tree planting goals, and canopy continuity and resiliency.
                     </p>
+                    <p>Condition of the population is healthy. Overall, the vast majority (92%) of Bloomington’s public
+                        trees are in Fair or Good condition. At the time of the inventory, only 8% of trees were either
+                        identified as Poor or Dead. Condition is an important tree attribute to know and monitor as it
+                        indicates how well trees are performing, their susceptibility to insect and disease threats,
+                        both short-term and long-term maintenance needs and costs, risk level, and the outlook for urban
+                        tree canopy cover continuity.</p>
+                    <p>Maintenance remains a priority for the city. Only 6% of the public trees should be removed, 12%
+                        require pruning, 37% require routine inspections and pruning, 25% of the young trees need
+                        structural pruning, and 23% could be planted.</p>
+                    <p>The following parks were included in this analysis: Bryan Park, Building Trades, Butler Park,
+                        Lower Cascades, Miller Showers Park, Olcott Park, Peoples Park, Rose Hill Cemetery, Seminary
+                        Park, Twin Lakes Recreation Center and Sports Complex, and White Oak Cemetery</p>
                 </div>
             </section>
+            <!--end Tree Inventory-->
 
-
-            <section id="landcover_section">
+            <section id="eco_section">
                 <div class="section-title">
-                    <h1>Mapping & Analysis</h1>
-                    <h1 class="subsection">Land Cover</h1>
+                    <h1>What Do We Have? Tree Benefits</h1>
 
                 </div>
-                <div id="landcover_map" class="general-map content-section sticky" style="z-index: 1">
-                </div>
-                <div id="landcover_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                <img id="eco" class="general-map content-section sticky" style="z-index: 1"
+                    src='/BloomingtonINTrees/src/appearance/img/bloomington/EcosystemValue.jpg'>
+                </img>
+
+                <div id="eco_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
                 </div>
 
-                <div class="right-content">
-                    <button id="landcover_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('landcover_overlay','landcover_button');">Click Here To Interact With
-                        Map</button>
-                    <button id="landcover_legendbutton" class="toggleButton legend-right legendButton"
-                        onclick="toggleLegend('landcover_legend','landcover_legendbutton');">View The Legend</button>
-
-                    <div id="landcover_legend" class="legend legend-right"></div>
-                </div>
 
                 <div class="sm-textbox">
 
-                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
-                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
-                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
-                        This information was calculated using models and methods derived from <a
-                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
+                    <p>Bloomington’s existing citywide tree canopy provides residents with more than $1.9 million in
+                        benefits annually. In addition to the annual benefits, the carbon stored by the current UTC
+                        contributes an additional $33.3 million in benefits and property value contribution contributes
+                        an additional $19.7 million, bringing the collective benefit amount to $55.0 million. This
+                        information was calculated using models and methods derived from www.itreetools.org.</p>
 
-                    <p class="photo-caption"><img
-                            src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'>
-                        This is a test caption. Testing: 1, 2, 3. </p>
+                    <ul>Bloomington’s urban forest is amazing because it annually :
+                        <li>Remove almost 470,000 pounds of pollutants from the air every year, scrubbing service valued
+                            at $626,000.</li>
+                        <li>Intercept a staggering 91 million gallons of stormwater, infrastructure service valued at
+                            $543,000.
+                        </li>
+                        <li>Sequester 28,673 tons of carbon, valued at $1,328,918.
+                        </li>
+                    </ul>
+
+                    <ul>The public tree population provides approximately $968,823 ($51 per tree and $11 per capita) in
+                        the following annual benefits:
+                        <li>Aesthetic and Other Tangible Benefits: valued at $643,202 per year.</li>
+                        <li>Air Quality: 16,230 pounds of pollutants removed valued at $23,884 per year.
+                        </li>
+                        <li>Net Total Carbon Sequestered and Avoided: 3,679,323 pounds valued at $10,870 per year.
+                        </li>
+                        <li>Energy: 853,140 kilowatt-hours (kWh) and 19,190 therms valued at $76,686 per year.</li>
+                        <li>Stormwater: 34,545,160 gallons valued at $214,180 per year.</li>
+                    </ul>
 
 
+                    <p>Visit <a href='https://bloomingtonin.treekeepersoftware.com/' target="_blank">Bloomington’s
+                            TreeKeeper</a> to find out what benefit public trees at your home, along your street, and in
+                        your neighborhood are doing for you at the finite scale.
+                    </p>
+                </div>
+            </section>
+            <!--end tree benefits-->
+
+
+            <section id="manage_section">
+                <div class="section-title">
+                    <h1>What Do We Want? Managing for the Future Forest</h1>
+
+                </div>
+                <img id="manage" class="general-map content-section sticky" style="z-index: 1"
+                    src='/BloomingtonINTrees/src/appearance/img/bloomington/Management_resized.JPG'>
+                </img>
+
+                <div id="manage_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                </div>
+                <div class="sm-textbox">
+
+                    <p>There is not a universal tree canopy goal that applies to all cities. Communities should instead
+                        create their own goals based on a number of factors, including what is possible and given local
+                        economic, development, and environmental goals and constraints.</p>
+
+                    <p>The suggestion is to choose a tree canopy goal that achieves specific objectives, such as
+                        reaching the canopy percentage necessary to reduce urban heat island temperatures to a specific
+                        range, or to reduce stormwater runoff by a projected amount. At 38%, Bloomington's citywide tree
+                        canopy is compares well with other similar communities like State College, Pennsylvania (39%),
+                        Columbia, Missouri (35%) and Ann Arbor, Michigan (33%), the challenge now is to maintain or grow
+                        that canopy as the city and citizens desire.</p>
+
+                    <p class="photo-caption"><img src='insertBenchMarkFigureHere'>
+                        **benchmark figure caption**</p>
                     <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
                         local environment. Knowledge about the UTC within these areas provides a benchmark for
                         understanding and optimizing stormwater mitigation benefits and other environmental services.
                     </p>
                 </div>
+                <!--end sm-textbox div-->
+                <!--insert map here-->
+
+                <section style="display: none;" id="swipetest_section">
+                    <!-- <div class="section-title">
+                        <h1 class="subsection">Historic Land Cover</h1>
+                    </div> -->
+                    <div id="map" class="general-map content-section sticky" style="z-index: 1">
+                        <div class='sliderHolder'>
+                            <div id="swipeDiv2"></div>
+                        </div>
+                    </div>
+                    <div id="swipe_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                    </div>
+
+                    <div class="right-content">
+                        <button id="swipe_button" class="toggleButton legend-right"
+                            onclick="toggleOverlay('swipe_map_overlay','swipe_button');makeSwiper('map','swipeDiv2')">Click
+                            Here To Interact With Map</button>
+
+                        <button id="swipe_legendbutton" class="toggleButton legend-right legendButton"
+                            onclick="toggleLegend('swipe_legend','swipe_legendbutton');">View The Legend</button>
+
+                        <div id="swipe_legend" class="legend legend-right"></div>
+                    </div>
+
+                    <div class="sm-textbox">
+
+                        <p>With Bloomington’s prioritized planting plan, the city’s UTC and beneficial reach can be
+                            expanded by planting and managing trees with a purpose to maximize benefits so that all
+                            citizens can benefit equally. Even small increases in UTC can make a big difference in the
+                            amount of benefits trees can provide to Bloomington.</p>
+
+                        <p>Are there potential planting areas in your neighborhood? Explore this planting site map to
+                            find out.</p>
+                    </div>
+                </section>
+                <!--end map-->
+
+
             </section>
+            <!--end Management-->
 
 
-            <section id="swipetest_section">
+            <section id="sustain_section">
+                <div class="section-title">
+                    <h1 class="subsection">A Sustainable Public Urban Forest</h1>
+
+                </div>
+                <img id="sustain" class="general-map content-section sticky" style="z-index: 1" src='GetThePhoto'>
+                </img>
+
+                <div id="sustain_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                </div>
+
+
+                <div class="sm-textbox">
+
+                    <p>The trees in parks and along the streets of Bloomington should not only be attractive and safe,
+                        but also reflect the city’s dedication to providing a high quality of life and effectively using
+                        municipal resources to do so. A sustainable public tree population in the city will provide
+                        maximum benefits to citizens, workers, and visitors, and require less resources to keep it safe
+                        and healthy.</p>
+
+                    <p>In general, a sustainable urban forest is a forest where the trees are of different ages and
+                        diverse with species well-suited to site conditions, and that are insect and disease resistant
+                        and low maintenance. A tree population meeting these criteria is sustainable, resilient, and
+                        produces maximum social, economic, and ecological benefits for the community.</p>
+
+
+                    <p>'We cannot separate sustainable urban forests from the people who live in and around them.
+                        Sustainable urban forests are not born, they are made. They do not arise at random, but result
+                        from a community-wide commitment to their creation and management. Obtaining the commitment of a
+                        broad community, of numerous constituencies, cannot be dictated or legislated. It must arise out
+                        of compromise and respect.'
+                        <br><br> -- Clark, et. al., A Model of Urban Forest Sustainability
+
+                    </p>
+                </div>
+            </section>
+            <!--end Sustainable-->
+
+
+            <section id="next_section">
+                <div class="section-title">
+                    <h1 class="subsection">Bloomington’s Next Steps</h1>
+
+                </div>
+                <img id="next" class="general-map content-section sticky" style="z-index: 1" src='GetThePhoto'>
+                </img>
+
+                <div id="next_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                </div>
+
+
+                <div class="sm-textbox">
+
+                    <p>Urban forest management plans are considered “living” documents involving multiple stakeholders’
+                        input. Following principles of adaptive management, planning provides opportunities for
+                        engagement and adjustment through cyclical updates.</p>
+
+                    <p>**Add anchor links to this**<br><br>Bloomington has not a master urban forest management plan, a
+                        collective strategy to meet community vision and goals for public and private trees. Existing
+                        city planning that trees have a part include the Sustainability Action Plan and the Equity,
+                        Inclusion & Accessibility statement. The City of Bloomington has a public tree management plan.
+                        The Tree Commision and City Forester has for many years been operating under the guidance of
+                        this Management Plan. Bloomington should utilize this collection of new information and tools to
+                        explore public and private tree issues to influence the improvement of the public tree
+                        management plan and create a community master urban forest management plan in ways that lead to
+                        the path of a more sustainable, resilient, and equitable urban forest. Two toolkits with guiding
+                        principles for urban forest planning may be of interest to the planning committees, Vibrant
+                        Cities Lab and U.S. Climate Resilience Toolkit.
+                    </p>
+
+                    <ul>Common planning goals include:
+                        <li>Managing a diverse, sustainable, safe, and beneficial community forest;
+                        </li>
+                        <li>Maintaining and expanding the urban tree canopy now and for future generations;
+                        </li>
+                        <li>Using professional urban forestry leadership and staff, proper maintenance and planting
+                            techniques, more efficient management of city resources, and greater public education so
+                            that the city’s urban forest is viewed as an important community asset;
+
+                        </li>
+                        <li>Having the urban forest uniquely define the city’s character and be a major factor in the
+                            continued growth and livability of Bloomington.</li>
+                    </ul>
+
+
+                    <p>If you have questions or suggestions for better managing and growing our city’s urban forest,
+                        please contact:
+                        <br><br> City of Bloomington Arborist
+                        <br><br> ???-???-????
+                        <br><br> City Website to Forestry program
+                    </p>
+                </div>
+            </section>
+            <!--end Next Steps-->
+
+
+            <section id="acknowledge_section">
+                <div class="section-title">
+                    <h1>Acknowledgements</h1>
+
+                </div>
+                <img id="acknowledge" class="general-map content-section sticky" style="z-index: 1"
+                    src='/BloomingtonINTrees/src/appearance/img/bloomington/Winter waterfall at Lower Cascades Park_editscale.jpg'>
+                </img>
+
+                <div id="acknowledge_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                </div>
+
+
+                <div class="sm-textbox">
+
+                    <p>Bloomington’s vision to promote and preserve the urban forest and improve the management of public trees was a fundamental inspiration for this project. This vision will ensure canopy continuity, which will reduce stormwater runoff and energy use and improve aesthetic value, air quality, and public health.</p>
+
+                    <p class="photo-caption"><img
+                            src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'>
+                        Davey Resource Logo Here </p>
+
+
+                </div>
+            </section><!--end acknowledge-->
+
+
+
+
+            <!-- <section style="display: none;" id="swipetest_section">
                 <div class="section-title">
                     <h1 class="subsection">Historic Land Cover</h1>
                 </div>
@@ -190,128 +657,20 @@
                         understanding and optimizing stormwater mitigation benefits and other environmental services.
                     </p>
                 </div>
-            </section>
-
-
-            <section id="eco_section">
-                <div class="section-title">
-                    <h1 class="subsection">Ecosystem Value</h1>
-
-                </div>
-                <img id="eco" class="general-map content-section sticky" style="z-index: 1"
-                    src='/BloomingtonINTrees/src/appearance/img/bloomington/EcosystemValue.jpg'>
-                </img>
-
-                <div id="eco_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
-                </div>
-
-
-                <div class="sm-textbox">
-
-                    <p>Some text</p>
-
-                    <p class="photo-caption"><img
-                            src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'>
-                        This is a test caption. Testing: 1, 2, 3. </p>
-
-
-                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
-                        local environment. Knowledge about the UTC within these areas provides a benchmark for
-                        understanding and optimizing stormwater mitigation benefits and other environmental services.
-                    </p>
-                </div>
-            </section>
-
-
-            <section id="rastertest_section">
-                <div class="section-title">
-                    <h1 class="subsection">Tree Health Index</h1>
-                </div>
-                <div id="rastermap" class="general-map content-section sticky" style="z-index: 1">
-                </div>
-                <div id="raster_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
-                </div>
-
-                <div class="right-content">
-                    <button id="raster_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('raster_map_overlay','raster_button');">Click Here To Interact With
-                        Map</button>
-
-                    <button id="raster_legendbutton" class="toggleButton legend-right legendButton"
-                        onclick="toggleLegend('raster_legend','raster_legendbutton');">View The Legend</button>
-
-                    <div id="raster_legend" class="legend legend-right"></div>
-                </div>
-
-
-                <div class="sm-textbox">
-
-                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
-                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
-                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
-                        This information was calculated using models and methods derived from <a
-                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
-
-                    <p class="photo-caption"><img
-                            src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'>
-                        This is a test caption. Testing: 1, 2, 3. </p>
-
-
-                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
-                        local environment. Knowledge about the UTC within these areas provides a benchmark for
-                        understanding and optimizing stormwater mitigation benefits and other environmental services.
-                    </p>
-                </div>
-            </section>
-
-
-            <section id="fragmentation_section">
-                <div class="section-title">
-                    <h1 class="subsection">Forest Fragmentation</h1>
-                </div>
-                <div id="fragmentation_map" class="general-map content-section sticky" style="z-index: 1"></div>
-
-                <div id="fragmentation_map_overlay" class="general-map content-section sticky overlay"
-                    style="z-index: 2">
-                </div>
-
-                <div class="right-content">
-                    <button id="fragmentation_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('fragmentation_map_overlay','fragmentation_button')">Click Here To
-                        Interact
-                        With Map</button>
-                    <button id="fragmentation_legendbutton" class="toggleButton legend-right legendButton"
-                        onclick="toggleLegend('fragmentation_legend','fragmentation_legendbutton')">View The
-                        Legend</button>
-
-                    <div id="fragmentation_legend" class="legend legend-right"></div>
-                </div>
-
-
-                <div class="sm-textbox">
-
-                    <p>Sammamish’s existing citywide tree canopy provides residents with $4 million in benefits
-                        annually. In addition to the annual benefits, the carbon stored by the current UTC contributes
-                        an additional $28 million in benefits, bringing the collective benefit amount to $32 million.
-                        This information was calculated using models and methods derived from <a
-                            href='http://www.itreetools.org'>www.itreetools.org.</a></p>
-
-                    <p class="photo-caption"><img
-                            src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'>
-                        This is a test caption. Testing: 1, 2, 3. </p>
-
-
-                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
-                        local environment. Knowledge about the UTC within these areas provides a benchmark for
-                        understanding and optimizing stormwater mitigation benefits and other environmental services.
-                    </p>
-                </div>
-            </section>
+            </section> -->
+            <!--end historic land cover-->
 
 
 
 
-            <section id="priority_section">
+
+
+
+
+
+
+
+            <section style="display: none;" id="priority_section">
                 <div class="section-title">
                     <h1 class="subsection">Priority Planting</h1>
 
@@ -352,101 +711,18 @@
 
 
 
-            <section id="manage_section">
-                <div class="section-title">
-                    <h1>Land Management</h1>
-
-                </div>
-                <img id="manage" class="general-map content-section sticky" style="z-index: 1"
-                    src='/BloomingtonINTrees/src/appearance/img/bloomington/Management_resized.JPG'>
-                </img>
-
-                <div id="manage_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
-                </div>
-
-
-                <div class="sm-textbox">
-
-                    <p>Some text</p>
-
-                    <p class="photo-caption"><img
-                            src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'>
-                        This is a test caption. Testing: 1, 2, 3. </p>
-
-
-                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
-                        local environment. Knowledge about the UTC within these areas provides a benchmark for
-                        understanding and optimizing stormwater mitigation benefits and other environmental services.
-                    </p>
-                </div>
-            </section>
-
-            <section id="conclusions_section">
-                <div class="section-title">
-                    <h1>Conclusions</h1>
-
-                </div>
-                <img id="conclusions" class="general-map content-section sticky" style="z-index: 1"
-                    src='/BloomingtonINTrees/src/appearance/img/bloomington/Conclusions_lighten_resize.jpg'>
-                </img>
-
-                <div id="conclusions_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
-                </div>
-
-
-                <div class="sm-textbox">
-
-                    <p>Some text</p>
-
-                    <p class="photo-caption"><img
-                            src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'>
-                        This is a test caption. Testing: 1, 2, 3. </p>
-
-
-                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
-                        local environment. Knowledge about the UTC within these areas provides a benchmark for
-                        understanding and optimizing stormwater mitigation benefits and other environmental services.
-                    </p>
-                </div>
-            </section>
-
-
-
-            <section id="acknowledge_section">
-                <div class="section-title">
-                    <h1>Acknowledgements</h1>
-
-                </div>
-                <img id="acknowledge" class="general-map content-section sticky" style="z-index: 1"
-                    src='/BloomingtonINTrees/src/appearance/img/bloomington/Winter waterfall at Lower Cascades Park_editscale.jpg'>
-                </img>
-
-                <div id="acknowledge_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
-                </div>
-
-
-                <div class="sm-textbox">
-
-                    <p>Some text</p>
-
-                    <p class="photo-caption"><img
-                            src='/BloomingtonINTrees/src/appearance/img/bloomington/20180603_172108_edit.jpg'>
-                        This is a test caption. Testing: 1, 2, 3. </p>
-
-
-                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
-                        local environment. Knowledge about the UTC within these areas provides a benchmark for
-                        understanding and optimizing stormwater mitigation benefits and other environmental services.
-                    </p>
-                </div>
-            </section>
 
 
 
 
 
 
-            <div class="lg-text-area" >
+
+
+
+
+
+            <div style="display: none;" class="lg-text-area">
                 <h1>Large Text Area 1</h1>
                 <p>
                     <div class="photo-caption caption-for-large-text-area">

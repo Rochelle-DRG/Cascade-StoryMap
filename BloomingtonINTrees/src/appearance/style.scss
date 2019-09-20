@@ -201,6 +201,9 @@ p{ //generic
         font-size: 1.5em;
     }
 }
+.middle-text {
+    margin-bottom: 3em;
+}
 
 
 .welcome-container {
@@ -256,7 +259,7 @@ p{ //generic
             }
 
         }
-        p {
+        p{
             color: $welcome-p-color;
             text-shadow: $welcome-p-shadow;
             margin-top: 1em;
@@ -409,7 +412,7 @@ section {
             padding-right: 65%;
         }
     }
-    .sm-textbox p {
+    .sm-textbox p, ul {
         background-color: $sm-textbox-bkgnd-color;  
         padding: .8em;
         color: $sm-textbox-text-color;

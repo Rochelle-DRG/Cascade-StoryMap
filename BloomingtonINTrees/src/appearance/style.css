@@ -232,6 +232,10 @@
   }
 }
 
+#bootstrap-overrides .middle-text {
+  margin-bottom: 3em;
+}
+
 #bootstrap-overrides .welcome-container {
   background-image: url("/BloomingtonINTrees/src/appearance/img/bloomington/IMG_8075_edit.JPG");
   background-size: cover;
@@ -456,7 +460,7 @@
   }
 }
 
-#bootstrap-overrides section .sm-textbox p {
+#bootstrap-overrides section .sm-textbox p, #bootstrap-overrides section ul {
   background-color: rgba(0, 0, 0, 0.8);
   padding: .8em;
   color: white;
