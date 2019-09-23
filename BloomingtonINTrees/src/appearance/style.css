@@ -200,6 +200,7 @@
 #bootstrap-overrides h1 {
   font-family: "Oswald", sans-serif;
   font-size: 2em;
+  margin-top: 1px;
 }
 
 @media (min-width: 600px) {

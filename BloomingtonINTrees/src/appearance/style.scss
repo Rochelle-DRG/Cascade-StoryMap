@@ -183,6 +183,7 @@ h1{ //generic
     font-family: $logo-font;
     // letter-spacing: .07em;
     font-size: 2em;
+    margin-top: 1px;
     @include for-tablet-portrait-up {
         font-size: 2.0em;
     }
