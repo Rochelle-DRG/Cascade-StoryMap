@@ -54,12 +54,19 @@ let navBarToggle    = document.getElementById('js-navbar-toggle');
 navBarToggle.addEventListener('click', function () {
     mainNav.classList.toggle('active');
     logos.classList.toggle('logo-hide'); //without this line, the top item in the dropdown is out of alignment
+    console.log('hey mainNav.classList.toggle(active)');
+
 });
-let navList         = document.getElementsByClassName('main-nav');
-navList[0].addEventListener('click', function () {
-    mainNav.classList.toggle('active');
-    logos.classList.toggle('logo-hide'); //without this line, the top item in the dropdown is out of alignment
-});
+/** This code was is supposed to close the mobile dropdown menu when a selection is made
+ * but it creates a bug where on desktop the list items are toggling when they should not be.
+ */
+// let navList         = document.getElementsByClassName('main-nav'); //formerly main-nav
+// navList[0].addEventListener('click', function () {
+//     mainNav.classList.toggle('active');
+//     logos.classList.toggle('logo-hide'); //without this line, the top item in the dropdown is out of alignment
+//     console.log('hey lines 60 mainNav.classList.toggle(active)');
+//     console.log(navList[0]);
+// });
 
 function makeSwiper(parentDivId, swipeDivId){
     console.log("makeSwiper called");
