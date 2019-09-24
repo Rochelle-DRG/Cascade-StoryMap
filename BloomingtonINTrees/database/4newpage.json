@@ -229,7 +229,7 @@
             "containerID": "priority2_map",
             
             "legendID": "priority2_legend",
-            "basemap": "gray",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -253,7 +253,7 @@
             "containerID": "landcover_map",
             
             "legendID": "landcover_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -275,7 +275,7 @@
             "containerID": "rastermap",
             
             "legendID": "raster_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -298,7 +298,7 @@
             "containerID": "map",
             
             "legendID": "swipe_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -321,7 +321,7 @@
             "containerID": "fragmentation_map",
             
             "legendID": "fragmentation_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -343,7 +343,7 @@
             "containerID": "councilDistricts_map",
             
             "legendID": "councilDistricts_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -367,7 +367,7 @@
             "containerID": "neighborhoodAssociation_map",
             
             "legendID": "neighborhoodAssociation_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -387,7 +387,7 @@
             "containerID": "parks_map",
             
             "legendID": "parks_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -407,7 +407,7 @@
             "containerID": "watershed_map",
             
             "legendID": "watershed_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
