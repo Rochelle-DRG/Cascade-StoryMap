@@ -336,6 +336,12 @@ section {
     .slideHolder {
         z-index: -1;
     }
+    ul, li{
+        list-style-position: inside;
+        list-style-type: square;
+        // list-style-image: url('getALeaf.png');
+        text-align: left;
+    }
 
 
 
