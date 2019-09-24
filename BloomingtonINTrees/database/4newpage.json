@@ -9,10 +9,10 @@
     "Layers": {
         "Layer1": {
             "layerID": [
-                0
+                1
             ],
             "title": "Bloomington City Limits",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/0",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/1",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -29,10 +29,10 @@
             "swipe": "true",
 
             "layerID": [
-                3
+                4
             ],
             "title": "Fragmentation",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/3",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/4",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -45,10 +45,10 @@
         },
         "Layer3": {
             "layerID": [
-                4
+                5
             ],
             "title": "CouncilDistricts",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/4",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/5",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -61,10 +61,10 @@
         },
         "Layer4": {
             "layerID": [
-                5
+                6
             ],
             "title": "NeighborhoodAssociation",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/5",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/6",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -77,10 +77,10 @@
         },
         "Layer5": {
             "layerID": [
-                6
+                7
             ],
             "title": "Parks",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/6",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/7",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -93,10 +93,10 @@
         },
         "Layer6": {
             "layerID": [
-                7
+                8
             ],
             "title": "Watershed",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/7",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/8",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -109,10 +109,10 @@
         },
         "Layer7": {
             "layerID": [
-                1
+                2
             ],
             "title": "TreeHealthIndex",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/1",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/2",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "raster",
@@ -125,10 +125,10 @@
         } ,
         "Layer8": {
             "layerID": [
-                2
+                3
             ],
             "title": "Land Cover",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/2",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/3",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "raster",
@@ -141,7 +141,7 @@
         },
         "Layer9": {
             "layerID": [
-                9
+                10
             ],
             "title": "PriorityPlantingLevel",
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/10",
@@ -156,26 +156,28 @@
             "order": 10
         },
         "Layer10": {
-            "layerID": [
-                
-            ],
-            "title": "Poles",
-            "url": "https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms",
-            "infoUrl": "https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms",
+            "swipe": "true",
 
-            "type": "geo",
+            "layerID": [
+                0
+            ],
+            "title": "Tree Inventory",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/0",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
+
+            "type": "raster",
             "opacity": 1.0,
-            "layername": "Treekeeper:BloomingtonIN_planttrees",
+            "layername": "Tree Inventory",
             "legend": true,
             "popup": true,
-            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}",
+            "popupContent": "Inventory Date: ${INV_DATE}</br>Maintenance Need: ${MAINTPRIM}</br>Overhead Utility: ${OHUTILITY}</br>Treegrate: ${TREEGRATE}</br>Council: ${COUNCIL}</br>Parkname: ${PARKNAME}",
             "order": 11
         },
         "Layer11": {
             "swipe": "true",
 
             "layerID": [
-                10
+                11
             ],
             "title": "Poles",
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/11",
@@ -212,9 +214,9 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer11"
+                "Layer10"
             ],
-            "searchLayer": "Layer11",
+            "searchLayer": "Layer10",
             "searchFld": "",
             "searchAttr": ""
         },
@@ -418,46 +420,7 @@
             "searchLayer": "Layer6",
             "searchFld": "",
             "searchAttr": ""
-        },
-        "map14": {
-            "viewType": "map",
-            "sectionID": "slide17_section",
-            "containerID": "slide17_map",
-            
-            "legendID": "map14_legend",
-            "basemap": "national-geographic",
-            "mapCenter": [
-                -85.709438,
-                43.157597
-            ],
-            "zoom": 14,
-            "featureArray": [
-                "Layer9",
-                "Layer12"
-            ],
-            "searchLayer": "Layer9",
-            "searchFld": "",
-            "searchAttr": ""
-        },
-        "map15": {
-            "viewType": "map",
-            "sectionID": "slide18_section",
-            "containerID": "slide18_map",
-            
-            "legendID": "map15_legend",
-            "basemap": "streets",
-            "mapCenter": [
-                -86.214169,
-                43.088371
-            ],
-            "zoom": 14,
-            "featureArray": [
-                "Layer3",
-                "Layer14"
-            ],
-            "searchLayer": "Layer14",
-            "searchFld": "",
-            "searchAttr": ""
         }
+
     }
 }
