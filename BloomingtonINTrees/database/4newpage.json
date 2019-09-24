@@ -306,10 +306,10 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer8",
-                "Layer2"
+                "Layer9",
+                "Layer11"
             ],
-            "searchLayer": "Layer8",
+            "searchLayer": "Layer9",
             "searchFld": "",
             "searchAttr": ""
         },
