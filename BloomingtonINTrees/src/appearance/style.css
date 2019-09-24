@@ -376,12 +376,6 @@
   z-index: -1;
 }
 
-#bootstrap-overrides section ul, #bootstrap-overrides section li {
-  list-style-position: inside;
-  list-style-type: square;
-  text-align: left;
-}
-
 #bootstrap-overrides section .toggleButton {
   font-family: "Oswald", sans-serif;
   padding: 0.35em 1.2em;
