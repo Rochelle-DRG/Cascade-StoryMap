@@ -133,84 +133,91 @@ $(document).ready(function () {
 
         // mapDetails is the list of individula map details from all of the Slides
         $.each(mapDetails, function (k, slideMap) {
-            var currentMap = new Map(slideMap.containerID, {
-                basemap: slideMap.basemap,
-                center: slideMap.mapCenter,
-                zoom: slideMap.zoom,
-            }); //end var currentMap= new Map
-            // other enable/disables here: https://developers.arcgis.com/javascript/3/jshelp/intro_navigation.html
-            currentMap.on("load", function () {
-                currentMap.disableScrollWheel();
-            });
-            makeTheLegend(slideMap, currentMap);
-
-
-            //loop through slideMap.featureArray for each map (featureArray is a list of the layer #'s for the slide)
-            $.each(slideMap.featureArray, function (j, layerNumber) {
-                var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
-                var newLayer;
-
-                if (slide.type !== "geo") {
-                    newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
-                    newLayer.setVisibleLayers([slide.layerID]);
-                    newLayer._div = currentMap.root;
-                    currentMap.addLayers([newLayer]);
-                };
-                if (slide.type === "geo") {
-                    console.log(layerNumber + " is a geo layer");
-
-                    var layerInfo = new WMSLayerInfo({
-                        name: slide.layername,
-                        title: slide.title
-                    });
-                    newLayer = new WMSLayer("https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms", {
-                        resourceInfo: {
-                            layerInfos: [layerInfo],
-                            extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                            featureInfoFormat: "text/html",
-                            // getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
-                            //getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
-                        },
-                        visibleLayers: [
-                            slide.layername
-                        ],
-                        version: "1.3.0"
-                    });
-                    currentMap.addLayer(newLayer);
-
-                }; //end if slidetype = geo
-
-
-                //previously
-                // if (slide.type === "feature") {
-                //     var feature = slide;
-                //     // console.log(slide);
-                //     newLayer = new FeatureLayer(slide.url);
-                //     currentMap.addLayer(newLayer);
-                // }
-
-
-                if (slideMap.swipe === "true") {
-                    if (slide.swipe === "true") {
-                        console.log("it should be swiping");
-                        var layerIds = currentMap.layerIds;
-                        var swipeWidget = new LayerSwipe({
-                            type: "vertical",
-                            map: currentMap,
-                            layers: [newLayer]
-                        }, slideMap.swipeWidgetID);
-
-                        swipeWidget.startup();
-                    }   //end if slide swipe
-                } // end if map swipe
-            }); //end .each layerNumber
-
-            legendDijit.refresh();
-
-            //still inside for-each-mapDetails loop
-            currentMap.on("click", function (event) {
-                setPopups(event, slideMap, currentMap);
-            }); //end on-click
+            // prevents an error from tripping when a map container does not currently exist in the html
+            mapcontainerexist = document.getElementById(slideMap.containerID);
+            if (mapcontainerexist) {
+                var currentMap = new Map(slideMap.containerID, {
+                    basemap: slideMap.basemap,
+                    center: slideMap.mapCenter,
+                    zoom: slideMap.zoom,
+                }); //end var currentMap= new Map
+                // other enable/disables here: https://developers.arcgis.com/javascript/3/jshelp/intro_navigation.html
+                currentMap.on("load", function () {
+                    currentMap.disableScrollWheel();
+                });
+                makeTheLegend(slideMap, currentMap);
+    
+    
+                //loop through slideMap.featureArray for each map (featureArray is a list of the layer #'s for the slide)
+                $.each(slideMap.featureArray, function (j, layerNumber) {
+                    var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
+                    var newLayer;
+    
+                    if (slide.type !== "geo") {
+                        newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
+                        newLayer.setVisibleLayers([slide.layerID]);
+                        newLayer._div = currentMap.root;
+                        currentMap.addLayers([newLayer]);
+                    };
+                    if (slide.type === "geo") {
+                        console.log(layerNumber + " is a geo layer");
+    
+                        var layerInfo = new WMSLayerInfo({
+                            name: slide.layername,
+                            title: slide.title
+                        });
+                        newLayer = new WMSLayer("https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms", {
+                            resourceInfo: {
+                                layerInfos: [layerInfo],
+                                extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
+                                featureInfoFormat: "text/html",
+                                // getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
+                                //getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
+                            },
+                            visibleLayers: [
+                                slide.layername
+                            ],
+                            version: "1.3.0"
+                        });
+                        currentMap.addLayer(newLayer);
+    
+                    }; //end if slidetype = geo
+    
+    
+                    //previously
+                    // if (slide.type === "feature") {
+                    //     var feature = slide;
+                    //     // console.log(slide);
+                    //     newLayer = new FeatureLayer(slide.url);
+                    //     currentMap.addLayer(newLayer);
+                    // }
+    
+    
+                    if (slideMap.swipe === "true") {
+                        if (slide.swipe === "true") {
+                            console.log("it should be swiping");
+                            var layerIds = currentMap.layerIds;
+                            var swipeWidget = new LayerSwipe({
+                                type: "vertical",
+                                map: currentMap,
+                                layers: [newLayer]
+                            }, slideMap.swipeWidgetID);
+    
+                            swipeWidget.startup();
+                        }   //end if slide swipe
+                    } // end if map swipe
+                }); //end .each layerNumber
+    
+                legendDijit.refresh();
+    
+                //still inside for-each-mapDetails loop
+                currentMap.on("click", function (event) {
+                    setPopups(event, slideMap, currentMap);
+                }); //end on-click
+            } else {
+                console.warn("Could not find div with id = " + slideMap.containerID + ", skipping");
+            };
+            
         }); //end .each
 
     }); //end require/function
