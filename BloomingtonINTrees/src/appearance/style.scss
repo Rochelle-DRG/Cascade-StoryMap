@@ -436,7 +436,7 @@ section {
         color: $sm-textbox-text-color;
         border: $sm-textbox-border-color;
         border-radius: 0.5em;
-        margin-top: 20em; //this causes a space between the big sections
+        margin-top: 13em; //margin-bottom causes an undesired space between the big sections
     }
     .sm-textbox img {
         margin-top: .2em; 
