@@ -29,10 +29,10 @@
             "swipe": "true",
 
             "layerID": [
-                4
+                9
             ],
             "title": "Fragmentation",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/4",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/9",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -115,7 +115,7 @@
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/2",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
-            "type": "raster",
+            "type": "feature",
             "opacity": 1.0,
             "layername": "TreeHealthIndex",
             "legend": true,
@@ -147,7 +147,7 @@
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/10",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
-            "type": "raster",
+            "type": "feature",
             "opacity": 1.0,
             "layername": "PriorityPlantingLevel",
             "legend": true,
@@ -165,7 +165,7 @@
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/0",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
-            "type": "raster",
+            "type": "feature",
             "opacity": 1.0,
             "layername": "Tree Inventory",
             "legend": true,
@@ -179,7 +179,7 @@
             "layerID": [
                 11
             ],
-            "title": "Poles",
+            "title": "Available Planting Sites",
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/11",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 

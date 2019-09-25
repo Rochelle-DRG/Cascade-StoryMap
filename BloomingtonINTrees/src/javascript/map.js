@@ -150,44 +150,39 @@ $(document).ready(function () {
                 var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
                 var newLayer;
 
-                if (slide.type !== "geo") {
+                if (slide.type === "feature") {
+
                     newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
                     newLayer.setVisibleLayers([slide.layerID]);
                     newLayer._div = currentMap.root;
                     currentMap.addLayers([newLayer]);
                 };
-                if (slide.type === "geo") {
-                    console.log(layerNumber + " is a geo layer");
 
-                    var layerInfo = new WMSLayerInfo({
-                        name: slide.layername,
-                        title: slide.title
-                    });
-                    newLayer = new WMSLayer("https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms", {
-                        resourceInfo: {
-                            layerInfos: [layerInfo],
-                            extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                            featureInfoFormat: "text/html",
-                            // getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
-                            //getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
-                        },
-                        visibleLayers: [
-                            slide.layername
-                        ],
-                        version: "1.3.0"
+                if (slide.type === "raster") {
+                    console.log("oh no it's a raster! I hope this works...")
+
+
+                    // var params = new ImageServiceParameters();
+                    // // params.mosaicRule = new MosaicRule(defaultMosaic);
+
+                    var rasterUrl = "https://sampleserver6.arcgisonline.com/arcgis/rest/services/ScientificData/SeaTemperature/ImageServer";
+
+
+                    var newLayer = new RasterLayer(rasterUrl, {
+                        opacity: 1,
+                        // pixelFilter: maskPixels,
+                        // imageServiceParameters: params
                     });
                     currentMap.addLayer(newLayer);
 
-                }; //end if slidetype = geo
 
 
-                //previously
-                // if (slide.type === "feature") {
-                //     var feature = slide;
-                //     // console.log(slide);
-                //     newLayer = new FeatureLayer(slide.url);
-                //     currentMap.addLayer(newLayer);
-                // }
+                    // newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
+                    // newLayer.setVisibleLayers([slide.layerID]);
+                    // newLayer._div = currentMap.root;
+                    // currentMap.addLayers([newLayer]);
+
+                };
 
 
                 if (slideMap.swipe === "true") {
