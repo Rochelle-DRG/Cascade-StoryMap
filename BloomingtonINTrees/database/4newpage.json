@@ -154,9 +154,10 @@
             "popup": true,
             "popupContent": "FID: ${FID}</br>SQFT: ${SQFT:NumberFormat(places:2)}</br>Priority: ${PRIORITY}",
             "order": 10
+
         },
         "Layer10": {
-            "swipe": "true",
+            "swipe": "false",
 
             "layerID": [
                 0
@@ -190,7 +191,26 @@
             "popup": true,
             "popupContent": "Inventory Date: ${INV_DATE}</br>Maintenance Need: ${MAINTPRIM}</br>Overhead Utility: ${OHUTILITY}</br>Treegrate: ${TREEGRATE}</br>Council: ${COUNCIL}</br>Parkname: ${PARKNAME}",
             "order": 12
+        },
+        "Layer12": {
+            "swipe": "true",
+
+            "layerID": [
+                12
+            ],
+            "title": "Historical",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/12",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
+
+            "type": "raster",
+            "opacity": ".5",
+            "layername": "BLOOM_HistoricTreeCanopy2008",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Inventory Date: ${INV_DATE}</br>Maintenance Need: ${MAINTPRIM}</br>Overhead Utility: ${OHUTILITY}</br>Treegrate: ${TREEGRATE}</br>Council: ${COUNCIL}</br>Parkname: ${PARKNAME}",
+            "order": 13
         }
+
 
 
         
@@ -200,7 +220,7 @@
     "maps": {
         "geo_map": {
             "swipe": "false",
-            "swipeWidgetID": "geo",
+            "swipeWidgetID": "",
             "viewType": "map",
             "sectionID": "geo_section",
             "containerID": "geo_map",
@@ -246,8 +266,8 @@
         },
 
         "landcover_map": {
-            "swipe": "false",
-            "swipeWidgetID": "landcover2",
+            "swipe": "true",
+            "swipeWidgetID": "historicalswipeDiv2",
             "viewType": "map",
             "sectionID": "landcover_section",
             "containerID": "landcover_map",
@@ -261,7 +281,8 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer8"
+                "Layer8",
+                "Layer12"
             ],
             "searchLayer": "Layer8",
             "searchFld": "",

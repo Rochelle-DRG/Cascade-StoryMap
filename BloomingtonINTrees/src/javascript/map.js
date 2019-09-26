@@ -168,6 +168,8 @@ $(document).ready(function () {
                             map: currentMap,
                             layers: [newLayer]
                         }, slideMap.swipeWidgetID);
+                        console.log(slideMap.swipeWidgetID);
+                        console.log(newLayer);
 
                         swipeWidget.startup();
                     }   //end if slide swipe
