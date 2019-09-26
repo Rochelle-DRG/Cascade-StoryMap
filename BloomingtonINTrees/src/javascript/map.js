@@ -150,13 +150,12 @@ $(document).ready(function () {
                 var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
                 var newLayer;
 
-                // if (slide.type === "feature") {
 
                     newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
                     newLayer.setVisibleLayers([slide.layerID]);
+                    newLayer.setOpacity(slide.opacity);
                     newLayer._div = currentMap.root;
                     currentMap.addLayers([newLayer]);
-                // };
 
 
 

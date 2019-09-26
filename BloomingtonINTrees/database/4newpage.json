@@ -36,7 +36,7 @@
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
-            "opacity": 1.0,
+            "opacity": ".4",
             "layername": "Fragmentation",
             "legend": true,
             "popup": true,
@@ -116,7 +116,7 @@
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
-            "opacity": 1.0,
+            "opacity": ".4",
             "layername": "TreeHealthIndex",
             "legend": true,
             "popup": true,
@@ -132,7 +132,7 @@
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "raster",
-            "opacity": 1.0,
+            "opacity": "0.4",
             "layername": "Land Cover",
             "legend": true,
             "popup": true,
@@ -148,7 +148,7 @@
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
-            "opacity": 1.0,
+            "opacity": ".6",
             "layername": "PriorityPlantingLevel",
             "legend": true,
             "popup": true,
@@ -321,7 +321,7 @@
             "containerID": "fragmentation_map",
             
             "legendID": "fragmentation_legend",
-            "basemap": "satellite",
+            "basemap": "osm",
             "mapCenter": [
                 -86.522406,
                 39.167872
