@@ -386,6 +386,45 @@
   text-align: left;
 }
 
+#bootstrap-overrides section .basemap-switch {
+  /*//This is the same style as used on the .esriSimpleSlider ZOOM class, just tweaked a little */
+  margin-left: 70%;
+  /* // This is the style from Lower Grand MI
+        */
+  position: absolute;
+  z-index: 31;
+  top: 200px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-image: url("/BloomingtonINTrees/src/appearance/img/roadmap1.JPG");
+  background-color: tan;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides section .basemap-switch {
+    margin-left: 90%;
+  }
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides section .basemap-switch {
+    margin-left: 93%;
+  }
+}
+
+@media (min-width: 1480px) {
+  #bootstrap-overrides section .basemap-switch {
+    margin-left: 96%;
+  }
+}
+
+#bootstrap-overrides section .satellite {
+  background-image: url("/BloomingtonINTrees/src/appearance/img/sat.jpg");
+}
+
 #bootstrap-overrides section .toggleButton {
   font-family: "Oswald", sans-serif;
   padding: 0.35em 1.2em;

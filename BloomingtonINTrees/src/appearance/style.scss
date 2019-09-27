@@ -346,7 +346,38 @@ section {
         text-align: left;
     }
 
-
+    .basemap-switch {
+        /*//This is the same style as used on the .esriSimpleSlider ZOOM class, just tweaked a little */
+        // background-color: rgba(255, 255, 255, 0.904);
+        // z-index: 31;
+        // margin-top: 20em;
+        margin-left: 70%;
+        @include for-tablet-portrait-up {
+            margin-left: 90%;
+        }
+        @include for-tablet-landscape-up {
+            margin-left: 93%;
+        }
+        @include for-desktop-med-up {
+            margin-left: 96%;
+    
+        }
+        /* // This is the style from Lower Grand MI
+        */
+        position: absolute;
+        z-index: 31;
+        top: 200px;
+        left: 20px;
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid white;
+        background-image: url("/BloomingtonINTrees/src/appearance/img/roadmap1.JPG");
+        background-color: tan;
+    }
+    .satellite {
+        background-image: url("/BloomingtonINTrees/src/appearance/img/sat.jpg");
+    }
 
     .toggleButton{
         font-family: $logo-font;

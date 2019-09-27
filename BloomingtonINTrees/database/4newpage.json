@@ -271,7 +271,7 @@
             "viewType": "map",
             "sectionID": "landcover_section",
             "containerID": "landcover_map",
-            
+            "basemapToggleID": "landcover_bmtoggle",
             "legendID": "landcover_legend",
             "basemap": "satellite",
             "mapCenter": [

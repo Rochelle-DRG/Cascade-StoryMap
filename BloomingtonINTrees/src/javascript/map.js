@@ -144,6 +144,26 @@ $(document).ready(function () {
             });
             makeTheLegend(slideMap, currentMap);
 
+            //add click event to basemap toggle
+            var basemapToggleID = slideMap.basemapToggleID;
+            var currentToggleButton = document.getElementById(basemapToggleID);
+
+            //the "if" statement is only needed until I have added a togglebutton to the html for each map
+            if (typeof basemapToggleID !== "undefined") { 
+                currentToggleButton.addEventListener('click', function(){
+                    console.log("click accepted!");
+                    var currentBasemap = currentMap.getBasemap();
+                    currentToggleButton.classList.toggle("satellite");
+                    if (currentBasemap === "satellite"){
+                        currentMap.setBasemap("osm");
+                    }//end if satellite
+                    if (currentBasemap === "osm"){
+                        currentMap.setBasemap("satellite");
+                    }//end if osm
+                }); //end eventListener onclick
+            }; //end if basemapToggleID not undefined
+
+
 
             //loop through slideMap.featureArray for each map (featureArray is a list of the layer #'s for the slide)
             $.each(slideMap.featureArray, function (j, layerNumber) {
@@ -151,11 +171,11 @@ $(document).ready(function () {
                 var newLayer;
 
 
-                    newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
-                    newLayer.setVisibleLayers([slide.layerID]);
-                    newLayer.setOpacity(slide.opacity);
-                    newLayer._div = currentMap.root;
-                    currentMap.addLayers([newLayer]);
+                newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
+                newLayer.setVisibleLayers([slide.layerID]);
+                newLayer.setOpacity(slide.opacity);
+                newLayer._div = currentMap.root;
+                currentMap.addLayers([newLayer]);
 
 
 
@@ -184,6 +204,12 @@ $(document).ready(function () {
             }); //end on-click
         }); //end .each
 
+
     }); //end require/function
 
 }); //end doc.ready
+
+
+// var tryThisFunction = function(map){
+//     console.log('called the function');
+// }
