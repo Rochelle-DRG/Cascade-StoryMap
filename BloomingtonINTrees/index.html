@@ -25,7 +25,7 @@
 </head>
 
 <body id="bootstrap-overrides">
-
+    <!--NAVBAR-->
     <nav class="navbar" id="navbar">
         <span class="navbar-toggle" id="js-navbar-toggle">
             <img id="bars" src="/BloomingtonINTrees/src/appearance/img/barsblackround.png" class="fas fa-bars"></i>
@@ -48,7 +48,7 @@
     </nav>
 
     <div class="everything-after-nav">
-
+        <!--WELCOME-->
         <section class="welcome-container">
             <div id="welcome" class="welcome-content">
                 <h1 id="Welcome">BLOOMINGTON </h1>
@@ -64,7 +64,7 @@
         <div id="main-body" class="main-body">
 
 
-
+            <!--INTRO-->
             <section id="intro_section">
                 <div class="section-title">
                     <h1>Introduction</h1>
@@ -129,7 +129,7 @@
                         an urban forest.</p>
                 </div>
             </section>
-
+            <!--LandCover/Historical-->
             <section id="utc">
                 <div class="section-title">
                     <h1 class="subsection">Urban Tree Canopy</h1>
@@ -137,7 +137,7 @@
 
                 <div id="landcover_map" class="general-map content-section sticky" style="z-index: 1">
 
-                    <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="landcover_bmtoggle" > </div>
+                    <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="landcover_bmtoggle"> </div>
 
                     <div class='sliderHolder'>
                         <div id="historicalswipeDiv2"></div>
@@ -203,11 +203,15 @@
             </section>
             <!--end Land Cover / UTC-->
 
+            <!--Fragmentation-->
             <section id="fragmentation_section">
                 <div class="section-title">
                     <h1 class="subsection">Forest Fragmentation</h1>
                 </div>
-                <div id="fragmentation_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="fragmentation_map" class="general-map content-section sticky" style="z-index: 1">
+                    <div class="basemap-switch satellite" title="Toggle Streetview/Satellite View" id="frag_bmtoggle"> </div>
+
+                </div>
 
                 <div id="fragmentation_map_overlay" class="general-map content-section sticky overlay"
                     style="z-index: 2">
@@ -259,11 +263,14 @@
             </section>
             <!--end Fragmentation-->
 
+            <!--Tree Health Index-->
             <section id="rastertest_section">
                 <div class="section-title">
                     <h1 class="subsection">Forest Health Issues</h1>
                 </div>
                 <div id="rastermap" class="general-map content-section sticky" style="z-index: 1">
+                    <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="raster_bmtoggle"> </div>
+
                 </div>
                 <div id="raster_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
                 </div>
@@ -311,12 +318,14 @@
             </section>
             <!--end Forest Health-->
 
-
+            <!--TREE INVENTORY / PUBLIC TREES-->
             <section id="geo_section">
                 <div id="Tree-Inventory" class="section-title">
                     <h1 class="subsection">Public Trees</h1>
                 </div>
                 <div id="geo_map" class="general-map content-section sticky" style="z-index: 1">
+                    <div class="basemap-switch satellite" title="Toggle Streetview/Satellite View" id="geo_bmtoggle"> </div>
+
                 </div>
                 <div id="geo_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
                 </div>
@@ -372,6 +381,7 @@
             </section>
             <!--end Tree Inventory-->
 
+            <!--BENEFITS-->
             <section id="eco_section">
                 <div class="section-title">
                     <h1 id="benefits">What Do We Have? Tree Benefits</h1>
@@ -424,7 +434,7 @@
             </section>
             <!--end tree benefits-->
 
-
+            <!--MANAGEMENT-->
             <section id="manage_section">
                 <div class="section-title">
                     <h1>What Do We Want? Managing for the Future Forest</h1>
@@ -461,11 +471,15 @@
                 <!--end sm-textbox div-->
                 <!--insert map here-->
 
+                <!--PRIORITY PLANTING / NEEDS PLANTED / VACANT SITES-->
                 <section id="swipetest_section">
                     <!-- <div class="section-title">
-                        <h1 class="subsection">Historic Land Cover</h1>
+                        <h1 class="subsection">This should not be here</h1>
                     </div> -->
                     <div id="map" class="general-map content-section sticky" style="z-index: 1">
+                        <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="swipe2_bmtoggle">
+                        </div>
+
                         <div class='sliderHolder'>
                             <div id="swipeDiv2"></div>
                         </div>
@@ -495,7 +509,7 @@
                             find out.</p>
                     </div>
                 </section>
-                <!--end map-->
+                <!--end priority map-->
 
 
             </section>

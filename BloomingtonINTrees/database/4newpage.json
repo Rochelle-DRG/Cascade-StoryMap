@@ -224,7 +224,7 @@
             "viewType": "map",
             "sectionID": "geo_section",
             "containerID": "geo_map",
-            
+            "basemapToggleID": "geo_bmtoggle",
             "legendID": "geo_legend",
             "basemap": "osm",
             "mapCenter": [
@@ -294,7 +294,7 @@
             "viewType": "map",
             "sectionID": "rastertest_section",
             "containerID": "rastermap",
-            
+            "basemapToggleID": "raster_bmtoggle",
             "legendID": "raster_legend",
             "basemap": "satellite",
             "mapCenter": [
@@ -317,7 +317,7 @@
             "viewType": "map",
             "sectionID": "swipetest_section",
             "containerID": "map",
-            
+            "basemapToggleID": "swipe2_bmtoggle",
             "legendID": "swipe_legend",
             "basemap": "satellite",
             "mapCenter": [
@@ -340,7 +340,7 @@
             "viewType": "map",
             "sectionID": "fragmentation_section",
             "containerID": "fragmentation_map",
-            
+            "basemapToggleID": "frag_bmtoggle",
             "legendID": "fragmentation_legend",
             "basemap": "osm",
             "mapCenter": [
