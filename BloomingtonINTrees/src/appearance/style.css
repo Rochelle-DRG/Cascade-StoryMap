@@ -544,6 +544,10 @@
   text-align: center;
 }
 
+#bootstrap-overrides section .bigger {
+  width: 200%;
+}
+
 #bootstrap-overrides section a:hover {
   color: #f3fc80;
   text-decoration: underline;

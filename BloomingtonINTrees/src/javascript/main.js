@@ -112,4 +112,10 @@ function toggleLegend(legendId, buttonId){
     }
 }
 
+//For toggle image bigger/normal
+function toggleSize(chartPDivId){
+    var chartDiv = document.getElementById(chartPDivId);
+    chartDiv.classList.toggle("bigger");
+}
+
 
