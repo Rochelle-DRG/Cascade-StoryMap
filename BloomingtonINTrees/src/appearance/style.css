@@ -1,3 +1,8 @@
+#bootstrap-overrides {
+  /* Credit for this wonderful scrolldown animation goes to this person:
+https://www.youtube.com/watch?v=UaYXrbNDqXM */
+}
+
 #bootstrap-overrides * {
   font-family: "Noto Serif", serif;
   line-height: 1.5em;
@@ -350,6 +355,89 @@
   #bootstrap-overrides .welcome-hr {
     padding-left: 15;
     margin-left: 0;
+  }
+}
+
+#bootstrap-overrides .scrolldown {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  -webkit-transform: translateY(-80px) translateX(-50%) rotate(45deg);
+          transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+
+#bootstrap-overrides .scrolldown span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 4px solid #fff;
+  border-right: 4px solid #fff;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s;
+  opacity: 0;
+}
+
+#bootstrap-overrides .scrolldown span:nth-child(1) {
+  -webkit-transform: translate(-15px, -15px);
+          transform: translate(-15px, -15px);
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+#bootstrap-overrides .scrolldown span:nth-child(2) {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+#bootstrap-overrides .scrolldown span:nth-child(3) {
+  -webkit-transform: translate(15px, 15px);
+          transform: translate(15px, 15px);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25% {
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+  50%, 100% {
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25% {
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+  50%, 100% {
+    top: 5px;
+    left: 5px;
+    opacity: 0;
   }
 }
 
