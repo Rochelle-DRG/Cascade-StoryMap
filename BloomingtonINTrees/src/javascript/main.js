@@ -118,6 +118,91 @@ function toggleSize(chartPDivId){
     chartDiv.classList.toggle("bigger");
 }
 
+//For the tour on the first map (all hard coded)
+//Clicking on the Interact With Map Button begins the tour
+var clickHere = document.getElementById('landcover_button');
+clickHere.addEventListener('click', startTour );
+
+function startTour(){
+    console.log('starting tour');
+     //remove click event
+     clickHere.removeEventListener('click', startTour);
+
+    //highlight the zoom buttons
+    var zoom= document.getElementById('landcover_map_zoom_slider');
+    var zoomIn = zoom.childNodes[0];
+    var zoomOut = zoom.childNodes[1];
+    zoomIn.classList.add('highlight');
+    zoomOut.classList.add('highlight');
+
+    //create the tour arrow div
+    var zoomTour = document.createElement("img");
+    zoomTour.src = "/BloomingtonINTrees/src/appearance/img/tour/500pxArrow_zoom.png";
+    zoomTour.alt = "Click on the + and - icons to zoom in and out.";
+    zoomTour.classList.add('zoom-tour');
+    var parentElement = document.getElementById('landcover_map');
+    var insertBefore = document.getElementById('landcover_slideHolder');
+    parentElement.insertBefore(zoomTour, insertBefore);
+   
+    //when the user clicks anywhere, move on
+    document.addEventListener('click',tourToggle, true);
+
+    function tourToggle(){
+        console.log("moving on to tourToggle");
+        //remove DOM event listeners from previous method
+        document.removeEventListener('click',tourToggle, true); 
+        //remove highlight class from zoom buttons
+        zoomIn.classList.remove('highlight');
+        zoomOut.classList.remove('highlight');
+    
+        //remove arrow
+        parentElement.removeChild(zoomTour);
+    
+        //create arrow pointing to toggle basemaps
+        var toggleTour = document.createElement("img");
+        toggleTour.src = "/BloomingtonINTrees/src/appearance/img/tour/600pxArrow_basemaptoggle.png";
+        toggleTour.alt = "Click on this icon to toggle between street map and satellite map";
+        toggleTour.classList.add('toggle-tour');
+        parentElement.insertBefore(toggleTour, insertBefore);
+
+        //highlight basemap toggle button
+        var maptoggle= document.getElementById('landcover_bmtoggle');
+        maptoggle.classList.add('highlight-toggleswitch');
+
+        //add new event listener to DOM click anywhere
+        document.addEventListener('click',tourPan, true);
+
+        function tourPan(){
+            console.log("moving to tourPan");
+            //remove previous event listener
+            document.removeEventListener('click',tourPan, true); 
+            //remove highlight
+            maptoggle.classList.remove('highlight-toggleswitch');
+            //remove arrow
+            parentElement.removeChild(toggleTour);
+            //show new image
+            var panTour = document.createElement("img");
+            panTour.src = "/BloomingtonINTrees/src/appearance/img/tour/round_tourPan.png";
+            panTour.alt = "Click and drag on the map to move it.";
+            panTour.classList.add('toggle-tour');
+            parentElement.insertBefore(panTour, insertBefore);
+    
+            //listen for click
+            document.addEventListener('click',endTour, true);
+            //end tour
+
+            function endTour() {
+            //remove previous event listener
+            document.removeEventListener('click',endTour, true); 
+            //remove circle
+            parentElement.removeChild(panTour);
+            }
+        }
+    }
+
+
+    
+};
 
 
 

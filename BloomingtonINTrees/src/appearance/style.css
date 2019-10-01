@@ -513,6 +513,102 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   background-image: url("/BloomingtonINTrees/src/appearance/img/sat.jpg");
 }
 
+#bootstrap-overrides section .zoom-tour {
+  margin-left: 63%;
+  position: absolute;
+  z-index: 999;
+  margin-top: 5em;
+  left: 20px;
+}
+
+#bootstrap-overrides section .toggle-tour {
+  margin-left: 56.5%;
+  position: absolute;
+  z-index: 999;
+  margin-top: 8em;
+  left: 10px;
+}
+
+#bootstrap-overrides section .highlight {
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 10;
+          animation-iteration-count: 10;
+}
+
+#bootstrap-overrides section .highlight-toggleswitch {
+  outline-style: solid;
+  outline-color: lawngreen;
+  outline-width: 8px;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    background-color: lawngreen;
+  }
+  25% {
+    background-color: lawngreen;
+  }
+  49% {
+    background-color: none;
+  }
+  50% {
+    background-color: none;
+  }
+  99% {
+    background-color: none;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: lawngreen;
+  }
+  25% {
+    background-color: lawngreen;
+  }
+  49% {
+    background-color: none;
+  }
+  50% {
+    background-color: none;
+  }
+  99% {
+    background-color: none;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+#bootstrap-overrides section .esriSimpleSlider {
+  background-color: rgba(255, 255, 255, 0.904);
+  margin-top: 7em;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides section .esriSimpleSlider {
+    margin-left: 90%;
+  }
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides section .esriSimpleSlider {
+    margin-left: 93%;
+  }
+}
+
+@media (min-width: 1480px) {
+  #bootstrap-overrides section .esriSimpleSlider {
+    margin-left: 96%;
+  }
+}
+
 #bootstrap-overrides section .toggleButton {
   font-family: "Oswald", sans-serif;
   padding: 0.35em 1.2em;
@@ -754,29 +850,6 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   border-radius: .23em;
   padding-bottom: 2em;
   margin-bottom: 2em;
-}
-
-#bootstrap-overrides .esriSimpleSlider {
-  background-color: rgba(255, 255, 255, 0.904);
-  margin-top: 7em;
-}
-
-@media (min-width: 600px) {
-  #bootstrap-overrides .esriSimpleSlider {
-    margin-left: 90%;
-  }
-}
-
-@media (min-width: 900px) {
-  #bootstrap-overrides .esriSimpleSlider {
-    margin-left: 93%;
-  }
-}
-
-@media (min-width: 1480px) {
-  #bootstrap-overrides .esriSimpleSlider {
-    margin-left: 96%;
-  }
 }
 
 #bootstrap-overrides .sticky {
