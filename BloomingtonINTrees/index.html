@@ -58,25 +58,29 @@
                 </h1>
                 <p>Urban Forest Assessment
                 </p>
-            </div><!--end welcome content-->
+            </div>
+            <!--end welcome content-->
             <div class="scrolldown">
                 <span></span>
                 <span></span>
                 <!-- <span></span> -->
-            </div><!--end scrolldown animation-->
+            </div>
+            <!--end scrolldown animation-->
         </section end welcome>
 
         <div id="main-body" class="main-body">
 
 
             <!--INTRO-->
-            <section id="intro_section">
+            <section class="photo-background" id="intro_section">
                 <div class="section-title">
                     <h1>Introduction</h1>
                 </div>
-                <img id="intro" class="general-map content-section sticky" style="z-index: 1"
-                    src='/BloomingtonINTrees/src/appearance/img/bloomington/Conclusions_lighten_resize.jpg'>
-                </img>
+                <!-- <div class="fullpage-img-container"> </div>-->
+                    <img id="intro" class="general-map content-section sticky" style="z-index: 1"
+                        src='/BloomingtonINTrees/src/appearance/img/bloomington/Conclusions_lighten_resize.jpg'>
+                    </img>
+                    <!-- <p class="right-content fullpage-photo-caption">Caption Here</p> -->
 
                 <div id="intro_overlay" class="general-map content-section sticky overlay img-overlay"
                     style="z-index: 31">
@@ -126,13 +130,14 @@
                 <div class="lg-text-area">
                     <p class="middle-text">Canopy cover is a measure of the physical coverage of the tree canopy over
                         the land.
-                        <!-- <br><br> -->
+                        <br><br>
                         It represents a way of expressing, as a percentage, how much of any given area is shaded or
                         protected by trees.
                         <!-- <br><br> -->
                         Canopy cover is an important way of measuring the character, location, extent, and benefits of
                         an urban forest.</p>
                 </div>
+
             </section>
             <!--LandCover/Historical-->
             <section id="utc">
@@ -216,7 +221,8 @@
                     <h1 class="subsection">Forest Fragmentation</h1>
                 </div>
                 <div id="fragmentation_map" class="general-map content-section sticky" style="z-index: 1">
-                    <div class="basemap-switch satellite" title="Toggle Streetview/Satellite View" id="frag_bmtoggle"> </div>
+                    <div class="basemap-switch satellite" title="Toggle Streetview/Satellite View" id="frag_bmtoggle">
+                    </div>
 
                 </div>
 
@@ -331,7 +337,8 @@
                     <h1 class="subsection">Public Trees</h1>
                 </div>
                 <div id="geo_map" class="general-map content-section sticky" style="z-index: 1">
-                    <div class="basemap-switch satellite" title="Toggle Streetview/Satellite View" id="geo_bmtoggle"> </div>
+                    <div class="basemap-switch satellite" title="Toggle Streetview/Satellite View" id="geo_bmtoggle">
+                    </div>
 
                 </div>
                 <div id="geo_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
@@ -467,7 +474,8 @@
                         Columbia, Missouri (35%) and Ann Arbor, Michigan (33%), the challenge now is to maintain or grow
                         that canopy as the city and citizens desire.</p>
 
-                    <p style="z-index: 35;" id="future-chart" class="photo-caption bigger" onclick="toggleSize('future-chart')"><img
+                    <p style="z-index: 35;" id="future-chart" class="photo-caption"
+                        onclick="toggleSize('future-chart')"><img
                             src='/BloomingtonINTrees/src/appearance/img/bloomington/Benchmarks.jpg'>
                         Click to Enlarge or Shrink</p>
                     <p>This City of Bloomington has mapped the watershed sub-basins as a key approach to managing the
@@ -653,16 +661,13 @@
                         continuity, which will reduce stormwater runoff and energy use and improve aesthetic value, air
                         quality, and public health.</p>
 
-                    <p class="photo-caption"><img
-                            src='/BloomingtonINTrees/src/appearance/img/logos/DRG use-this logo_FIXED_smaller.jpg'>
-                        Davey Resource Logo Here </p>
 
 
                 </div>
             </section>
             <!--end acknowledge-->
 
-
+            <!--###@@@  THE REST OF THESE SECTIONS ARE NOT USED IN THE BLOOMINGTON STORYMAP @@@###-->
 
 
             <!-- <section style="display: none;" id="swipetest_section">
@@ -984,13 +989,7 @@
 
         </div end main-body>
         <div class="credits">
-            <h1>With thanks to</h1>
-            <ul>
-                <li>Bill</li>
-                <li>Rochelle</li>
-                <li>Will</li>
-                <li>And all of our testers!</li>
-            </ul>
+            <img id="footer-img" src='/BloomingtonINTrees/src/appearance/img/logos/DRG use-this logo_FIXED_smaller.jpg'>
         </div>
     </div everything-after-nav>
 

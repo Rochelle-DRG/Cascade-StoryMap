@@ -199,7 +199,7 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 }
 
 #bootstrap-overrides section {
-  margin-bottom: 0em !important;
+  margin-bottom: 1px !important;
 }
 
 #bootstrap-overrides h1 {
@@ -464,13 +464,33 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   height: 50vh;
 }
 
+#bootstrap-overrides section .fullpage-img-container {
+  width: 100%;
+  height: 100vh;
+}
+
+#bootstrap-overrides section .fullpage-photo-caption {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
 #bootstrap-overrides section .slideHolder {
   z-index: -1;
+}
+
+#bootstrap-overrides section p, #bootstrap-overrides section ul, #bootstrap-overrides section li {
+  line-height: 1.8;
 }
 
 #bootstrap-overrides section ul, #bootstrap-overrides section li {
   list-style-position: inside;
   list-style-type: square;
+}
+
+#bootstrap-overrides section li {
+  padding-left: 2em;
+  padding-top: 1em;
   text-align: left;
 }
 
@@ -881,8 +901,8 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 
 @media (min-width: 1200px) {
   #bootstrap-overrides .lg-text-area {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }
 
@@ -915,5 +935,12 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   background-color: #011801;
   color: white;
   text-shadow: 0.05em 0.05em 0.1em black;
+  margin-top: 1px;
+}
+
+#bootstrap-overrides #footer-img {
+  height: 15em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 /*# sourceMappingURL=style.css.map */

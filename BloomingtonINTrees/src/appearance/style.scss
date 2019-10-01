@@ -177,7 +177,7 @@
     text-align: center;
 }
 section { //generic 
-    margin-bottom: 0em !important; //does not reduce spacing
+    margin-bottom: 1px !important; //does not reduce spacing
 }
 h1{ //generic
     font-family: $logo-font;
@@ -362,9 +362,12 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 
 
 
-
+// .photo-background {
+//     color: magenta;
+// }
 
 section {
+    // position: relative;
     .general-map {
         padding: 0px !important;
         margin-top: 0px !important;
@@ -386,6 +389,15 @@ section {
     .img-overlay {
         height: 50vh;
     }
+    .fullpage-img-container{
+        width: 100%;
+        height: 100vh;
+    }
+    .fullpage-photo-caption {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;    }
+
     // .LayerSwipe { //works, but hard to turn back on
     //     display:none !important;
     // }
@@ -395,11 +407,19 @@ section {
     .slideHolder {
         z-index: -1;
     }
+    p, ul, li {
+        line-height: 1.8;
+    }
     ul, li{
         list-style-position: inside;
         list-style-type: square;
         // list-style-image: url('getALeaf.png');
+    }
+    li {
+        padding-left: 2em;
+        padding-top: 1em;
         text-align: left;
+
     }
 
     .basemap-switch {
@@ -752,8 +772,8 @@ section {
         margin-right: 20%;
     }
     @include for-desktop-up {
-        margin-left: 25%;
-        margin-right: 25%;
+        margin-left: 30%;
+        margin-right: 30%;
     }
 
 
@@ -785,7 +805,13 @@ section {
     background-color: $credits-bkgnd-color;
     color: $credits-text-color;
     text-shadow: $lg-text-h1-shadow;
+    margin-top: 1px;
 }
 
+#footer-img {
+    height: 15em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
 
 }
