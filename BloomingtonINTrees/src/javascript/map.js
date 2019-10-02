@@ -2,50 +2,62 @@
 $(document).ready(function () {
     require([
         "esri/map",                     //1
-        "esri/layers/WMSLayer",         //2
-        "esri/layers/WMSLayerInfo",     //3
-        "esri/geometry/Extent",         //4
-        "esri/tasks/IdentifyTask",      //5
-        "esri/tasks/IdentifyParameters",//6
-        "esri/InfoTemplate",            //7
-//        "esri/dijit/Popup",             //8
-//        "esri/dijit/PopupTemplate",     //9
-        "dojo/_base/array",             //10
-//        "dojo/_base/array",           //11 this "duplicate" is not a mistake
-        "esri/dijit/LayerSwipe",        //12
-//        "esri/arcgis/utils",          
-        "esri/dijit/Legend",            //13
-        "esri/layers/ArcGISDynamicMapServiceLayer",//14
-        "esri/layers/ImageParameters",  //15
-        "esri/layers/RasterLayer",      //16
-        "esri/layers/RasterFunction",   //17
-        "dojo/dom-construct",           //18
-        "dojo/dom",                     //19
-        "dojo/parser",                  //20
+        "esri/layers/FeatureLayer",     //2
+        "esri/layers/WMSLayer",         //3
+        "esri/layers/WMSLayerInfo",     //4
+        "esri/config",                  //5
+        "esri/geometry/Extent",         //6
+        "esri/config",                  //7
+        "esri/tasks/IdentifyTask",      //8
+        "esri/tasks/IdentifyParameters",//9
+        "esri/InfoTemplate",            //10
+        "esri/dijit/Popup",             //11
+        "esri/dijit/PopupTemplate",     //12
+        "dojo/_base/array",             //13
+        "dojo/_base/array",             //14 this "duplicate" is not a mistake
+
+
+        "esri/dijit/LayerSwipe",        //15
+        "esri/arcgis/utils",            //16
+        "esri/dijit/Legend",            //17
+        "esri/layers/ArcGISDynamicMapServiceLayer",//18
+        "esri/layers/ImageParameters",  //19
+        "dojo/dom-construct",           //20
+        "dojo/dom",                     //21
+        "dojo/parser",                  //22
+        "esri/layers/RasterLayer",      //23
+        "esri/layers/RasterFunction",   //24
+
         "dijit/layout/BorderContainer", //always last, no function match
         "dijit/layout/ContentPane",     //always last, no function match
         "dojo/domReady!"                //always last, no function match
 
     ], function (Map,                   //1
-        WMSLayer,                       //2
-        WMSLayerInfo,                   //3
-        Extent,                         //4
-        IdentifyTask,                   //5
-        IdentifyParameters,             //6
-        InfoTemplate,                   //7
-//        Popup,                          //8
-//        PopupTemplate,                  //9
-        arrayUtils,                     //10
- //       array,                        //11
-        LayerSwipe,                     //12
-        Legend,                         //13
-        ArcGISDynamicMapServiceLayer,   //14
-        ImageParameters,                //15
-        RasterLayer,                    //16
-        RasterFunction,                 //17
-        domConst,                       //18
-        dom,                            //19
-        parser) {                       //20
+        FeatureLayer,                   //2
+        WMSLayer,                       //3
+        WMSLayerInfo,                   //4
+        esriConfig,                     //5
+        Extent,                         //6
+        esriConfig,                     //7
+        IdentifyTask,                   //8
+        IdentifyParameters,             //9
+        InfoTemplate,                   //10
+
+        Popup,                          //11
+        PopupTemplate,                  //12
+        arrayUtils,                     //13
+        array,                          //14
+
+        LayerSwipe,                     //15
+        arcgisUtils,                    //16
+        Legend,                         //17
+        ArcGISDynamicMapServiceLayer,   //18
+        ImageParameters,                //19
+        domConst,                       //20
+        dom,                            //21
+        parser,                         //22
+        RasterLayer,                    //23
+        RasterFunction) {                 //24
 
         dojo.require("esri.tasks.query"); //part of 1st attempt setGeoPopups https://developers.arcgis.com/javascript/3/jssamples/query_clickinfowindow.html
 

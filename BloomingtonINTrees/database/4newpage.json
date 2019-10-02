@@ -8,7 +8,6 @@
     },
     "Layers": {
         "Layer1": {
-            "swipe": "false",
             "layerID": [
                 1
             ],
@@ -28,6 +27,7 @@
         },
         "Layer2": {
             "swipe": "true",
+
             "layerID": [
                 9
             ],
@@ -39,12 +39,11 @@
             "opacity": ".4",
             "layername": "Fragmentation",
             "legend": true,
-            "popup": false,
+            "popup": true,
             "popupContent": "Fragment Level: ${FRAGLEVEL}",
             "order": 3
         },
         "Layer3": {
-            "swipe": "false",
             "layerID": [
                 5
             ],
@@ -61,7 +60,6 @@
             "order": 4
         },
         "Layer4": {
-            "swipe": "false",
             "layerID": [
                 6
             ],
@@ -78,7 +76,6 @@
             "order": 5
         },
         "Layer5": {
-            "swipe": "false",
             "layerID": [
                 7
             ],
@@ -95,7 +92,6 @@
             "order": 6
         },
         "Layer6": {
-            "swipe": "false",
             "layerID": [
                 8
             ],
@@ -112,7 +108,6 @@
             "order": 7
         },
         "Layer7": {
-            "swipe": "false",
             "layerID": [
                 2
             ],
@@ -129,7 +124,6 @@
             "order": 8
         } ,
         "Layer8": {
-            "swipe": "false",
             "layerID": [
                 3
             ],
@@ -146,7 +140,6 @@
             "order": 9
         },
         "Layer9": {
-            "swipe": "false",
             "layerID": [
                 10
             ],
@@ -183,6 +176,7 @@
         },
         "Layer11": {
             "swipe": "true",
+
             "layerID": [
                 11
             ],
@@ -190,7 +184,7 @@
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/11",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
-            "type": "geo",
+            "type": "raster",
             "opacity": 1.0,
             "layername": "Bloomington_needs_planted",
             "legend": true,
@@ -216,7 +210,6 @@
             "popupContent": "Inventory Date: ${INV_DATE}</br>Maintenance Need: ${MAINTPRIM}</br>Overhead Utility: ${OHUTILITY}</br>Treegrate: ${TREEGRATE}</br>Council: ${COUNCIL}</br>Parkname: ${PARKNAME}",
             "order": 13
         }
-
 
 
         
@@ -385,6 +378,9 @@
             "searchAttr": ""
         },
         
+       
+        
+        
         "NeighborhoodAssociation_map": {
             "viewType": "map",
             "sectionID": "neighborhoodAssociation_section",
@@ -428,7 +424,7 @@
         "watershed_map": {
             "viewType": "map",
             "sectionID": "watershed_section",
-            "containerID": "watershed_map_fix",
+            "containerID": "watershed_map",
             
             "legendID": "watershed_legend",
             "basemap": "satellite",
@@ -442,6 +438,46 @@
                 "Layer6"
             ],
             "searchLayer": "Layer6",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map14": {
+            "viewType": "map",
+            "sectionID": "slide17_section",
+            "containerID": "slide17_map",
+            
+            "legendID": "map14_legend",
+            "basemap": "national-geographic",
+            "mapCenter": [
+                -85.709438,
+                43.157597
+            ],
+            "zoom": 14,
+            "featureArray": [
+                "Layer9",
+                "Layer12"
+            ],
+            "searchLayer": "Layer9",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+        "map15": {
+            "viewType": "map",
+            "sectionID": "slide18_section",
+            "containerID": "slide18_map",
+            
+            "legendID": "map15_legend",
+            "basemap": "streets",
+            "mapCenter": [
+                -86.214169,
+                43.088371
+            ],
+            "zoom": 14,
+            "featureArray": [
+                "Layer3",
+                "Layer14"
+            ],
+            "searchLayer": "Layer14",
             "searchFld": "",
             "searchAttr": ""
         }
