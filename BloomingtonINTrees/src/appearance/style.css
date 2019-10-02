@@ -1,3 +1,8 @@
+#bootstrap-overrides {
+  /* Credit for this wonderful scrolldown animation goes to this person:
+https://www.youtube.com/watch?v=UaYXrbNDqXM */
+}
+
 #bootstrap-overrides * {
   font-family: "Noto Serif", serif;
   line-height: 1.5em;
@@ -194,7 +199,7 @@
 }
 
 #bootstrap-overrides section {
-  margin-bottom: 0em !important;
+  margin-bottom: 1px !important;
 }
 
 #bootstrap-overrides h1 {
@@ -353,6 +358,89 @@
   }
 }
 
+#bootstrap-overrides .scrolldown {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  -webkit-transform: translateY(-80px) translateX(-50%) rotate(45deg);
+          transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+
+#bootstrap-overrides .scrolldown span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 4px solid #fff;
+  border-right: 4px solid #fff;
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s;
+  opacity: 0;
+}
+
+#bootstrap-overrides .scrolldown span:nth-child(1) {
+  -webkit-transform: translate(-15px, -15px);
+          transform: translate(-15px, -15px);
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+#bootstrap-overrides .scrolldown span:nth-child(2) {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+}
+
+#bootstrap-overrides .scrolldown span:nth-child(3) {
+  -webkit-transform: translate(15px, 15px);
+          transform: translate(15px, 15px);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25% {
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+  50%, 100% {
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25% {
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+  50%, 100% {
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+  }
+}
+
 #bootstrap-overrides section .general-map {
   padding: 0px !important;
   margin-top: 0px !important;
@@ -372,14 +460,167 @@
   z-index: 2;
 }
 
+#bootstrap-overrides section .img-overlay {
+  height: 50vh;
+}
+
+#bootstrap-overrides section .fullpage-photo-caption {
+  width: 20px;
+  top: 80%;
+}
+
 #bootstrap-overrides section .slideHolder {
   z-index: -1;
+}
+
+#bootstrap-overrides section p, #bootstrap-overrides section ul, #bootstrap-overrides section li {
+  line-height: 1.8;
 }
 
 #bootstrap-overrides section ul, #bootstrap-overrides section li {
   list-style-position: inside;
   list-style-type: square;
+}
+
+#bootstrap-overrides section li {
+  padding-left: 2em;
+  padding-top: 1em;
   text-align: left;
+}
+
+#bootstrap-overrides section .basemap-switch {
+  /*//This is the same style as used on the .esriSimpleSlider ZOOM class, just tweaked a little */
+  margin-left: 70%;
+  /* // This is the style from Lower Grand MI
+        */
+  position: absolute;
+  z-index: 999;
+  top: 200px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-image: url("/BloomingtonINTrees/src/appearance/img/roadmap1.JPG");
+  background-color: tan;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides section .basemap-switch {
+    margin-left: 90%;
+  }
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides section .basemap-switch {
+    margin-left: 93%;
+  }
+}
+
+@media (min-width: 1480px) {
+  #bootstrap-overrides section .basemap-switch {
+    margin-left: 96%;
+  }
+}
+
+#bootstrap-overrides section .satellite {
+  background-image: url("/BloomingtonINTrees/src/appearance/img/sat.jpg");
+}
+
+#bootstrap-overrides section .zoom-tour {
+  margin-left: 63%;
+  position: absolute;
+  z-index: 999;
+  margin-top: 5em;
+  left: 20px;
+}
+
+#bootstrap-overrides section .toggle-tour {
+  margin-left: 56.5%;
+  position: absolute;
+  z-index: 999;
+  margin-top: 8em;
+  left: 10px;
+}
+
+#bootstrap-overrides section .highlight {
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 10;
+          animation-iteration-count: 10;
+}
+
+#bootstrap-overrides section .highlight-toggleswitch {
+  outline-style: solid;
+  outline-color: lawngreen;
+  outline-width: 8px;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    background-color: lawngreen;
+  }
+  25% {
+    background-color: lawngreen;
+  }
+  49% {
+    background-color: none;
+  }
+  50% {
+    background-color: none;
+  }
+  99% {
+    background-color: none;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: lawngreen;
+  }
+  25% {
+    background-color: lawngreen;
+  }
+  49% {
+    background-color: none;
+  }
+  50% {
+    background-color: none;
+  }
+  99% {
+    background-color: none;
+  }
+  100% {
+    background-color: none;
+  }
+}
+
+#bootstrap-overrides section .esriSimpleSlider {
+  background-color: rgba(255, 255, 255, 0.904);
+  margin-top: 7em;
+}
+
+@media (min-width: 600px) {
+  #bootstrap-overrides section .esriSimpleSlider {
+    margin-left: 90%;
+  }
+}
+
+@media (min-width: 900px) {
+  #bootstrap-overrides section .esriSimpleSlider {
+    margin-left: 93%;
+  }
+}
+
+@media (min-width: 1480px) {
+  #bootstrap-overrides section .esriSimpleSlider {
+    margin-left: 96%;
+  }
 }
 
 #bootstrap-overrides section .toggleButton {
@@ -486,7 +727,7 @@
   color: white;
   border: 1px solid black;
   border-radius: 0.5em;
-  margin-top: 20em;
+  margin-top: 13em;
 }
 
 #bootstrap-overrides section .sm-textbox img {
@@ -499,6 +740,10 @@
 #bootstrap-overrides section .photo-caption {
   font-size: 90%;
   text-align: center;
+}
+
+#bootstrap-overrides section .bigger {
+  width: 200%;
 }
 
 #bootstrap-overrides section a:hover {
@@ -621,29 +866,6 @@
   margin-bottom: 2em;
 }
 
-#bootstrap-overrides .esriSimpleSlider {
-  background-color: rgba(255, 255, 255, 0.904);
-  margin-top: 7em;
-}
-
-@media (min-width: 600px) {
-  #bootstrap-overrides .esriSimpleSlider {
-    margin-left: 90%;
-  }
-}
-
-@media (min-width: 900px) {
-  #bootstrap-overrides .esriSimpleSlider {
-    margin-left: 93%;
-  }
-}
-
-@media (min-width: 1480px) {
-  #bootstrap-overrides .esriSimpleSlider {
-    margin-left: 96%;
-  }
-}
-
 #bootstrap-overrides .sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -673,8 +895,8 @@
 
 @media (min-width: 1200px) {
   #bootstrap-overrides .lg-text-area {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }
 
@@ -707,5 +929,12 @@
   background-color: #011801;
   color: white;
   text-shadow: 0.05em 0.05em 0.1em black;
+  margin-top: 1px;
+}
+
+#bootstrap-overrides #footer-img {
+  height: 15em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 }
 /*# sourceMappingURL=style.css.map */

@@ -25,7 +25,7 @@
 </head>
 
 <body id="bootstrap-overrides">
-
+    <!--NAVBAR-->
     <nav class="navbar" id="navbar">
         <span class="navbar-toggle" id="js-navbar-toggle">
             <img id="bars" src="/BloomingtonINTrees/src/appearance/img/barsblackround.png" class="fas fa-bars"></i>
@@ -39,7 +39,7 @@
             <li><a href="#intro_section" class="nav-links">Introduction</a></li>
             <li style="display: none;"><a href="#Tree-Inventory" class="nav-links">Tree Inventory</a></li>
             <li><a href="#landcover_section" class="nav-links">Forest Resources</a></li>
-            <li><a href="#" class="nav-links">Tree Benefits</a></li>
+            <li><a href="#benefits" class="nav-links">Tree Benefits</a></li>
 
             <li><a href="#manage_section" class="nav-links">Future Forest</a></li>
             <li><a href="#acknowledge_section" class="nav-links">Acknowledgements</a></li>
@@ -48,7 +48,7 @@
     </nav>
 
     <div class="everything-after-nav">
-
+        <!--WELCOME-->
         <section class="welcome-container">
             <div id="welcome" class="welcome-content">
                 <h1 id="Welcome">BLOOMINGTON </h1>
@@ -59,21 +59,33 @@
                 <p>Urban Forest Assessment
                 </p>
             </div>
+            <!--end welcome content-->
+            <div class="scrolldown">
+                <span></span>
+                <span></span>
+                <!-- <span></span> -->
+            </div>
+            <!--end scrolldown animation-->
         </section end welcome>
 
         <div id="main-body" class="main-body">
 
 
-
-            <section id="intro_section">
+            <!--INTRO-->
+            <section class="photo-background" id="intro_section" style="display: relative !important;">
                 <div class="section-title">
                     <h1>Introduction</h1>
                 </div>
+                <!-- <div class="fullpage-img-container"> </div>-->
                 <img id="intro" class="general-map content-section sticky" style="z-index: 1"
                     src='/BloomingtonINTrees/src/appearance/img/bloomington/Conclusions_lighten_resize.jpg'>
                 </img>
+                <div class="section-title fullpage-photo-caption">
+                    <h1>Introduction</h1>
+                </div>
 
-                <div id="intro_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                <div id="intro_overlay" class="general-map content-section sticky overlay img-overlay"
+                    style="z-index: 31">
                 </div>
 
                 <div class="sm-textbox">
@@ -120,21 +132,30 @@
                 <div class="lg-text-area">
                     <p class="middle-text">Canopy cover is a measure of the physical coverage of the tree canopy over
                         the land.
-                        <!-- <br><br> -->
+                        <br><br>
                         It represents a way of expressing, as a percentage, how much of any given area is shaded or
                         protected by trees.
                         <!-- <br><br> -->
                         Canopy cover is an important way of measuring the character, location, extent, and benefits of
                         an urban forest.</p>
                 </div>
-            </section>
 
+            </section>
+            <!--LandCover/Historical-->
             <section id="utc">
                 <div class="section-title">
                     <h1 class="subsection">Urban Tree Canopy</h1>
                 </div>
 
                 <div id="landcover_map" class="general-map content-section sticky" style="z-index: 1">
+
+                    <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="landcover_bmtoggle"> </div>
+
+                    <!-- <img class="zoom-tour" src="/BloomingtonINTrees/src/appearance/img/tour/500pxArrow_zoom.png" alt="Click on the + and - icons to zoom in and out." > -->
+
+                    <div class='sliderHolder' id='landcover_slideHolder'>
+                        <div id="historicalswipeDiv2"></div>
+                    </div>
                 </div>
                 <div id="landcover_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
                 </div>
@@ -196,11 +217,16 @@
             </section>
             <!--end Land Cover / UTC-->
 
+            <!--Fragmentation-->
             <section id="fragmentation_section">
                 <div class="section-title">
                     <h1 class="subsection">Forest Fragmentation</h1>
                 </div>
-                <div id="fragmentation_map" class="general-map content-section sticky" style="z-index: 1"></div>
+                <div id="fragmentation_map" class="general-map content-section sticky" style="z-index: 1">
+                    <div class="basemap-switch satellite" title="Toggle Streetview/Satellite View" id="frag_bmtoggle">
+                    </div>
+
+                </div>
 
                 <div id="fragmentation_map_overlay" class="general-map content-section sticky overlay"
                     style="z-index: 2">
@@ -252,11 +278,14 @@
             </section>
             <!--end Fragmentation-->
 
+            <!--Tree Health Index-->
             <section id="rastertest_section">
                 <div class="section-title">
                     <h1 class="subsection">Forest Health Issues</h1>
                 </div>
                 <div id="rastermap" class="general-map content-section sticky" style="z-index: 1">
+                    <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="raster_bmtoggle"> </div>
+
                 </div>
                 <div id="raster_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
                 </div>
@@ -304,12 +333,15 @@
             </section>
             <!--end Forest Health-->
 
-
+            <!--TREE INVENTORY / PUBLIC TREES-->
             <section id="geo_section">
                 <div id="Tree-Inventory" class="section-title">
                     <h1 class="subsection">Public Trees</h1>
                 </div>
                 <div id="geo_map" class="general-map content-section sticky" style="z-index: 1">
+                    <div class="basemap-switch satellite" title="Toggle Streetview/Satellite View" id="geo_bmtoggle">
+                    </div>
+
                 </div>
                 <div id="geo_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
                 </div>
@@ -365,16 +397,18 @@
             </section>
             <!--end Tree Inventory-->
 
+            <!--BENEFITS-->
             <section id="eco_section">
                 <div class="section-title">
-                    <h1>What Do We Have? Tree Benefits</h1>
+                    <h1 id="benefits">What Do We Have? Tree Benefits</h1>
 
                 </div>
                 <img id="eco" class="general-map content-section sticky" style="z-index: 1"
                     src='/BloomingtonINTrees/src/appearance/img/bloomington/EcosystemValue.jpg'>
                 </img>
 
-                <div id="eco_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                <div id="eco_overlay" class="general-map content-section sticky overlay img-overlay"
+                    style="z-index: 31">
                 </div>
 
 
@@ -416,7 +450,7 @@
             </section>
             <!--end tree benefits-->
 
-
+            <!--MANAGEMENT-->
             <section id="manage_section">
                 <div class="section-title">
                     <h1>What Do We Want? Managing for the Future Forest</h1>
@@ -426,7 +460,8 @@
                     src='/BloomingtonINTrees/src/appearance/img/bloomington/Management_resized.JPG'>
                 </img>
 
-                <div id="manage_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                <div id="manage_overlay" class="general-map content-section sticky overlay img-overlay"
+                    style="z-index: 31">
                 </div>
                 <div class="sm-textbox">
 
@@ -441,9 +476,11 @@
                         Columbia, Missouri (35%) and Ann Arbor, Michigan (33%), the challenge now is to maintain or grow
                         that canopy as the city and citizens desire.</p>
 
-                    <p class="photo-caption"><img src='/BloomingtonINTrees/src/appearance/img/bloomington/Benchmarks.jpg'>
-                        **Click to Enlarge (not built yet)**</p>
-                    <p>This City of Sammamish has mapped the watershed sub-basins as a key approach to managing the
+                    <p style="z-index: 35;" id="future-chart" class="photo-caption"
+                        onclick="toggleSize('future-chart')"><img
+                            src='/BloomingtonINTrees/src/appearance/img/bloomington/Benchmarks.jpg'>
+                        Click to Enlarge or Shrink</p>
+                    <p>This City of Bloomington has mapped the watershed sub-basins as a key approach to managing the
                         local environment. Knowledge about the UTC within these areas provides a benchmark for
                         understanding and optimizing stormwater mitigation benefits and other environmental services.
                     </p>
@@ -451,11 +488,15 @@
                 <!--end sm-textbox div-->
                 <!--insert map here-->
 
-                <section style="display: none;" id="swipetest_section">
+                <!--PRIORITY PLANTING / NEEDS PLANTED / VACANT SITES-->
+                <section id="swipetest_section">
                     <!-- <div class="section-title">
-                        <h1 class="subsection">Historic Land Cover</h1>
+                        <h1 class="subsection">This should not be here</h1>
                     </div> -->
-                    <div id="map" class="general-map content-section sticky" style="z-index: 1">
+                    <div id="map" class="general-map content-section sticky" style="z-index: 33">
+                        <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="swipe2_bmtoggle">
+                        </div>
+
                         <div class='sliderHolder'>
                             <div id="swipeDiv2"></div>
                         </div>
@@ -485,7 +526,7 @@
                             find out.</p>
                     </div>
                 </section>
-                <!--end map-->
+                <!--end priority map-->
 
 
             </section>
@@ -497,10 +538,12 @@
                     <h1 class="subsection">A Sustainable Public Urban Forest</h1>
 
                 </div>
-                <img id="sustain" class="general-map content-section sticky" style="z-index: 1" src='/BloomingtonINTrees/src/appearance/img/bloomington/DSC_0404_editscale.JPG'>
+                <img id="sustain" class="general-map content-section sticky" style="z-index: 1"
+                    src='/BloomingtonINTrees/src/appearance/img/bloomington/DSC_0404_editscale.JPG'>
                 </img>
 
-                <div id="sustain_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                <div id="sustain_overlay" class="general-map content-section sticky overlay img-overlay"
+                    style="z-index: 31">
                 </div>
 
 
@@ -536,10 +579,12 @@
                     <h1 class="subsection">Bloomington’s Next Steps</h1>
 
                 </div>
-                <img id="next" class="general-map content-section sticky" style="z-index: 1" src='/BloomingtonINTrees/src/appearance/img/bloomington/NextSteps_scale.jpg'>
+                <img id="next" class="general-map content-section sticky" style="z-index: 1"
+                    src='/BloomingtonINTrees/src/appearance/img/bloomington/NextSteps_scale.jpg'>
                 </img>
 
-                <div id="next_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                <div id="next_overlay" class="general-map content-section sticky overlay img-overlay"
+                    style="z-index: 31">
                 </div>
 
 
@@ -551,20 +596,24 @@
 
                     <p>Bloomington has not a master urban forest management plan, a
                         collective strategy to meet community vision and goals for public and private trees. Existing
-                        city planning that trees have a part include the 
-                        <a href="https://bloomington.in.gov/sustainability/action-plan" target="_blank">Sustainability Action Plan</a> 
+                        city planning that trees have a part include the
+                        <a href="https://bloomington.in.gov/sustainability/action-plan" target="_blank">Sustainability
+                            Action Plan</a>
                         and the <a href='https://bloomington.in.gov/inclusion' target="_blank">Equity,
-                        Inclusion & Accessibility</a> 
+                            Inclusion & Accessibility</a>
                         statement. The City of Bloomington has a public tree management plan.
                         The Tree Commision and City Forester has for many years been operating under the guidance of
-                        this <a href='https://bloomington.in.gov/about/trees/urban-forestry-plan' target="_blank">Management Plan</a>. Bloomington should utilize this collection of new information and tools to
+                        this <a href='https://bloomington.in.gov/about/trees/urban-forestry-plan'
+                            target="_blank">Management Plan</a>. Bloomington should utilize this collection of new
+                        information and tools to
                         explore public and private tree issues to influence the improvement of the public tree
                         management plan and create a community master urban forest management plan in ways that lead to
                         the path of a more sustainable, resilient, and equitable urban forest. Two toolkits with guiding
-                        principles for urban forest planning may be of interest to the planning committees, 
+                        principles for urban forest planning may be of interest to the planning committees,
                         <a href='http://www.vibrantcitieslab.com/' target="_blank">Vibrant
-                        Cities Lab</a> and 
-                        <a href='https://toolkit.climate.gov/steps-to-resilience/prioritize-plan' target="_blank">U.S. Climate Resilience Toolkit</a>.
+                            Cities Lab</a> and
+                        <a href='https://toolkit.climate.gov/steps-to-resilience/prioritize-plan' target="_blank">U.S.
+                            Climate Resilience Toolkit</a>.
                     </p>
 
                     <ul>Common planning goals include:
@@ -602,23 +651,25 @@
                     src='/BloomingtonINTrees/src/appearance/img/bloomington/Winter waterfall at Lower Cascades Park_editscale.jpg'>
                 </img>
 
-                <div id="acknowledge_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+                <div id="acknowledge_overlay" class="general-map content-section sticky overlay img-overlay"
+                    style="z-index: 31">
                 </div>
 
 
                 <div class="sm-textbox">
 
-                    <p>Bloomington’s vision to promote and preserve the urban forest and improve the management of public trees was a fundamental inspiration for this project. This vision will ensure canopy continuity, which will reduce stormwater runoff and energy use and improve aesthetic value, air quality, and public health.</p>
+                    <p>Bloomington’s vision to promote and preserve the urban forest and improve the management of
+                        public trees was a fundamental inspiration for this project. This vision will ensure canopy
+                        continuity, which will reduce stormwater runoff and energy use and improve aesthetic value, air
+                        quality, and public health.</p>
 
-                    <p class="photo-caption"><img
-                        src='/BloomingtonINTrees/src/appearance/img/logos/DRG use-this logo_FIXED_smaller.jpg'>
-                    </p>
 
 
                 </div>
-            </section><!--end acknowledge-->
+            </section>
+            <!--end acknowledge-->
 
-
+            <!--###@@@  THE REST OF THESE SECTIONS ARE NOT USED IN THE BLOOMINGTON STORYMAP @@@###-->
 
 
             <!-- <section style="display: none;" id="swipetest_section">
@@ -940,13 +991,7 @@
 
         </div end main-body>
         <div class="credits">
-            <h1>With thanks to</h1>
-            <ul>
-                <li>Bill</li>
-                <li>Rochelle</li>
-                <li>Will</li>
-                <li>And all of our testers!</li>
-            </ul>
+            <img id="footer-img" src='/BloomingtonINTrees/src/appearance/img/logos/DRG use-this logo_FIXED_smaller.jpg'>
         </div>
     </div everything-after-nav>
 

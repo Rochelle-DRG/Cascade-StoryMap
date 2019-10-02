@@ -10,10 +10,10 @@
         "Layer1": {
             "swipe": "false",
             "layerID": [
-                0
+                1
             ],
             "title": "Bloomington City Limits",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/0",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/1",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -29,14 +29,14 @@
         "Layer2": {
             "swipe": "true",
             "layerID": [
-                3
+                9
             ],
             "title": "Fragmentation",
-            "url": "https://gis.davey.com/arcgis/services/BloomingtonIN/BloomintonIN/MapServer/WMSServer",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/9",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
-            "opacity": 1.0,
+            "opacity": ".4",
             "layername": "Fragmentation",
             "legend": true,
             "popup": false,
@@ -46,10 +46,10 @@
         "Layer3": {
             "swipe": "false",
             "layerID": [
-                4
+                5
             ],
             "title": "CouncilDistricts",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/4",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/5",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -63,10 +63,10 @@
         "Layer4": {
             "swipe": "false",
             "layerID": [
-                5
+                6
             ],
             "title": "NeighborhoodAssociation",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/5",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/6",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -80,10 +80,10 @@
         "Layer5": {
             "swipe": "false",
             "layerID": [
-                6
+                7
             ],
             "title": "Parks",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/6",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/7",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -97,10 +97,10 @@
         "Layer6": {
             "swipe": "false",
             "layerID": [
-                7
+                8
             ],
             "title": "Watershed",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/7",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/8",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
@@ -114,14 +114,14 @@
         "Layer7": {
             "swipe": "false",
             "layerID": [
-                1
+                2
             ],
             "title": "TreeHealthIndex",
-            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/1",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/2",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
-            "type": "raster",
-            "opacity": 1.0,
+            "type": "feature",
+            "opacity": ".4",
             "layername": "TreeHealthIndex",
             "legend": true,
             "popup": true,
@@ -131,15 +131,15 @@
         "Layer8": {
             "swipe": "false",
             "layerID": [
-                2
+                3
             ],
             "title": "Land Cover",
-            "url": "https://gis.davey.com/arcgis/services/BloomingtonIN/BloomintonIN/MapServer/WMSServer",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/3",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "raster",
-            "opacity": 1.0,
-            "layername": "LandCover",
+            "opacity": "0.4",
+            "layername": "Land Cover",
             "legend": true,
             "popup": true,
             "popupContent": "Coverclass: ${CoverClass}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy %: ${PERCENT:NumberFormat(places:2)}",
@@ -148,43 +148,45 @@
         "Layer9": {
             "swipe": "false",
             "layerID": [
-                9
+                10
             ],
             "title": "PriorityPlantingLevel",
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/10",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
-            "type": "raster",
-            "opacity": 1.0,
+            "type": "feature",
+            "opacity": ".6",
             "layername": "PriorityPlantingLevel",
             "legend": true,
             "popup": true,
             "popupContent": "FID: ${FID}</br>SQFT: ${SQFT:NumberFormat(places:2)}</br>Priority: ${PRIORITY}",
             "order": 10
+
         },
         "Layer10": {
             "swipe": "false",
-            "layerID": [
-                99
-            ],
-            "title": "Planted Trees",
-            "url": "https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms",
-            "infoUrl": "https://geo2.daveytreekeeper.com/geoserver/Treekeeper/wms",
 
-            "type": "geo",
+            "layerID": [
+                0
+            ],
+            "title": "Tree Inventory",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/0",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
+
+            "type": "feature",
             "opacity": 1.0,
-            "layername": "Treekeeper:BloomingtonIN_planttrees",
+            "layername": "Tree Inventory",
             "legend": true,
             "popup": true,
-            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}",
+            "popupContent": "Inventory Date: ${INV_DATE}</br>Maintenance Need: ${MAINTPRIM}</br>Overhead Utility: ${OHUTILITY}</br>Treegrate: ${TREEGRATE}</br>Council: ${COUNCIL}</br>Parkname: ${PARKNAME}",
             "order": 11
         },
         "Layer11": {
             "swipe": "true",
             "layerID": [
-                10
+                11
             ],
-            "title": "Trees Needing Planted",
+            "title": "Available Planting Sites",
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/11",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
@@ -195,17 +197,40 @@
             "popup": true,
             "popupContent": "Inventory Date: ${INV_DATE}</br>Maintenance Need: ${MAINTPRIM}</br>Overhead Utility: ${OHUTILITY}</br>Treegrate: ${TREEGRATE}</br>Council: ${COUNCIL}</br>Parkname: ${PARKNAME}",
             "order": 12
+        },
+        "Layer12": {
+            "swipe": "true",
+
+            "layerID": [
+                12
+            ],
+            "title": "Historical",
+            "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/12",
+            "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
+
+            "type": "raster",
+            "opacity": ".5",
+            "layername": "BLOOM_HistoricTreeCanopy2008",
+            "legend": true,
+            "popup": true,
+            "popupContent": "Inventory Date: ${INV_DATE}</br>Maintenance Need: ${MAINTPRIM}</br>Overhead Utility: ${OHUTILITY}</br>Treegrate: ${TREEGRATE}</br>Council: ${COUNCIL}</br>Parkname: ${PARKNAME}",
+            "order": 13
         }
+
+
+
+        
+        
         
     },
     "maps": {
         "geo_map": {
             "swipe": "false",
-            "swipeWidgetID": "geo",
+            "swipeWidgetID": "",
             "viewType": "map",
             "sectionID": "geo_section",
             "containerID": "geo_map",
-            
+            "basemapToggleID": "geo_bmtoggle",
             "legendID": "geo_legend",
             "basemap": "osm",
             "mapCenter": [
@@ -215,9 +240,9 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer11"
+                "Layer10"
             ],
-            "searchLayer": "Layer11",
+            "searchLayer": "Layer10",
             "searchFld": "",
             "searchAttr": ""
         },
@@ -230,7 +255,7 @@
             "containerID": "priority2_map",
             
             "legendID": "priority2_legend",
-            "basemap": "gray",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -247,14 +272,14 @@
         },
 
         "landcover_map": {
-            "swipe": "false",
-            "swipeWidgetID": "landcover2",
+            "swipe": "true",
+            "swipeWidgetID": "historicalswipeDiv2",
             "viewType": "map",
             "sectionID": "landcover_section",
             "containerID": "landcover_map",
-            
+            "basemapToggleID": "landcover_bmtoggle",
             "legendID": "landcover_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -262,7 +287,8 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer8"
+                "Layer8",
+                "Layer12"
             ],
             "searchLayer": "Layer8",
             "searchFld": "",
@@ -274,9 +300,9 @@
             "viewType": "map",
             "sectionID": "rastertest_section",
             "containerID": "rastermap",
-            
+            "basemapToggleID": "raster_bmtoggle",
             "legendID": "raster_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -297,9 +323,9 @@
             "viewType": "map",
             "sectionID": "swipetest_section",
             "containerID": "map",
-            
+            "basemapToggleID": "swipe2_bmtoggle",
             "legendID": "swipe_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -307,10 +333,10 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer8",
-                "Layer2"
+                "Layer9",
+                "Layer11"
             ],
-            "searchLayer": "Layer8",
+            "searchLayer": "Layer9",
             "searchFld": "",
             "searchAttr": ""
         },
@@ -320,7 +346,7 @@
             "viewType": "map",
             "sectionID": "fragmentation_section",
             "containerID": "fragmentation_map",
-            
+            "basemapToggleID": "frag_bmtoggle",
             "legendID": "fragmentation_legend",
             "basemap": "osm",
             "mapCenter": [
@@ -344,7 +370,7 @@
             "containerID": "councilDistricts_map",
             
             "legendID": "councilDistricts_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -365,7 +391,7 @@
             "containerID": "neighborhoodAssociation_map",
             
             "legendID": "neighborhoodAssociation_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -385,7 +411,7 @@
             "containerID": "parks_map",
             
             "legendID": "parks_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -405,7 +431,7 @@
             "containerID": "watershed_map_fix",
             
             "legendID": "watershed_legend",
-            "basemap": "osm",
+            "basemap": "satellite",
             "mapCenter": [
                 -86.522406,
                 39.167872
@@ -419,5 +445,6 @@
             "searchFld": "",
             "searchAttr": ""
         }
+
     }
 }

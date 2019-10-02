@@ -121,111 +121,83 @@ $(document).ready(function () {
 
         // mapDetails is the list of individula map details from all of the Slides
         $.each(mapDetails, function (k, slideMap) {
-            // the error when the map container its looking for is a little vauge 
-            // so i added in a check\warning that catches this before trying to add the map
-            containercheck = document.getElementById(slideMap.containerID);
-            if (containercheck) {
-                
-                var currentMap = new Map(slideMap.containerID, {
-                    basemap: slideMap.basemap,
-                    center: slideMap.mapCenter,
-                    zoom: slideMap.zoom,
-                }); //end var currentMap= new Map
-                // other enable/disables here: https://developers.arcgis.com/javascript/3/jshelp/intro_navigation.html
-                currentMap.on("load", function () {
-                    currentMap.disableScrollWheel();
-                });
-                makeTheLegend(slideMap, currentMap);
-    
-    
-                //loop through slideMap.featureArray for each map (featureArray is a list of the layer #'s for the slide)
-                $.each(slideMap.featureArray, function (j, layerNumber) {
-                    var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
-                    var newLayer;
-    
-                    
-                    if (slide.type === "geo") {
-                        console.log(layerNumber + " is a geo layer");
-    
-                        var layerInfo = new WMSLayerInfo({
-                            name: slide.layername,
-                            title: slide.title
-                        });
-                        newLayer = new WMSLayer(slide.url , {
-                            resourceInfo: {
-                                layerInfos: [layerInfo],
-                                extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                                featureInfoFormat: "text/html",
-                                // getFeatureInfoURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows",
-                                //getMapURL: "http://geo.rowkeeper.com/geoserver/Treekeeper/ows"
-                            },
-                            visibleLayers: [
-                                slide.layername
-                            ],
-                            version: "1.3.0"
-                        });
-                        currentMap.addLayer(newLayer);
-    
-                    } else if (slide.type == "raster") {
-                        var layerInfo = new WMSLayerInfo({
-                            name: slide.layername,
-                            title: slide.title
-                        });
-                        newLayer = new WMSLayer(slide.url, {
-                            resourceInfo: {
-                                layerInfos: [layerInfo],
-                                extent: new Extent(0, 0, 0, 0, { wkid: 4326 }),
-                                featureInfoFormat: "text/html",
-                            },
-                            visibleLayers: [
-                                slide.layername
-                            ],
-                            version: "1.3.0"
-                        });
-                        // console.log('adding raster as wms')
-                        currentMap.addLayer(newLayer);
-                    } else {
-                        newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
-                        newLayer.setVisibleLayers([slide.layerID]);
-                        newLayer._div = currentMap.root;
-                        currentMap.addLayers([newLayer]);
-                    };
-    
-                    //previously
-                    // if (slide.type === "feature") {
-                    //     var feature = slide;
-                    //     // console.log(slide);
-                    //     newLayer = new FeatureLayer(slide.url);
-                    //     currentMap.addLayer(newLayer);
-                    // }
-    
-    
-                    if (slideMap.swipe === "true") {
-                        if (slide.swipe === "true") {
-                            console.log("it should be swiping");
-                            var layerIds = currentMap.layerIds;
-                            var swipeWidget = new LayerSwipe({
-                                type: "vertical",
-                                map: currentMap,
-                                layers: [newLayer]
-                            }, slideMap.swipeWidgetID);
-    
-                            swipeWidget.startup();
-                        }   //end if slide swipe
-                    } // end if map swipe
-                }); //end .each layerNumber
-    
-                legendDijit.refresh();
-    
-                //still inside for-each-mapDetails loop
-                currentMap.on("click", function (event) {
-                    setPopups(event, slideMap, currentMap);
-                }); //end on-click
-                // end of the containercheck
-            } else {console.warn("Container for " + slideMap.containerID + " was not found, skipping")};
-            
+            var currentMap = new Map(slideMap.containerID, {
+                basemap: slideMap.basemap,
+                center: slideMap.mapCenter,
+                zoom: slideMap.zoom,
+            }); //end var currentMap= new Map
+            // other enable/disables here: https://developers.arcgis.com/javascript/3/jshelp/intro_navigation.html
+            currentMap.on("load", function () {
+                currentMap.disableScrollWheel();
+            });
+            makeTheLegend(slideMap, currentMap);
+
+            //add click event to basemap toggle
+            var basemapToggleID = slideMap.basemapToggleID;
+            var currentToggleButton = document.getElementById(basemapToggleID);
+
+            //the "if" statement is only needed until I have added a togglebutton to the html for each map
+            if (typeof basemapToggleID !== "undefined") { 
+                currentToggleButton.addEventListener('click', function(){
+                    console.log("click accepted!");
+                    var currentBasemap = currentMap.getBasemap();
+                    currentToggleButton.classList.toggle("satellite");
+                    if (currentBasemap === "satellite"){
+                        currentMap.setBasemap("osm");
+                    }//end if satellite
+                    if (currentBasemap === "osm"){
+                        currentMap.setBasemap("satellite");
+                    }//end if osm
+                }); //end eventListener onclick
+            }; //end if basemapToggleID not undefined
+
+
+
+            //loop through slideMap.featureArray for each map (featureArray is a list of the layer #'s for the slide)
+            $.each(slideMap.featureArray, function (j, layerNumber) {
+                var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
+                var newLayer;
+
+
+                newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
+                newLayer.setVisibleLayers([slide.layerID]);
+                newLayer.setOpacity(slide.opacity);
+                newLayer._div = currentMap.root;
+                currentMap.addLayers([newLayer]);
+
+
+
+                if (slideMap.swipe === "true") {
+                    if (slide.swipe === "true") {
+                        console.log("it should be swiping");
+                        var layerIds = currentMap.layerIds;
+                        var swipeWidget = new LayerSwipe({
+                            type: "vertical",
+                            map: currentMap,
+                            layers: [newLayer]
+                        }, slideMap.swipeWidgetID);
+                        console.log(slideMap.swipeWidgetID);
+                        console.log(newLayer);
+
+                        swipeWidget.startup();
+                    }   //end if slide swipe
+                } // end if map swipe
+            }); //end .each layerNumber
+
+            legendDijit.refresh();
+
+            //still inside for-each-mapDetails loop
+            currentMap.on("click", function (event) {
+                setPopups(event, slideMap, currentMap);
+            }); //end on-click
         }); //end .each
+
 
     }); //end require/function
 
 }); //end doc.ready
+
+
+// var tryThisFunction = function(map){
+//     console.log('called the function');
+// }

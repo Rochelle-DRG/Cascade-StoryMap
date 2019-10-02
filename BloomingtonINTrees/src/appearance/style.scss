@@ -177,7 +177,7 @@
     text-align: center;
 }
 section { //generic 
-    margin-bottom: 0em !important; //does not reduce spacing
+    margin-bottom: 1px !important; //does not reduce spacing
 }
 h1{ //generic
     font-family: $logo-font;
@@ -304,11 +304,70 @@ p{ //generic
         // margin-top: .4em;
     }
 }
+/* Credit for this wonderful scrolldown animation goes to this person:
+https://www.youtube.com/watch?v=UaYXrbNDqXM */
+.scrolldown {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    // background: #fff;
+    transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+.scrolldown span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 4px solid #fff;
+    border-right: 4px solid #fff;
+    animation: animate 2s linear infinite;
+    animation-delay: 30s;
+    opacity: 0;
+}
+.scrolldown span:nth-child(1){
+    transform: translate(-15px,-15px);
+    animation-delay: -0.4s;
+}
+.scrolldown span:nth-child(2){
+    transform: translate(0px,0px);
+    animation-delay: -0.2s;
+
+}
+.scrolldown span:nth-child(3){
+    transform: translate(15px,15px);
+    animation-delay: 0s;
+
+}
+@keyframes animate {
+   0% {
+       top: -5px;
+       left: -5px;
+       opacity: 0;
+   } 
+   25% {
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+    50%,100% {
+        top: 5px;
+        left: 5px;
+        opacity: 0;
+    } 
+}
 
 
 
+// .photo-background {
+//     color: magenta;
+// }
 
 section {
+    // position: relative;
     .general-map {
         padding: 0px !important;
         margin-top: 0px !important;
@@ -327,6 +386,22 @@ section {
         background-color: rgba(0,0,0,0.0);
         z-index: 2;
     }
+    .img-overlay {
+        height: 50vh;
+    }
+    // .fullpage-img-container{
+    //     // width: 100%;
+    //     // height: 100vh;
+
+    // }
+    .fullpage-photo-caption {
+        // position: absolute;
+        width: 20px;
+        // bottom: 8px;
+        // left: 16px;    
+        top: 80%;
+    }
+
     // .LayerSwipe { //works, but hard to turn back on
     //     display:none !important;
     // }
@@ -336,14 +411,106 @@ section {
     .slideHolder {
         z-index: -1;
     }
+    p, ul, li {
+        line-height: 1.8;
+    }
     ul, li{
         list-style-position: inside;
         list-style-type: square;
         // list-style-image: url('getALeaf.png');
+    }
+    li {
+        padding-left: 2em;
+        padding-top: 1em;
         text-align: left;
+
     }
 
+    .basemap-switch {
+        /*//This is the same style as used on the .esriSimpleSlider ZOOM class, just tweaked a little */
+        // background-color: rgba(255, 255, 255, 0.904);
+        // z-index: 31;
+        // margin-top: 20em;
+        margin-left: 70%;
+        @include for-tablet-portrait-up {
+            margin-left: 90%;
+        }
+        @include for-tablet-landscape-up {
+            margin-left: 93%;
+        }
+        @include for-desktop-med-up {
+            margin-left: 96%;
+    
+        }
+        /* // This is the style from Lower Grand MI
+        */
+        position: absolute;
+        z-index: 999;
+        top: 200px;
+        left: 20px;
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid white;
+        background-image: url("/BloomingtonINTrees/src/appearance/img/roadmap1.JPG");
+        background-color: tan;
+    }
+    .satellite {
+        background-image: url("/BloomingtonINTrees/src/appearance/img/sat.jpg");
+    }
+    .zoom-tour {
+        margin-left: 63%;
+        position: absolute;
+        z-index: 999;
+        margin-top: 5em;
+        left: 20px;
+    }
+    .toggle-tour {
+        margin-left: 56.5%;
+        position: absolute;
+        z-index: 999;
+        margin-top: 8em;
+        left: 10px;
+    }
 
+    .highlight {
+        // background-color: lawngreen;
+        // border-style: solid;
+        // border-width: 10px;
+        // border-color: lawngreen;
+        animation-name: blink;
+        animation-duration: 1s;
+        animation-iteration-count: 10;
+    }
+    .highlight-toggleswitch {
+        outline-style: solid;
+        outline-color: lawngreen;
+        outline-width: 8px;
+    }
+    @keyframes blink {
+        0% {background-color: lawngreen;}
+        25% {background-color: lawngreen;}
+        49%{    background-color: none;}
+        50%{    background-color: none;}
+        99%{    background-color: none;  }
+        100% {background-color: none;}
+
+    }
+    .esriSimpleSlider { //the ZOOM button
+        background-color: rgba(255, 255, 255, 0.904);
+        margin-top: 7em;
+        // margin-left: 70%;
+        @include for-tablet-portrait-up {
+            margin-left: 90%;
+        }
+        @include for-tablet-landscape-up {
+            margin-left: 93%;
+        }
+        @include for-desktop-med-up {
+            margin-left: 96%;
+    
+        }
+    }
 
     .toggleButton{
         font-family: $logo-font;
@@ -436,7 +603,7 @@ section {
         color: $sm-textbox-text-color;
         border: $sm-textbox-border-color;
         border-radius: 0.5em;
-        margin-top: 20em; //this causes a space between the big sections
+        margin-top: 13em; //margin-bottom causes an undesired space between the big sections
     }
     .sm-textbox img {
         margin-top: .2em; 
@@ -449,6 +616,9 @@ section {
         // max-width: 90%;
         font-size: 90%;
         text-align: center;
+    }
+    .bigger {
+        width:200%;
     }
     a:hover {
         color: rgb(243, 252, 128);
@@ -580,21 +750,7 @@ section {
         margin-bottom: 2em;
     }
 }
-.esriSimpleSlider { //the ZOOM button
-    background-color: rgba(255, 255, 255, 0.904);
-    margin-top: 7em;
-    // margin-left: 70%;
-    @include for-tablet-portrait-up {
-        margin-left: 90%;
-    }
-    @include for-tablet-landscape-up {
-        margin-left: 93%;
-    }
-    @include for-desktop-med-up {
-        margin-left: 96%;
 
-    }
-}
 
 
 
@@ -620,8 +776,8 @@ section {
         margin-right: 20%;
     }
     @include for-desktop-up {
-        margin-left: 25%;
-        margin-right: 25%;
+        margin-left: 30%;
+        margin-right: 30%;
     }
 
 
@@ -653,7 +809,13 @@ section {
     background-color: $credits-bkgnd-color;
     color: $credits-text-color;
     text-shadow: $lg-text-h1-shadow;
+    margin-top: 1px;
 }
 
+#footer-img {
+    height: 15em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
 
 }
