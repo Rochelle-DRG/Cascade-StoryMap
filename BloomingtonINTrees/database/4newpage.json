@@ -193,7 +193,7 @@
             "order": 12
         },
         "Layer12": {
-            "swipe": "true",
+            "swipe": "false",
 
             "layerID": [
                 12
@@ -280,8 +280,7 @@
             "zoom": 13,
             "featureArray": [
                 "Layer1",
-                "Layer8",
-                "Layer12"
+                "Layer8"
             ],
             "searchLayer": "Layer8",
             "searchFld": "",
