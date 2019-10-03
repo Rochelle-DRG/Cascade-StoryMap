@@ -362,10 +362,17 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   position: absolute;
   bottom: 1%;
   left: 50%;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   -webkit-transform: translateY(-80px) translateX(-50%) rotate(45deg);
           transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+
+@media (min-width: 1480px) {
+  #bootstrap-overrides .scrolldown {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 #bootstrap-overrides .scrolldown span {
