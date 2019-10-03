@@ -448,6 +448,10 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   }
 }
 
+#bootstrap-overrides .photo-background {
+  position: relative;
+}
+
 #bootstrap-overrides section .general-map {
   padding: 0px !important;
   margin-top: 0px !important;
@@ -472,8 +476,18 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 }
 
 #bootstrap-overrides section .fullpage-photo-caption {
-  width: 20px;
-  top: 80%;
+  font-family: "Oswald", sans-serif;
+  position: absolute;
+  padding-left: 3px;
+  padding-right: 3px;
+  bottom: 0px;
+  right: 0px;
+  color: black;
+  background: white;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0.7;
+  z-index: 999;
 }
 
 #bootstrap-overrides section .slideHolder {

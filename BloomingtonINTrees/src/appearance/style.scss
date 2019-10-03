@@ -367,9 +367,9 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 
 
 
-// .photo-background {
-//     color: magenta;
-// }
+.photo-background {
+    position: relative ;
+}
 
 section {
     // position: relative;
@@ -400,11 +400,24 @@ section {
 
     // }
     .fullpage-photo-caption {
-        // position: absolute;
-        width: 20px;
-        // bottom: 8px;
-        // left: 16px;    
-        top: 80%;
+        font-family: $logo-font;        
+        position: absolute;
+        // height: 50px;
+        padding-left:3px;
+        padding-right: 3px;
+        bottom: 0px;
+        right: 0px;
+        color: black;
+        background: white;
+        text-align:center;
+        font-weight:bold;
+        opacity:0.7;
+        z-index: 999;
+        // // position: absolute;
+        // width: 20px;
+        // // bottom: 8px;
+        // // left: 16px;    
+        // top: 80%;
     }
 
     // .LayerSwipe { //works, but hard to turn back on
