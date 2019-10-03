@@ -682,7 +682,7 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 
 #bootstrap-overrides section .sm-textbox {
   width: 90%;
-  z-index: 4;
+  z-index: 31;
   position: relative;
   padding: 2%;
   margin-left: auto;
