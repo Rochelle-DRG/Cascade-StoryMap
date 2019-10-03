@@ -681,6 +681,7 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 }
 
 #bootstrap-overrides section .sm-textbox {
+  pointer-events: none;
   width: 90%;
   z-index: 31;
   position: relative;
@@ -752,6 +753,8 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 }
 
 #bootstrap-overrides section .right-content {
+  /*This is the original when it would stick for a bit 
+        then scroll before the paragraph blocks*/
   display: block;
   position: -webkit-sticky;
   position: sticky;

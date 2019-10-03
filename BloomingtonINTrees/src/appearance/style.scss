@@ -568,6 +568,7 @@ section {
     
 
     .sm-textbox {
+        pointer-events:none;
         width: 90%;
         // background-color: magenta;
         z-index: 31; //4;
@@ -629,6 +630,15 @@ section {
 
 
     .right-content{
+        // margin-left: 90%;
+        // position: absolute;
+        // z-index: 999 !important;
+        // top: 200px;
+        // left: 20px;
+
+
+        /*This is the original when it would stick for a bit 
+        then scroll before the paragraph blocks*/
         display: block;
         position: sticky;
         bottom: 0em !important;
