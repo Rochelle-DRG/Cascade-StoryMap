@@ -156,10 +156,10 @@
                     <div id="historicalswipeDiv2"></div>
                 </div>
             </div>
-            <div id="landcover_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+            <div id="landcover_overlay" class="general-map content-section sticky overlay " style="z-index: 31">
             </div>
 
-            <div id="landcover_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+            <div id="landcover_overlay2" class="general-map content-section sticky overlay click-through" style="z-index: 32">
                 <div class="right-content" >
                     <button id="landcover_button" class="toggleButton legend-right"
                         onclick="toggleOverlay('landcover_overlay','landcover_button');">Click Here To Interact With
@@ -170,7 +170,7 @@
                     <div id="landcover_legend" class="legend legend-right"></div>
                 </div>
 
-            </div>
+            </div><!--end overlay2-->
 
 
 
@@ -248,7 +248,7 @@
             <div id="fragmentation_map_overlay" class="general-map content-section sticky overlay" style="z-index: 2">
             </div>
 
-            <div id="fragmentation_map_overlay2" class="general-map content-section sticky overlay" style="z-index: 2">
+            <div id="fragmentation_map_overlay2" class="general-map content-section sticky overlay click-through" style="z-index: 2">
             
                 <div class="right-content">
                     <button id="fragmentation_button" class="toggleButton legend-right"
@@ -309,7 +309,10 @@
                 <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="raster_bmtoggle"> </div>
 
             </div>
-            <div id="raster_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+            <div id="raster_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">   
+            </div>
+
+            <div id="raster_map_overlay2" class="general-map content-section sticky overlay click-through" style="z-index: 31">
             
                 <div class="right-content">
                     <button id="raster_button" class="toggleButton legend-right"
@@ -396,7 +399,7 @@
             </div>
 
 
-            <div id="geo_overlay2" class="general-map content-section sticky overlay" style="z-index: 31">
+            <div id="geo_overlay2" class="general-map content-section sticky overlay click-through" style="z-index: 31">
            
                 <div class="right-content">
                     <button id="geo_button" class="toggleButton legend-right"
@@ -567,7 +570,7 @@
                 </div>
 
 
-                <div id="swipe_map_overlay" class="general-map content-section sticky overlay" style="z-index: 950">
+                <div id="swipe_map_overlay2" class="general-map content-section sticky overlay click-through" style="z-index: 950">
                     <div class="right-content" style="z-index:950">
                         <button id="swipe_button" class="toggleButton legend-right"
                             onclick="toggleOverlay('swipe_map_overlay','swipe_button');makeSwiper('map','swipeDiv2')">Click

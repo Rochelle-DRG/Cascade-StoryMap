@@ -542,6 +542,7 @@ section {
     }
 
     .toggleButton{
+        pointer-events: auto;
         font-family: $logo-font;
         padding: 0.35em 1.2em;
         border: 0.1em solid #FFFFFF;
@@ -594,7 +595,9 @@ section {
         
     }
 
-    
+    .click-through {
+        pointer-events: none;
+    }
 
     .sm-textbox {
         pointer-events:none;

@@ -652,6 +652,7 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 }
 
 #bootstrap-overrides section .toggleButton {
+  pointer-events: auto;
   font-family: "Oswald", sans-serif;
   padding: 0.35em 1.2em;
   border: 0.1em solid #FFFFFF;
@@ -706,6 +707,10 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   background-color: #97c0e6;
   padding: 0px;
   font-size: 2em;
+}
+
+#bootstrap-overrides section .click-through {
+  pointer-events: none;
 }
 
 #bootstrap-overrides section .sm-textbox {
