@@ -248,17 +248,23 @@
             <div id="fragmentation_map_overlay" class="general-map content-section sticky overlay" style="z-index: 2">
             </div>
 
-            <div class="right-content">
-                <button id="fragmentation_button" class="toggleButton legend-right"
-                    onclick="toggleOverlay('fragmentation_map_overlay','fragmentation_button')">Click Here To
-                    Interact
-                    With Map</button>
-                <button id="fragmentation_legendbutton" class="toggleButton legend-right legendButton"
-                    onclick="toggleLegend('fragmentation_legend','fragmentation_legendbutton')">View The
-                    Legend</button>
-
-                <div id="fragmentation_legend" class="legend legend-right"></div>
+            <div id="fragmentation_map_overlay2" class="general-map content-section sticky overlay" style="z-index: 2">
+            
+                <div class="right-content">
+                    <button id="fragmentation_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('fragmentation_map_overlay','fragmentation_button')">Click Here To
+                        Interact
+                        With Map</button>
+                    <button id="fragmentation_legendbutton" class="toggleButton legend-right legendButton"
+                        onclick="toggleLegend('fragmentation_legend','fragmentation_legendbutton')">View The
+                        Legend</button>
+    
+                    <div id="fragmentation_legend" class="legend legend-right"></div>
+                </div>
             </div>
+
+
+            
 
             <div class="sm-textbox">
 
@@ -304,18 +310,20 @@
 
             </div>
             <div id="raster_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+            
+                <div class="right-content">
+                    <button id="raster_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('raster_map_overlay','raster_button');">Click Here To Interact With
+                        Map</button>
+    
+                    <button id="raster_legendbutton" class="toggleButton legend-right legendButton"
+                        onclick="toggleLegend('raster_legend','raster_legendbutton');">View The Legend</button>
+    
+                    <div id="raster_legend" class="legend legend-right"></div>
+                </div>
+    
             </div>
 
-            <div class="right-content">
-                <button id="raster_button" class="toggleButton legend-right"
-                    onclick="toggleOverlay('raster_map_overlay','raster_button');">Click Here To Interact With
-                    Map</button>
-
-                <button id="raster_legendbutton" class="toggleButton legend-right legendButton"
-                    onclick="toggleLegend('raster_legend','raster_legendbutton');">View The Legend</button>
-
-                <div id="raster_legend" class="legend legend-right"></div>
-            </div>
 
 
             <div class="sm-textbox">
@@ -387,15 +395,24 @@
             <div id="geo_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
             </div>
 
-            <div class="right-content">
-                <button id="geo_button" class="toggleButton legend-right"
-                    onclick="toggleOverlay('geo_overlay','geo_button');">Click Here To Interact With
-                    Map</button>
-                <button id="geo_legendbutton" class="toggleButton legend-right legendButton"
-                    onclick="toggleLegend('geo_legend','geo_legendbutton');">View The Legend</button>
 
-                <div id="geo_legend" class="legend legend-right"></div>
+            <div id="geo_overlay2" class="general-map content-section sticky overlay" style="z-index: 31">
+           
+                <div class="right-content">
+                    <button id="geo_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('geo_overlay','geo_button');">Click Here To Interact With
+                        Map</button>
+                    <button id="geo_legendbutton" class="toggleButton legend-right legendButton"
+                        onclick="toggleLegend('geo_legend','geo_legendbutton');">View The Legend</button>
+    
+                    <div id="geo_legend" class="legend legend-right"></div>
+                </div>
+    
+           
             </div>
+
+            
+
 
             <div class="sm-textbox">
 
@@ -506,6 +523,9 @@
 
             <div id="manage_overlay" class="general-map content-section sticky overlay img-overlay" style="z-index: 31">
             </div>
+
+
+
             <div class="sm-textbox">
 
                 <p>There is not a universal tree canopy goal that applies to all cities. Communities should instead
@@ -546,18 +566,25 @@
                 <div id="swipe_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
                 </div>
 
-                <div class="right-content">
-                    <button id="swipe_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('swipe_map_overlay','swipe_button');makeSwiper('map','swipeDiv2')">Click
-                        Here To Interact With Map</button>
 
-                    <button id="swipe_legendbutton" class="toggleButton legend-right legendButton"
-                        onclick="toggleLegend('swipe_legend','swipe_legendbutton');">View The Legend</button>
-
-                    <div id="swipe_legend" class="legend legend-right"></div>
+                <div id="swipe_map_overlay" class="general-map content-section sticky overlay" style="z-index: 950">
+                    <div class="right-content" style="z-index:950">
+                        <button id="swipe_button" class="toggleButton legend-right"
+                            onclick="toggleOverlay('swipe_map_overlay','swipe_button');makeSwiper('map','swipeDiv2')">Click
+                            Here To Interact With Map</button>
+    
+                        <button id="swipe_legendbutton" class="toggleButton legend-right legendButton"
+                            onclick="toggleLegend('swipe_legend','swipe_legendbutton');">View The Legend</button>
+    
+                        <div id="swipe_legend" class="legend legend-right"></div>
+                    </div>
+    
+                
                 </div>
 
-                <div class="sm-textbox">
+
+
+                <div class="sm-textbox" style="z-index: 955">
 
                     <p>With Bloomington’s prioritized planting plan, the city’s UTC and beneficial reach can be
                         expanded by planting and managing trees with a purpose to maximize benefits so that all

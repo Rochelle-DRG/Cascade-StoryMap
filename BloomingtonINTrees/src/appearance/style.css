@@ -786,6 +786,7 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   right: 0px;
   /*This is the original when it would stick for a bit 
         then scroll before the paragraph blocks*/
+  background-color: #f0f0f0;
 }
 
 #bootstrap-overrides section .legend {
