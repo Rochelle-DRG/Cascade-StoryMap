@@ -240,29 +240,7 @@
             "searchAttr": ""
         },
 
-        "priority_map2": {
-            "swipe": "true",
-            "swipeWidgetID": "priority2",
-            "viewType": "map",
-            "sectionID": "priority2_section",
-            "containerID": "priority2_map",
-            
-            "legendID": "priority2_legend",
-            "basemap": "satellite",
-            "mapCenter": [
-                -86.522406,
-                39.167872
-            ],
-            "zoom": 13,
-            "featureArray": [
-                "Layer1",
-                "Layer9",
-                "Layer11"
-            ],
-            "searchLayer": "Layer9",
-            "searchFld": "",
-            "searchAttr": ""
-        },
+       
 
         "landcover_map": {
             "swipe": "true",

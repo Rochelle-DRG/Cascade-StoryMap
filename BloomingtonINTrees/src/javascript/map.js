@@ -59,6 +59,7 @@ $(document).ready(function () {
         RasterLayer,                    //23
         RasterFunction) {                 //24
 
+        console.log("inside the require in map.js");    
         dojo.require("esri.tasks.query"); //part of 1st attempt setGeoPopups https://developers.arcgis.com/javascript/3/jssamples/query_clickinfowindow.html
 
         var layersURL = "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer";
@@ -112,6 +113,7 @@ $(document).ready(function () {
 
 
         makeTheLegend = function (mapDetailsFromJson, currentMap) {
+            console.log("makeTheLegend for: "+ mapDetailsFromJson.containerID);
             var detailLayer = mapLayers[mapDetailsFromJson.searchLayer].layerID;
             var imageParameters = new ImageParameters();
             imageParameters.layerIds = detailLayer;
@@ -133,6 +135,7 @@ $(document).ready(function () {
 
         // mapDetails is the list of individula map details from all of the Slides
         $.each(mapDetails, function (k, slideMap) {
+            console.log(slideMap.containerID);
             var currentMap = new Map(slideMap.containerID, {
                 basemap: slideMap.basemap,
                 center: slideMap.mapCenter,
@@ -167,9 +170,10 @@ $(document).ready(function () {
 
             //loop through slideMap.featureArray for each map (featureArray is a list of the layer #'s for the slide)
             $.each(slideMap.featureArray, function (j, layerNumber) {
+                
                 var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
                 var newLayer;
-
+                console.log("layerNumber: "+layerNumber);
 
                 newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
                 newLayer.setVisibleLayers([slide.layerID]);
@@ -181,15 +185,14 @@ $(document).ready(function () {
 
                 if (slideMap.swipe === "true") {
                     if (slide.swipe === "true") {
-                        console.log("it should be swiping");
                         var layerIds = currentMap.layerIds;
                         var swipeWidget = new LayerSwipe({
                             type: "vertical",
                             map: currentMap,
                             layers: [newLayer]
                         }, slideMap.swipeWidgetID);
-                        console.log(slideMap.swipeWidgetID);
-                        console.log(newLayer);
+                        // console.log(slideMap.swipeWidgetID);
+                        // console.log(newLayer);
 
                         swipeWidget.startup();
                     }   //end if slide swipe
@@ -202,12 +205,16 @@ $(document).ready(function () {
             currentMap.on("click", function (event) {
                 setPopups(event, slideMap, currentMap);
             }); //end on-click
+            console.log("at the end of for-each-map");
         }); //end .each
+        console.log("after for-each-map");
 
 
     }); //end require/function
+    console.log("end of doc.ready");
 
 }); //end doc.ready
+console.log("after doc.ready");
 
 
 // var tryThisFunction = function(map){
