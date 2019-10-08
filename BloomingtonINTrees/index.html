@@ -159,8 +159,9 @@
             <div id="landcover_overlay" class="general-map content-section sticky overlay " style="z-index: 31">
             </div>
 
-            <div id="landcover_overlay2" class="general-map content-section sticky overlay click-through" style="z-index: 32">
-                <div class="right-content" >
+            <div id="landcover_overlay2" class="general-map content-section sticky overlay click-through"
+                style="z-index: 32">
+                <div class="right-content">
                     <button id="landcover_button" class="toggleButton legend-right"
                         onclick="toggleOverlay('landcover_overlay','landcover_button');">Click Here To Interact With
                         Map</button>
@@ -170,7 +171,8 @@
                     <div id="landcover_legend" class="legend legend-right"></div>
                 </div>
 
-            </div><!--end overlay2-->
+            </div>
+            <!--end overlay2-->
 
 
 
@@ -248,8 +250,9 @@
             <div id="fragmentation_map_overlay" class="general-map content-section sticky overlay" style="z-index: 2">
             </div>
 
-            <div id="fragmentation_map_overlay2" class="general-map content-section sticky overlay click-through" style="z-index: 2">
-            
+            <div id="fragmentation_map_overlay2" class="general-map content-section sticky overlay click-through"
+                style="z-index: 2">
+
                 <div class="right-content">
                     <button id="fragmentation_button" class="toggleButton legend-right"
                         onclick="toggleOverlay('fragmentation_map_overlay','fragmentation_button')">Click Here To
@@ -258,13 +261,13 @@
                     <button id="fragmentation_legendbutton" class="toggleButton legend-right legendButton"
                         onclick="toggleLegend('fragmentation_legend','fragmentation_legendbutton')">View The
                         Legend</button>
-    
+
                     <div id="fragmentation_legend" class="legend legend-right"></div>
                 </div>
             </div>
 
 
-            
+
 
             <div class="sm-textbox">
 
@@ -309,22 +312,23 @@
                 <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="raster_bmtoggle"> </div>
 
             </div>
-            <div id="raster_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">   
+            <div id="raster_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
             </div>
 
-            <div id="raster_map_overlay2" class="general-map content-section sticky overlay click-through" style="z-index: 31">
-            
+            <div id="raster_map_overlay2" class="general-map content-section sticky overlay click-through"
+                style="z-index: 31">
+
                 <div class="right-content">
                     <button id="raster_button" class="toggleButton legend-right"
                         onclick="toggleOverlay('raster_map_overlay','raster_button');">Click Here To Interact With
                         Map</button>
-    
+
                     <button id="raster_legendbutton" class="toggleButton legend-right legendButton"
                         onclick="toggleLegend('raster_legend','raster_legendbutton');">View The Legend</button>
-    
+
                     <div id="raster_legend" class="legend legend-right"></div>
                 </div>
-    
+
             </div>
 
 
@@ -400,21 +404,21 @@
 
 
             <div id="geo_overlay2" class="general-map content-section sticky overlay click-through" style="z-index: 31">
-           
+
                 <div class="right-content">
                     <button id="geo_button" class="toggleButton legend-right"
                         onclick="toggleOverlay('geo_overlay','geo_button');">Click Here To Interact With
                         Map</button>
                     <button id="geo_legendbutton" class="toggleButton legend-right legendButton"
                         onclick="toggleLegend('geo_legend','geo_legendbutton');">View The Legend</button>
-    
+
                     <div id="geo_legend" class="legend legend-right"></div>
                 </div>
-    
-           
+
+
             </div>
 
-            
+
 
 
             <div class="sm-textbox">
@@ -553,56 +557,59 @@
             <!--end sm-textbox div-->
             <!--insert map here-->
 
-            <!--PRIORITY PLANTING / NEEDS PLANTED / VACANT SITES-->
-            <section id="swipetest_section">
-                <!-- <div class="section-title">
-                        <h1 class="subsection">This should not be here</h1>
-                    </div> -->
-                <div id="map" class="general-map content-section sticky" style="z-index: 33">
-                    <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="swipe2_bmtoggle">
-                    </div>
-
-                    <div class='sliderHolder'>
-                        <div id="swipeDiv2"></div>
-                    </div>
-                </div>
-                <div id="swipe_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
-                </div>
-
-
-                <div id="swipe_map_overlay2" class="general-map content-section sticky overlay click-through" style="z-index: 950">
-                    <div class="right-content" style="z-index:950">
-                        <button id="swipe_button" class="toggleButton legend-right"
-                            onclick="toggleOverlay('swipe_map_overlay','swipe_button');makeSwiper('map','swipeDiv2')">Click
-                            Here To Interact With Map</button>
-    
-                        <button id="swipe_legendbutton" class="toggleButton legend-right legendButton"
-                            onclick="toggleLegend('swipe_legend','swipe_legendbutton');">View The Legend</button>
-    
-                        <div id="swipe_legend" class="legend legend-right"></div>
-                    </div>
-    
-                
-                </div>
-
-
-
-                <div class="sm-textbox" style="z-index: 955">
-
-                    <p>With Bloomington’s prioritized planting plan, the city’s UTC and beneficial reach can be
-                        expanded by planting and managing trees with a purpose to maximize benefits so that all
-                        citizens can benefit equally. Even small increases in UTC can make a big difference in the
-                        amount of benefits trees can provide to Bloomington.</p>
-
-                    <p>Are there potential planting areas in your neighborhood? Explore this planting site map to
-                        find out.</p>
-                </div>
-            </section>
-            <!--end priority map-->
 
 
         </section>
         <!--end Management-->
+
+        <!--PRIORITY PLANTING / NEEDS PLANTED / VACANT SITES-->
+        <section id="swipetest_section">
+            <div class="section-title">
+                    <h1 class="subsection" >Planting Assessment</h1>
+                </div>
+            <div id="map" class="general-map content-section sticky" style="z-index: 33">
+                <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="swipe2_bmtoggle">
+                </div>
+
+                <div class='sliderHolder'>
+                    <div id="swipeDiv2"></div>
+                </div>
+            </div>
+            <div id="swipe_map_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
+            </div>
+
+
+            <div id="swipe_map_overlay2" class="general-map content-section sticky overlay click-through"
+                style="z-index: 34">
+                <div class="right-content" style="z-index:34">
+                    <button id="swipe_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('swipe_map_overlay','swipe_button');makeSwiper('map','swipeDiv2')">Click
+                        Here To Interact With Map</button>
+
+                    <button id="swipe_legendbutton" class="toggleButton legend-right legendButton"
+                        onclick="toggleLegend('swipe_legend','swipe_legendbutton');">View The Legend</button>
+
+                    <div id="swipe_legend" class="legend legend-right"></div>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="sm-textbox" >
+
+                <p>With Bloomington’s prioritized planting plan, the city’s UTC and beneficial reach can be
+                    expanded by planting and managing trees with a purpose to maximize benefits so that all
+                    citizens can benefit equally. Even small increases in UTC can make a big difference in the
+                    amount of benefits trees can provide to Bloomington.</p>
+
+                <p>Are there potential planting areas in your neighborhood? Explore this planting site map to
+                    find out.</p>
+            </div>
+        </section>
+        <!--end priority map-->
+
 
         <!--SUSTAINABLE-->
         <section class="photo-background" id="sustain_section">
@@ -617,8 +624,7 @@
                 in Bloomington, Indiana</div>
 
 
-            <div id="sustain_overlay" class="general-map content-section sticky overlay"
-                style="z-index: 31">
+            <div id="sustain_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
             </div>
 
 
@@ -731,8 +737,7 @@
             </div>
 
 
-            <div id="acknowledge_overlay" class="general-map content-section sticky overlay"
-                style="z-index: 31">
+            <div id="acknowledge_overlay" class="general-map content-section sticky overlay" style="z-index: 31">
             </div>
 
 
@@ -765,7 +770,7 @@
                     Options</a></p>
             <p>If you are interested in selecting your own fonts, look here: <a href='https://fonts.google.com/'>Google
                     Fonts</a></p>
-            
+
         </div>
 
 
