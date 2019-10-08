@@ -594,10 +594,11 @@ section {
 
     .click-through {
         pointer-events: none;
-        // height: 100vh;
+        height: 100vh;
+        // z-index: 30;
     }
-
     .sm-textbox {
+        margin-top: -50vh;
         pointer-events:none;
         width: 90%;
         // background-color: magenta;
@@ -628,6 +629,10 @@ section {
             padding-right: 65%;
         }
     }
+    .over-map{
+        margin-top: -150vh;
+    }
+
     .sm-textbox p, ul {
         background-color: $sm-textbox-bkgnd-color;  
         padding: .8em;

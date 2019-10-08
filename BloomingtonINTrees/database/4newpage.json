@@ -36,7 +36,7 @@
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "feature",
-            "opacity": ".4",
+            "opacity": ".6",
             "layername": "Fragmentation",
             "legend": true,
             "popup": true,

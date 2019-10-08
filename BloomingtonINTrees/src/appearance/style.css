@@ -707,9 +707,11 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 
 #bootstrap-overrides section .click-through {
   pointer-events: none;
+  height: 100vh;
 }
 
 #bootstrap-overrides section .sm-textbox {
+  margin-top: -50vh;
   pointer-events: none;
   width: 90%;
   z-index: 31;
@@ -749,6 +751,10 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
     padding-left: 8%;
     padding-right: 65%;
   }
+}
+
+#bootstrap-overrides section .over-map {
+  margin-top: -150vh;
 }
 
 #bootstrap-overrides section .sm-textbox p, #bootstrap-overrides section ul {
