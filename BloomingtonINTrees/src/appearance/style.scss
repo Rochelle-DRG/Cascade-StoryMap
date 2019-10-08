@@ -393,7 +393,7 @@ section {
         // border: .2em solid black;
     }
     .overlay {
-        height: 100vh;
+        height: 50vh;
         width: 100%;
         top: 0;
         left: 0;
@@ -401,9 +401,6 @@ section {
         bottom: 0;
         background-color: rgba(0,0,0,0.0);
         z-index: 2;
-    }
-    .img-overlay {
-        height: 50vh;
     }
     // .fullpage-img-container{
     //     // width: 100%;
