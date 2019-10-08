@@ -942,11 +942,14 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   color: white;
   text-shadow: 0.05em 0.05em 0.1em black;
   margin-top: 1px;
+  text-align: right;
 }
 
 #bootstrap-overrides #footer-img {
-  height: 15em;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  height: 8em;
+  margin-top: 5px;
+  margin-right: 5px;
+  position: relative;
+  bottom: 2px;
 }
 /*# sourceMappingURL=style.css.map */
