@@ -764,6 +764,7 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   border: 1px solid black;
   border-radius: 0.5em;
   margin-top: 13em;
+  font-size: 1em;
 }
 
 #bootstrap-overrides section .sm-textbox img {
