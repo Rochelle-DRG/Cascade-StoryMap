@@ -469,6 +469,7 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 }
 
 #bootstrap-overrides section .overlay {
+  pointer-events: none;
   height: 50vh;
   width: 100%;
   top: 0;
@@ -709,6 +710,10 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
 #bootstrap-overrides section .click-through {
   pointer-events: none;
   height: 100vh;
+}
+
+#bootstrap-overrides section .unclickable {
+  pointer-events: none;
 }
 
 #bootstrap-overrides section .sm-textbox {

@@ -146,7 +146,7 @@
                 <h1 class="subsection">Urban Tree Canopy</h1>
             </div>
 
-            <div id="landcover_map" class="general-map content-section sticky" style="z-index: 1">
+            <div id="landcover_map" class="general-map content-section sticky unclickable" style="z-index: 1">
 
                 <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="landcover_bmtoggle"> </div>
 
@@ -163,7 +163,7 @@
                 style="z-index: 32">
                 <div class="right-content">
                     <button id="landcover_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('landcover_overlay','landcover_button');">Click Here To Interact With
+                        onclick="toggleOverlay('landcover_map','landcover_button');">Click Here To Interact With
                         Map</button>
                     <button id="landcover_legendbutton" class="toggleButton legend-right legendButton"
                         onclick="toggleLegend('landcover_legend','landcover_legendbutton');">View The Legend</button>
@@ -241,7 +241,7 @@
             <div class="section-title">
                 <h1 class="subsection">Forest Fragmentation</h1>
             </div>
-            <div id="fragmentation_map" class="general-map content-section sticky" style="z-index: 1">
+            <div id="fragmentation_map" class="general-map content-section sticky unclickable" style="z-index: 1">
                 <div class="basemap-switch satellite" title="Toggle Streetview/Satellite View" id="frag_bmtoggle">
                 </div>
 
@@ -255,7 +255,7 @@
 
                 <div class="right-content">
                     <button id="fragmentation_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('fragmentation_map_overlay','fragmentation_button')">Click Here To
+                        onclick="toggleOverlay('fragmentation_map','fragmentation_button')">Click Here To
                         Interact
                         With Map</button>
                     <button id="fragmentation_legendbutton" class="toggleButton legend-right legendButton"
@@ -308,7 +308,7 @@
             <div class="section-title">
                 <h1 class="subsection">Forest Health</h1>
             </div>
-            <div id="rastermap" class="general-map content-section sticky" style="z-index: 1">
+            <div id="rastermap" class="general-map content-section sticky unclickable" style="z-index: 1">
                 <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="raster_bmtoggle"> </div>
 
             </div>
@@ -320,7 +320,7 @@
 
                 <div class="right-content">
                     <button id="raster_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('raster_map_overlay','raster_button');">Click Here To Interact With
+                        onclick="toggleOverlay('rastermap','raster_button');">Click Here To Interact With
                         Map</button>
 
                     <button id="raster_legendbutton" class="toggleButton legend-right legendButton"
@@ -394,7 +394,7 @@
                 <h1 class="subsection">Inventory of Trees</h1>
             </div>
 
-            <div id="geo_map" class="general-map content-section sticky" style="z-index: 1">
+            <div id="geo_map" class="general-map content-section sticky unclickable" style="z-index: 1">
                 <div class="basemap-switch satellite" title="Toggle Streetview/Satellite View" id="geo_bmtoggle">
                 </div>
 
@@ -407,7 +407,7 @@
 
                 <div class="right-content">
                     <button id="geo_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('geo_overlay','geo_button');">Click Here To Interact With
+                        onclick="toggleOverlay('geo_map','geo_button');">Click Here To Interact With
                         Map</button>
                     <button id="geo_legendbutton" class="toggleButton legend-right legendButton"
                         onclick="toggleLegend('geo_legend','geo_legendbutton');">View The Legend</button>
@@ -567,7 +567,7 @@
             <div class="section-title">
                     <h1 class="subsection" >Planting Assessment</h1>
                 </div>
-            <div id="map" class="general-map content-section sticky" style="z-index: 33">
+            <div id="map" class="general-map content-section sticky unclickable" style="z-index: 33">
                 <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="swipe2_bmtoggle">
                 </div>
 
@@ -583,7 +583,7 @@
                 style="z-index: 34">
                 <div class="right-content" style="z-index:34">
                     <button id="swipe_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('swipe_map_overlay','swipe_button');makeSwiper('map','swipeDiv2')">Click
+                        onclick="toggleOverlay('map','swipe_button');makeSwiper('map','swipeDiv2')">Click
                         Here To Interact With Map</button>
 
                     <button id="swipe_legendbutton" class="toggleButton legend-right legendButton"
@@ -780,10 +780,10 @@
             <div class="section-title">
                 <h1>Council Districts </h1>
             </div>
-            <div id="councilDistricts_map" class="general-map content-section sticky" style="z-index: 1"></div>
+            <div id="councilDistricts_map" class="general-map content-section sticky unclickable" style="z-index: 1"></div>
             <div class="right-content">
                 <button id="councilDistricts_button" class="toggleButton legend-right"
-                    onclick="toggleOverlay('councilDistricts_map_overlay','councilDistricts_button')">Click Here To
+                    onclick="toggleOverlay('councilDistricts_map','councilDistricts_button')">Click Here To
                     Interact With
                     Map</button>
                 <button id="councilDistricts_legendbutton" class="toggleButton legend-right"

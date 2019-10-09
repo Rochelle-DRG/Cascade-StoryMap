@@ -77,14 +77,14 @@ function makeSwiper(parentDivId, swipeDivId){
     document.getElementById(parentDivId).appendChild(swipeDiv);
 }
 
-// For map overlay and button toggle
-function toggleOverlay(overlayId, buttonId, swipeId) {
-    var x = document.getElementById(overlayId);
+// For map clickableness and button toggle (used to use the overlay)
+function toggleOverlay(mapId, buttonId, swipeId) {
+    var x = document.getElementById(mapId);
     var y = document.getElementById(buttonId);
     if (y.innerText === "Click Here To Interact With Map"){
-        console.log(x.style.visibility);
+        // console.log(x.style.visibility);
 
-        x.style.visibility = "hidden";
+        x.classList.toggle("unclickable");
         y.innerText= "Stop Exploring";
     }
     else {
