@@ -16,7 +16,6 @@ $.getJSON("database/4newpage.json", function (data) {
     // forming a dict of layers to populate the map with in the next step
     $.each(data.Layers, function (k, layer) {
         mapLayers[k] = layer;
-        console.log(layer.title + " added to mapLayers")
     });
 
     // Loop each map
@@ -28,7 +27,6 @@ $.getJSON("database/4newpage.json", function (data) {
         mapPoints[k] = jsonMap;
 
         mapDetails.push(jsonMap);
-        console.log(jsonMap.containerID + "was added to mapDetails");
     });//end .each
 
 }).always(function () {
