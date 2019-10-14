@@ -5,15 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d dist"
+    "build": "babel src -d dist",
+    "postcss": "postcss --config postcss.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "postcss": "^7.0.18"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.7.0"
+    "autoprefixer": "^9.6.5",
+    "babel-preset-env": "^1.7.0",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^6.1.3"
   }
 }
