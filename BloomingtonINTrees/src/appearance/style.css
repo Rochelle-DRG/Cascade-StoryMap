@@ -685,6 +685,11 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   }
 }
 
+#bootstrap-overrides section .layer-switch {
+  width: 50%;
+  float: left;
+}
+
 #bootstrap-overrides section .section-title {
   z-index: 35;
   position: relative;
