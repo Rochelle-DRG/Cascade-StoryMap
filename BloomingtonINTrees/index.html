@@ -247,42 +247,40 @@
 
 
 
-        <!--LandCover/Historical-->
-        <section id="utc">
+        <!--Metrics-->
+        <section id="metrics">
             <div class="section-title">
-                <h1 class="subsection">Urban Tree Canopy</h1>
+                <h1 class="subsection">Tree Canopy Metrics</h1>
             </div>
 
-            <div id="landcover_map" class="general-map content-section sticky unclickable" style="z-index: 1">
+            <div id="metrics_map" class="general-map content-section sticky unclickable" style="z-index: 1">
 
-                <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="landcover_bmtoggle"> </div>
+                <div class="basemap-switch" title="Toggle Streetview/Satellite View" id="metrics_bmtoggle"> </div>
 
-                <!-- <img class="zoom-tour" src="/BloomingtonINTrees/src/appearance/img/tour/500pxArrow_zoom.png" alt="Click on the + and - icons to zoom in and out." > -->
-
-                <div class='sliderHolder' id='landcover_slideHolder'>
-                    <div id="historicalswipeDiv2"></div>
+                <div class='sliderHolder' id='metrics_slideHolder'>
+                    <div id="metricsswipeDiv2"></div>
                 </div>
             </div>
-            <div id="landcover_overlay" class="general-map content-section sticky overlay " style="z-index: 31">
+            <div id="metrics_overlay" class="general-map content-section sticky overlay " style="z-index: 31">
             </div>
 
-            <div id="landcover_overlay2" class="general-map content-section sticky overlay click-through"
+            <div id="metrics_overlay2" class="general-map content-section sticky overlay click-through"
                 style="z-index: 32">
                 <div class="right-content">
-                    <button id="landcover_button" class="toggleButton legend-right"
-                        onclick="toggleOverlay('landcover_map','landcover_button');">Click Here To Interact With
+                    <button id="metrics_button" class="toggleButton legend-right"
+                        onclick="toggleOverlay('metrics_map','metrics_button');">Click Here To Interact With
                         Map</button>
-                    <div id='layer-switch-holder'>
+                    <div id='metricslayer-switch-holder'>
                         <button class="toggleButton legend-right layer-switch" value="Layer4">Neighborhoods</button>
                         <button class="toggleButton legend-right layer-switch" value="Layer5">Parks</button>
                         <div style='clear:both'></div>
                         <button class="toggleButton legend-right layer-switch" value="Layer6">Watershed</button>
                         <button class="toggleButton legend-right layer-switch" value="Layer3">Districts</button>
                     </div>
-                    <button id="landcover_legendbutton" class="toggleButton legend-right legendButton"
+                    <button id="metrics_legendbutton" class="toggleButton legend-right legendButton"
                         onclick="toggleLegend('landcover_legend','landcover_legendbutton');">View The Legend</button>
 
-                    <div id="landcover_legend" class="legend legend-right"></div>
+                    <div id="metrics_legend" class="legend legend-right"></div>
                 </div>
 
             </div>
@@ -348,7 +346,7 @@
                 </ul>
             </div>
         </section>
-        <!--end Land Cover / UTC-->
+        <!--end Metrics-->
 
 
 
