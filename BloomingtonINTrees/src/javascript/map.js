@@ -176,10 +176,10 @@ $(document).ready(function () {
                 newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
                 newLayer.setVisibleLayers([slide.layerID]);
                 newLayer.setOpacity(slide.opacity);
+                newLayer.DRGid = layerNumber; //I have added this property to the layer so that we can easily search and compare layers later
                 newLayer._div = currentMap.root;
                 currentMap.addLayers([newLayer]);
-
-
+                // console.log(newLayer.id + " : "+ newLayer.DRGid);
 
                 if (slideMap.swipe === "true") {
                     if (slide.swipe === "true") {
@@ -204,32 +204,18 @@ $(document).ready(function () {
                 setPopups(event, slideMap, currentMap);
             }); //end on-click
 
+            /** To use the layer toggle, the buttons need moved to that maps's html div
+             *  AND in the json the map must have a property of "toggleLayers": "true"**/
             //Layer Toggle
             turnOnLayer = function (layerNumber, map, button) {
-                console.log("turning on " + layerNumber);
                 var newLayer;
-                // console.log("layerNumber: "+layerNumber);
-                // console.log(slide); //undefined as it should be
-
                 var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
-                console.log(slide);
                 newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
                 newLayer.setVisibleLayers([slide.layerID]);
-                console.log(slide.layerID);
                 newLayer.setOpacity(slide.opacity);
+                newLayer.DRGid = layerNumber;
                 newLayer._div = map.root;
-                console.log(newLayer);
-
-                // console.log(currentMap); //is returning the watershed map instead of the one I am expecting
-                // console.log(currentMap); //after changing currentMap from var to let, STILL have watershed map 
-
-                // console.log(currentMap.layers); //undefined, can't access layers this way
-                // console.log(currentMap.getScale()); //72223.819286
-                // console.log(currentMap.getLayersVisibleAtScale(72223.819286)); //3 layers
-
                 map.addLayers([newLayer]);
-                // console.log(currentMap.getLayersVisibleAtScale(72223.819286)); //4 items
-                //I can't see the last layer?
                 button.classList.add("button-clicked");
             }
 
@@ -239,28 +225,41 @@ $(document).ready(function () {
                 var fourButtons = document.getElementsByClassName("layer-switch");
                 //loop through each button with that class
                 for (var i = 0; i < 4; i++) {
-                    // console.log(i);
                     let button = fourButtons[i];
-                    // console.log(button);
-                    // console.log(button.getAttribute("value"));
                     button.addEventListener("click", function () {
-                        // console.log("turning on a layer");
-                        //current map, add layer (value)
-                        // console.log(button.getAttribute("value"));
-                        // console.log(currentMap); //returns the correct map
-                        turnOnLayer(button.getAttribute("value"), currentMap, button);
-                    
-                    });
+                        //##was the layer already turned on?
+                        let wasOn = false;
+                        if (button.classList.contains("button-clicked") === true) {
+                            wasOn = true;
+                        };
+
+                        //##see if any of the button layers are turned on and turn it off
+                        let currentLayers = currentMap.getLayersVisibleAtScale(72223.819286);
+                        for (var j = 0; j < currentLayers.length; j++) {
+                            let oneOfCurrentLayers = currentLayers[j];
+                            if (oneOfCurrentLayers.DRGid === "Layer4" ||
+                                oneOfCurrentLayers.DRGid === "Layer5" ||
+                                oneOfCurrentLayers.DRGid === "Layer6" ||
+                                oneOfCurrentLayers.DRGid === "Layer3") {
+                                // console.log("must remove " + oneOfCurrentLayers.DRGid);
+                                currentMap.removeLayer(oneOfCurrentLayers);
+                            } //end if this layer already is on
+                        };//end for each layer on the map
+
+                        //##unselect all of the buttons
+                        for (var k = 0; k < 4; k++) {
+                            let b = fourButtons[k];
+                            b.classList.remove("button-clicked");
+                        };
+
+                        //##if the button clicked was not already clicked
+                        if (wasOn === false) {
+                            turnOnLayer(button.getAttribute("value"), currentMap, button);
+                        };
+                    }); //end onclick
                 }//end for
+            }//end if this map has ToggleLayers
 
-
-            }//end if ToggleLayers
-
-            //get the value of the button
-            //set a click event that calls Turn On Layer
-            //change button class to indicate turned on
-            //change click event to call Turn Off Layer
-            //current map, remove layer (value)
             //change button class to indicate turned off
             //change click event to Turn On Layer
 
