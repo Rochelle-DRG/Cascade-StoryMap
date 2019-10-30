@@ -690,6 +690,10 @@ https://www.youtube.com/watch?v=UaYXrbNDqXM */
   float: left;
 }
 
+#bootstrap-overrides section .button-clicked {
+  background-color: #006d00;
+}
+
 #bootstrap-overrides section .section-title {
   z-index: 35;
   position: relative;

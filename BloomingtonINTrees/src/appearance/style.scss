@@ -578,6 +578,11 @@ section {
             float: left;
         }
 
+    .button-clicked {
+        background-color: #006d00;
+        
+    }    
+
     .section-title{ /// must be fixed, opacity 0, change when map stick
         z-index: 35;
         position: relative;
