@@ -243,6 +243,7 @@
        
 
         "landcover_map": {
+            "toggleLayers": "true",
             "swipe": "true",
             "swipeWidgetID": "historicalswipeDiv2",
             "viewType": "map",

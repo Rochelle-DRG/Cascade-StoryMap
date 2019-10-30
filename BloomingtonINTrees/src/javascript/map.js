@@ -135,7 +135,7 @@ $(document).ready(function () {
         // mapDetails is the list of individula map details from all of the Slides
         $.each(mapDetails, function (k, slideMap) {
             // console.log(slideMap.containerID);
-            var currentMap = new Map(slideMap.containerID, {
+            let currentMap = new Map(slideMap.containerID, {
                 basemap: slideMap.basemap,
                 center: slideMap.mapCenter,
                 zoom: slideMap.zoom,
@@ -151,25 +151,24 @@ $(document).ready(function () {
             var currentToggleButton = document.getElementById(basemapToggleID);
 
             //the "if" statement is only needed until I have added a togglebutton to the html for each map
-            if (typeof basemapToggleID !== "undefined") { 
-                currentToggleButton.addEventListener('click', function(){
+            if (typeof basemapToggleID !== "undefined") {
+                currentToggleButton.addEventListener('click', function () {
                     console.log("click accepted!");
                     var currentBasemap = currentMap.getBasemap();
                     currentToggleButton.classList.toggle("satellite");
-                    if (currentBasemap === "satellite"){
+                    if (currentBasemap === "satellite") {
                         currentMap.setBasemap("osm");
                     }//end if satellite
-                    if (currentBasemap === "osm"){
+                    if (currentBasemap === "osm") {
                         currentMap.setBasemap("satellite");
                     }//end if osm
                 }); //end eventListener onclick
             }; //end if basemapToggleID not undefined
 
 
-
             //loop through slideMap.featureArray for each map (featureArray is a list of the layer #'s for the slide)
             $.each(slideMap.featureArray, function (j, layerNumber) {
-                
+
                 var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
                 var newLayer;
                 // console.log("layerNumber: "+layerNumber);
@@ -204,7 +203,69 @@ $(document).ready(function () {
             currentMap.on("click", function (event) {
                 setPopups(event, slideMap, currentMap);
             }); //end on-click
+
+            //Layer Toggle
+            turnOnLayer = function (layerNumber, map, button) {
+                console.log("turning on " + layerNumber);
+                var newLayer;
+                // console.log("layerNumber: "+layerNumber);
+                // console.log(slide); //undefined as it should be
+
+                var slide = mapLayers[layerNumber]; //this individual layer of the layers that will be on this map
+                console.log(slide);
+                newLayer = new ArcGISDynamicMapServiceLayer("https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer");
+                newLayer.setVisibleLayers([slide.layerID]);
+                console.log(slide.layerID);
+                newLayer.setOpacity(slide.opacity);
+                newLayer._div = map.root;
+                console.log(newLayer);
+
+                // console.log(currentMap); //is returning the watershed map instead of the one I am expecting
+                // console.log(currentMap); //after changing currentMap from var to let, STILL have watershed map 
+
+                // console.log(currentMap.layers); //undefined, can't access layers this way
+                // console.log(currentMap.getScale()); //72223.819286
+                // console.log(currentMap.getLayersVisibleAtScale(72223.819286)); //3 layers
+
+                map.addLayers([newLayer]);
+                // console.log(currentMap.getLayersVisibleAtScale(72223.819286)); //4 items
+                //I can't see the last layer?
+                button.classList.add("button-clicked");
+            }
+
+            //if map has layerToggle (only 1 does right now, so I can search the whole document, else I would have to only search this map)
+            if (slideMap.toggleLayers === "true") {
+                //get all the buttons (there are only 4 in the whole doc so this works)
+                var fourButtons = document.getElementsByClassName("layer-switch");
+                //loop through each button with that class
+                for (var i = 0; i < 4; i++) {
+                    // console.log(i);
+                    let button = fourButtons[i];
+                    // console.log(button);
+                    // console.log(button.getAttribute("value"));
+                    button.addEventListener("click", function () {
+                        // console.log("turning on a layer");
+                        //current map, add layer (value)
+                        // console.log(button.getAttribute("value"));
+                        // console.log(currentMap); //returns the correct map
+                        turnOnLayer(button.getAttribute("value"), currentMap, button);
+                    
+                    });
+                }//end for
+
+
+            }//end if ToggleLayers
+
+            //get the value of the button
+            //set a click event that calls Turn On Layer
+            //change button class to indicate turned on
+            //change click event to call Turn Off Layer
+            //current map, remove layer (value)
+            //change button class to indicate turned off
+            //change click event to Turn On Layer
+
         }); //end .each
+
 
 
     }); //end require/function
