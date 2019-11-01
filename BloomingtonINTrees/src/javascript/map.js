@@ -71,63 +71,72 @@ $(document).ready(function () {
 
 
         setPopups = function (event, slideMap, currentMap) {
-            var popupLayer = mapLayers[slideMap.searchLayer];
-            identifyTask = new IdentifyTask(popupLayer.infoUrl);
-            identifyParams = new IdentifyParameters();
-            identifyParams.tolerance = 10; //i think the bigger the number the bigger the area around your click it searches.
-            identifyParams.returnGeometry = true;
-            identifyParams.layerIds = popupLayer.layerID; //this can be multiple layers, but we're just using one right now
-            identifyParams.layerOption = IdentifyParameters.LAYER_OPTION_VISIBLE;
-            identifyParams.width = currentMap.width;
-            identifyParams.height = currentMap.height;
-            identifyParams.geometry = event.mapPoint;
-            identifyParams.mapExtent = currentMap.extent;
-            var deferred = identifyTask
-                .execute(identifyParams)
-                .addCallback(function (response) {
+            if (slideMap.searchLayer.length > 0) {
+                let popupLayer = mapLayers[slideMap.searchLayer];
+                console.log(popupLayer);
+                identifyTask = new IdentifyTask(popupLayer.infoUrl);
+                identifyParams = new IdentifyParameters();
+                identifyParams.tolerance = 10; //i think the bigger the number the bigger the area around your click it searches.
+                identifyParams.returnGeometry = true;
+                identifyParams.layerIds = popupLayer.layerID; //this can be multiple layers, but we're just using one right now
+                identifyParams.layerOption = IdentifyParameters.LAYER_OPTION_VISIBLE;
+                identifyParams.width = currentMap.width;
+                identifyParams.height = currentMap.height;
+                identifyParams.geometry = event.mapPoint;
+                identifyParams.mapExtent = currentMap.extent;
+                var deferred = identifyTask
+                    .execute(identifyParams)
+                    .addCallback(function (response) {
 
-                    if (response.length > 0) {//if there should be a popup
-                        return arrayUtils.map(response, function (result) {
-                            var feature = result.feature;
-                            var layerName = result.layerName;
-                            feature.attributes.layerName = layerName;
-                            var popupTemplate = new InfoTemplate(popupLayer.title, popupLayer.popupContent);
-                            feature.setInfoTemplate(popupTemplate);
-                            currentMap.infoWindow.show(event.mapPoint);
-                            return feature;
+                        if (response.length > 0) {//if there should be a popup
+                            return arrayUtils.map(response, function (result) {
+                                var feature = result.feature;
+                                var layerName = result.layerName;
+                                feature.attributes.layerName = layerName;
+                                var popupTemplate = new InfoTemplate(popupLayer.title, popupLayer.popupContent);
+                                feature.setInfoTemplate(popupTemplate);
+                                currentMap.infoWindow.show(event.mapPoint);
+                                return feature;
 
-                        }); //end return arrayUtils
-                    } //end if response.length
-                    else {
-                        if (map.infoWindow) {
-                            console.log("execute(identifyParams) returned nothing");
-                            setGeoPopups(event, slideMap, currentMap);
-                            // map.infoWindow.hide(); 
-                        }
-                    }; //end else nothing returned
-                }); //end .addCalback
-            currentMap.infoWindow.setFeatures([deferred]);
+                            }); //end return arrayUtils
+                        } //end if response.length
+                        else {
+                            if (map.infoWindow) {
+                                console.log("execute(identifyParams) returned nothing");
+                                setGeoPopups(event, slideMap, currentMap);
+                                // map.infoWindow.hide(); 
+                            }
+                        }; //end else nothing returned
+                    }); //end .addCalback
+                currentMap.infoWindow.setFeatures([deferred]);
+            }
         }; //end setPopups()
 
 
 
         makeTheLegend = function (mapDetailsFromJson, currentMap) {
             // console.log("makeTheLegend for: "+ mapDetailsFromJson.containerID);
-            var detailLayer = mapLayers[mapDetailsFromJson.searchLayer].layerID;
-            var imageParameters = new ImageParameters();
-            imageParameters.layerIds = detailLayer;
-            imageParameters.layerOption = ImageParameters.LAYER_OPTION_SHOW; //defines that you only see the layer(s) listed above
-            imageParameters.transparent = true; //the website says "Whether or not background of dynamic image is transparent."
-            imageParameters.format = "png32" //this makes the opacity set at the service level actually work (untested outside of chrome)
-            //maybe we can just use the featureLayer here
-            dynamicMSL = new ArcGISDynamicMapServiceLayer(layersURL, {
-                "imageParameters": imageParameters
-            });
-            legendDijit = new Legend({
-                map: currentMap,
-                layerInfos: [{ layer: dynamicMSL }]
-                // }, 'esriLegend'); //end legendDijit new
-            }, mapDetailsFromJson.legendID); //end legendDijit new
+            if (mapDetailsFromJson.searchLayer.length > 0) {
+                var detailLayer = mapLayers[mapDetailsFromJson.searchLayer].layerID;
+                console.log(mapDetailsFromJson.searchLayer);
+                var imageParameters = new ImageParameters();
+                imageParameters.layerIds = detailLayer;
+                imageParameters.layerOption = ImageParameters.LAYER_OPTION_SHOW; //defines that you only see the layer(s) listed above
+                imageParameters.transparent = true; //the website says "Whether or not background of dynamic image is transparent."
+                imageParameters.format = "png32" //this makes the opacity set at the service level actually work (untested outside of chrome)
+                //maybe we can just use the featureLayer here
+                dynamicMSL = new ArcGISDynamicMapServiceLayer(layersURL, {
+                    "imageParameters": imageParameters
+                });
+                legendDijit = new Legend({
+                    map: currentMap,
+                    layerInfos: [{ layer: dynamicMSL }]
+                    // }, 'esriLegend'); //end legendDijit new
+                }, mapDetailsFromJson.legendID); //end legendDijit new
+            };
+            if (mapDetailsFromJson.searchLayer.length = 0) {
+                console.log(mapDetailsFromJson.containerID + " does not have a legend");
+            }
         }; //end makeTheLegend
 
 
@@ -217,7 +226,55 @@ $(document).ready(function () {
                 newLayer._div = map.root;
                 map.addLayers([newLayer]);
                 button.classList.add("button-clicked");
+                map.on("click", function (event) {
+                    console.log(layerNumber + " was clicked");
+                    setPopupsForToggleLayers(event, slideMap, layerNumber, map);
+                });
             }
+
+
+            setPopupsForToggleLayers = function (event, slideMap, layerNumber, currentMap) {
+                let popupLayer = mapLayers[layerNumber];
+                //console.log(popupLayer); //success
+                identifyTask = new IdentifyTask(popupLayer.infoUrl);
+                identifyParams = new IdentifyParameters();
+                identifyParams.tolerance = 10;
+                identifyParams.returnGeometry = true;
+                identifyParams.layerIds = popupLayer.layerID; //this can be multiple layers, but we're just using one right now
+                identifyParams.layerOption = IdentifyParameters.LAYER_OPTION_VISIBLE;
+                identifyParams.width = currentMap.width;
+                identifyParams.height = currentMap.height;
+                identifyParams.geometry = event.mapPoint;
+                identifyParams.mapExtent = currentMap.extent;
+                var deferred = identifyTask
+                    .execute(identifyParams)
+                    .addCallback(function (response) {
+
+                        if (response.length > 0) {//if there should be a popup
+                            return arrayUtils.map(response, function (result) {
+                                var feature = result.feature;
+                                var layerName = result.layerName;
+                                feature.attributes.layerName = layerName;
+                                var popupTemplate = new InfoTemplate(popupLayer.title, popupLayer.popupContent);
+                                feature.setInfoTemplate(popupTemplate);
+                                currentMap.infoWindow.show(event.mapPoint);
+                                return feature;
+
+                            }); //end return arrayUtils
+                        } //end if response.length
+                        else {
+                            if (map.infoWindow) {
+                                console.log("execute(identifyParams) returned nothing");
+                                setGeoPopups(event, slideMap, currentMap);
+                                // map.infoWindow.hide(); 
+                            }
+                        }; //end else nothing returned
+                    }); //end .addCalback
+                currentMap.infoWindow.setFeatures([deferred]);
+
+            }
+
+
 
             //if map has layerToggle (only 1 does right now, so I can search the whole document, else I would have to only search this map)
             if (slideMap.toggleLayers === "true") {

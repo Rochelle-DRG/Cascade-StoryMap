@@ -243,7 +243,7 @@
        
 
         "landcover_map": {
-            "toggleLayers": "true",
+            "toggleLayers": "false",
             "swipe": "true",
             "swipeWidgetID": "historicalswipeDiv2",
             "viewType": "map",
@@ -265,6 +265,31 @@
             "searchFld": "",
             "searchAttr": ""
         },
+
+        "metrics_map": {
+            "toggleLayers": "true",
+            "swipe": "true",
+            "swipeWidgetID": "",
+            "viewType": "map",
+            "sectionID": "metrics_section",
+            "containerID": "metrics_map",
+            "basemapToggleID": "metrics_bmtoggle",
+            "legendID": "metrics_legend",
+            "basemap": "satellite",
+            "mapCenter": [
+                -86.522406,
+                39.167872
+            ],
+            "zoom": 13,
+            "featureArray": [
+                "Layer1"
+            ],
+            "searchLayer": "",
+            "searchFld": "",
+            "searchAttr": ""
+        },
+
+
         "rastertest_map": {
             "swipe": "false",
             "swipeWidgetID": "rasterDiv2",
