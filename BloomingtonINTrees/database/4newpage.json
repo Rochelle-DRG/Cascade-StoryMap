@@ -198,16 +198,16 @@
             "layerID": [
                 12
             ],
-            "title": "Historical",
+            "title": "Canopy Percent",
             "url": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer/12",
             "infoUrl": "https://gis.davey.com/arcgis/rest/services/BloomingtonIN/BloomintonIN/MapServer",
 
             "type": "raster",
             "opacity": ".5",
-            "layername": "BLOOM_HistoricTreeCanopy2008",
+            "layername": "Canopy Percent",
             "legend": true,
             "popup": true,
-            "popupContent": "Inventory Date: ${INV_DATE}</br>Maintenance Need: ${MAINTPRIM}</br>Overhead Utility: ${OHUTILITY}</br>Treegrate: ${TREEGRATE}</br>Council: ${COUNCIL}</br>Parkname: ${PARKNAME}",
+            "popupContent": "",
             "order": 13
         }
 
@@ -284,7 +284,7 @@
             "featureArray": [
                 "Layer1"
             ],
-            "searchLayer": "",
+            "searchLayer": "Layer12",
             "searchFld": "",
             "searchAttr": ""
         },

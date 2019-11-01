@@ -118,7 +118,7 @@ $(document).ready(function () {
             // console.log("makeTheLegend for: "+ mapDetailsFromJson.containerID);
             if (mapDetailsFromJson.searchLayer.length > 0) {
                 var detailLayer = mapLayers[mapDetailsFromJson.searchLayer].layerID;
-                console.log(mapDetailsFromJson.searchLayer);
+                console.log(detailLayer);
                 var imageParameters = new ImageParameters();
                 imageParameters.layerIds = detailLayer;
                 imageParameters.layerOption = ImageParameters.LAYER_OPTION_SHOW; //defines that you only see the layer(s) listed above
@@ -134,7 +134,7 @@ $(document).ready(function () {
                     // }, 'esriLegend'); //end legendDijit new
                 }, mapDetailsFromJson.legendID); //end legendDijit new
             };
-            if (mapDetailsFromJson.searchLayer.length = 0) {
+            if (mapDetailsFromJson.searchLayer.length = "toggler") {
                 console.log(mapDetailsFromJson.containerID + " does not have a legend");
             }
         }; //end makeTheLegend
@@ -271,8 +271,7 @@ $(document).ready(function () {
                         }; //end else nothing returned
                     }); //end .addCalback
                 currentMap.infoWindow.setFeatures([deferred]);
-
-            }
+            }; //end setPopupsForToggleLayers
 
 
 
