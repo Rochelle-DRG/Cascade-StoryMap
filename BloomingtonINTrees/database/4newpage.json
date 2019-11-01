@@ -72,7 +72,7 @@
             "layername": "NeighborhoodAssociation",
             "legend": true,
             "popup": true,
-            "popupContent": "Neighborhood: ${Neighborhood}</br>Quadrant: ${Quadrant}</br>Jurisdiction: ${Jurisdiction}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}",
+            "popupContent": "Neighborhood: ${Neighborhood}</br>Quadrant: ${Quadrant}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Current Canopy (2018): ${CANOPY_ACRES:NumberFormat(places:2)}</br>Current Canopy % (2018): ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Historic Canopy (2008): ${CANOPY_ACRES2008:NumberFormat(places:2)}</br>Historic Canopy % (2008): ${CANOPY_PERCENT2008:NumberFormat(places:2)}</br>Change Acres: ${DIFFERENCE_ACRES_08_18:NumberFormat(places:2)}</br>Percent Change: ${PERCENT_CHANGE08_18:NumberFormat(places:2)}</br>Absolute Change: ${ABSOLUTE_CHANGE:NumberFormat(places:2)}",
             "order": 5
         },
         "Layer5": {
@@ -88,7 +88,7 @@
             "layername": "Parks",
             "legend": true,
             "popup": true,
-            "popupContent": "Name: ${NAME}</br>Type: ${TYPE}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}",
+            "popupContent": "Name: ${NAME}</br>Type: ${TYPE}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Current Canopy (2018): ${CANOPY_ACRES:NumberFormat(places:2)}</br>Current Canopy % (2018): ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Historic Canopy (2008): ${CANOPY_ACRES2008:NumberFormat(places:2)}</br>Historic Canopy % (2008): ${CANOPY_PERCENT2008:NumberFormat(places:2)}</br>Change Acres: ${DIFFERENCE_ACRES_08_18:NumberFormat(places:2)}</br>Percent Change: ${PERCENT_CHANGE08_18:NumberFormat(places:2)}</br>Absolute Change: ${ABSOLUTE_CHANGE:NumberFormat(places:2)}",
             "order": 6
         },
         "Layer6": {
@@ -104,7 +104,7 @@
             "layername": "Watershed",
             "legend": true,
             "popup": true,
-            "popupContent": "Tag: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Canopy Acres: ${CANOPY_ACRES:NumberFormat(places:2)}</br>Canopy %: ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Impervious Acres: ${IMPERVIOUS_ACRES:NumberFormat(places:2)}</br>Impervious %: ${IMPERVIOUS_PERCENT:NumberFormat(places:2)}</br>Pervious Acres: ${PERVIOUS_ACRES:NumberFormat(places:2)}</br>Pervious %: ${PERVIOUS_PERCENT:NumberFormat(places:2)}</br>Bare Soil Acres: ${BARE_SOIL_ACRES:NumberFormat(places:2)}</br>Bare Soil %: ${BARE_SOIL_PERCENT:NumberFormat(places:2)}</br>Water Acres: ${WATER_ACRES:NumberFormat(places:2)}</br>Water %: ${WATER_PERCENT:NumberFormat(places:2)}",
+            "popupContent": "Watershed Name: ${TAG}</br>Acres: ${ACRES:NumberFormat(places:2)}</br>Current Canopy (2018): ${CANOPY_ACRES:NumberFormat(places:2)}</br>Current Canopy % (2018): ${CANOPY_PERCENT:NumberFormat(places:2)}</br>Historic Canopy (2008): ${CANOPY_ACRES2008:NumberFormat(places:2)}</br>Historic Canopy % (2008): ${CANOPY_PERCENT2008:NumberFormat(places:2)}</br>Change Acres: ${DIFFERENCE_ACRES_08_18:NumberFormat(places:2)}</br>Percent Change: ${PERCENT_CHANGE08_18:NumberFormat(places:2)}</br>Absolute Change: ${ABSOLUTE_CHANGE:NumberFormat(places:2)}",
             "order": 7
         },
         "Layer7": {
